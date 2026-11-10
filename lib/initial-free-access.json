@@ -1,0 +1,527 @@
+{
+  "offers": [
+    {
+      "model": "Flint",
+      "company": "Recursive",
+      "route": "api",
+      "url": "https://openrouter.ai/recursive/flint-v1.0:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Xing4.0 29B A4B",
+      "company": "XingChen",
+      "route": "api",
+      "url": "https://openrouter.ai/xingchen-agi/xing4.0-29b-a4b:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Nemotron 3.5 Super VL",
+      "company": "NVIDIA",
+      "route": "api",
+      "url": "https://openrouter.ai/nvidia/nemotron-3.5-super-vl:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Dots3-Note Preview",
+      "company": "Dots Studio",
+      "route": "api",
+      "url": "https://openrouter.ai/dots-studio/dots-3-note-preview:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "LFM2.5-2.6B",
+      "company": "LiquidAI",
+      "route": "api",
+      "url": "https://openrouter.ai/liquid/lfm-2.5-2.6b:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Nemotron 3.5 Lightning",
+      "company": "NVIDIA",
+      "route": "api",
+      "url": "https://openrouter.ai/nvidia/nemotron-3.5-lightning:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Inkling Small",
+      "company": "Thinking Machines",
+      "route": "api",
+      "url": "https://openrouter.ai/thinkingmachines/inkling-small:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Laguna S 2.1",
+      "company": "Poolside",
+      "route": "api",
+      "url": "https://openrouter.ai/poolside/laguna-s-2.1:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Inkling",
+      "company": "Thinking Machines",
+      "route": "api",
+      "url": "https://openrouter.ai/thinkingmachines/inkling:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Laguna XS 2.1",
+      "company": "Poolside",
+      "route": "api",
+      "url": "https://openrouter.ai/poolside/laguna-xs-2.1:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "North Mini Code",
+      "company": "Cohere",
+      "route": "api",
+      "url": "https://openrouter.ai/cohere/north-mini-code:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Nemotron 3.5 Content Safety",
+      "company": "NVIDIA",
+      "route": "api",
+      "url": "https://openrouter.ai/nvidia/nemotron-3.5-content-safety:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Nemotron 3 Ultra",
+      "company": "NVIDIA",
+      "route": "api",
+      "url": "https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Nemotron 3 Nano Omni",
+      "company": "NVIDIA",
+      "route": "api",
+      "url": "https://openrouter.ai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemma 4 26B A4B",
+      "company": "Google",
+      "route": "api",
+      "url": "https://openrouter.ai/google/gemma-4-26b-a4b-it:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemma 4 31B",
+      "company": "Google",
+      "route": "api",
+      "url": "https://openrouter.ai/google/gemma-4-31b-it:free",
+      "source": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 3.6 Flash",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 3.5 Live Translate",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 3.5 Transcribe Live",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 3.5 Transcribe",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 3.5 Flash-Lite",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 3.1 Flash-Lite",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 3.8 Flash TTS",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 3.8 Flash-Lite TTS",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 3.1 Flash TTS Preview",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 3 Flash Preview",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 2.5 Pro",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 2.5 Flash",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 2.5 Flash-Lite",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 2.5 Flash Native Audio (Live API)",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "Gemini 2.5 Flash Preview TTS",
+      "company": "Google",
+      "route": "api",
+      "url": "https://aistudio.google.com/",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "DeepSeek V4.1 Flash 1017",
+      "company": "DeepSeek",
+      "route": "chat",
+      "url": "https://chat.deepseek.com/",
+      "source": "https://www.deepseek.com/en/",
+      "checkedAt": "2026-10-30T18:38:12.594Z"
+    },
+    {
+      "model": "GPT-6 Luna",
+      "company": "OpenAI",
+      "route": "chat",
+      "url": "https://chatgpt.com/",
+      "source": "https://chatgpt.com/pricing/",
+      "checkedAt": "2026-10-30T18:57:46.627Z"
+    },
+    {
+      "model": "GPT-5 Thinking Mini",
+      "company": "OpenAI",
+      "route": "chat",
+      "url": "https://chatgpt.com/",
+      "source": "https://chatgpt.com/pricing/",
+      "checkedAt": "2026-10-30T18:57:46.627Z"
+    },
+    {
+      "model": "Claude Sonnet 5.5",
+      "company": "Anthropic",
+      "route": "chat",
+      "url": "https://claude.ai/",
+      "source": "https://claude.com/pricing",
+      "checkedAt": "2026-10-30T18:57:50.963Z",
+      "scope": "family"
+    },
+    {
+      "model": "Claude Haiku 5.5",
+      "company": "Anthropic",
+      "route": "chat",
+      "url": "https://claude.ai/",
+      "source": "https://claude.com/pricing",
+      "checkedAt": "2026-10-30T18:57:50.963Z",
+      "scope": "family"
+    },
+    {
+      "model": "Nano Banana 2",
+      "company": "Google",
+      "modality": "image",
+      "url": "https://gemini.google.com/",
+      "route": "web",
+      "scope": "model",
+      "limitsEn": "Free image quota; Nano Banana 2.1 is a separate paid model.",
+      "limitsPt": "Cota gratuita de imagens; Nano Banana 2.1 é um modelo pago separado.",
+      "aliases": [
+        "Nano Banana 2 (Gemini 3.1 Flash Image)"
+      ],
+      "source": "https://gemini.google/overview/image-generation/",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00"
+    },
+    {
+      "model": "Veo 3.1 Fast",
+      "company": "Google",
+      "modality": "video",
+      "url": "https://labs.google/fx/tools/flow",
+      "route": "web",
+      "scope": "model",
+      "limitsEn": "Daily credits, off-peak availability and resolution limits apply.",
+      "limitsPt": "Créditos diários, disponibilidade fora do pico e limites de resolução.",
+      "source": "https://support.google.com/flow/answer/16526234?hl=en",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00",
+      "aliases": [
+        "Veo 3.1 Fast (Audio)"
+      ]
+    },
+    {
+      "model": "Veo 3.1 Lite",
+      "company": "Google",
+      "modality": "video",
+      "url": "https://labs.google/fx/tools/flow",
+      "route": "web",
+      "scope": "model",
+      "limitsEn": "Daily credits, off-peak availability and resolution limits apply.",
+      "limitsPt": "Créditos diários, disponibilidade fora do pico e limites de resolução.",
+      "source": "https://support.google.com/flow/answer/16526234?hl=en",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00"
+    },
+    {
+      "model": "Gemini Omni Flash 1.1",
+      "company": "Google",
+      "modality": "video",
+      "url": "https://labs.google/fx/tools/flow",
+      "route": "web",
+      "scope": "model",
+      "limitsEn": "Daily credits, off-peak availability and resolution limits apply.",
+      "limitsPt": "Créditos diários, disponibilidade fora do pico e limites de resolução.",
+      "source": "https://support.google.com/flow/answer/16526234?hl=en",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00",
+      "aliases": [
+        "Gemini Omni 1.1 Flash"
+      ]
+    },
+    {
+      "model": "Nano Banana 2 Lite",
+      "company": "Google",
+      "modality": "image",
+      "url": "https://labs.google/fx/tools/flow",
+      "route": "web",
+      "scope": "model",
+      "limitsEn": "Daily credits, off-peak availability and resolution limits apply.",
+      "limitsPt": "Créditos diários, disponibilidade fora do pico e limites de resolução.",
+      "aliases": [
+        "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
+        "Gemini 3.1 Flash-Lite Image (nano-banana-2-lite)"
+      ],
+      "source": "https://support.google.com/flow/answer/16526234?hl=en",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00"
+    },
+    {
+      "model": "Recraft V4.1 Utility",
+      "company": "Recraft",
+      "modality": "image",
+      "url": "https://www.recraft.ai/",
+      "route": "web",
+      "scope": "model",
+      "limitsEn": "Daily credits; public images and restricted commercial rights.",
+      "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos.",
+      "source": "https://www.recraft.ai/blog/midjourney-alternative",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00"
+    },
+    {
+      "model": "Recraft V4.1 Utility Pro",
+      "company": "Recraft",
+      "modality": "image",
+      "url": "https://www.recraft.ai/",
+      "route": "web",
+      "scope": "model",
+      "limitsEn": "Daily credits; public images and restricted commercial rights.",
+      "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos.",
+      "source": "https://www.recraft.ai/blog/midjourney-alternative",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00"
+    },
+    {
+      "model": "Recraft V4.1 Flash",
+      "company": "Recraft",
+      "modality": "image",
+      "url": "https://www.recraft.ai/",
+      "route": "web",
+      "scope": "model",
+      "limitsEn": "Daily credits; public images and restricted commercial rights.",
+      "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos.",
+      "source": "https://www.recraft.ai/blog/midjourney-alternative",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00"
+    },
+    {
+      "model": "Seedream 4.5",
+      "company": "ByteDance",
+      "modality": "image",
+      "url": "https://dreamina.capcut.com/",
+      "route": "web",
+      "scope": "model",
+      "limitsEn": "Daily credits; queues, resolution and account/region limits apply.",
+      "limitsPt": "Créditos diários; filas e limites de resolução, conta e região.",
+      "source": "https://dreamina.capcut.com/pt-br/resource/seedream-4-5",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00"
+    },
+    {
+      "model": "Dreamina Seedance 2.5",
+      "company": "ByteDance",
+      "modality": "video",
+      "url": "https://dreamina.capcut.com/",
+      "route": "web",
+      "scope": "model",
+      "limitsEn": "Daily credits; queues, resolution and account/region limits apply.",
+      "limitsPt": "Créditos diários; filas e limites de resolução, conta e região.",
+      "source": "https://dreamina.capcut.com/pt-br/seedance/seedance-2-5",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00",
+      "aliases": [
+        "Dreamina Seedance 2.5 (720p)"
+      ]
+    },
+    {
+      "model": "Dreamina Seedance 2.0",
+      "company": "ByteDance",
+      "modality": "video",
+      "url": "https://dreamina.capcut.com/",
+      "route": "web",
+      "scope": "model",
+      "limitsEn": "Daily credits; queues, resolution and account/region limits apply.",
+      "limitsPt": "Créditos diários; filas e limites de resolução, conta e região.",
+      "source": "https://dreamina.capcut.com/tools/seedance-2-0",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00",
+      "aliases": [
+        "Dreamina Seedance 2.0 (720p)"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "router",
+      "url": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-10-30T18:38:12.594Z",
+      "status": "live"
+    },
+    {
+      "id": "google",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-30T18:38:12.594Z",
+      "status": "live"
+    },
+    {
+      "id": "deepseek",
+      "url": "https://www.deepseek.com/en/",
+      "checkedAt": "2026-10-30T18:38:12.594Z",
+      "status": "live"
+    },
+    {
+      "id": "openai",
+      "url": "https://chatgpt.com/pricing/",
+      "checkedAt": "2026-10-30T18:57:46.627Z",
+      "status": "live"
+    },
+    {
+      "id": "anthropic",
+      "url": "https://claude.com/pricing",
+      "checkedAt": "2026-10-30T18:57:50.963Z",
+      "status": "live"
+    },
+    {
+      "id": "gemini-images",
+      "name": "Gemini images",
+      "url": "https://gemini.google/overview/image-generation/",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00",
+      "status": "live"
+    },
+    {
+      "id": "flow-free",
+      "name": "Google Flow",
+      "url": "https://support.google.com/flow/answer/16526234?hl=en",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00",
+      "status": "live"
+    },
+    {
+      "id": "recraft-free",
+      "name": "Recraft",
+      "url": "https://www.recraft.ai/blog/midjourney-alternative",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00",
+      "status": "live"
+    },
+    {
+      "id": "seedream45-free",
+      "name": "Dreamina Seedream",
+      "url": "https://dreamina.capcut.com/pt-br/resource/seedream-4-5",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00",
+      "status": "live"
+    },
+    {
+      "id": "seedance25-free",
+      "name": "Dreamina Seedance 2.5",
+      "url": "https://dreamina.capcut.com/pt-br/seedance/seedance-2-5",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00",
+      "status": "live"
+    },
+    {
+      "id": "seedance20-free",
+      "name": "Dreamina Seedance 2.0",
+      "url": "https://dreamina.capcut.com/tools/seedance-2-0",
+      "checkedAt": "2026-10-31T21:47:40.652085+00:00",
+      "status": "live"
+    }
+  ]
+}

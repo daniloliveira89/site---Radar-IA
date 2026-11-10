@@ -1,0 +1,207 @@
+[
+  {
+    "id": "gemini-images",
+    "name": "Gemini images",
+    "url": "https://gemini.google/overview/image-generation/",
+    "checks": [
+      "Nano Banana 2",
+      "Available for free.",
+      "Upgrade to a Google AI Plan to unlock Nano Banana 2.1"
+    ],
+    "extraUrls": [],
+    "models": [
+      {
+        "model": "Nano Banana 2",
+        "company": "Google",
+        "modality": "image",
+        "url": "https://gemini.google.com/",
+        "route": "web",
+        "scope": "model",
+        "limitsEn": "Free image quota; Nano Banana 2.1 is a separate paid model.",
+        "limitsPt": "Cota gratuita de imagens; Nano Banana 2.1 é um modelo pago separado.",
+        "aliases": [
+          "Nano Banana 2 (Gemini 3.1 Flash Image)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "flow-free",
+    "name": "Google Flow",
+    "url": "https://support.google.com/flow/answer/16526234?hl=en",
+    "checks": [
+      "50 Google Flow credits per day",
+      "Gemini Omni Flash 1.1",
+      "default model available at no charge"
+    ],
+    "extraUrls": [
+      "https://support.google.com/flow/answer/16352836?hl=en"
+    ],
+    "models": [
+      {
+        "model": "Veo 3.1 Fast",
+        "company": "Google",
+        "modality": "video",
+        "url": "https://labs.google/fx/tools/flow",
+        "route": "web",
+        "scope": "model",
+        "limitsEn": "Daily credits, off-peak availability and resolution limits apply.",
+        "limitsPt": "Créditos diários, disponibilidade fora do pico e limites de resolução.",
+        "aliases": [
+          "Veo 3.1 Fast (Audio)"
+        ]
+      },
+      {
+        "model": "Veo 3.1 Lite",
+        "company": "Google",
+        "modality": "video",
+        "url": "https://labs.google/fx/tools/flow",
+        "route": "web",
+        "scope": "model",
+        "limitsEn": "Daily credits, off-peak availability and resolution limits apply.",
+        "limitsPt": "Créditos diários, disponibilidade fora do pico e limites de resolução."
+      },
+      {
+        "model": "Gemini Omni Flash 1.1",
+        "company": "Google",
+        "modality": "video",
+        "url": "https://labs.google/fx/tools/flow",
+        "route": "web",
+        "scope": "model",
+        "limitsEn": "Daily credits, off-peak availability and resolution limits apply.",
+        "limitsPt": "Créditos diários, disponibilidade fora do pico e limites de resolução.",
+        "aliases": [
+          "Gemini Omni 1.1 Flash"
+        ]
+      },
+      {
+        "model": "Nano Banana 2 Lite",
+        "company": "Google",
+        "modality": "image",
+        "url": "https://labs.google/fx/tools/flow",
+        "route": "web",
+        "scope": "model",
+        "limitsEn": "Daily credits, off-peak availability and resolution limits apply.",
+        "limitsPt": "Créditos diários, disponibilidade fora do pico e limites de resolução.",
+        "aliases": [
+          "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
+          "Gemini 3.1 Flash-Lite Image (nano-banana-2-lite)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "recraft-free",
+    "name": "Recraft",
+    "url": "https://www.recraft.ai/blog/midjourney-alternative",
+    "checks": [
+      "All models are available to all users, including free plan users",
+      "daily credits"
+    ],
+    "extraUrls": [],
+    "models": [
+      {
+        "model": "Recraft V4.1 Utility",
+        "company": "Recraft",
+        "modality": "image",
+        "url": "https://www.recraft.ai/",
+        "route": "web",
+        "scope": "model",
+        "limitsEn": "Daily credits; public images and restricted commercial rights.",
+        "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos."
+      },
+      {
+        "model": "Recraft V4.1 Utility Pro",
+        "company": "Recraft",
+        "modality": "image",
+        "url": "https://www.recraft.ai/",
+        "route": "web",
+        "scope": "model",
+        "limitsEn": "Daily credits; public images and restricted commercial rights.",
+        "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos."
+      },
+      {
+        "model": "Recraft V4.1 Flash",
+        "company": "Recraft",
+        "modality": "image",
+        "url": "https://www.recraft.ai/",
+        "route": "web",
+        "scope": "model",
+        "limitsEn": "Daily credits; public images and restricted commercial rights.",
+        "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos."
+      }
+    ]
+  },
+  {
+    "id": "seedream45-free",
+    "name": "Dreamina Seedream",
+    "url": "https://dreamina.capcut.com/pt-br/resource/seedream-4-5",
+    "checks": [
+      "Seedream 4.5",
+      "créditos diários gratuitos"
+    ],
+    "extraUrls": [],
+    "models": [
+      {
+        "model": "Seedream 4.5",
+        "company": "ByteDance",
+        "modality": "image",
+        "url": "https://dreamina.capcut.com/",
+        "route": "web",
+        "scope": "model",
+        "limitsEn": "Daily credits; queues, resolution and account/region limits apply.",
+        "limitsPt": "Créditos diários; filas e limites de resolução, conta e região."
+      }
+    ]
+  },
+  {
+    "id": "seedance25-free",
+    "name": "Dreamina Seedance 2.5",
+    "url": "https://dreamina.capcut.com/pt-br/seedance/seedance-2-5",
+    "checks": [
+      "Seedance 2.5",
+      "créditos diários gratuitos"
+    ],
+    "extraUrls": [],
+    "models": [
+      {
+        "model": "Dreamina Seedance 2.5",
+        "company": "ByteDance",
+        "modality": "video",
+        "url": "https://dreamina.capcut.com/",
+        "route": "web",
+        "scope": "model",
+        "limitsEn": "Daily credits; queues, resolution and account/region limits apply.",
+        "limitsPt": "Créditos diários; filas e limites de resolução, conta e região.",
+        "aliases": [
+          "Dreamina Seedance 2.5 (720p)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "seedance20-free",
+    "name": "Dreamina Seedance 2.0",
+    "url": "https://dreamina.capcut.com/tools/seedance-2-0",
+    "checks": [
+      "Seedance 2.0",
+      "free daily credits"
+    ],
+    "extraUrls": [],
+    "models": [
+      {
+        "model": "Dreamina Seedance 2.0",
+        "company": "ByteDance",
+        "modality": "video",
+        "url": "https://dreamina.capcut.com/",
+        "route": "web",
+        "scope": "model",
+        "limitsEn": "Daily credits; queues, resolution and account/region limits apply.",
+        "limitsPt": "Créditos diários; filas e limites de resolução, conta e região.",
+        "aliases": [
+          "Dreamina Seedance 2.0 (720p)"
+        ]
+      }
+    ]
+  }
+]

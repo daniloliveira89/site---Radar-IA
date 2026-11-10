@@ -1,0 +1,231 @@
+{
+  "articles": [
+    {
+      "id": "Google:https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+      "company": "Google",
+      "title": "Gemini 4 Carbon: Our next frontier model",
+      "originalTitle": "Gemini 4 Carbon: Our next frontier model",
+      "excerpt": "Gemini 4 Carbon is our strongest model with state-of-the-art cybersecurity and long horizon capabilities.",
+      "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+      "date": "2026-10-28T17:00:00.000Z",
+      "category": "Modelos",
+      "important": true,
+      "topics": [],
+      "summary": "Publicação da Google sobre modelos de IA. Abra o anúncio para conferir os recursos e as condições de acesso.",
+      "newsKind": "Novo modelo"
+    },
+    {
+      "id": "Meta:https://about.fb.com/news/2026/10/muse-is-now-available-in-singapore-the-worlds-first-personal-ai-agent-built-for-everyone",
+      "company": "Meta",
+      "title": "Muse Is já disponível in Singapore: The World’s First Personal AI Agent Built para todos",
+      "originalTitle": "Muse Is Now Available in Singapore: The World’s First Personal AI Agent Built for Everyone",
+      "excerpt": "Today we’re announcing Muse is now available in Singapore. The post Muse Is Now Available in Singapore: The World’s First Personal AI",
+      "url": "https://about.fb.com/news/2026/10/muse-is-now-available-in-singapore-the-worlds-first-personal-ai-agent-built-for-everyone",
+      "date": "2026-10-28T00:00:03.000Z",
+      "category": "Aplicativos",
+      "important": true,
+      "topics": [
+        "agentes e ferramentas"
+      ],
+      "summary": "Anúncio sobre aplicativos e ferramentas de IA. Entre os temas citados pela fonte: agentes e ferramentas.",
+      "newsKind": "Ecossistema"
+    },
+    {
+      "id": "OpenAI:https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+      "company": "OpenAI",
+      "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+      "originalTitle": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+      "excerpt": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes.",
+      "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+      "date": "2026-10-26T13:45:00.000Z",
+      "category": "Modelos",
+      "important": true,
+      "topics": [
+        "programação",
+        "agentes e ferramentas"
+      ],
+      "summary": "Anúncio sobre modelos de IA. Entre os temas citados pela fonte: programação, agentes e ferramentas.",
+      "newsKind": "Novo modelo"
+    },
+    {
+      "id": "OpenAI:https://openai.com/index/introducing-gpt-6-1-terra",
+      "company": "OpenAI",
+      "title": "Conheça GPT-6.1 Terra",
+      "originalTitle": "Introducing GPT-6.1 Terra",
+      "excerpt": "Bringing fast and capable computer use to everyone",
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "date": "2026-10-26T00:00:00.000Z",
+      "category": "Modelos",
+      "important": true,
+      "topics": [],
+      "summary": "Publicação da OpenAI sobre modelos de IA. Abra o anúncio para conferir os recursos e as condições de acesso.",
+      "newsKind": "Novo modelo"
+    },
+    {
+      "id": "Kimi:https://www.kimi.com/en/blog/kimi-k3-1-pro",
+      "company": "Kimi",
+      "title": "Kimi K3.1 Pro",
+      "originalTitle": "Kimi K3.1 Pro",
+      "excerpt": "Introducing Kimi K3.1 Pro, our most capable 3T-class open-weight model with 1M-token context and major advances in coding, 3D modeling, and financial",
+      "url": "https://www.kimi.com/en/blog/kimi-k3-1-pro",
+      "date": "2026-10-24T12:00:00.000Z",
+      "category": "Modelos",
+      "important": true,
+      "topics": [
+        "programação",
+        "janela de contexto",
+        "modelos abertos"
+      ],
+      "summary": "Anúncio sobre modelos de IA. Entre os temas citados pela fonte: programação, janela de contexto, modelos abertos.",
+      "newsKind": "Novo modelo"
+    }
+  ],
+  "sources": [
+    {
+      "id": "openai",
+      "company": "OpenAI",
+      "name": "OpenAI News",
+      "url": "https://openai.com/news/rss.xml",
+      "status": "ok",
+      "count": 2,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "deepmind",
+      "company": "Google",
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "google",
+      "company": "Google",
+      "name": "Google AI",
+      "url": "https://blog.google/technology/ai/rss/",
+      "status": "ok",
+      "count": 0,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "google-dev",
+      "company": "Google",
+      "name": "Google Developers · AI Studio e Antigravity",
+      "url": "https://developers.googleblog.com/feeds/posts/default",
+      "status": "ok",
+      "count": 0,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "anthropic",
+      "company": "Anthropic",
+      "name": "Anthropic · Claude",
+      "url": "https://www.anthropic.com/news",
+      "status": "ok",
+      "count": 0,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "anthropic-models",
+      "company": "Anthropic",
+      "name": "Anthropic · Modelos",
+      "url": "https://www.anthropic.com/news/models",
+      "status": "ok",
+      "count": 0,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "deepseek",
+      "company": "DeepSeek",
+      "name": "DeepSeek News",
+      "url": "https://www.deepseek.com/en/news/",
+      "status": "ok",
+      "count": 0,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "xai",
+      "company": "xAI",
+      "name": "xAI · Grok",
+      "url": "https://x.ai/news",
+      "status": "ok",
+      "count": 0,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "kimi",
+      "company": "Kimi",
+      "name": "Kimi · Moonshot",
+      "url": "https://www.kimi.com/en/blog/",
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "bfl",
+      "company": "Black Forest Labs",
+      "name": "Black Forest Labs · FLUX",
+      "url": "https://blackforestlabs.ai/blog",
+      "status": "ok",
+      "count": 0,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "runway",
+      "company": "Runway",
+      "name": "Runway Changelog",
+      "url": "https://runwayml.com/changelog",
+      "status": "ok",
+      "count": 0,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "luma",
+      "company": "Luma",
+      "name": "Luma AI News",
+      "url": "https://lumalabs.ai/news",
+      "status": "ok",
+      "count": 0,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "midjourney",
+      "company": "Midjourney",
+      "name": "Midjourney Updates",
+      "url": "https://updates.midjourney.com/rss/",
+      "status": "ok",
+      "count": 0,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "microsoft",
+      "company": "Microsoft",
+      "name": "Microsoft Blog",
+      "url": "https://blogs.microsoft.com/feed/",
+      "status": "ok",
+      "count": 0,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "meta",
+      "company": "Meta",
+      "name": "Meta Newsroom",
+      "url": "https://about.fb.com/feed/",
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    },
+    {
+      "id": "mistral",
+      "company": "Mistral",
+      "name": "Mistral News",
+      "url": "https://mistral.ai/news/rss",
+      "status": "ok",
+      "count": 0,
+      "checkedAt": "2026-10-30T00:19:39.486Z"
+    }
+  ],
+  "fetchedAt": "2026-10-30T00:19:39.486Z",
+  "nextCheckAt": "2026-10-30T06:19:39.486Z"
+}
