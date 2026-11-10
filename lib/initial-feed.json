@@ -1,6 +1,34 @@
 {
   "articles": [
     {
+      "id": "Google:https://deepmind.google/blog/gemini-4-carbon-is-now-available",
+      "company": "Google",
+      "title": "Gemini 4 Carbon is já disponível",
+      "originalTitle": "Gemini 4 Carbon is now available",
+      "excerpt": "Today, we’re making Gemini 4 Carbon available to developers, enterprises, scientists, and consumers.",
+      "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available",
+      "date": "2026-11-10T16:00:00.000Z",
+      "category": "Modelos",
+      "important": true,
+      "topics": [],
+      "summary": "Publicação da Google sobre modelos de IA. Abra o anúncio para conferir os recursos e as condições de acesso.",
+      "newsKind": "Novo modelo"
+    },
+    {
+      "id": "Google:https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare",
+      "company": "Google",
+      "title": "Google Cloud launches Gemini for healthcare.",
+      "originalTitle": "Google Cloud launches Gemini for healthcare.",
+      "excerpt": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare",
+      "date": "2026-11-10T13:00:00.000Z",
+      "category": "Empresas",
+      "important": true,
+      "topics": [],
+      "summary": "Publicação da Google sobre novidades da empresa. Abra o anúncio para conferir os recursos e as condições de acesso.",
+      "newsKind": "Ecossistema"
+    },
+    {
       "id": "Google:https://deepmind.google/blog/introducing-alphaproof-code",
       "company": "Google",
       "title": "Conheça AlphaProof Code: a breakthrough in verifying complex software at depth",
@@ -155,7 +183,7 @@
       "url": "https://openai.com/news/rss.xml",
       "status": "ok",
       "count": 4,
-      "checkedAt": "2026-11-10T12:49:18.207Z"
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     },
     {
       "id": "deepmind",
@@ -163,8 +191,8 @@
       "name": "Google DeepMind",
       "url": "https://deepmind.google/blog/rss.xml",
       "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-10T12:49:18.207Z"
+      "count": 3,
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     },
     {
       "id": "google",
@@ -172,8 +200,8 @@
       "name": "Google AI",
       "url": "https://blog.google/technology/ai/rss/",
       "status": "ok",
-      "count": 0,
-      "checkedAt": "2026-11-10T12:49:18.207Z"
+      "count": 1,
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     },
     {
       "id": "google-dev",
@@ -182,7 +210,7 @@
       "url": "https://developers.googleblog.com/feeds/posts/default",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T12:49:18.207Z"
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     },
     {
       "id": "anthropic",
@@ -191,7 +219,7 @@
       "url": "https://www.anthropic.com/news",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-10T12:49:18.207Z"
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     },
     {
       "id": "anthropic-models",
@@ -200,7 +228,7 @@
       "url": "https://www.anthropic.com/news/models",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-10T12:49:18.207Z"
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     },
     {
       "id": "deepseek",
@@ -209,7 +237,7 @@
       "url": "https://www.deepseek.com/en/news/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T12:49:18.207Z"
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     },
     {
       "id": "xai",
@@ -218,7 +246,7 @@
       "url": "https://x.ai/news",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-10T12:49:18.207Z",
+      "checkedAt": "2026-11-10T21:20:17.457Z",
       "error": "HTTP 403"
     },
     {
@@ -228,17 +256,16 @@
       "url": "https://www.kimi.com/en/blog/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-10T12:49:18.207Z"
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     },
     {
       "id": "z-ai",
       "company": "Z AI",
       "name": "Z.ai · GLM",
       "url": "https://www.zhipuai.cn/en/research",
-      "status": "error",
+      "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T12:49:18.207Z",
-      "error": "fetch failed"
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     },
     {
       "id": "bfl",
@@ -247,7 +274,7 @@
       "url": "https://blackforestlabs.ai/blog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T12:49:18.207Z"
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     },
     {
       "id": "runway",
@@ -256,7 +283,7 @@
       "url": "https://runwayml.com/changelog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T12:49:18.207Z"
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     },
     {
       "id": "luma",
@@ -265,7 +292,7 @@
       "url": "https://lumalabs.ai/news",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T12:49:18.207Z"
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     },
     {
       "id": "midjourney",
@@ -274,7 +301,7 @@
       "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-10T12:49:18.207Z",
+      "checkedAt": "2026-11-10T21:20:17.457Z",
       "error": "HTTP 403"
     },
     {
@@ -284,7 +311,7 @@
       "url": "https://blogs.microsoft.com/feed/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T12:49:18.207Z"
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     },
     {
       "id": "meta",
@@ -293,7 +320,7 @@
       "url": "https://about.fb.com/feed/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-10T12:49:18.207Z"
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     },
     {
       "id": "mistral",
@@ -302,9 +329,9 @@
       "url": "https://mistral.ai/news/rss",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T12:49:18.207Z"
+      "checkedAt": "2026-11-10T21:20:17.457Z"
     }
   ],
-  "fetchedAt": "2026-11-10T12:49:18.207Z",
-  "nextCheckAt": "2026-11-10T18:49:18.207Z"
+  "fetchedAt": "2026-11-10T21:20:17.457Z",
+  "nextCheckAt": "2026-11-11T03:20:17.457Z"
 }
