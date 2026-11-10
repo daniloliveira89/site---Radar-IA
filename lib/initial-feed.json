@@ -1,6 +1,23 @@
 {
   "articles": [
     {
+      "id": "Google:https://deepmind.google/blog/introducing-alphaproof-code",
+      "company": "Google",
+      "title": "Conheça AlphaProof Code: a breakthrough in verifying complex software at depth",
+      "originalTitle": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+      "excerpt": "AlphaProof Code agents wrote three million lines of proofs in Lean to verify Signal’s core encryption.",
+      "url": "https://deepmind.google/blog/introducing-alphaproof-code",
+      "date": "2026-11-10T12:02:28.000Z",
+      "category": "Empresas",
+      "important": true,
+      "topics": [
+        "programação",
+        "agentes e ferramentas"
+      ],
+      "summary": "Anúncio sobre novidades da empresa. Entre os temas citados pela fonte: programação, agentes e ferramentas.",
+      "newsKind": "Ecossistema"
+    },
+    {
       "id": "Anthropic:https://www.anthropic.com/claude-fable-and-mythos-5-2",
       "company": "Anthropic",
       "title": "Conheça Claude Fable 5.2 and Claude Mythos 5.2",
@@ -138,7 +155,7 @@
       "url": "https://openai.com/news/rss.xml",
       "status": "ok",
       "count": 4,
-      "checkedAt": "2026-11-10T11:43:38.865Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z"
     },
     {
       "id": "deepmind",
@@ -146,8 +163,8 @@
       "name": "Google DeepMind",
       "url": "https://deepmind.google/blog/rss.xml",
       "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-10T11:43:38.865Z"
+      "count": 2,
+      "checkedAt": "2026-11-10T12:49:18.207Z"
     },
     {
       "id": "google",
@@ -156,7 +173,7 @@
       "url": "https://blog.google/technology/ai/rss/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T11:43:38.865Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z"
     },
     {
       "id": "google-dev",
@@ -165,7 +182,7 @@
       "url": "https://developers.googleblog.com/feeds/posts/default",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T11:43:38.865Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z"
     },
     {
       "id": "anthropic",
@@ -174,7 +191,7 @@
       "url": "https://www.anthropic.com/news",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-10T11:43:38.865Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z"
     },
     {
       "id": "anthropic-models",
@@ -183,7 +200,7 @@
       "url": "https://www.anthropic.com/news/models",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-10T11:43:38.865Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z"
     },
     {
       "id": "deepseek",
@@ -192,7 +209,7 @@
       "url": "https://www.deepseek.com/en/news/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T11:43:38.865Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z"
     },
     {
       "id": "xai",
@@ -201,7 +218,7 @@
       "url": "https://x.ai/news",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-10T11:43:38.865Z",
+      "checkedAt": "2026-11-10T12:49:18.207Z",
       "error": "HTTP 403"
     },
     {
@@ -211,16 +228,17 @@
       "url": "https://www.kimi.com/en/blog/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-10T11:43:38.865Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z"
     },
     {
       "id": "z-ai",
       "company": "Z AI",
       "name": "Z.ai · GLM",
       "url": "https://www.zhipuai.cn/en/research",
-      "status": "ok",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-10T11:43:58.463Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z",
+      "error": "fetch failed"
     },
     {
       "id": "bfl",
@@ -229,7 +247,7 @@
       "url": "https://blackforestlabs.ai/blog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T11:43:38.865Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z"
     },
     {
       "id": "runway",
@@ -238,7 +256,7 @@
       "url": "https://runwayml.com/changelog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T11:43:38.865Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z"
     },
     {
       "id": "luma",
@@ -247,16 +265,17 @@
       "url": "https://lumalabs.ai/news",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T11:43:38.865Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z"
     },
     {
       "id": "midjourney",
       "company": "Midjourney",
       "name": "Midjourney · Model Releases",
       "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
-      "status": "ok",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-10T11:44:40.503Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z",
+      "error": "HTTP 403"
     },
     {
       "id": "microsoft",
@@ -265,7 +284,7 @@
       "url": "https://blogs.microsoft.com/feed/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T11:43:38.865Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z"
     },
     {
       "id": "meta",
@@ -274,7 +293,7 @@
       "url": "https://about.fb.com/feed/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-10T11:43:38.865Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z"
     },
     {
       "id": "mistral",
@@ -283,9 +302,9 @@
       "url": "https://mistral.ai/news/rss",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T11:43:38.865Z"
+      "checkedAt": "2026-11-10T12:49:18.207Z"
     }
   ],
-  "fetchedAt": "2026-11-10T11:43:38.865Z",
-  "nextCheckAt": "2026-11-10T17:43:38.865Z"
+  "fetchedAt": "2026-11-10T12:49:18.207Z",
+  "nextCheckAt": "2026-11-10T18:49:18.207Z"
 }
