@@ -3,7 +3,7 @@ export type NewsKind = 'Novo modelo' | 'Teste grátis' | 'Ecossistema';
 export type Article = { id: string; company: string; title: string; originalTitle: string; excerpt: string; summary: string; url: string; date: string | null; category: Category; important: boolean; topics: string[]; newsKind?: NewsKind };
 export type SourceStatus = { id: string; company: string; name: string; url: string; status: 'ok' | 'error'; count: number; checkedAt: string; error?: string };
 export type Feed = { articles: Article[]; sources: SourceStatus[]; fetchedAt: string; nextCheckAt: string };
-type Source = { id: string; company: string; name: string; url: string; kind: 'rss' | 'html' | 'runway'; path?: string };
+type Source = { id: string; company: string; name: string; url: string; kind: 'rss' | 'html' | 'runway' | 'midjourney-versions' | 'z-ai-research'; path?: string };
 export const SOURCES: Source[] = [
   { id: 'openai', company: 'OpenAI', name: 'OpenAI News', url: 'https://openai.com/news/rss.xml', kind: 'rss' },
   { id: 'deepmind', company: 'Google', name: 'Google DeepMind', url: 'https://deepmind.google/blog/rss.xml', kind: 'rss' },
@@ -14,15 +14,16 @@ export const SOURCES: Source[] = [
   { id: 'deepseek', company: 'DeepSeek', name: 'DeepSeek News', url: 'https://www.deepseek.com/en/news/', kind: 'html', path: '/en/news/' },
   { id: 'xai', company: 'xAI', name: 'xAI · Grok', url: 'https://x.ai/news', kind: 'html', path: '/news/' },
   { id: 'kimi', company: 'Kimi', name: 'Kimi · Moonshot', url: 'https://www.kimi.com/en/blog/', kind: 'html', path: '/en/blog/' },
+  { id: 'z-ai', company: 'Z AI', name: 'Z.ai · GLM', url: 'https://www.zhipuai.cn/en/research', kind: 'z-ai-research' },
   { id: 'bfl', company: 'Black Forest Labs', name: 'Black Forest Labs · FLUX', url: 'https://blackforestlabs.ai/blog', kind: 'html', path: '/blog/' },
   { id: 'runway', company: 'Runway', name: 'Runway Changelog', url: 'https://runwayml.com/changelog', kind: 'runway' },
   { id: 'luma', company: 'Luma', name: 'Luma AI News', url: 'https://lumalabs.ai/news', kind: 'html', path: '/news/' },
-  { id: 'midjourney', company: 'Midjourney', name: 'Midjourney Updates', url: 'https://updates.midjourney.com/rss/', kind: 'rss' },
+  { id: 'midjourney', company: 'Midjourney', name: 'Midjourney · Model Releases', url: 'https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version', kind: 'midjourney-versions' },
   { id: 'microsoft', company: 'Microsoft', name: 'Microsoft Blog', url: 'https://blogs.microsoft.com/feed/', kind: 'rss' },
   { id: 'meta', company: 'Meta', name: 'Meta Newsroom', url: 'https://about.fb.com/feed/', kind: 'rss' },
   { id: 'mistral', company: 'Mistral', name: 'Mistral News', url: 'https://mistral.ai/news/rss', kind: 'rss' },
 ];
-export const COMPANIES = ['OpenAI', 'Google', 'Anthropic', 'DeepSeek', 'xAI', 'Kimi', 'Black Forest Labs', 'Runway', 'Luma', 'Midjourney','Microsoft','Meta','Mistral'];
+export const COMPANIES = ['OpenAI', 'Google', 'Anthropic', 'DeepSeek', 'xAI', 'Kimi', 'Z AI', 'Black Forest Labs', 'Runway', 'Luma', 'Midjourney','Microsoft','Meta','Mistral'];
 export const SIX_HOURS = 6 * 60 * 60 * 1000;
 // Fixed start date requested by the owner, midnight in São Paulo (UTC−3).
 export const NEWS_START = '2026-10-23T03:00:00.000Z';
@@ -32,7 +33,8 @@ export function newsKind(title:string,excerpt:string,company:string):NewsKind|un
   if(/\b(?:free trial|trial credits|try .{0,60} for free|free (?:access|credits|trial)|(?:days|months|weeks) (?:of .{0,20})?free|teste gr[aá]tis|cr[eé]ditos gr[aá]tis)\b/i.test(text))return 'Teste grátis';
   const named=/\b(?:gpt[- ‑]?\d|claude (?:opus|sonnet|haiku|mythos|fable)|gemini[ -]?\d|deepseek[- ]?[vr]\d|kimi k\d|grok[ -]?\d|flux[ .-]?\d|gen-\d|veo[ -]?\d|sora[ -]?\d|ray[ -]?\d|lyria[ -]?\d|seedance[ -]?\d|kling[ -]?\d|qwen[- ]?[\d]|mistral (?:large|medium|small)|nano banana|wan[ -]?\d)\b/i.test(title);
   const launch=/\b(?:introducing|meet|launch(?:es|ed|ing)?|releas(?:e|es|ed|ing)|unveil(?:s|ed|ing)?|announc(?:e|es|ed|ing)|now available|available now|new model|preview|is here|debuts|new .{0,30}model)\b/i.test(title);
-  if(named&&(launch||(/^[A-Z0-9]/.test(title)&&title.length<115&&!/\b(?:using|with|wins|achieves|scores|evaluation|performance|costs|benchmark|tips)\b/i.test(title))))return 'Novo modelo';
+  const releaseHeadline=(company==='Z AI'&&/^GLM[- ](?:\d+(?:\.\d+)*(?:[A-Z]|-[\w]+)*|image|ocr|asr|tts)\s*[:：–—-]/i.test(title))||(company==='Midjourney'&&/^Midjourney (?:V|Niji )\d+(?:\.\d+)*$/i.test(title));
+  if(releaseHeadline||named&&(launch||(/^[A-Z0-9]/.test(title)&&title.length<115&&!/\b(?:using|with|wins|achieves|scores|evaluation|performance|costs|benchmark|tips)\b/i.test(title))))return 'Novo modelo';
   const product=/\b(?:flow|antigravity|studio|gemini notebook|notebooklm|codex|chatgpt work|cowork|claude code|claude design|grok bot|grok build|kimi (?:work|code|claw)|stitch|opal|jules|pomelli|playground|genie|muse|vibe|agent platform|creative studio|api platform|ecosystem|workflows|plugins|connectors|skills|agents?|app|canvas|layers|pages)\b/i.test(text);
   if(product&&(launch||/^new\b/i.test(title)))return 'Ecossistema';
   if(named&&/\b(?:in luma|in runway|available on|now live in)\b/i.test(text))return 'Ecossistema';
@@ -64,7 +66,7 @@ export function classify(title: string, excerpt: string, company: string) {
   if (/\b(video|veo|sora|ray[ -]?\d|kling|seedance|aleph|gen-\d)\b/.test(text)) category = 'Vídeo';
   else if (/\b(audio|voice|speech|music|sound|lyria|sfx|whisper)\b/.test(text)) category = 'Áudio';
   else if (/\b(image|imagen|flux|midjourney|photo|banana|upscal|background removal|foreground)/.test(text) || company === 'Midjourney') category = 'Imagem';
-  else if (/\b(gpt[- ‑]?\d|claude (?:opus|sonnet|haiku|mythos|fable)|gemini[ -]?\d|deepseek[- ]?[vr]\d|kimi k\d|grok[ -]?\d|model|llm|gemma)\b/.test(text)) category = 'Modelos';
+  else if (/\b(gpt[- ‑]?\d|claude (?:opus|sonnet|haiku|mythos|fable)|gemini[ -]?\d|deepseek[- ]?[vr]\d|kimi k\d|grok[ -]?\d|glm[- ]?\d|model|llm|gemma)\b/.test(text)) category = 'Modelos';
   else if (/\b(chatgpt|codex|agent|app|studio|canvas|search|workspace|flow|tool|mode|playground|games|dots)\b/.test(text)) category = 'Aplicativos';
   const version = /\b(gpt[- ‑]?\d|claude (?:opus|sonnet|haiku|mythos|fable)|gemini[ -]?\d|deepseek[- ]?[vr]\d|kimi k\d|grok[ -]?\d|flux[ .-]?\d|gen-\d|veo[ -]?\d|sora[ -]?\d|ray[ -]?\d|v\d+(?:\.\d+)?)\b/i.test(title);
   const launch = /\b(introducing|introduce|launch|launches|launched|releasing|released|release|unveiling|announcing|announces|new model|new features|now available|price|pricing|cheaper|free|available to everyone|for everyone)\b/i.test(title);
@@ -84,8 +86,11 @@ function article(source: Source, title: string, excerpt: string, url: string, da
   title = clean(title).slice(0,240); excerpt = clean(excerpt);
   if (title.length < 5 || title.length > 239) return null;
   let u: URL; try {u = new URL(url, source.url);} catch {return null;}
-  if (u.protocol !== 'https:' || u.hostname.replace(/^www\./,'') !== new URL(source.url).hostname.replace(/^www\./,'')) return null;
-  u.search = ''; u.hash = ''; u.pathname = u.pathname.replace(/\/$/,'');
+  const zaiBlog=source.kind==='z-ai-research'&&u.hostname==='z.ai'&&/^\/blog\/[a-z0-9.-]+\/?$/i.test(u.pathname);
+  if (u.protocol !== 'https:' || u.username || u.password || (!zaiBlog&&u.hostname.replace(/^www\./,'') !== new URL(source.url).hostname.replace(/^www\./,''))) return null;
+  u.search = '';
+  if(source.kind!=='midjourney-versions')u.hash = '';
+  u.pathname = u.pathname.replace(/\/$/,'');
   // Keep publication dates as supplied; future-dated posts stay out of the feed.
   if (date && +new Date(date) > Date.now()) return null;
   const id = source.company + ':' + u.href + (source.kind === 'runway' ? ':' + title : '');
@@ -103,7 +108,43 @@ export function parseRss(xml: string, source: Source): Article[] {
   }
   return result;
 }
+function parseMidjourneyVersions(html:string,source:Source):Article[] {
+  const items:Article[]=[];
+  for(const match of html.matchAll(/<h2\b([^>]*)>([\s\S]*?)<\/h2>([\s\S]*?)(?=<h[12]\b|$)/gi)){
+    const heading=clean(match[2]),anchor=attr(match[1],'id');
+    if(!/^(?:V|Niji )\d+(?:\.\d+)*$/i.test(heading)||!/^[-\w]+$/.test(anchor))continue;
+    const paragraphs=[...match[3].matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)].map(p=>clean(p[1]));
+    const release=paragraphs.map(p=>p.match(/\b(?:was |is )?(?:released|launched|made available)(?: as the default version)? on ([A-Za-z]+ \d{1,2},? 20\d{2})\b/i)?.[1]).find(Boolean);
+    const date=release?findDate(release):null;
+    if(!date)continue;
+    const a=article(source,'Midjourney '+heading,paragraphs.slice(0,2).join(' '),'#'+anchor,date);
+    if(a)items.push(a);
+  }
+  return items;
+}
+type ZaiPost={id?:number;title_en?:string;title_zh?:string;resume_en?:string;resume_zh?:string;createAt?:string;externalUrl_en?:string;contentType_en?:string};
+function parseZaiResearch(html:string,source:Source):Article[]{
+  // Read the publisher's dated listing data without executing its page scripts.
+  const stream=[...html.matchAll(/<script[^>]*>self\.__next_f\.push\((\[1,"(?:[^"\\]|\\[\s\S])*"\])\)<\/script>/g)].map(m=>JSON.parse(m[1])[1] as string).join('');
+  const line=stream.split('\n').find(row=>/^\w+:\[/.test(row)&&row.includes('"blogsItems":'));
+  if(!line)return [];
+  const data=JSON.parse(line.slice(line.indexOf(':')+1)) as [unknown,unknown,unknown,{children?:[unknown,unknown,unknown,{blogsItems?:ZaiPost[]}]}];
+  const posts=data[3]?.children?.[3]?.blogsItems;
+  if(!Array.isArray(posts))return [];
+  return posts.slice(0,60).flatMap(p=>{
+    if(!p||!Number.isSafeInteger(p.id)||typeof p.createAt!=='string')return [];
+    const title=typeof p.title_en==='string'&&p.title_en||typeof p.title_zh==='string'&&p.title_zh;
+    const date=findDate(p.createAt);
+    if(!title||!date)return [];
+    const url=typeof p.externalUrl_en==='string'&&p.externalUrl_en||`/${p.title_en?'en':'zh'}/research/${p.id}`;
+    const summary=p.title_en?p.resume_en:p.resume_zh;
+    const a=article(source,title,typeof summary==='string'?summary:'',url,date);
+    return a?[a]:[];
+  });
+}
 export function parseHtml(html: string, source: Source): Article[] {
+  if(source.kind==='midjourney-versions')return parseMidjourneyVersions(html,source);
+  if(source.kind==='z-ai-research')return parseZaiResearch(html,source);
   let safe = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,'');
   if(source.id==='kimi')safe = safe.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] || safe;
   const results = new Map<string,Article>();

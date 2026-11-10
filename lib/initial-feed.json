@@ -214,6 +214,15 @@
       "checkedAt": "2026-11-10T11:43:38.865Z"
     },
     {
+      "id": "z-ai",
+      "company": "Z AI",
+      "name": "Z.ai · GLM",
+      "url": "https://www.zhipuai.cn/en/research",
+      "status": "ok",
+      "count": 0,
+      "checkedAt": "2026-11-10T11:43:58.463Z"
+    },
+    {
       "id": "bfl",
       "company": "Black Forest Labs",
       "name": "Black Forest Labs · FLUX",
@@ -243,12 +252,11 @@
     {
       "id": "midjourney",
       "company": "Midjourney",
-      "name": "Midjourney Updates",
-      "url": "https://updates.midjourney.com/rss/",
-      "status": "error",
+      "name": "Midjourney · Model Releases",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
+      "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-10T11:43:38.865Z",
-      "error": "HTTP 404"
+      "checkedAt": "2026-11-10T11:44:40.503Z"
     },
     {
       "id": "microsoft",

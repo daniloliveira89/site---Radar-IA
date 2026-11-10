@@ -1,6 +1,6 @@
 'use client';
 import {useMemo,useState} from 'react';
-import {Search,ArrowUpRight,Network,Code2,Music2,Film,BookOpen,Briefcase,Boxes,Sparkles,Globe2,Check,Info} from 'lucide-react';
+import {Search,X,ArrowUpRight,Network,Code2,Music2,Film,BookOpen,Briefcase,Boxes,Sparkles,Globe2,Check,Info} from 'lucide-react';
 import catalog from '../lib/ecosystems.json';
 import Brand from './brand';
 import {useLanguage,useLabels} from './language';
@@ -9,13 +9,21 @@ export default function Ecosystems(){
  const {t,language}=useLanguage(),label=useLabels();
  const [company,setCompany]=useState('Google'),[group,setGroup]=useState('Todos'),[query,setQuery]=useState(''),[free,setFree]=useState(false);
  const normalize=(s:string)=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+ const search=normalize(query).trim();
  const companyItems=catalog.items.filter(i=>company==='Todos'||i.company===company),groups=['Todos',...new Set(companyItems.map(i=>i.group))];
- const items=useMemo(()=>catalog.items.filter(i=>(company==='Todos'||i.company===company)&&(group==='Todos'||i.group===group)&&(!free||/grátis/.test(i.access))&&(!query||normalize([i.name,i.company,i.description,i.descriptionEn,i.aliases].join(' ')).includes(normalize(query)))),[company,group,query,free]);
+ const items=useMemo(()=>catalog.items.filter(i=>(company==='Todos'||i.company===company)&&(group==='Todos'||i.group===group)&&(!free||/grátis/.test(i.access))&&(!search||normalize([i.name,i.company,i.description,i.descriptionEn,i.aliases].join(' ')).includes(search))),[company,group,search,free]);
  const byGroup=groups.filter(g=>g!=='Todos').map(g=>({group:g,items:items.filter(i=>i.group===g)})).filter(g=>g.items.length),hubs=company==='Todos'?[]:(catalog.hubs as Record<string,string[]>)[company]||[];
  return <section className="ecosystems-panel">
 
  <div className="ecosystem-company-tabs" aria-label={t('Choose an ecosystem','Escolher ecossistema')}><button className={company==='Todos'?'active':''} aria-pressed={company==='Todos'} onClick={()=>{setCompany('Todos');setGroup('Todos');}}>{t('All','Todos')}</button>{catalog.companies.map(c=><button key={c} className={company===c?'active':''} aria-pressed={company===c} onClick={()=>{setCompany(c);setGroup('Todos');}}><Brand name={c} small/>{c==='Alibaba / Qwen'?'Qwen':c==='Black Forest Labs'?'FLUX':c}</button>)}</div>
- <div className="ecosystem-toolbar"><label className="search-box"><Search size={17}/><input aria-label={t('Search ecosystem tools','Buscar ferramenta no ecossistema')} placeholder={t('Flow, music, agents, code…','Flow, música, agentes, código…')} value={query} onChange={e=>setQuery(e.target.value)}/></label><label className="free-filter"><input type="checkbox" checked={free} onChange={e=>setFree(e.target.checked)}/>{t('Confirmed free access','Acesso grátis confirmado')}</label></div>
+ <div className="ecosystem-toolbar">
+  <div className="ecosystem-search" role="search">
+   <Search size={17} aria-hidden="true"/>
+   <input type="search" aria-label={t('Search ecosystem tools','Buscar ferramentas no ecossistema')} placeholder={t('Search tools…','Buscar ferramentas…')} value={query} onChange={e=>setQuery(e.target.value)}/>
+   {query&&<button type="button" onClick={e=>{e.currentTarget.parentElement?.querySelector('input')?.focus();setQuery('');}} aria-label={t('Clear search','Limpar busca')}><X size={16}/></button>}
+  </div>
+  <label className="free-filter"><input type="checkbox" checked={free} onChange={e=>setFree(e.target.checked)}/>{t('Confirmed free access','Acesso grátis confirmado')}</label>
+ </div>
  <div className="ecosystem-groups" role="group" aria-label={t('Tool categories','Categorias de ferramentas')}>{groups.map(g=><button key={g} aria-pressed={group===g} className={group===g?'active':''} onClick={()=>setGroup(g)}>{label(g)}<span>{g==='Todos'?companyItems.length:companyItems.filter(i=>i.group===g).length}</span></button>)}</div>
 
 
