@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {parseBoard,parseBenchmarkCost,collectBenchmarks} from '../lib/benchmarks.ts';
 import {costPerScore,isBelowAnyAbove,highestScoreAbove,isTiedWithBestAbove,filterRedValueRows} from '../lib/benchmark-value.ts';
-import {selectComparisonRows,DEFAULT_COMPARISON_MODE} from '../lib/benchmark-selection.ts';
+import {selectComparisonRows,DEFAULT_COMPARISON_MODE,selectNonRedLanguageValueRows} from '../lib/benchmark-selection.ts';
 
 const row=(model,score,costUSD,costUnit='task')=>({model,company:'Test',score,costUSD,costUnit,preview:false});
 test('cost ranking uses a same-unit ratio and keeps unknown prices unranked at the end',()=>{
@@ -62,4 +62,15 @@ test('hide red preserves original candidates, ties, new highs, missing prices an
   assert(rows.every((r,i)=>r.model===['First','Lower','Partial recovery','Tie','New high','Unknown price','Below unknown high','Tie unknown high'][i]));
  }
  assert.deepEqual(filterRedValueRows([],'text',true),[]);
+});
+
+test('language cost view can fill 20 non-red slots from the entire priced board',()=>{
+ const eligible=Array.from({length:22},(_,i)=>row('Eligible '+i,40+i,(40+i)*(i+1)));
+ const dominated=row('Lower score at higher cost per point',50,50*30);
+ const unknown=row('Unpriced',100,undefined);
+ const result=selectNonRedLanguageValueRows([dominated,unknown,...eligible.slice().reverse()]);
+ assert.deepEqual(result,eligible.slice(2));
+ assert.equal(result.length,20);
+ assert(result.every((r,i)=>!isBelowAnyAbove(result,i)));
+ assert.deepEqual(selectNonRedLanguageValueRows([unknown,dominated,eligible[21]]),[eligible[21]]);
 });
