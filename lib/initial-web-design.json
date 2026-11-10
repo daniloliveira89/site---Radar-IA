@@ -1,0 +1,120 @@
+{
+  "id": "text",
+  "title": "Web Design",
+  "metric": "DesignArena · Website Elo",
+  "scope": "Website",
+  "description": "Human preferences in blind comparisons of AI-generated websites.",
+  "source": "https://www.designarena.ai/leaderboard/website",
+  "methodology": "https://www.designarena.ai/about",
+  "evaluation": "design-arena",
+  "rows": [
+    {
+      "model": "Muse Wonder (max)",
+      "company": "Meta",
+      "score": 1367,
+      "samples": 6249,
+      "preview": false
+    },
+    {
+      "model": "Muse Spark 1.3 (xhigh)",
+      "company": "Meta",
+      "score": 1352,
+      "samples": 31242,
+      "preview": false
+    },
+    {
+      "model": "Inkling 2 Small",
+      "company": "Thinking Machines",
+      "score": 1334,
+      "samples": 2368,
+      "preview": false
+    },
+    {
+      "model": "GPT-6 Astra (max)",
+      "company": "OpenAI",
+      "score": 1332,
+      "samples": 3131,
+      "preview": false
+    },
+    {
+      "model": "Kimi K3",
+      "company": "Kimi",
+      "score": 1331,
+      "samples": 5334,
+      "preview": false
+    },
+    {
+      "model": "Muse Ember",
+      "company": "Meta",
+      "score": 1329,
+      "samples": 1909,
+      "preview": false
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "company": "Anthropic",
+      "score": 1324,
+      "samples": 4323,
+      "preview": false
+    },
+    {
+      "model": "Kimi K3.1 Pro",
+      "company": "Kimi",
+      "score": 1320,
+      "samples": 4026,
+      "preview": false
+    },
+    {
+      "model": "GPT-5.6 Sol (xhigh)",
+      "company": "OpenAI",
+      "score": 1316,
+      "samples": 8266,
+      "preview": false
+    },
+    {
+      "model": "Claude Sonnet 5.5",
+      "company": "Anthropic",
+      "score": 1315,
+      "samples": 3515,
+      "preview": false
+    },
+    {
+      "model": "Gemini 4 Argon",
+      "company": "Google",
+      "score": 1314,
+      "samples": 11025,
+      "preview": false
+    },
+    {
+      "model": "Muse Spark 1.2",
+      "company": "Meta",
+      "score": 1310,
+      "samples": 35627,
+      "preview": false
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "company": "OpenAI",
+      "score": 1309,
+      "samples": 4417,
+      "preview": false
+    },
+    {
+      "model": "DeepSeek-V4.1-Flash",
+      "company": "DeepSeek",
+      "score": 1305,
+      "samples": 26358,
+      "preview": false
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "company": "Anthropic",
+      "score": 1305,
+      "samples": 6555,
+      "preview": false
+    }
+  ],
+  "publishedAt": "2026-11-10T14:06:00.000Z",
+  "checkedAt": "2026-11-10T15:27:48.820Z",
+  "status": "live"
+}

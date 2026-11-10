@@ -2,6 +2,7 @@ import {readFile,writeFile} from 'node:fs/promises';
 import {collectFeed,isNewsEligible} from '../lib/feed.ts';
 import {collectBenchmarks} from '../lib/benchmarks.ts';
 import {collectPricing} from '../lib/pricing.ts';
+import {WEB_DESIGN_LIMIT} from '../lib/web-design.ts';
 const root=new URL('../',import.meta.url);
 const read=async name=>JSON.parse(await readFile(new URL(`lib/${name}.json`,root),'utf8'));
 const save=async(name,data)=>writeFile(new URL(`lib/${name}.json`,root),JSON.stringify(data,null,2)+'\n');
@@ -15,6 +16,7 @@ if(!Array.isArray(news.sources)||benchmarks.boards.length!==3||pricing.services.
 if(!benchmarks.boards.every(b=>b.rows.length>=3&&b.rows.every(r=>Number.isFinite(r.score))))throw Error('Benchmark validation failed.');
 if(benchmarks.creativeWriting?.scope!=='Creative Writing'||benchmarks.creativeWriting.rows.length<15||!benchmarks.creativeWriting.rows.every(r=>Number.isFinite(r.score)))throw Error('Creative Writing validation failed.');
 if(benchmarks.creativeWritingLongform?.evaluation!=='eq-bench'||benchmarks.creativeWritingLongform.rows.length<15||!benchmarks.creativeWritingLongform.rows.every(r=>Number.isFinite(r.score)&&r.score>=0&&r.score<=100))throw Error('EQ-Bench Longform validation failed.');
+if(benchmarks.webDesign?.evaluation!=='design-arena'||benchmarks.webDesign.rows.length!==WEB_DESIGN_LIMIT)throw Error('DesignArena Website validation failed.');
 if(!pricing.services.every(s=>s.plans.every(p=>(p.monthly===null||Number.isFinite(p.monthly)&&p.monthly>=0)&&(p.annual===null||Number.isFinite(p.annual)&&p.annual>=0))))throw Error('Pricing validation failed.');
 await Promise.all([save('initial-feed',news),save('initial-benchmarks',benchmarks),save('initial-pricing',pricing)]);
 await import('./prepare-data.mjs');

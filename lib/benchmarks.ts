@@ -4,10 +4,12 @@ import {collectArena,collectCreativeWriting} from './arena.ts';
 import {collectLongform} from './longform-writing.ts';
 import {fetchRouterCatalogue} from './openrouter.ts';
 import {withLongformPrices} from './longform-pricing.ts';
+import {collectWebDesign} from './web-design.ts';
+import initialWebDesign from './initial-web-design.json' with {type:'json'};
 export type CostUnit='task'|'1k-images'|'minute'|'1m-tokens';
 export type BenchmarkRow={model:string;company:string;score:number;low?:number;high?:number;samples?:number;preview:boolean;costUSD?:number;costUnit?:CostUnit};
-export type Board={id:'text'|'image'|'video';title:string;metric:string;description:string;source:string;methodology:string;checkedAt:string;rows:BenchmarkRow[];status:'live'|'saved';error?:string;evaluation?:'aa'|'arena'|'eq-bench';scope?:string;publishedAt?:string;priceCheckedAt?:string};
-export type Benchmarks={boards:Board[];arenas?:Board[];creativeWriting?:Board;creativeWritingLongform?:Board;freeAccess?:FreeAccess};
+export type Board={id:'text'|'image'|'video';title:string;metric:string;description:string;source:string;methodology:string;checkedAt:string;rows:BenchmarkRow[];status:'live'|'saved';error?:string;evaluation?:'aa'|'arena'|'eq-bench'|'design-arena';scope?:string;publishedAt?:string;priceCheckedAt?:string};
+export type Benchmarks={boards:Board[];arenas?:Board[];creativeWriting?:Board;creativeWritingLongform?:Board;webDesign?:Board;freeAccess?:FreeAccess};
 export const BOARD_CONFIG=[
  {id:'text' as const,title:'Texto e raciocínio',metric:'AA Intelligence Index',description:'Desempenho agregado nas avaliações da Artificial Analysis. Configuração de raciocínio preservada no nome.',source:'https://artificialanalysis.ai/leaderboards/models',methodology:'https://artificialanalysis.ai/methodology/intelligence-benchmarking'},
  {id:'image' as const,title:'Criação de imagem',metric:'AA-Image-T2I v2.1 · Elo',description:'Geração de imagem a partir de texto. Preferências humanas em comparações cegas; não mede edição de imagem.',source:'https://artificialanalysis.ai/image/leaderboard/text-to-image',methodology:'https://artificialanalysis.ai/methodology/image'},
@@ -44,9 +46,10 @@ export async function collectBenchmarks(fallback:Benchmarks):Promise<Benchmarks>
  const freeAccess=collectFreeAccess(fallback.freeAccess||initialFreeAccess,router);
  const arenas=collectArena(fallback.arenas);
  const creativeWriting=collectCreativeWriting(fallback.creativeWriting);
+ const webDesign=collectWebDesign(fallback.webDesign||initialWebDesign as Board);
  const creativeWritingLongform=Promise.all([collectLongform(fallback.creativeWritingLongform),router]).then(([board,prices])=>withLongformPrices(board,prices,new Date().toISOString(),fallback.creativeWritingLongform));
  const boards=await Promise.all(BOARD_CONFIG.map(async config=>{
   try{const response=await fetch(config.source,{headers:{'User-Agent':'Mozilla/5.0 (compatible; RadarIA/2.0)'},signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error('Fonte indisponível');const html=await response.text();if(html.length>5_000_000)throw Error('Resposta muito grande');return {...config,checkedAt:new Date().toISOString(),rows:parseBoard(html,config.id),status:'live' as const};}
   catch{return {...fallback.boards.find(b=>b.id===config.id)!,status:'saved' as const,error:'Não foi possível atualizar esta avaliação. Exibindo a coleta identificada abaixo.'};}
- }));return {boards,arenas:await arenas,creativeWriting:await creativeWriting,creativeWritingLongform:await creativeWritingLongform,freeAccess:await freeAccess};
+ }));return {boards,arenas:await arenas,creativeWriting:await creativeWriting,creativeWritingLongform:await creativeWritingLongform,webDesign:await webDesign,freeAccess:await freeAccess};
 }

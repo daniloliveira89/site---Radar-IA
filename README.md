@@ -7,6 +7,7 @@ Site gratuito para acompanhar lançamentos de modelos, testes grátis e ecossist
 ## O que está incluído
 
 - Código-fonte completo desta edição, ícones e dados iniciais.
+- **Web Design** (Compare): os 15 modelos mais bem classificados na categoria [Website do DesignArena](https://www.designarena.ai/leaderboard/website), com nota Elo e número de comparações. A coleta automática preserva a última edição se a fonte falhar.
 - Publicação automática pelo GitHub Pages.
 - Coleta de notícias, comparativos e preços pelo GitHub Actions quatro vezes por dia e sob demanda. Cada envio para `main` publica a edição salva.
 - Execução manual da coleta em **Actions → Update & publish Radar IA → Run workflow**.
