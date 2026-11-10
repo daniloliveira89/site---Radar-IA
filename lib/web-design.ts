@@ -1,7 +1,6 @@
 import type {Board,BenchmarkRow} from './benchmarks.ts';
-import {clean} from './feed.ts';
 
-export const WEB_DESIGN_LIMIT=15;
+export const WEB_DESIGN_LIMIT=20;
 export const WEB_DESIGN_CONFIG={
  id:'text', title:'Web Design', metric:'DesignArena · Website Elo', scope:'Website',
  description:'Human preferences in blind comparisons of AI-generated websites.',
@@ -9,41 +8,42 @@ export const WEB_DESIGN_CONFIG={
  methodology:'https://www.designarena.ai/about', evaluation:'design-arena',
 } as const;
 
-// Extract only the top-level div cells of the published leaderboard row.
-function cellsOf(row:string):string[]{
- const cells:string[]=[];let depth=0,start=0;
- for(const tag of row.matchAll(/<\/?div\b[^>]*>/gi)){
-  if(/^<\//.test(tag[0])){
-   if(depth===0)break;
-   if(--depth===0)cells.push(row.slice(start,tag.index));
-  }else if(depth++===0)start=tag.index+tag[0].length;
+type WebsiteSeed={
+ boards?:{arenaType?:string;category?:string;variationName?:string;inputModality?:string;metadata?:{lastUpdateTime?:string};data?:{modelId:string;elo:number;battles:number}[]}[];
+ registry?:{models?:Record<string,{displayName?:string;provider?:string;modeOf?:string}>;providers?:Record<string,{displayName?:string}>};
+};
+function websiteSeed(html:string):WebsiteSeed{
+ // The public page renders only its first 15 rows; read the full board from its embedded data.
+ const frames=[...html.matchAll(/<script\b[^>]*>self\.__next_f\.push\((\[1,"(?:[^"\\]|\\[\s\S])*"\])\)<\/script>/g)];
+ const stream=frames.map(m=>JSON.parse(m[1])[1] as string).join('');
+ for(const line of stream.split('\n')){
+  if(!/^\w+:\[/.test(line)||!line.includes('"boards":')||!line.includes('"seed":'))continue;
+  const record=JSON.parse(line.slice(line.indexOf(':')+1)) as [unknown,unknown,unknown,{seed?:WebsiteSeed}];
+  const seed=record[3]?.seed;
+  if(seed?.boards?.some(b=>b.arenaType==='models'&&b.category==='website'&&b.variationName==='public'&&b.inputModality==='text')&&seed.registry?.models&&seed.registry.providers)return seed;
  }
- return cells;
+ throw Error('DesignArena Website board data missing');
 }
-const numberText=(s:string)=>/^\d[\d,]*$/.test(s)?Number(s.replaceAll(',','')):NaN;
-
 export function parseWebDesign(html:string):{rows:BenchmarkRow[],publishedAt:string}{
  if(!/<link\b[^>]*rel=["']canonical["'][^>]*href=["']https:\/\/(?:www\.)?designarena\.ai\/leaderboard\/website\/?["']/i.test(html))throw Error('DesignArena Website board not confirmed');
- const heading=/<h2\b[^>]*>\s*The Leaderboard\s*<\/h2>/i.exec(html);
- if(!heading)throw Error('DesignArena leaderboard missing');
- const section=html.slice(heading.index);
- const date=section.match(/<p\b[^>]*>\s*Updated ([^<]+?)\s*<\/p>/i)?.[1]||'';
- const publication=Date.parse(date);
- if(!Number.isFinite(publication)||!/\bUTC$/i.test(date))throw Error('DesignArena edition date missing');
- const matches=[...section.matchAll(/<div\b[^>]*\bdata-model-id=["']([^"']+)["'][^>]*>/gi)];
- const header=section.slice(0,matches[0]?.index??0);
- if(!['Elo Rating','Win Rate','Battles','Organization'].every(name=>header.includes(name)))throw Error('DesignArena table columns changed');
- const rows:BenchmarkRow[]=[],ids=new Set<string>();
- for(const [index,match] of matches.slice(0,WEB_DESIGN_LIMIT).entries()){
-  const cells=cellsOf(section.slice(match.index+match[0].length,matches[index+1]?.index));
-  if(cells.length!==8||ids.has(match[1]))throw Error('DesignArena row structure changed');
-  const rank=Number(clean(cells[0]).replace(/^#\s*/,'')), model=clean(cells[1].match(/<span\b[^>]*font-concrette[^>]*>([\s\S]*?)<\/span>/i)?.[1]||'');
-  const score=numberText(clean(cells[2].match(/<div\b[^>]*>([\s\S]*?)<\/div>/i)?.[1]||''));
-  const samples=numberText(clean(cells[5])),org=clean(cells[6]);
+ const {boards,registry}=websiteSeed(html);
+ const board=boards!.find(b=>b.arenaType==='models'&&b.category==='website'&&b.variationName==='public'&&b.inputModality==='text');
+ const publication=Date.parse(board?.metadata?.lastUpdateTime||'');
+ if(!Number.isFinite(publication)||!Array.isArray(board?.data))throw Error('DesignArena edition data missing');
+ const rows:BenchmarkRow[]=[],families=new Set<string>();
+ for(const result of [...board.data].sort((a,b)=>b.elo-a.elo)){
+  if(typeof result.modelId!=='string'||!Number.isInteger(result.elo)||result.elo<100||result.elo>3000||!Number.isSafeInteger(result.battles)||result.battles<1)throw Error('Invalid DesignArena ranking data');
+  const model=registry?.models?.[result.modelId];
+  const name=model?.displayName?.trim();
+  const org=model?.provider&&registry?.providers?.[model.provider]?.displayName?.trim();
+  if(!name||!org)throw Error('DesignArena model identity missing');
+  // Keep the highest-ranked effort variant per model, matching the source's default list.
+  const family=model.modeOf||result.modelId;
+  if(families.has(family))continue;
+  families.add(family);
   const company=({'moonshot ai':'Kimi','moonshot':'Kimi','z.ai':'Z AI','google deepmind':'Google','x.ai':'xAI'} as Record<string,string>)[org.toLowerCase()]||org;
-  if(!Number.isInteger(rank)||rank<1||(index===0&&rank!==1)||!model||!company||!Number.isSafeInteger(samples)||samples<1||score<100||score>3000||!Number.isInteger(score)||(index>0&&score>rows[index-1].score))throw Error('Invalid DesignArena ranking data');
-  ids.add(match[1]);
-  rows.push({model,company,score,samples,preview:/\b(?:preliminary|preview|beta|experimental)\b/i.test(clean(cells[1]))});
+  rows.push({model:name,company,score:result.elo,samples:result.battles,preview:/\b(?:preliminary|preview|beta|experimental)\b/i.test(name)});
+  if(rows.length===WEB_DESIGN_LIMIT)break;
  }
  if(rows.length<WEB_DESIGN_LIMIT)throw Error('Incomplete DesignArena leaderboard');
  return {rows,publishedAt:new Date(publication).toISOString()};
@@ -56,7 +56,7 @@ export async function collectWebDesign(fallback?:Board):Promise<Board>{
   const html=await response.text();if(html.length>5_000_000)throw Error('DesignArena response too large');
   return {...WEB_DESIGN_CONFIG,...parseWebDesign(html),status:'live',checkedAt:new Date().toISOString()};
  }catch{
-  const old=fallback?.evaluation===WEB_DESIGN_CONFIG.evaluation&&fallback.scope===WEB_DESIGN_CONFIG.scope?fallback:undefined;
+  const old=fallback?.evaluation===WEB_DESIGN_CONFIG.evaluation&&fallback.scope===WEB_DESIGN_CONFIG.scope&&fallback.rows.length>=WEB_DESIGN_LIMIT?fallback:undefined;
   return {...WEB_DESIGN_CONFIG,rows:[],checkedAt:'',...old,status:'saved',error:'DesignArena could not be refreshed. Showing the last available edition.'};
  }
 }

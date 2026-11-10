@@ -3,6 +3,7 @@ import {useEffect,useMemo,useState} from 'react';
 import {RefreshCw,ArrowUpRight,ChevronDown,Sparkles,PenLine,Image,Video,Table2,PanelsTopLeft} from 'lucide-react';
 import initial from '../lib/initial-benchmarks.json';
 import initialWebDesign from '../lib/initial-web-design.json';
+import {WEB_DESIGN_LIMIT} from '../lib/web-design';
 import {formatLongformModel} from '../lib/longform-writing';
 import type {Benchmarks,BenchmarkRow,Board} from '../lib/benchmarks';
 import {modelAccess} from '../lib/model-access';
@@ -40,7 +41,7 @@ function Plot({board,rows,offers,valueMode=false}:{board:Board,rows:BenchmarkRow
 }
 export default function Comparisons({onSourceChange}:{onSourceChange?:(source:Board)=>void}={}){
  const {t,locale,language}=useLanguage();
- const [data,setData]=useState<Benchmarks>({...initial as Benchmarks,webDesign:(initial as Benchmarks).webDesign||initialWebDesign as Board}),[active,setActive]=useState('text'),[provider,setProvider]=useState('aa'),[mode,setMode]=useState<string>(DEFAULT_COMPARISON_MODE),[writingMode,setWritingMode]=useState('top'),[writingSource,setWritingSource]=useState('eq-bench'),[longformMode,setLongformMode]=useState('top'),[loading,setLoading]=useState(false),[table,setTable]=useState(false),[hideRed,setHideRed]=useState(false);
+ const [data,setData]=useState<Benchmarks>({...initial as Benchmarks,webDesign:((initial as Benchmarks).webDesign?.rows.length??0)>=WEB_DESIGN_LIMIT?(initial as Benchmarks).webDesign:initialWebDesign as Board}),[active,setActive]=useState('text'),[provider,setProvider]=useState('aa'),[mode,setMode]=useState<string>(DEFAULT_COMPARISON_MODE),[writingMode,setWritingMode]=useState('top'),[writingSource,setWritingSource]=useState('eq-bench'),[longformMode,setLongformMode]=useState('top'),[loading,setLoading]=useState(false),[table,setTable]=useState(false),[hideRed,setHideRed]=useState(false);
  const saved=(b?:Board):Board|undefined=>b&&{...b,status:'saved'};
  async function refresh(manual=false){
   setLoading(true);
@@ -50,7 +51,7 @@ export default function Comparisons({onSourceChange}:{onSourceChange?:(source:Bo
    if(v.boards?.every(b=>b.rows?.length))setData(p=>({...v,
     creativeWriting:v.creativeWriting?.rows.length?v.creativeWriting:saved(p.creativeWriting),
     creativeWritingLongform:v.creativeWritingLongform?.rows.length?v.creativeWritingLongform:saved(p.creativeWritingLongform),
-    webDesign:v.webDesign?.rows.length?v.webDesign:p.webDesign,
+    webDesign:(v.webDesign?.rows.length??0)>=WEB_DESIGN_LIMIT?v.webDesign:p.webDesign,
    }));
   }catch{
    setData(p=>({...p,boards:p.boards.map(b=>({...b,status:'saved'})),arenas:p.arenas?.map(b=>({...b,status:'saved'})),creativeWriting:saved(p.creativeWriting),creativeWritingLongform:saved(p.creativeWritingLongform),webDesign:saved(p.webDesign)}));
@@ -63,7 +64,7 @@ export default function Comparisons({onSourceChange}:{onSourceChange?:(source:Bo
  const writingBoard=isLongform?'creativeWritingLongform':'creativeWriting';
  const board=isWeb?data.webDesign:isWriting?(data[writingBoard]||(initial as Benchmarks)[writingBoard]):boards.find(b=>b.id===active)||boards[0];
  const viewMode=isWeb?'top':isLongform?longformMode:isWriting?writingMode:mode,valueMode=viewMode==='value'||viewMode==='value-free',freeMode=viewMode==='free'||viewMode==='value-free';
- const selectedRows=useMemo(()=>board?selectComparisonRows(board.rows,viewMode,board.id,offers):[],[board,viewMode,offers]);
+ const selectedRows=useMemo(()=>board?(isWeb?board.rows.slice(0,WEB_DESIGN_LIMIT):selectComparisonRows(board.rows,viewMode,board.id,offers)):[],[board,isWeb,viewMode,offers]);
  const expandedLanguageValue=active==='text'&&!isArena&&viewMode==='value'&&hideRed;
  const rows=useMemo(()=>board?(expandedLanguageValue?selectNonRedLanguageValueRows(board.rows):filterRedValueRows(selectedRows,board.id,valueMode&&hideRed)):[],[board,selectedRows,valueMode,hideRed,expandedLanguageValue]);
  const sourceMode=isWriting?writingSource:provider;
@@ -90,7 +91,7 @@ export default function Comparisons({onSourceChange}:{onSourceChange?:(source:Bo
  {rows.length>0?<Plot board={board} rows={rows} offers={offers} valueMode={valueMode}/>:<div className="empty-state">{isWeb?t('The DesignArena ranking is temporarily unavailable.','O ranking do DesignArena está temporariamente indisponível.'):isLongform&&!freeMode?t('EQ-Bench Longform is currently unavailable. Try refreshing later.','O EQ-Bench Longform está indisponível. Tente atualizar mais tarde.'):isArena&&!freeMode?t('Arena is currently unavailable. Try refreshing later.','A Arena está indisponível. Tente atualizar mais tarde.'):valueMode?t('No published API prices in this edition.','Nenhum preço de API publicado nesta edição.'):t('No verified free models in this edition.','Nenhum modelo grátis verificado nesta edição.')}</div>}
  {freeMode&&board.id==='text'&&<div className="unranked-chats"><span>{t('More chats · model to confirm','Mais chats · modelo a confirmar')}</span>{[{company:'xAI',name:'Grok',url:'https://grok.com/'},{company:'Kimi',name:'Kimi',url:'https://www.kimi.com/'}].map(chat=><a key={chat.name} href={chat.url} target="_blank" rel="noopener noreferrer" title={t('The free tier’s exact model was not matched to this benchmark. No score is assigned.','A versão exata do plano grátis não foi identificada nesta avaliação. Nenhuma nota foi atribuída.')}><Brand name={chat.company} small/>{chat.name}<ArrowUpRight size={12}/></a>)}</div>}
  {isWeb?<div className="comparison-bottom"><details className="quiet-details benchmark-details"><summary>{t('Details','Detalhes')}</summary><div className="details-body">
-  <p>{t('Top 15 by Elo in the DesignArena Website category. People compare AI-generated sites without seeing which models made them. Battles are the number of comparisons for each model. The ranking measures voter preference for the generated sites.','Top 15 por Elo na categoria Website do DesignArena. Pessoas comparam sites gerados por IA sem saber quais modelos os criaram. O número de comparações aparece em cada linha. O ranking mede a preferência dos votantes pelos sites gerados.')}</p>
+  <p>{t('Top 20 by Elo in the DesignArena Website category, using each model’s best-ranked variant. People compare AI-generated sites without seeing which models made them. Battles are the number of comparisons for each model. The ranking measures voter preference for the generated sites.','Top 20 por Elo na categoria Website do DesignArena, com a variante mais bem colocada de cada modelo. Pessoas comparam sites gerados por IA sem saber quais modelos os criaram. O número de comparações aparece em cada linha. O ranking mede a preferência dos votantes pelos sites gerados.')}</p>
   {board.publishedAt&&<p>{t('Source edition','Edição da fonte')}: {new Intl.DateTimeFormat(locale,{dateStyle:'medium',timeStyle:'short',timeZone:'America/Sao_Paulo'}).format(new Date(board.publishedAt))} · Brasília</p>}
   <a href={board.methodology} target="_blank" rel="noopener noreferrer">{t('Methodology','Metodologia')} <ArrowUpRight size={12}/></a>
  </div></details></div>:<>

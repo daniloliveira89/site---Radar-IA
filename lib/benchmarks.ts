@@ -4,7 +4,7 @@ import {collectArena,collectCreativeWriting} from './arena.ts';
 import {collectLongform} from './longform-writing.ts';
 import {fetchRouterCatalogue} from './openrouter.ts';
 import {withLongformPrices} from './longform-pricing.ts';
-import {collectWebDesign} from './web-design.ts';
+import {collectWebDesign,WEB_DESIGN_LIMIT} from './web-design.ts';
 import initialWebDesign from './initial-web-design.json' with {type:'json'};
 export type CostUnit='task'|'1k-images'|'minute'|'1m-tokens';
 export type BenchmarkRow={model:string;company:string;score:number;low?:number;high?:number;samples?:number;preview:boolean;costUSD?:number;costUnit?:CostUnit};
@@ -46,7 +46,7 @@ export async function collectBenchmarks(fallback:Benchmarks):Promise<Benchmarks>
  const freeAccess=collectFreeAccess(fallback.freeAccess||initialFreeAccess,router);
  const arenas=collectArena(fallback.arenas);
  const creativeWriting=collectCreativeWriting(fallback.creativeWriting);
- const webDesign=collectWebDesign(fallback.webDesign||initialWebDesign as Board);
+ const webDesign=collectWebDesign((fallback.webDesign?.rows.length??0)>=WEB_DESIGN_LIMIT?fallback.webDesign:initialWebDesign as Board);
  const creativeWritingLongform=Promise.all([collectLongform(fallback.creativeWritingLongform),router]).then(([board,prices])=>withLongformPrices(board,prices,new Date().toISOString(),fallback.creativeWritingLongform));
  const boards=await Promise.all(BOARD_CONFIG.map(async config=>{
   try{const response=await fetch(config.source,{headers:{'User-Agent':'Mozilla/5.0 (compatible; RadarIA/2.0)'},signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error('Fonte indisponível');const html=await response.text();if(html.length>5_000_000)throw Error('Resposta muito grande');return {...config,checkedAt:new Date().toISOString(),rows:parseBoard(html,config.id),status:'live' as const};}
