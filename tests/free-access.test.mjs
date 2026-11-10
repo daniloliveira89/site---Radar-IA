@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {selectComparisonRows} from '../lib/benchmark-selection.ts';
-import {freeOffer,modelKey,parseFreeRouter,parseFreeGoogle,collectFreeAccess,initialFreeAccess,parseFreeOpenAI,parseFreeClaude} from '../lib/free-access.ts';
+import {freeOffer,modelKey,parseFreeRouter,parseFreeGoogle,collectFreeAccess,initialFreeAccess,parseFreeOpenAI,parseFreeClaude,parseFreeFlowImages,withFlowImageAccess,FLOW_IMAGE_SOURCE} from '../lib/free-access.ts';
+import {modelAccess} from '../lib/model-access.ts';
 const data=JSON.parse(fs.readFileSync(new URL('../lib/initial-benchmarks.json',import.meta.url)));
 test('free ranking preserves verified distinct models and source scores',()=>{
  const b=data.boards[0],offers=(data.freeAccess||initialFreeAccess).offers,rows=selectComparisonRows(b.rows,'free','text',offers);assert(rows.length<=10);assert.equal(new Set(rows.map(r=>modelKey(r.model))).size,rows.length);
@@ -43,6 +44,32 @@ test('creative rankings show up to five verified models per modality without mod
 });
 test('free access stays in its modality and excludes paid Nano Banana and Veo variants',()=>{
  assert(!freeOffer('Google','Nano Banana 2.1',initialFreeAccess.offers,'image'));assert(!freeOffer('Google','Veo 3.1',initialFreeAccess.offers,'video'));assert(!freeOffer('Google','Veo 3.1 Fast',initialFreeAccess.offers,'text'));assert(freeOffer('Google','Nano Banana 2 (Gemini 3.1 Flash Image)',initialFreeAccess.offers,'image'));
+});
+
+test('Flow verifies Nano Banana Pro against the no-plan column and matches the tested versions',()=>{
+ const html=quota=>`<table><tr><th>Model</th><th>Google AI Plus &amp; Pro</th><th>Without a Google AI plan</th></tr><tr><td><strong>Nano Banana Pro</strong></td><td>Up to 100 / day</td><td>${quota}</td></tr></table>`;
+ const offers=parseFreeFlowImages(html('Up to 20 / day'),'2026-11-10');
+ assert.equal(modelAccess('Google','Nano Banana Pro (Gemini 3 Pro Image)',offers,'image').en,'Free in Flow');
+ assert.match(freeOffer('Google','Gemini 3 Pro Image (nano-banana-pro, 2K)',offers,'image').limitsEn,/20 images per day/);
+ assert.equal(freeOffer('Google','Gemini 3 Pro Image Preview (nano-banana-pro)',offers,'image'),undefined);
+ assert.equal(freeOffer('Google','Gemini 3 Pro Image',offers,'text'),undefined);
+ assert.deepEqual(parseFreeFlowImages(html('Not available'),'2026-11-10'),[]);
+ assert.deepEqual(parseFreeFlowImages(html('0 per day'),'2026-11-10'),[]);
+ assert.throws(()=>parseFreeFlowImages(html('—'),'2026-11-10'));
+});
+
+test('Nano Banana Pro is visible in the image rankings without expanding the API cost shortlist',()=>{
+ const access=withFlowImageAccess({offers:[],sources:[]});
+ const paid=Array.from({length:24},(_,i)=>({model:`Paid model ${i+1}`,company:'Test',score:1200-i*5,costUSD:12}));
+ for(const [model,score] of [['Nano Banana Pro (Gemini 3 Pro Image)',1138],['Gemini 3 Pro Image (nano-banana-pro, 2K)',1118]]){
+  const pro={model,company:'Google',score,costUSD:140},rows=[...paid,pro];
+  const top=selectComparisonRows(rows,'top','image',access.offers),value=selectComparisonRows(rows,'value','image',access.offers);
+  assert.equal(top.length,20);assert(top.includes(pro));
+  assert.deepEqual(selectComparisonRows(rows,'free','image',access.offers),[pro]);
+  assert.equal(value.length,10);assert(!value.includes(pro));
+ }
+ const verifiedWithoutFreeOffer={offers:[],sources:access.sources.filter(s=>s.url===FLOW_IMAGE_SOURCE)};
+ assert.equal(withFlowImageAccess(verifiedWithoutFreeOffer),verifiedWithoutFreeOffer);
 });
 
 test('OpenRouter free routes match exact EQ-Bench IDs without mixing versions',()=>{

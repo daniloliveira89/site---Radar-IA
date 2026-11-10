@@ -5,6 +5,13 @@ export type FreeModality='text'|'image'|'video';
 export type FreeOffer={model:string;company:string;route:'api'|'chat'|'web';url:string;source:string;checkedAt:string;scope?:'model'|'family';modality?:FreeModality;aliases?:string[];modelIds?:string[];limitsEn?:string;limitsPt?:string;reportedByUser?:boolean};
 export type FreeAccess={offers:FreeOffer[];sources:{id:string;name?:string;url:string;checkedAt:string;status:'live'|'saved'}[]};
 export const initialFreeAccess=snapshot as FreeAccess;
+const flowImage={id:'flow-image-free',name:'Google Flow · Images',url:'https://support.google.com/flow/answer/16729550?hl=en'};
+export const FLOW_IMAGE_SOURCE=flowImage.url;
+// Older published benchmark snapshots predate this source. A later verified removal takes precedence.
+export function withFlowImageAccess(access:FreeAccess):FreeAccess{
+ if(access.sources.some(s=>s.id===flowImage.id))return access;
+ return {offers:[...access.offers,...initialFreeAccess.offers.filter(o=>o.source===flowImage.url)],sources:[...access.sources,...initialFreeAccess.sources.filter(s=>s.id===flowImage.id)]};
+}
 export const modelKey=(model:string)=>model.replace(/\((?:non-reasoning|xhigh|max|high|medium|low)(?: with fallback)?\)/gi,'').toLowerCase().replace(/[^a-z0-9]/g,'');
 export const writingChatAccess:FreeOffer[]=[{
  model:'GLM-5.3',company:'Z AI',route:'chat',url:'https://chat.z.ai/',source:'https://chat.z.ai/',checkedAt:'',reportedByUser:true,
@@ -27,6 +34,25 @@ export function freeOffer(company:string,model:string,offers:FreeOffer[]=initial
 
 const plain=(html:string)=>html.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
 const visible=(html:string)=>plain(html.replace(/<(script|style)\b[\s\S]*?<\/\1>/gi,' '));
+export function parseFreeFlowImages(html:string,checkedAt:string):FreeOffer[]{
+ for(const table of html.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/gi)){
+  const rows=[...table[1].matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].map(r=>[...r[1].matchAll(/<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/gi)].map(c=>plain(c[1])));
+  const header=rows.find(r=>r[0]==='Model'&&r.includes('Without a Google AI plan'));if(!header)continue;
+  const quota=rows.find(r=>r[0]==='Nano Banana Pro')?.[header.indexOf('Without a Google AI plan')]||'';
+  if(/^Not available\b/i.test(quota))return [];
+  const daily=quota.match(/^(?:Up to\s+)?([\d,]+)\s*(?:\/\s*|per\s+)day\b/i);
+  if(!daily)continue;
+  const limit=Number(daily[1].replaceAll(',',''));if(limit===0)return [];
+  if(!Number.isSafeInteger(limit))continue;
+  return [{
+   model:'Nano Banana Pro',company:'Google',route:'web',url:'https://labs.google/fx/tools/flow',source:flowImage.url,checkedAt,scope:'model',modality:'image',
+   aliases:['Nano Banana Pro (Gemini 3 Pro Image)','Gemini 3 Pro Image','Gemini 3 Pro Image (nano-banana-pro, 2K)'],
+   limitsEn:`Google Flow: up to ${limit.toLocaleString('en-US')} images per day without a Google AI plan. Gemini API billing is separate.`,
+   limitsPt:`Google Flow: até ${limit.toLocaleString('pt-BR')} imagens por dia sem plano Google AI. A API Gemini é cobrada à parte.`,
+  }];
+ }
+ throw Error('Google Flow image quotas unavailable');
+}
 export function parseCreativeOffers(html:string,id:string,checkedAt:string):FreeOffer[]{
  const c=creativeCatalog.find(c=>c.id===id);if(!c)throw Error('Unknown creative source');
  const text=visible(html).toLowerCase();if(!c.checks.every(s=>text.includes(s.toLowerCase())))throw Error('Free creative access needs review');
@@ -78,7 +104,7 @@ export function parseFreeDeepSeek(web:string,docs:string,checkedAt:string):FreeO
  return [{model:version.replace(/-/g,' '),company:'DeepSeek',route:'chat',url:'https://chat.deepseek.com/',source:'https://www.deepseek.com/en/',checkedAt}];
 }
 export async function collectFreeAccess(fallback:FreeAccess=initialFreeAccess,router?:Promise<RouterCatalogue|undefined>):Promise<FreeAccess>{
- const configs=[{id:'router',url:routerSource},{id:'google',url:'https://ai.google.dev/gemini-api/docs/pricing'},{id:'deepseek',url:'https://www.deepseek.com/en/'},{id:'openai',url:'https://chatgpt.com/pricing/'},{id:'anthropic',url:'https://claude.com/pricing'},...creativeCatalog];
+ const configs=[{id:'router',url:routerSource},{id:'google',url:'https://ai.google.dev/gemini-api/docs/pricing'},{id:'deepseek',url:'https://www.deepseek.com/en/'},{id:'openai',url:'https://chatgpt.com/pricing/'},{id:'anthropic',url:'https://claude.com/pricing'},...creativeCatalog,flowImage];
  const request=async(url:string)=>{const r=await fetch(url,{headers:{'User-Agent':'Mozilla/5.0 (compatible; RadarIA/2.0)'},signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error('Source unavailable');return r.text();};
  const results=await Promise.all(configs.map(async c=>{
   try{const checkedAt=new Date().toISOString();let offers:FreeOffer[];
@@ -88,6 +114,7 @@ export async function collectFreeAccess(fallback:FreeAccess=initialFreeAccess,ro
    else if(c.id==='google')offers=parseFreeGoogle(await request(c.url),checkedAt);
    else if(c.id==='openai')offers=parseFreeOpenAI(await request(c.url),checkedAt);
    else if(c.id==='anthropic')offers=parseFreeClaude(await request(c.url),checkedAt);
+   else if(c.id===flowImage.id)offers=parseFreeFlowImages(await request(c.url),checkedAt);
    else{const [web,docs]=await Promise.all([request(c.url),request('https://api-docs.deepseek.com/')]);offers=parseFreeDeepSeek(web,docs,checkedAt);}
    return {offers,source:{...c,checkedAt,status:'live' as const}};
   }catch{const previous=fallback.sources.some(s=>s.id===c.id)?fallback:initialFreeAccess;return {offers:previous.offers.filter(o=>o.source===c.url),source:{...c,checkedAt:previous.sources.find(s=>s.id===c.id)?.checkedAt||'',status:'saved' as const}};}

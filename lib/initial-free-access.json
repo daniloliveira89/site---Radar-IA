@@ -448,6 +448,23 @@
       "aliases": [
         "Dreamina Seedance 2.0 (720p)"
       ]
+    },
+    {
+      "model": "Nano Banana Pro",
+      "company": "Google",
+      "route": "web",
+      "url": "https://labs.google/fx/tools/flow",
+      "source": "https://support.google.com/flow/answer/16729550?hl=en",
+      "checkedAt": "2026-11-10T18:30:45.270Z",
+      "scope": "model",
+      "modality": "image",
+      "aliases": [
+        "Nano Banana Pro (Gemini 3 Pro Image)",
+        "Gemini 3 Pro Image",
+        "Gemini 3 Pro Image (nano-banana-pro, 2K)"
+      ],
+      "limitsEn": "Google Flow: up to 20 images per day without a Google AI plan. Gemini API billing is separate.",
+      "limitsPt": "Google Flow: até 20 imagens por dia sem plano Google AI. A API Gemini é cobrada à parte."
     }
   ],
   "sources": [
@@ -521,6 +538,13 @@
       "name": "Dreamina Seedance 2.0",
       "url": "https://dreamina.capcut.com/tools/seedance-2-0",
       "checkedAt": "2026-10-31T21:47:40.652085+00:00",
+      "status": "live"
+    },
+    {
+      "id": "flow-image-free",
+      "name": "Google Flow · Images",
+      "url": "https://support.google.com/flow/answer/16729550?hl=en",
+      "checkedAt": "2026-11-10T18:30:45.270Z",
       "status": "live"
     }
   ]
