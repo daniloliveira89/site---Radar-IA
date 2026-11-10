@@ -8,7 +8,7 @@ Site gratuito para acompanhar lançamentos de modelos, testes grátis e ecossist
 
 - Código-fonte completo desta edição, ícones e dados iniciais.
 - Publicação automática pelo GitHub Pages.
-- Coleta de notícias, comparativos e preços pelo GitHub Actions a cada seis horas, aproximadamente, e sob demanda. Cada envio para `main` publica a edição salva.
+- Coleta de notícias, comparativos e preços pelo GitHub Actions quatro vezes por dia e sob demanda. Cada envio para `main` publica a edição salva.
 - Execução manual da coleta em **Actions → Update & publish Radar IA → Run workflow**.
 - Sem chave de API de IA, sem assinatura de notícias e sem servidor contratado.
 - Compatibilidade com endereços `usuario.github.io/repositorio/` e instalação na tela inicial pelo Safari.
@@ -31,7 +31,7 @@ O visual, os filtros, EN/PT, salvos locais, comparativos e catálogo foram manti
 | Ecossistemas | Catálogo editorial revisado em 23/10/2026. Novas ferramentas exigem edição de `lib/ecosystems.json`. |
 | Notas de acesso | Regras em `lib/model-access.ts`; novas versões podem exigir revisão. Chat grátis não garante a configuração avaliada. |
 
-O cron usa `17 */6 * * *` em UTC: aproximadamente **21:17, 03:17, 09:17 e 15:17 no horário de Brasília**. O GitHub pode atrasar ou pular execuções. Workflows agendados de repositórios públicos podem ser desativados após 60 dias de inatividade; confira a aba Actions se a data do site parar de avançar.
+As coletas estão programadas para **07:17, 12:17, 17:17 e 22:17 no horário de Brasília** (`America/Sao_Paulo`). O GitHub pode atrasar ou pular execuções. Workflows agendados de repositórios públicos podem ser desativados após 60 dias de inatividade; confira a aba Actions se a data do site parar de avançar.
 
 Se uma fonte bloquear o coletor ou mudar seu HTML, o site mostra os dados anteriores com a data original e o estado da consulta. A edição anterior continua disponível se uma compilação falhar. Não há garantia de descobrir todos os anúncios ou novos planos automaticamente.
 

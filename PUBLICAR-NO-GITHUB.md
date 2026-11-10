@@ -21,8 +21,8 @@ Um primeiro job iniciado antes de ativar Pages pode falhar. Depois de ativar, ex
 
 ## 3. Atualizações
 
-- Uma coleta roda aproximadamente a cada seis horas e publica uma nova edição.
-- Também roda quando você envia alterações para `main`.
+- O GitHub programa quatro coletas por dia: **07:17, 12:17, 17:17 e 22:17 (horário de Brasília)**. Cada coleta concluída publica uma nova edição.
+- Envios para `main` publicam a edição salva.
 - Para antecipar uma coleta, use **Actions → Update & publish Radar IA → Run workflow**.
 - O botão dentro do site apenas recarrega os dados já publicados.
 - As coletas funcionam com o computador desligado. A agenda depende do GitHub e pode atrasar.
