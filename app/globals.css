@@ -265,4 +265,97 @@ footer { position:relative; display:flex; align-items:center; justify-content:sp
   .latest-info { white-space:normal; }
 }
 
+/* My AI Ranking styles */
+.my-ranking-panel { margin-bottom:45px; }
+.ranking-hero { border:1px solid var(--line); border-radius:12px; padding:28px 30px; background:linear-gradient(120deg,var(--paper),var(--side)); display:flex; align-items:center; justify-content:space-between; gap:28px; margin-bottom:24px; }
+.ranking-hero-copy { flex:1; max-width:720px; }
+.ranking-hero-tag { display:inline-flex; align-items:center; gap:6px; font-size:10px; font-weight:700; letter-spacing:1.3px; color:var(--green); margin-bottom:10px; }
+.ranking-hero-copy h2 { font-size:24px; letter-spacing:-.6px; margin:0 0 10px; font-weight:750; color:var(--text); line-height:1.3; }
+.ranking-hero-copy p { font-size:12px; line-height:1.8; color:var(--muted); margin:0; }
+.ranking-hero-stats { display:flex; gap:14px; flex-shrink:0; }
+.ranking-hero-stat { background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:14px 18px; min-width:95px; text-align:center; display:flex; flex-direction:column; gap:4px; }
+.ranking-hero-stat strong { font-size:25px; font-weight:800; color:var(--green); line-height:1.1; }
+.ranking-hero-stat span { font-size:10px; color:var(--muted); font-weight:500; }
+
+.ranking-category-tabs { display:flex; align-items:center; gap:6px; overflow-x:auto; padding-bottom:12px; margin-bottom:16px; border-bottom:1px solid var(--line); scrollbar-width:thin; }
+.ranking-category-tabs button { display:inline-flex; align-items:center; gap:7px; padding:8px 13px; border:1px solid var(--line); border-radius:8px; background:var(--paper); font-size:11px; font-weight:550; color:var(--muted); white-space:nowrap; cursor:pointer; transition:all .15s ease; }
+.ranking-category-tabs button:hover { background:var(--soft); color:var(--green); border-color:var(--green); }
+.ranking-category-tabs button.active { background:var(--soft); color:var(--green); border-color:var(--green); font-weight:700; box-shadow:0 2px 8px #00000008; }
+
+.ranking-toolbar { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:24px; flex-wrap:wrap; }
+.ranking-variants-filter { display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.toolbar-caption { font-size:11px; color:var(--muted); font-weight:600; margin-right:4px; }
+.ranking-variants-filter button { display:inline-flex; align-items:center; gap:6px; padding:6px 11px; border:1px solid var(--line); border-radius:6px; background:var(--paper); font-size:11px; font-weight:500; color:var(--muted); cursor:pointer; transition:all .15s ease; }
+.ranking-variants-filter button:hover { background:var(--soft); color:var(--green); border-color:var(--green); }
+.ranking-variants-filter button.active { background:var(--soft); color:var(--green); border-color:var(--green); font-weight:650; }
+
+.ranking-groups-container { display:flex; flex-direction:column; gap:36px; }
+.ranking-category-section { display:flex; flex-direction:column; gap:16px; }
+
+.category-section-header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 20px; background:var(--side); border:1px solid var(--line); border-radius:10px; }
+.category-header-main { display:flex; align-items:center; gap:14px; }
+.category-icon-bubble { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:9px; background:var(--paper); border:1px solid var(--line); color:var(--green); }
+.category-header-main h3 { margin:0 0 3px; font-size:16px; font-weight:750; color:var(--text); letter-spacing:-.3px; }
+.category-header-main p { margin:0; font-size:11px; color:var(--muted); line-height:1.5; }
+.category-header-tag { display:inline-flex; align-items:center; padding:5px 10px; border-radius:6px; background:var(--paper); border:1px solid var(--line); font-size:10px; font-weight:650; color:var(--green); white-space:nowrap; }
+
+.ranking-cards-list { display:flex; flex-direction:column; gap:12px; }
+.ranking-card { display:flex; gap:16px; background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:18px 20px; transition:border-color .18s,box-shadow .18s; }
+.ranking-card:hover { border-color:var(--green); box-shadow:0 6px 24px #0000000a; }
+
+.rank-position-col { display:flex; align-items:flex-start; flex-shrink:0; padding-top:2px; }
+.rank-badge { display:inline-flex; align-items:center; justify-content:center; gap:4px; min-width:44px; height:34px; padding:0 8px; border-radius:8px; font-size:13px; font-weight:800; border:1px solid var(--line); background:var(--side); color:var(--text); }
+.rank-badge-1 { background:#fef9c3; color:#854d0e; border-color:#fde047; box-shadow:0 2px 6px #facc1533; }
+.rank-badge-2 { background:#f1f5f9; color:#334155; border-color:#cbd5e1; }
+.rank-badge-3 { background:#ffedd5; color:#9a3412; border-color:#fdba74; }
+[data-theme=dark] .rank-badge-1 { background:#422006; color:#fef08a; border-color:#854d0e; }
+[data-theme=dark] .rank-badge-2 { background:#1e293b; color:#cbd5e1; border-color:#334155; }
+[data-theme=dark] .rank-badge-3 { background:#431407; color:#fed7aa; border-color:#9a3412; }
+
+.rank-content-main { flex:1; display:flex; flex-direction:column; gap:12px; min-width:0; }
+.rank-model-header { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+.model-titles { flex:1; min-width:180px; }
+.model-titles h4 { margin:0 0 3px; font-size:16px; font-weight:750; color:var(--text); letter-spacing:-.3px; }
+.model-account-meta { display:flex; align-items:center; gap:6px; font-size:11px; color:var(--muted); }
+.bullet-dot { font-weight:bold; opacity:.6; }
+
+.score-highlight-pill { display:flex; flex-direction:column; align-items:flex-end; gap:2px; }
+.highlight-text { font-size:10px; font-weight:700; color:var(--green); background:var(--soft); padding:3px 8px; border-radius:5px; border:1px solid color-mix(in srgb,var(--green) 30%,transparent); white-space:nowrap; }
+.score-val { font-size:10px; font-weight:600; color:var(--muted); }
+
+.why-best-block { background:var(--side); border:1px solid var(--line); border-radius:8px; padding:10px 14px; display:flex; flex-direction:column; gap:4px; }
+.why-best-label { font-size:10px; font-weight:700; letter-spacing:.3px; color:var(--green); text-transform:uppercase; }
+.why-best-block p { margin:0; font-size:12px; line-height:1.7; color:var(--text); }
+
+.rank-card-actions { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:2px; }
+.rank-variants { display:flex; align-items:center; gap:6px; }
+.variant-pill { display:inline-flex; align-items:center; gap:5px; font-size:10px; font-weight:600; padding:3px 7px; border-radius:5px; background:var(--paper); border:1px solid var(--line); color:var(--text); }
+.variant-pill.antigravity { border-color:color-mix(in srgb,var(--accent) 40%,var(--line)); color:var(--accent); }
+.variant-pill.codex { border-color:color-mix(in srgb,var(--green) 40%,var(--line)); color:var(--green); }
+
+.open-ai-button { display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border-radius:6px; background:var(--soft); color:var(--green); border:1px solid var(--line); font-size:11px; font-weight:650; transition:all .15s ease; margin-left:auto; }
+.open-ai-button:hover { background:var(--green); color:#fff; border-color:var(--green); }
+
+@media (max-width:900px) {
+  .ranking-hero { flex-direction:column; align-items:flex-start; gap:16px; padding:22px; }
+  .ranking-hero-stats { width:100%; justify-content:flex-start; }
+  .score-highlight-pill { align-items:flex-start; }
+}
+
+@media (max-width:700px) {
+  .ranking-hero { padding:18px; }
+  .ranking-hero-copy h2 { font-size:20px; }
+  .ranking-hero-stat { flex:1; min-width:75px; padding:10px; }
+  .ranking-hero-stat strong { font-size:20px; }
+  .ranking-category-tabs { gap:4px; }
+  .ranking-category-tabs button { font-size:10px; padding:7px 10px; }
+  .ranking-toolbar { flex-direction:column; align-items:stretch; }
+  .ranking-variants-filter { overflow-x:auto; flex-wrap:nowrap; padding-bottom:4px; }
+  .category-section-header { flex-direction:column; align-items:flex-start; gap:10px; padding:14px; }
+  .category-header-tag { align-self:flex-start; }
+  .ranking-card { flex-direction:column; gap:12px; padding:14px; }
+  .rank-position-col { align-self:flex-start; }
+  .open-ai-button { width:100%; justify-content:center; }
+}
+
 
