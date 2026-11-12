@@ -1,6 +1,23 @@
 {
   "articles": [
     {
+      "id": "Google:https://deepmind.google/blog/introducing-gemini-4-hydrogen",
+      "company": "Google",
+      "title": "Conheça Gemini 4 Hydrogen",
+      "originalTitle": "Introducing Gemini 4 Hydrogen",
+      "excerpt": "Google introduces Gemini 4 Hydrogen, a fast, cost-efficient model built for reliable agentic workflows and everyday tasks. Get the details.",
+      "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
+      "date": "2026-11-12T18:00:00.000Z",
+      "category": "Modelos",
+      "important": true,
+      "topics": [
+        "custos e preços",
+        "agentes e ferramentas"
+      ],
+      "summary": "Anúncio sobre modelos de IA. Entre os temas citados pela fonte: custos e preços, agentes e ferramentas.",
+      "newsKind": "Novo modelo"
+    },
+    {
       "id": "Google:https://deepmind.google/blog/gemini-4-carbon-is-now-available",
       "company": "Google",
       "title": "Gemini 4 Carbon is já disponível",
@@ -267,7 +284,7 @@
       "url": "https://openai.com/news/rss.xml",
       "status": "ok",
       "count": 4,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     },
     {
       "id": "deepmind",
@@ -275,8 +292,8 @@
       "name": "Google DeepMind",
       "url": "https://deepmind.google/blog/rss.xml",
       "status": "ok",
-      "count": 3,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "count": 4,
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     },
     {
       "id": "google",
@@ -285,7 +302,7 @@
       "url": "https://blog.google/technology/ai/rss/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     },
     {
       "id": "google-dev",
@@ -294,7 +311,7 @@
       "url": "https://developers.googleblog.com/feeds/posts/default",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     },
     {
       "id": "anthropic",
@@ -303,7 +320,7 @@
       "url": "https://www.anthropic.com/news",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     },
     {
       "id": "anthropic-models",
@@ -312,7 +329,7 @@
       "url": "https://www.anthropic.com/news/models",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     },
     {
       "id": "deepseek",
@@ -321,7 +338,7 @@
       "url": "https://www.deepseek.com/en/news/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     },
     {
       "id": "xai",
@@ -330,7 +347,7 @@
       "url": "https://x.ai/news",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-12T01:55:47.709Z",
+      "checkedAt": "2026-11-12T18:22:49.610Z",
       "error": "HTTP 403"
     },
     {
@@ -340,7 +357,7 @@
       "url": "https://www.kimi.com/en/blog/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     },
     {
       "id": "z-ai",
@@ -349,7 +366,7 @@
       "url": "https://www.zhipuai.cn/en/research",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     },
     {
       "id": "bfl",
@@ -358,7 +375,7 @@
       "url": "https://blackforestlabs.ai/blog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     },
     {
       "id": "runway",
@@ -367,7 +384,7 @@
       "url": "https://runwayml.com/changelog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     },
     {
       "id": "luma",
@@ -376,7 +393,7 @@
       "url": "https://lumalabs.ai/news",
       "status": "ok",
       "count": 6,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     },
     {
       "id": "midjourney",
@@ -385,7 +402,7 @@
       "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-12T01:55:47.709Z",
+      "checkedAt": "2026-11-12T18:22:49.610Z",
       "error": "HTTP 403"
     },
     {
@@ -395,7 +412,7 @@
       "url": "https://blogs.microsoft.com/feed/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     },
     {
       "id": "meta",
@@ -404,7 +421,7 @@
       "url": "https://about.fb.com/feed/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     },
     {
       "id": "mistral",
@@ -413,9 +430,9 @@
       "url": "https://mistral.ai/news/rss",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-12T01:55:47.709Z"
+      "checkedAt": "2026-11-12T18:22:49.610Z"
     }
   ],
-  "fetchedAt": "2026-11-12T01:55:47.709Z",
-  "nextCheckAt": "2026-11-12T07:55:47.709Z"
+  "fetchedAt": "2026-11-12T18:22:49.610Z",
+  "nextCheckAt": "2026-11-13T00:22:49.610Z"
 }

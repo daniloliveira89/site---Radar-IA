@@ -7,7 +7,7 @@
       "description": "Desempenho agregado nas avaliações da Artificial Analysis. Configuração de raciocínio preservada no nome.",
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "methodology": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
-      "checkedAt": "2026-11-12T01:55:49.066Z",
+      "checkedAt": "2026-11-12T18:22:51.196Z",
       "rows": [
         {
           "model": "Claude Fable 5.2 (max)",
@@ -130,6 +130,14 @@
           "preview": false
         },
         {
+          "model": "Gemini 4 Hydrogen (xhigh)",
+          "company": "Google",
+          "score": 54,
+          "costUSD": 3.16,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "GPT-6.1 Sol (xhigh)",
           "company": "OpenAI",
           "score": 52,
@@ -158,6 +166,14 @@
           "company": "OpenAI",
           "score": 51,
           "costUSD": 0.96,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Gemini 4 Hydrogen (high)",
+          "company": "Google",
+          "score": 51,
+          "costUSD": 1.87,
           "costUnit": "task",
           "preview": false
         },
@@ -252,6 +268,14 @@
           "company": "Anthropic",
           "score": 42,
           "costUSD": 1.64,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Gemini 4 Hydrogen (medium)",
+          "company": "Google",
+          "score": 41,
+          "costUSD": 0.8,
           "costUnit": "task",
           "preview": false
         },
@@ -492,6 +516,14 @@
           "company": "Z AI",
           "score": 28,
           "costUSD": 0.58,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Gemini 4 Hydrogen (low)",
+          "company": "Google",
+          "score": 27,
+          "costUSD": 0.29,
           "costUnit": "task",
           "preview": false
         },
@@ -859,72 +891,72 @@
       "description": "Geração de imagem a partir de texto. Preferências humanas em comparações cegas; não mede edição de imagem.",
       "source": "https://artificialanalysis.ai/image/leaderboard/text-to-image",
       "methodology": "https://artificialanalysis.ai/methodology/image",
-      "checkedAt": "2026-11-12T01:55:49.182Z",
+      "checkedAt": "2026-11-12T18:22:51.339Z",
       "rows": [
         {
           "model": "GPT Image 2.6 Sunburst (max)",
           "company": "OpenAI",
-          "score": 1261,
+          "score": 1262,
           "costUSD": 210.72,
           "costUnit": "1k-images",
-          "low": 1247,
-          "high": 1275,
-          "samples": 5171,
+          "low": 1248,
+          "high": 1276,
+          "samples": 5214,
           "preview": false
         },
         {
           "model": "GPT Image 2.5 Sunburst (max)",
           "company": "OpenAI",
-          "score": 1229,
+          "score": 1230,
           "costUSD": 210.72,
           "costUnit": "1k-images",
-          "low": 1219,
-          "high": 1239,
-          "samples": 13529,
+          "low": 1220,
+          "high": 1240,
+          "samples": 13575,
           "preview": false
         },
         {
           "model": "GPT Image 2.6 Flare (max)",
           "company": "OpenAI",
-          "score": 1226,
+          "score": 1227,
           "costUSD": 210.72,
           "costUnit": "1k-images",
-          "low": 1214,
-          "high": 1238,
-          "samples": 7057,
+          "low": 1215,
+          "high": 1239,
+          "samples": 7113,
           "preview": false
         },
         {
           "model": "GPT Image 2.5 Flare (max)",
           "company": "OpenAI",
-          "score": 1210,
+          "score": 1211,
           "costUSD": 210.72,
           "costUnit": "1k-images",
-          "low": 1200,
-          "high": 1220,
-          "samples": 12869,
+          "low": 1201,
+          "high": 1221,
+          "samples": 12921,
           "preview": false
         },
         {
           "model": "GPT Image 2 (high)",
           "company": "OpenAI",
-          "score": 1190,
+          "score": 1189,
           "costUSD": 211,
           "costUnit": "1k-images",
-          "low": 1179,
-          "high": 1201,
-          "samples": 13334,
+          "low": 1178,
+          "high": 1200,
+          "samples": 13385,
           "preview": false
         },
         {
           "model": "Nano Banana 2.1",
           "company": "Google",
-          "score": 1176,
+          "score": 1177,
           "costUSD": 33.6,
           "costUnit": "1k-images",
-          "low": 1164,
-          "high": 1188,
-          "samples": 6648,
+          "low": 1165,
+          "high": 1189,
+          "samples": 6701,
           "preview": false
         },
         {
@@ -935,29 +967,29 @@
           "costUnit": "1k-images",
           "low": 1158,
           "high": 1182,
-          "samples": 8845,
+          "samples": 8901,
           "preview": false
         },
         {
           "model": "Grok Imagine Image 2.0",
           "company": "xAI",
-          "score": 1168,
+          "score": 1167,
           "costUSD": 60,
           "costUnit": "1k-images",
-          "low": 1156,
-          "high": 1180,
-          "samples": 7935,
+          "low": 1155,
+          "high": 1179,
+          "samples": 7990,
           "preview": false
         },
         {
           "model": "Nano Banana 2 (Gemini 3.1 Flash Image)",
           "company": "Google",
-          "score": 1143,
+          "score": 1144,
           "costUSD": 67,
           "costUnit": "1k-images",
-          "low": 1133,
-          "high": 1153,
-          "samples": 16553,
+          "low": 1134,
+          "high": 1154,
+          "samples": 16600,
           "preview": false
         },
         {
@@ -966,9 +998,9 @@
           "score": 1135,
           "costUSD": 20,
           "costUnit": "1k-images",
-          "low": 1122,
-          "high": 1148,
-          "samples": 5128,
+          "low": 1123,
+          "high": 1147,
+          "samples": 5162,
           "preview": false
         },
         {
@@ -979,7 +1011,18 @@
           "costUnit": "1k-images",
           "low": 1117,
           "high": 1139,
-          "samples": 8960,
+          "samples": 9006,
+          "preview": false
+        },
+        {
+          "model": "MAI-Image-2.6-Flash",
+          "company": "Microsoft",
+          "score": 1126,
+          "costUSD": 19.46,
+          "costUnit": "1k-images",
+          "low": 1114,
+          "high": 1138,
+          "samples": 6006,
           "preview": false
         },
         {
@@ -990,18 +1033,7 @@
           "costUnit": "1k-images",
           "low": 1114,
           "high": 1136,
-          "samples": 13325,
-          "preview": false
-        },
-        {
-          "model": "MAI-Image-2.6-Flash",
-          "company": "Microsoft",
-          "score": 1125,
-          "costUSD": 19.46,
-          "costUnit": "1k-images",
-          "low": 1113,
-          "high": 1137,
-          "samples": 5954,
+          "samples": 13376,
           "preview": false
         },
         {
@@ -1012,29 +1044,29 @@
           "costUnit": "1k-images",
           "low": 1110,
           "high": 1130,
-          "samples": 15710,
+          "samples": 15765,
           "preview": false
         },
         {
           "model": "MAI-Image-2.5",
           "company": "Microsoft",
-          "score": 1118,
+          "score": 1119,
           "costUSD": 48.13,
           "costUnit": "1k-images",
-          "low": 1107,
-          "high": 1129,
-          "samples": 14261,
+          "low": 1108,
+          "high": 1130,
+          "samples": 14316,
           "preview": false
         },
         {
           "model": "MAI-Image-2.5-Pro",
           "company": "Microsoft",
-          "score": 1117,
+          "score": 1118,
           "costUSD": 108.54,
           "costUnit": "1k-images",
-          "low": 1107,
+          "low": 1109,
           "high": 1127,
-          "samples": 12677,
+          "samples": 12725,
           "preview": false
         },
         {
@@ -1045,7 +1077,7 @@
           "costUnit": "1k-images",
           "low": 1103,
           "high": 1127,
-          "samples": 6601,
+          "samples": 6641,
           "preview": false
         },
         {
@@ -1056,18 +1088,18 @@
           "costUnit": "1k-images",
           "low": 1101,
           "high": 1121,
-          "samples": 15591,
+          "samples": 15637,
           "preview": false
         },
         {
           "model": "Seedream 5.0 Pro",
           "company": "ByteDance",
-          "score": 1102,
+          "score": 1103,
           "costUSD": 90,
           "costUnit": "1k-images",
-          "low": 1091,
-          "high": 1113,
-          "samples": 12137,
+          "low": 1092,
+          "high": 1114,
+          "samples": 12181,
           "preview": false
         },
         {
@@ -1078,7 +1110,7 @@
           "costUnit": "1k-images",
           "low": 1084,
           "high": 1108,
-          "samples": 6844,
+          "samples": 6880,
           "preview": false
         },
         {
@@ -1089,40 +1121,40 @@
           "costUnit": "1k-images",
           "low": 1064,
           "high": 1088,
-          "samples": 6576,
+          "samples": 6630,
           "preview": false
         },
         {
           "model": "H3-Image Highspeed",
           "company": "MiniMax",
-          "score": 1072,
+          "score": 1071,
           "costUSD": 35.29,
           "costUnit": "1k-images",
           "low": 1057,
-          "high": 1087,
-          "samples": 3199,
+          "high": 1085,
+          "samples": 3246,
           "preview": false
         },
         {
           "model": "H3-Image",
           "company": "MiniMax",
-          "score": 1066,
+          "score": 1067,
           "costUSD": 21.79,
           "costUnit": "1k-images",
-          "low": 1051,
-          "high": 1081,
-          "samples": 3093,
+          "low": 1052,
+          "high": 1082,
+          "samples": 3143,
           "preview": false
         },
         {
           "model": "Qwen-Image-2.1-Pro",
           "company": "Alibaba",
-          "score": 1058,
+          "score": 1059,
           "costUSD": 35.33,
           "costUnit": "1k-images",
-          "low": 1046,
-          "high": 1070,
-          "samples": 5464,
+          "low": 1047,
+          "high": 1071,
+          "samples": 5511,
           "preview": false
         },
         {
@@ -1133,71 +1165,71 @@
           "costUnit": "1k-images",
           "low": 1041,
           "high": 1059,
-          "samples": 17257,
+          "samples": 17301,
           "preview": false
         },
         {
           "model": "Qwen-Image-2.1",
           "company": "Alibaba",
-          "score": 1046,
-          "low": 1034,
-          "high": 1058,
-          "samples": 6184,
+          "score": 1047,
+          "low": 1035,
+          "high": 1059,
+          "samples": 6226,
           "preview": false
         },
         {
           "model": "FLUX 3 Image Klein",
           "company": "Black Forest Labs",
-          "score": 1043,
+          "score": 1044,
           "costUSD": 9,
           "costUnit": "1k-images",
-          "low": 1031,
+          "low": 1033,
           "high": 1055,
-          "samples": 5653,
+          "samples": 5696,
           "preview": false
         },
         {
           "model": "Fibo 2.0",
           "company": "Bria",
-          "score": 1037,
+          "score": 1038,
           "costUSD": 32,
           "costUnit": "1k-images",
-          "low": 1026,
-          "high": 1048,
-          "samples": 5588,
+          "low": 1027,
+          "high": 1049,
+          "samples": 5634,
           "preview": false
         },
         {
           "model": "Krea 2 Large",
           "company": "Krea",
-          "score": 1035,
+          "score": 1036,
           "costUSD": 60,
           "costUnit": "1k-images",
-          "low": 1026,
-          "high": 1044,
-          "samples": 14989,
+          "low": 1027,
+          "high": 1045,
+          "samples": 15048,
           "preview": false
         },
         {
           "model": "MAI-Image-2.5-Flash",
           "company": "Microsoft",
-          "score": 1033,
+          "score": 1034,
           "costUSD": 19.97,
           "costUnit": "1k-images",
-          "low": 1022,
-          "high": 1044,
-          "samples": 6327,
+          "low": 1023,
+          "high": 1045,
+          "samples": 6373,
           "preview": false
         },
         {
           "model": "Qwen Image 2.0 Pro (2026-04-22)",
           "company": "Alibaba",
-          "score": 1032,
+          "score": 1033,
           "costUSD": 75,
           "costUnit": "1k-images",
-          "low": 1021,
-          "high": 1043,
-          "samples": 6577,
+          "low": 1022,
+          "high": 1044,
+          "samples": 6623,
           "preview": false
         },
         {
@@ -1208,7 +1240,7 @@
           "costUnit": "1k-images",
           "low": 1019,
           "high": 1041,
-          "samples": 6899,
+          "samples": 6951,
           "preview": false
         },
         {
@@ -1219,18 +1251,29 @@
           "costUnit": "1k-images",
           "low": 1017,
           "high": 1039,
-          "samples": 7950,
+          "samples": 7997,
           "preview": false
         },
         {
           "model": "FLUX.2 [flex]",
           "company": "Black Forest Labs",
-          "score": 1027,
+          "score": 1028,
           "costUSD": 60,
+          "costUnit": "1k-images",
+          "low": 1017,
+          "high": 1039,
+          "samples": 6607,
+          "preview": false
+        },
+        {
+          "model": "Luma UNI 1 Max",
+          "company": "Luma",
+          "score": 1027,
+          "costUSD": 100,
           "costUnit": "1k-images",
           "low": 1016,
           "high": 1038,
-          "samples": 6570,
+          "samples": 6007,
           "preview": false
         },
         {
@@ -1241,29 +1284,7 @@
           "costUnit": "1k-images",
           "low": 1016,
           "high": 1036,
-          "samples": 11130,
-          "preview": false
-        },
-        {
-          "model": "Luma UNI 1 Max",
-          "company": "Luma",
-          "score": 1026,
-          "costUSD": 100,
-          "costUnit": "1k-images",
-          "low": 1015,
-          "high": 1037,
-          "samples": 5963,
-          "preview": false
-        },
-        {
-          "model": "grok-imagine-image",
-          "company": "xAI",
-          "score": 1025,
-          "costUSD": 20,
-          "costUnit": "1k-images",
-          "low": 1014,
-          "high": 1036,
-          "samples": 6837,
+          "samples": 11175,
           "preview": false
         },
         {
@@ -1272,9 +1293,9 @@
           "score": 1025,
           "costUSD": 30,
           "costUnit": "1k-images",
-          "low": 1013,
-          "high": 1037,
-          "samples": 5851,
+          "low": 1014,
+          "high": 1036,
+          "samples": 5894,
           "preview": false
         },
         {
@@ -1285,7 +1306,18 @@
           "costUnit": "1k-images",
           "low": 1013,
           "high": 1037,
-          "samples": 5130,
+          "samples": 5192,
+          "preview": false
+        },
+        {
+          "model": "grok-imagine-image",
+          "company": "xAI",
+          "score": 1025,
+          "costUSD": 20,
+          "costUnit": "1k-images",
+          "low": 1014,
+          "high": 1036,
+          "samples": 6876,
           "preview": false
         },
         {
@@ -1296,7 +1328,18 @@
           "costUnit": "1k-images",
           "low": 1012,
           "high": 1032,
-          "samples": 11600,
+          "samples": 11644,
+          "preview": false
+        },
+        {
+          "model": "Seedream 5.0 Lite",
+          "company": "ByteDance",
+          "score": 1022,
+          "costUSD": 35,
+          "costUnit": "1k-images",
+          "low": 1011,
+          "high": 1033,
+          "samples": 6154,
           "preview": false
         },
         {
@@ -1307,62 +1350,51 @@
           "costUnit": "1k-images",
           "low": 1010,
           "high": 1032,
-          "samples": 6529,
-          "preview": false
-        },
-        {
-          "model": "Seedream 5.0 Lite",
-          "company": "ByteDance",
-          "score": 1020,
-          "costUSD": 35,
-          "costUnit": "1k-images",
-          "low": 1009,
-          "high": 1031,
-          "samples": 6111,
+          "samples": 6574,
           "preview": false
         },
         {
           "model": "Recraft V4.1 Utility Pro",
           "company": "Recraft",
-          "score": 1019,
+          "score": 1020,
           "costUSD": 210,
           "costUnit": "1k-images",
-          "low": 1010,
-          "high": 1028,
-          "samples": 15931,
+          "low": 1011,
+          "high": 1029,
+          "samples": 15975,
           "preview": false
         },
         {
           "model": "HiDream-O1-Image-1.5",
           "company": "HiDream",
-          "score": 1018,
+          "score": 1020,
           "costUSD": 80,
           "costUnit": "1k-images",
-          "low": 1007,
-          "high": 1029,
-          "samples": 12652,
+          "low": 1009,
+          "high": 1031,
+          "samples": 12696,
           "preview": false
         },
         {
           "model": "Wan2.6 Text to Image",
           "company": "Alibaba",
-          "score": 1017,
+          "score": 1018,
           "costUSD": 30,
           "costUnit": "1k-images",
-          "low": 1006,
-          "high": 1028,
-          "samples": 6030,
+          "low": 1007,
+          "high": 1029,
+          "samples": 6088,
           "preview": false
         },
         {
           "model": "GPT Image 1 (high)",
           "company": "OpenAI",
-          "score": 1016,
+          "score": 1018,
           "costUSD": 167,
           "costUnit": "1k-images",
-          "low": 1004,
-          "high": 1028,
-          "samples": 6013,
+          "low": 1006,
+          "high": 1030,
+          "samples": 6053,
           "preview": false
         },
         {
@@ -1373,29 +1405,29 @@
           "costUnit": "1k-images",
           "low": 1002,
           "high": 1030,
-          "samples": 3394,
+          "samples": 3440,
           "preview": false
         },
         {
           "model": "Krea 2 Medium",
           "company": "Krea",
-          "score": 1014,
+          "score": 1015,
           "costUSD": 30,
           "costUnit": "1k-images",
-          "low": 1005,
-          "high": 1023,
-          "samples": 14948,
+          "low": 1006,
+          "high": 1024,
+          "samples": 14983,
           "preview": false
         },
         {
           "model": "FLUX.2 [pro]",
           "company": "Black Forest Labs",
-          "score": 1004,
+          "score": 1005,
           "costUSD": 30,
           "costUnit": "1k-images",
-          "low": 994,
-          "high": 1014,
-          "samples": 11286,
+          "low": 995,
+          "high": 1015,
+          "samples": 11334,
           "preview": false
         },
         {
@@ -1406,7 +1438,7 @@
           "costUnit": "1k-images",
           "low": 993,
           "high": 1013,
-          "samples": 10555,
+          "samples": 10593,
           "preview": false
         },
         {
@@ -1417,7 +1449,7 @@
           "costUnit": "1k-images",
           "low": 993,
           "high": 1011,
-          "samples": 20746,
+          "samples": 20776,
           "preview": false
         },
         {
@@ -1426,29 +1458,29 @@
           "score": 1000,
           "costUSD": 12,
           "costUnit": "1k-images",
-          "samples": 18571,
+          "samples": 18625,
           "preview": false
         },
         {
           "model": "P-Image-Ideogram (High)",
           "company": "Pruna AI",
-          "score": 997,
+          "score": 998,
           "costUSD": 15,
           "costUnit": "1k-images",
-          "low": 984,
-          "high": 1010,
-          "samples": 4070,
+          "low": 985,
+          "high": 1011,
+          "samples": 4117,
           "preview": false
         },
         {
           "model": "Luma UNI 1",
           "company": "Luma",
-          "score": 996,
+          "score": 997,
           "costUSD": 40.4,
           "costUnit": "1k-images",
-          "low": 985,
-          "high": 1007,
-          "samples": 6031,
+          "low": 986,
+          "high": 1008,
+          "samples": 6086,
           "preview": false
         },
         {
@@ -1459,60 +1491,49 @@
           "costUnit": "1k-images",
           "low": 985,
           "high": 1007,
-          "samples": 6804,
+          "samples": 6841,
           "preview": false
         },
         {
           "model": "Cosmos3-Super-Text2Image (agentic)",
           "company": "NVIDIA",
-          "score": 995,
-          "low": 986,
-          "high": 1004,
-          "samples": 12039,
-          "preview": false
-        },
-        {
-          "model": "Qwen Image 2.0 (2026-03-03)",
-          "company": "Alibaba",
-          "score": 994,
-          "costUSD": 35,
-          "costUnit": "1k-images",
-          "low": 979,
-          "high": 1009,
-          "samples": 3115,
+          "score": 996,
+          "low": 987,
+          "high": 1005,
+          "samples": 12083,
           "preview": false
         },
         {
           "model": "P-Image-Ideogram (Very High)",
           "company": "Pruna AI",
-          "score": 993,
+          "score": 995,
           "costUSD": 33,
           "costUnit": "1k-images",
-          "low": 979,
-          "high": 1007,
-          "samples": 3267,
+          "low": 981,
+          "high": 1009,
+          "samples": 3312,
           "preview": false
         },
         {
           "model": "HunyuanImage 3.0 (Tencent Cloud)",
           "company": "Tencent",
-          "score": 993,
+          "score": 994,
           "costUSD": 32,
           "costUnit": "1k-images",
-          "low": 978,
-          "high": 1008,
-          "samples": 3041,
+          "low": 979,
+          "high": 1009,
+          "samples": 3095,
           "preview": false
         },
         {
-          "model": "Wan 2.7",
+          "model": "Qwen Image 2.0 (2026-03-03)",
           "company": "Alibaba",
-          "score": 989,
-          "costUSD": 26,
+          "score": 993,
+          "costUSD": 35,
           "costUnit": "1k-images",
           "low": 978,
-          "high": 1000,
-          "samples": 5995,
+          "high": 1008,
+          "samples": 3164,
           "preview": false
         },
         {
@@ -1523,7 +1544,29 @@
           "costUnit": "1k-images",
           "low": 979,
           "high": 999,
-          "samples": 11349,
+          "samples": 11410,
+          "preview": false
+        },
+        {
+          "model": "Wan 2.7",
+          "company": "Alibaba",
+          "score": 989,
+          "costUSD": 26,
+          "costUnit": "1k-images",
+          "low": 978,
+          "high": 1000,
+          "samples": 6038,
+          "preview": false
+        },
+        {
+          "model": "Nano Banana (Gemini 2.5 Flash Image)",
+          "company": "Google",
+          "score": 988,
+          "costUSD": 39,
+          "costUnit": "1k-images",
+          "low": 976,
+          "high": 1000,
+          "samples": 5818,
           "preview": false
         },
         {
@@ -1534,27 +1577,16 @@
           "costUnit": "1k-images",
           "low": 975,
           "high": 999,
-          "samples": 5834,
-          "preview": false
-        },
-        {
-          "model": "Nano Banana (Gemini 2.5 Flash Image)",
-          "company": "Google",
-          "score": 987,
-          "costUSD": 39,
-          "costUnit": "1k-images",
-          "low": 975,
-          "high": 999,
-          "samples": 5787,
+          "samples": 5883,
           "preview": false
         },
         {
           "model": "HunyuanImage 3.0 Instruct",
           "company": "Tencent",
-          "score": 986,
-          "low": 974,
-          "high": 998,
-          "samples": 6201,
+          "score": 987,
+          "low": 975,
+          "high": 999,
+          "samples": 6248,
           "preview": false
         },
         {
@@ -1565,7 +1597,7 @@
           "costUnit": "1k-images",
           "low": 973,
           "high": 997,
-          "samples": 5963,
+          "samples": 6011,
           "preview": false
         },
         {
@@ -1576,18 +1608,18 @@
           "costUnit": "1k-images",
           "low": 972,
           "high": 994,
-          "samples": 6434,
+          "samples": 6485,
           "preview": false
         },
         {
           "model": "Wan 2.7 Pro",
           "company": "Alibaba",
-          "score": 981,
+          "score": 982,
           "costUSD": 75,
           "costUnit": "1k-images",
-          "low": 969,
-          "high": 993,
-          "samples": 5947,
+          "low": 970,
+          "high": 994,
+          "samples": 5985,
           "preview": false
         },
         {
@@ -1598,30 +1630,19 @@
           "costUnit": "1k-images",
           "low": 969,
           "high": 989,
-          "samples": 11134,
+          "samples": 11178,
           "preview": false
         },
         {
           "model": "P-Image-Ideogram (Medium)",
           "company": "Pruna AI",
-          "score": 976,
+          "score": 978,
           "costUSD": 10,
           "costUnit": "1k-images",
-          "low": 963,
-          "high": 989,
-          "samples": 4261,
+          "low": 965,
+          "high": 991,
+          "samples": 4308,
           "preview": false
-        },
-        {
-          "model": "HunyuanImage 3.5 (Preview)",
-          "company": "Tencent",
-          "score": 973,
-          "costUSD": 24,
-          "costUnit": "1k-images",
-          "low": 961,
-          "high": 985,
-          "samples": 6103,
-          "preview": true
         },
         {
           "model": "Cosmos3-Super-Text2Image-4Step",
@@ -1633,25 +1654,36 @@
           "preview": false
         },
         {
+          "model": "HunyuanImage 3.5 (Preview)",
+          "company": "Tencent",
+          "score": 973,
+          "costUSD": 24,
+          "costUnit": "1k-images",
+          "low": 961,
+          "high": 985,
+          "samples": 6154,
+          "preview": true
+        },
+        {
           "model": "Ideogram 4.0 Fast",
           "company": "Fal",
-          "score": 966,
+          "score": 967,
           "costUSD": 10.5,
           "costUnit": "1k-images",
-          "low": 954,
-          "high": 978,
-          "samples": 5950,
+          "low": 955,
+          "high": 979,
+          "samples": 5998,
           "preview": false
         },
         {
           "model": "P-Image-Ideogram (Low)",
           "company": "Pruna AI",
-          "score": 965,
+          "score": 966,
           "costUSD": 7.5,
           "costUnit": "1k-images",
-          "low": 952,
-          "high": 978,
-          "samples": 4328,
+          "low": 953,
+          "high": 979,
+          "samples": 4378,
           "preview": false
         },
         {
@@ -1662,146 +1694,146 @@
           "costUnit": "1k-images",
           "low": 942,
           "high": 972,
-          "samples": 3113,
+          "samples": 3160,
           "preview": false
         },
         {
           "model": "Recraft V4.1 Flash",
           "company": "Recraft",
-          "score": 950,
+          "score": 951,
           "costUSD": 7,
           "costUnit": "1k-images",
-          "low": 938,
-          "high": 962,
-          "samples": 6275,
+          "low": 939,
+          "high": 963,
+          "samples": 6333,
           "preview": false
         },
         {
           "model": "GPT Image 1 Mini (medium)",
           "company": "OpenAI",
-          "score": 936,
+          "score": 938,
           "costUSD": 11,
           "costUnit": "1k-images",
-          "low": 920,
-          "high": 952,
-          "samples": 2781,
+          "low": 922,
+          "high": 954,
+          "samples": 2815,
           "preview": false
         },
         {
           "model": "Z-Image Turbo",
           "company": "Alibaba",
-          "score": 936,
+          "score": 937,
           "costUSD": 5,
           "costUnit": "1k-images",
-          "low": 925,
-          "high": 947,
-          "samples": 8663,
+          "low": 926,
+          "high": 948,
+          "samples": 8711,
           "preview": false
         },
         {
           "model": "HunyuanImage 3.0",
           "company": "Tencent",
-          "score": 933,
-          "low": 917,
-          "high": 949,
-          "samples": 2913,
+          "score": 935,
+          "low": 919,
+          "high": 951,
+          "samples": 2962,
           "preview": false
         },
         {
           "model": "FLUX.2 [klein] 9B",
           "company": "Black Forest Labs",
-          "score": 932,
+          "score": 933,
           "costUSD": 15,
           "costUnit": "1k-images",
-          "low": 922,
-          "high": 942,
-          "samples": 11235,
-          "preview": false
-        },
-        {
-          "model": "FLUX.1 Kontext [max]",
-          "company": "Black Forest Labs",
-          "score": 931,
-          "costUSD": 80,
-          "costUnit": "1k-images",
-          "low": 919,
+          "low": 923,
           "high": 943,
-          "samples": 5787,
+          "samples": 11291,
           "preview": false
         },
         {
           "model": "Dreamina 3.1",
           "company": "ByteDance",
-          "score": 931,
+          "score": 933,
           "costUSD": 30,
           "costUnit": "1k-images",
-          "low": 915,
-          "high": 947,
-          "samples": 2854,
+          "low": 917,
+          "high": 949,
+          "samples": 2909,
           "preview": false
         },
         {
-          "model": "FLUX.1 Kontext [pro]",
+          "model": "FLUX.1 Kontext [max]",
           "company": "Black Forest Labs",
-          "score": 925,
-          "costUSD": 40,
+          "score": 932,
+          "costUSD": 80,
           "costUnit": "1k-images",
-          "low": 908,
-          "high": 942,
-          "samples": 2718,
+          "low": 920,
+          "high": 944,
+          "samples": 5840,
           "preview": false
         },
         {
           "model": "Kling Image 3.0 Omni",
           "company": "Kling",
-          "score": 925,
+          "score": 926,
           "costUSD": 28,
           "costUnit": "1k-images",
+          "low": 910,
+          "high": 942,
+          "samples": 3192,
+          "preview": false
+        },
+        {
+          "model": "FLUX.1 Kontext [pro]",
+          "company": "Black Forest Labs",
+          "score": 926,
+          "costUSD": 40,
+          "costUnit": "1k-images",
           "low": 909,
-          "high": 941,
-          "samples": 3148,
+          "high": 943,
+          "samples": 2763,
           "preview": false
         },
         {
           "model": "ERNIE Image Turbo",
           "company": "Baidu",
-          "score": 915,
+          "score": 916,
           "costUSD": 10.49,
           "costUnit": "1k-images",
-          "low": 905,
-          "high": 925,
-          "samples": 11109,
+          "low": 906,
+          "high": 926,
+          "samples": 11148,
           "preview": false
         },
         {
           "model": "P-Image-Ideogram (Very Low)",
           "company": "Pruna AI",
-          "score": 912,
+          "score": 914,
           "costUSD": 3,
           "costUnit": "1k-images",
-          "low": 898,
-          "high": 926,
-          "samples": 3764,
+          "low": 900,
+          "high": 928,
+          "samples": 3812,
           "preview": false
         },
         {
           "model": "Ideogram 3.0",
           "company": "Ideogram",
-          "score": 911,
+          "score": 912,
           "costUSD": 60,
           "costUnit": "1k-images",
-          "low": 895,
-          "high": 927,
-          "samples": 2826,
+          "low": 896,
+          "high": 928,
+          "samples": 2867,
           "preview": false
         },
         {
           "model": "ADM 3 Cloud (Image)",
           "company": "Apple",
-          "score": 910,
-          "low": 895,
-          "high": 925,
-          "samples": 2997,
+          "score": 911,
+          "low": 896,
+          "high": 926,
+          "samples": 3036,
           "preview": false
         },
         {
@@ -1812,29 +1844,29 @@
           "costUnit": "1k-images",
           "low": 900,
           "high": 920,
-          "samples": 11260,
+          "samples": 11309,
           "preview": false
         },
         {
           "model": "Qwen Image",
           "company": "Alibaba",
-          "score": 906,
+          "score": 907,
           "costUSD": 20,
           "costUnit": "1k-images",
-          "low": 889,
+          "low": 891,
           "high": 923,
-          "samples": 2861,
+          "samples": 2921,
           "preview": false
         },
         {
           "model": "Vidu Q2",
           "company": "Vidu",
-          "score": 897,
+          "score": 898,
           "costUSD": 30,
           "costUnit": "1k-images",
-          "low": 881,
-          "high": 913,
-          "samples": 3025,
+          "low": 882,
+          "high": 914,
+          "samples": 3063,
           "preview": false
         },
         {
@@ -1845,7 +1877,7 @@
           "costUnit": "1k-images",
           "low": 879,
           "high": 913,
-          "samples": 2831,
+          "samples": 2873,
           "preview": false
         },
         {
@@ -1856,62 +1888,62 @@
           "costUnit": "1k-images",
           "low": 880,
           "high": 912,
-          "samples": 2988,
+          "samples": 3037,
           "preview": false
         },
         {
           "model": "GLM-Image",
           "company": "Z AI",
-          "score": 892,
+          "score": 893,
           "costUSD": 50,
           "costUnit": "1k-images",
-          "low": 875,
+          "low": 877,
           "high": 909,
-          "samples": 2944,
+          "samples": 2998,
           "preview": false
         },
         {
           "model": "Lucid Origin Ultra",
           "company": "Leonardo.Ai",
-          "score": 879,
+          "score": 877,
           "costUSD": 86.71,
           "costUnit": "1k-images",
-          "low": 863,
-          "high": 895,
-          "samples": 3171,
+          "low": 861,
+          "high": 893,
+          "samples": 3220,
           "preview": false
         },
         {
           "model": "FLUX1.1 [pro]",
           "company": "Black Forest Labs",
-          "score": 871,
+          "score": 875,
           "costUSD": 40,
           "costUnit": "1k-images",
-          "low": 853,
-          "high": 889,
-          "samples": 2710,
+          "low": 857,
+          "high": 893,
+          "samples": 2754,
           "preview": false
         },
         {
           "model": "FLUX.1 Krea [dev]",
           "company": "Black Forest Labs",
-          "score": 866,
+          "score": 869,
           "costUSD": 25,
           "costUnit": "1k-images",
-          "low": 835,
-          "high": 897,
-          "samples": 975,
+          "low": 838,
+          "high": 900,
+          "samples": 1017,
           "preview": false
         },
         {
           "model": "Lucid Origin Fast",
           "company": "Leonardo.Ai",
-          "score": 865,
+          "score": 867,
           "costUSD": 17.94,
           "costUnit": "1k-images",
-          "low": 848,
-          "high": 882,
-          "samples": 3102,
+          "low": 850,
+          "high": 884,
+          "samples": 3145,
           "preview": false
         },
         {
@@ -1922,95 +1954,84 @@
           "costUnit": "1k-images",
           "low": 842,
           "high": 878,
-          "samples": 2647,
+          "samples": 2693,
           "preview": false
         },
         {
           "model": "FIBO",
           "company": "Bria",
-          "score": 856,
+          "score": 857,
           "costUSD": 40,
           "costUnit": "1k-images",
-          "low": 838,
-          "high": 874,
-          "samples": 2776,
+          "low": 839,
+          "high": 875,
+          "samples": 2823,
           "preview": false
         },
         {
           "model": "FLUX1.1 [pro] Ultra",
           "company": "Black Forest Labs",
-          "score": 853,
+          "score": 855,
           "costUSD": 60,
           "costUnit": "1k-images",
-          "low": 835,
-          "high": 871,
-          "samples": 2779,
+          "low": 838,
+          "high": 872,
+          "samples": 2827,
           "preview": false
         },
         {
           "model": "Luma Photon",
           "company": "Luma",
-          "score": 844,
+          "score": 843,
           "costUSD": 19,
           "costUnit": "1k-images",
-          "low": 826,
-          "high": 862,
-          "samples": 2733,
+          "low": 825,
+          "high": 861,
+          "samples": 2773,
           "preview": false
         },
         {
           "model": "FLUX.2 [klein] 4B",
           "company": "Black Forest Labs",
-          "score": 839,
+          "score": 840,
           "costUSD": 14,
           "costUnit": "1k-images",
-          "low": 827,
-          "high": 851,
-          "samples": 6886,
+          "low": 828,
+          "high": 852,
+          "samples": 6935,
           "preview": false
         },
         {
           "model": "Phoenix 0.9 Ultra",
           "company": "Leonardo.Ai",
-          "score": 835,
+          "score": 836,
           "costUSD": 76.24,
           "costUnit": "1k-images",
-          "low": 817,
-          "high": 853,
-          "samples": 2731,
+          "low": 818,
+          "high": 854,
+          "samples": 2774,
           "preview": false
         },
         {
           "model": "SRPO",
           "company": "Tencent",
-          "score": 831,
+          "score": 834,
           "costUSD": 26,
           "costUnit": "1k-images",
-          "low": 812,
-          "high": 850,
-          "samples": 2647,
+          "low": 815,
+          "high": 853,
+          "samples": 2699,
           "preview": false
         },
         {
           "model": "Phoenix 1.0 Fast",
           "company": "Leonardo.Ai",
-          "score": 828,
+          "score": 830,
           "costUSD": 19.43,
           "costUnit": "1k-images",
-          "low": 809,
-          "high": 847,
-          "samples": 2653,
-          "preview": false
-        },
-        {
-          "model": "FLUX.1 [dev]",
-          "company": "Black Forest Labs",
-          "score": 820,
-          "costUSD": 25,
-          "costUnit": "1k-images",
-          "low": 786,
-          "high": 854,
-          "samples": 1014,
+          "low": 811,
+          "high": 849,
+          "samples": 2702,
           "preview": false
         },
         {
@@ -2021,18 +2042,29 @@
           "costUnit": "1k-images",
           "low": 800,
           "high": 832,
-          "samples": 3756,
+          "samples": 3803,
+          "preview": false
+        },
+        {
+          "model": "FLUX.1 [dev]",
+          "company": "Black Forest Labs",
+          "score": 815,
+          "costUSD": 25,
+          "costUnit": "1k-images",
+          "low": 781,
+          "high": 849,
+          "samples": 1055,
           "preview": false
         },
         {
           "model": "HiDream-O1-Image-Dev",
           "company": "HiDream",
-          "score": 811,
+          "score": 812,
           "costUSD": 5,
           "costUnit": "1k-images",
-          "low": 792,
-          "high": 830,
-          "samples": 2822,
+          "low": 793,
+          "high": 831,
+          "samples": 2863,
           "preview": false
         },
         {
@@ -2043,40 +2075,40 @@
           "costUnit": "1k-images",
           "low": 748,
           "high": 792,
-          "samples": 2496,
+          "samples": 2534,
           "preview": false
         },
         {
           "model": "FLUX.1 [schnell]",
           "company": "Black Forest Labs",
-          "score": 742,
+          "score": 743,
           "costUSD": 3,
           "costUnit": "1k-images",
-          "low": 723,
-          "high": 761,
-          "samples": 3560,
+          "low": 724,
+          "high": 762,
+          "samples": 3612,
           "preview": false
         },
         {
           "model": "OmniGen V2",
           "company": "VectorSpaceLab",
-          "score": 704,
+          "score": 702,
           "costUSD": 150,
           "costUnit": "1k-images",
-          "low": 679,
-          "high": 729,
-          "samples": 2558,
+          "low": 677,
+          "high": 727,
+          "samples": 2605,
           "preview": false
         },
         {
           "model": "Bagel",
           "company": "ByteDance",
-          "score": 601,
+          "score": 602,
           "costUSD": 100,
           "costUnit": "1k-images",
-          "low": 568,
-          "high": 634,
-          "samples": 2537,
+          "low": 569,
+          "high": 635,
+          "samples": 2585,
           "preview": false
         }
       ],
@@ -2089,7 +2121,7 @@
       "description": "Geração de vídeo com áudio a partir de texto. Não mistura resultados de imagem para vídeo ou vídeo sem áudio.",
       "source": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
       "methodology": "https://artificialanalysis.ai/video/methodology",
-      "checkedAt": "2026-11-12T01:55:49.126Z",
+      "checkedAt": "2026-11-12T18:22:51.306Z",
       "rows": [
         {
           "model": "Wan 3.0",
@@ -12669,7 +12701,7 @@
         "company": "Kimi",
         "score": 79.9,
         "preview": false,
-        "costUSD": 6,
+        "costUSD": 4.51155,
         "costUnit": "1m-tokens"
       },
       {
@@ -12749,7 +12781,7 @@
         "company": "DeepSeek",
         "score": 75.6,
         "preview": false,
-        "costUSD": 1.43289,
+        "costUSD": 1.338408,
         "costUnit": "1m-tokens"
       },
       {
@@ -12765,7 +12797,7 @@
         "company": "Kimi",
         "score": 74.9,
         "preview": false,
-        "costUSD": 1.9284999999999999,
+        "costUSD": 1.5,
         "costUnit": "1m-tokens"
       },
       {
@@ -12779,7 +12811,7 @@
         "company": "DeepSeek",
         "score": 74,
         "preview": false,
-        "costUSD": 0.211,
+        "costUSD": 0.75,
         "costUnit": "1m-tokens"
       },
       {
@@ -13227,7 +13259,7 @@
         "company": "Google",
         "score": 50.7,
         "preview": false,
-        "costUSD": 0.09,
+        "costUSD": 0.185,
         "costUnit": "1m-tokens"
       },
       {
@@ -13411,7 +13443,7 @@
         "company": "Alibaba",
         "score": 35.9,
         "preview": false,
-        "costUSD": 0.16,
+        "costUSD": 0.17999999999999997,
         "costUnit": "1m-tokens"
       },
       {
@@ -13561,9 +13593,9 @@
         "preview": false
       }
     ],
-    "checkedAt": "2026-11-12T01:55:49.319Z",
+    "checkedAt": "2026-11-12T18:22:51.349Z",
     "status": "live",
-    "priceCheckedAt": "2026-11-12T01:55:49.320Z"
+    "priceCheckedAt": "2026-11-12T18:22:51.349Z"
   },
   "webDesign": {
     "id": "text",
@@ -13578,147 +13610,147 @@
       {
         "model": "Muse Wonder (max)",
         "company": "Meta",
-        "score": 1367,
-        "samples": 6331,
+        "score": 1380,
+        "samples": 4889,
         "preview": false
       },
       {
         "model": "Muse Spark 1.3 (xhigh)",
         "company": "Meta",
-        "score": 1351,
-        "samples": 31449,
+        "score": 1361,
+        "samples": 23945,
         "preview": false
       },
       {
         "model": "Claude Fable 5.2",
         "company": "Anthropic",
-        "score": 1344,
-        "samples": 1619,
-        "preview": false
-      },
-      {
-        "model": "Inkling 2 Small",
-        "company": "Thinking Machines",
-        "score": 1331,
-        "samples": 2553,
+        "score": 1352,
+        "samples": 1250,
         "preview": false
       },
       {
         "model": "GPT-6 Astra (xhigh)",
         "company": "OpenAI",
-        "score": 1330,
-        "samples": 6869,
-        "preview": false
-      },
-      {
-        "model": "Muse Ember",
-        "company": "Meta",
-        "score": 1329,
-        "samples": 1913,
+        "score": 1341,
+        "samples": 5668,
         "preview": false
       },
       {
         "model": "Kimi K3",
         "company": "Kimi",
-        "score": 1329,
-        "samples": 5395,
+        "score": 1337,
+        "samples": 4777,
+        "preview": false
+      },
+      {
+        "model": "Inkling 2 Small",
+        "company": "Thinking Machines",
+        "score": 1332,
+        "samples": 2225,
+        "preview": false
+      },
+      {
+        "model": "Muse Ember",
+        "company": "Meta",
+        "score": 1331,
+        "samples": 1740,
         "preview": false
       },
       {
         "model": "Claude Opus 5.5",
         "company": "Anthropic",
-        "score": 1324,
-        "samples": 4409,
+        "score": 1325,
+        "samples": 3871,
         "preview": false
       },
       {
         "model": "Kimi K3.1 Pro",
         "company": "Kimi",
-        "score": 1319,
-        "samples": 4086,
-        "preview": false
-      },
-      {
-        "model": "Gemini 4 Carbon",
-        "company": "Google",
-        "score": 1316,
-        "samples": 239,
+        "score": 1323,
+        "samples": 3651,
         "preview": false
       },
       {
         "model": "GPT-5.6 Sol (xhigh)",
         "company": "OpenAI",
-        "score": 1315,
-        "samples": 8334,
-        "preview": false
-      },
-      {
-        "model": "Claude Sonnet 5.5",
-        "company": "Anthropic",
-        "score": 1314,
-        "samples": 3600,
+        "score": 1320,
+        "samples": 6785,
         "preview": false
       },
       {
         "model": "Gemini 4 Argon",
         "company": "Google",
-        "score": 1313,
-        "samples": 11073,
-        "preview": false
-      },
-      {
-        "model": "Muse Spark 1.2",
-        "company": "Meta",
-        "score": 1308,
-        "samples": 35800,
+        "score": 1317,
+        "samples": 8553,
         "preview": false
       },
       {
         "model": "GPT-6.1 Sol",
         "company": "OpenAI",
-        "score": 1308,
-        "samples": 4505,
-        "preview": false
-      },
-      {
-        "model": "Claude Opus 5",
-        "company": "Anthropic",
-        "score": 1304,
-        "samples": 11363,
-        "preview": false
-      },
-      {
-        "model": "Claude Fable 5.1",
-        "company": "Anthropic",
-        "score": 1304,
-        "samples": 6555,
+        "score": 1315,
+        "samples": 3862,
         "preview": false
       },
       {
         "model": "MiMo-V2.6-Pro",
         "company": "Xiaomi",
-        "score": 1303,
-        "samples": 23854,
+        "score": 1312,
+        "samples": 18028,
         "preview": false
       },
       {
-        "model": "DeepSeek-V4.1-Flash",
-        "company": "DeepSeek",
-        "score": 1303,
-        "samples": 26361,
+        "model": "Muse Spark 1.2",
+        "company": "Meta",
+        "score": 1311,
+        "samples": 28299,
+        "preview": false
+      },
+      {
+        "model": "Claude Sonnet 5.5",
+        "company": "Anthropic",
+        "score": 1311,
+        "samples": 3028,
         "preview": false
       },
       {
         "model": "Muse Spark Open (xhigh)",
         "company": "Meta",
-        "score": 1300,
-        "samples": 4595,
+        "score": 1308,
+        "samples": 3919,
+        "preview": false
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "company": "Anthropic",
+        "score": 1306,
+        "samples": 5372,
+        "preview": false
+      },
+      {
+        "model": "Claude Opus 5",
+        "company": "Anthropic",
+        "score": 1305,
+        "samples": 9895,
+        "preview": false
+      },
+      {
+        "model": "DeepSeek-V4.1-Flash",
+        "company": "DeepSeek",
+        "score": 1299,
+        "samples": 19754,
+        "preview": false
+      },
+      {
+        "model": "Gemini 3.7 Flash",
+        "company": "Google",
+        "score": 1297,
+        "samples": 46713,
         "preview": false
       }
     ],
-    "publishedAt": "2026-11-12T01:24:57.131Z",
+    "publishedAt": "2026-11-12T18:02:20.441Z",
     "status": "live",
-    "checkedAt": "2026-11-12T01:55:49.508Z"
+    "checkedAt": "2026-11-12T18:22:51.654Z"
   },
   "freeAccess": {
     "offers": [
@@ -13728,7 +13760,7 @@
         "route": "api",
         "url": "https://openrouter.ai/baidu/ernie-5.5-flash-preview:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.654Z",
         "modelIds": [
           "baidu/ernie-5.5-flash-preview",
           "baidu/ernie-5.5-flash-preview-20261110"
@@ -13740,7 +13772,7 @@
         "route": "api",
         "url": "https://openrouter.ai/thinkingmachines/inkling-2-small:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.654Z",
         "modelIds": [
           "thinkingmachines/inkling-2-small",
           "thinkingmachines/inkling-2-small-20261107"
@@ -13752,7 +13784,7 @@
         "route": "api",
         "url": "https://openrouter.ai/liquid/lfm-3-1.7b:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.654Z",
         "modelIds": [
           "liquid/lfm-3-1.7b",
           "liquid/lfm-3-1.7b-20261106"
@@ -13764,7 +13796,7 @@
         "route": "api",
         "url": "https://openrouter.ai/recursive/flint-v1.0:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.654Z",
         "modelIds": [
           "recursive/flint-v1.0",
           "recursive/flint-v1.0-20261021"
@@ -13776,7 +13808,7 @@
         "route": "api",
         "url": "https://openrouter.ai/nvidia/nemotron-3.5-super-vl:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.654Z",
         "modelIds": [
           "nvidia/nemotron-3.5-super-vl",
           "nvidia/nemotron-3.5-super-vl-20261015"
@@ -13788,7 +13820,7 @@
         "route": "api",
         "url": "https://openrouter.ai/dots-studio/dots-3-note-preview:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.654Z",
         "modelIds": [
           "dots-studio/dots-3-note-preview",
           "dots-studio/dots-3-note-preview-20260813"
@@ -13800,7 +13832,7 @@
         "route": "api",
         "url": "https://openrouter.ai/liquid/lfm-2.5-2.6b:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.654Z",
         "modelIds": [
           "liquid/lfm-2.5-2.6b",
           "liquid/lfm-2.5-2.6b-20260811"
@@ -13812,7 +13844,7 @@
         "route": "api",
         "url": "https://openrouter.ai/nvidia/nemotron-3.5-lightning:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.654Z",
         "modelIds": [
           "nvidia/nemotron-3.5-lightning",
           "nvidia/nemotron-3.5-lightning-20260807"
@@ -13824,7 +13856,7 @@
         "route": "api",
         "url": "https://openrouter.ai/cohere/north-mini-code:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.654Z",
         "modelIds": [
           "cohere/north-mini-code",
           "cohere/north-mini-code-20260617"
@@ -13836,7 +13868,7 @@
         "route": "api",
         "url": "https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.654Z",
         "modelIds": [
           "nvidia/nemotron-3-ultra-550b-a55b",
           "nvidia/nemotron-3-ultra-550b-a55b-20260604"
@@ -13848,7 +13880,7 @@
         "route": "api",
         "url": "https://openrouter.ai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.654Z",
         "modelIds": [
           "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
           "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428"
@@ -13860,7 +13892,7 @@
         "route": "api",
         "url": "https://openrouter.ai/google/gemma-4-26b-a4b-it:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.654Z",
         "modelIds": [
           "google/gemma-4-26b-a4b-it",
           "google/gemma-4-26b-a4b-it-20260403"
@@ -13872,7 +13904,7 @@
         "route": "api",
         "url": "https://openrouter.ai/google/gemma-4-31b-it:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.654Z",
         "modelIds": [
           "google/gemma-4-31b-it",
           "google/gemma-4-31b-it-20260402"
@@ -14012,7 +14044,7 @@
         "route": "chat",
         "url": "https://chat.deepseek.com/",
         "source": "https://www.deepseek.com/en/",
-        "checkedAt": "2026-11-12T01:55:47.773Z"
+        "checkedAt": "2026-11-12T18:22:49.655Z"
       },
       {
         "model": "GPT-6 Luna",
@@ -14020,7 +14052,7 @@
         "route": "chat",
         "url": "https://chatgpt.com/",
         "source": "https://chatgpt.com/pricing/",
-        "checkedAt": "2026-11-12T01:55:47.774Z"
+        "checkedAt": "2026-11-12T18:22:49.655Z"
       },
       {
         "model": "GPT-5 Thinking Mini",
@@ -14028,7 +14060,7 @@
         "route": "chat",
         "url": "https://chatgpt.com/",
         "source": "https://chatgpt.com/pricing/",
-        "checkedAt": "2026-11-12T01:55:47.774Z"
+        "checkedAt": "2026-11-12T18:22:49.655Z"
       },
       {
         "model": "Claude Sonnet 5.5",
@@ -14036,7 +14068,7 @@
         "route": "chat",
         "url": "https://claude.ai/",
         "source": "https://claude.com/pricing",
-        "checkedAt": "2026-11-12T01:55:47.775Z",
+        "checkedAt": "2026-11-12T18:22:49.656Z",
         "scope": "family"
       },
       {
@@ -14045,7 +14077,7 @@
         "route": "chat",
         "url": "https://claude.ai/",
         "source": "https://claude.com/pricing",
-        "checkedAt": "2026-11-12T01:55:47.775Z",
+        "checkedAt": "2026-11-12T18:22:49.656Z",
         "scope": "family"
       },
       {
@@ -14061,7 +14093,7 @@
           "Nano Banana 2 (Gemini 3.1 Flash Image)"
         ],
         "source": "https://gemini.google/overview/image-generation/",
-        "checkedAt": "2026-11-12T01:55:47.775Z"
+        "checkedAt": "2026-11-12T18:22:49.656Z"
       },
       {
         "model": "Veo 3.1 Fast",
@@ -14076,7 +14108,7 @@
           "Veo 3.1 Fast (Audio)"
         ],
         "source": "https://support.google.com/flow/answer/16526234?hl=en",
-        "checkedAt": "2026-11-12T01:55:47.776Z"
+        "checkedAt": "2026-11-12T18:22:49.657Z"
       },
       {
         "model": "Veo 3.1 Lite",
@@ -14088,7 +14120,7 @@
         "limitsEn": "Daily credits, off-peak availability and resolution limits apply.",
         "limitsPt": "Créditos diários, disponibilidade fora do pico e limites de resolução.",
         "source": "https://support.google.com/flow/answer/16526234?hl=en",
-        "checkedAt": "2026-11-12T01:55:47.776Z"
+        "checkedAt": "2026-11-12T18:22:49.657Z"
       },
       {
         "model": "Gemini Omni Flash 1.1",
@@ -14103,7 +14135,7 @@
           "Gemini Omni 1.1 Flash"
         ],
         "source": "https://support.google.com/flow/answer/16526234?hl=en",
-        "checkedAt": "2026-11-12T01:55:47.776Z"
+        "checkedAt": "2026-11-12T18:22:49.657Z"
       },
       {
         "model": "Nano Banana 2 Lite",
@@ -14119,7 +14151,7 @@
           "Gemini 3.1 Flash-Lite Image (nano-banana-2-lite)"
         ],
         "source": "https://support.google.com/flow/answer/16526234?hl=en",
-        "checkedAt": "2026-11-12T01:55:47.776Z"
+        "checkedAt": "2026-11-12T18:22:49.657Z"
       },
       {
         "model": "Recraft V4.1 Utility",
@@ -14131,7 +14163,7 @@
         "limitsEn": "Daily credits; public images and restricted commercial rights.",
         "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos.",
         "source": "https://www.recraft.ai/blog/midjourney-alternative",
-        "checkedAt": "2026-11-12T01:55:47.777Z"
+        "checkedAt": "2026-11-12T18:22:49.657Z"
       },
       {
         "model": "Recraft V4.1 Utility Pro",
@@ -14143,7 +14175,7 @@
         "limitsEn": "Daily credits; public images and restricted commercial rights.",
         "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos.",
         "source": "https://www.recraft.ai/blog/midjourney-alternative",
-        "checkedAt": "2026-11-12T01:55:47.777Z"
+        "checkedAt": "2026-11-12T18:22:49.657Z"
       },
       {
         "model": "Recraft V4.1 Flash",
@@ -14155,7 +14187,7 @@
         "limitsEn": "Daily credits; public images and restricted commercial rights.",
         "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos.",
         "source": "https://www.recraft.ai/blog/midjourney-alternative",
-        "checkedAt": "2026-11-12T01:55:47.777Z"
+        "checkedAt": "2026-11-12T18:22:49.657Z"
       },
       {
         "model": "Seedream 4.5",
@@ -14167,7 +14199,7 @@
         "limitsEn": "Daily credits; queues, resolution and account/region limits apply.",
         "limitsPt": "Créditos diários; filas e limites de resolução, conta e região.",
         "source": "https://dreamina.capcut.com/pt-br/resource/seedream-4-5",
-        "checkedAt": "2026-11-12T01:55:47.777Z"
+        "checkedAt": "2026-11-12T18:22:49.657Z"
       },
       {
         "model": "Dreamina Seedance 2.5",
@@ -14182,7 +14214,7 @@
           "Dreamina Seedance 2.5 (720p)"
         ],
         "source": "https://dreamina.capcut.com/pt-br/seedance/seedance-2-5",
-        "checkedAt": "2026-11-12T01:55:47.778Z"
+        "checkedAt": "2026-11-12T18:22:49.658Z"
       },
       {
         "model": "Dreamina Seedance 2.0",
@@ -14197,7 +14229,7 @@
           "Dreamina Seedance 2.0 (720p)"
         ],
         "source": "https://dreamina.capcut.com/tools/seedance-2-0",
-        "checkedAt": "2026-11-12T01:55:47.778Z"
+        "checkedAt": "2026-11-12T18:22:49.658Z"
       },
       {
         "model": "Nano Banana Pro",
@@ -14205,7 +14237,7 @@
         "route": "web",
         "url": "https://labs.google/fx/tools/flow",
         "source": "https://support.google.com/flow/answer/16729550?hl=en",
-        "checkedAt": "2026-11-12T01:55:47.779Z",
+        "checkedAt": "2026-11-12T18:22:49.659Z",
         "scope": "model",
         "modality": "image",
         "aliases": [
@@ -14221,7 +14253,7 @@
       {
         "id": "router",
         "url": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.654Z",
         "status": "live"
       },
       {
@@ -14233,19 +14265,19 @@
       {
         "id": "deepseek",
         "url": "https://www.deepseek.com/en/",
-        "checkedAt": "2026-11-12T01:55:47.773Z",
+        "checkedAt": "2026-11-12T18:22:49.655Z",
         "status": "live"
       },
       {
         "id": "openai",
         "url": "https://chatgpt.com/pricing/",
-        "checkedAt": "2026-11-12T01:55:47.774Z",
+        "checkedAt": "2026-11-12T18:22:49.655Z",
         "status": "live"
       },
       {
         "id": "anthropic",
         "url": "https://claude.com/pricing",
-        "checkedAt": "2026-11-12T01:55:47.775Z",
+        "checkedAt": "2026-11-12T18:22:49.656Z",
         "status": "live"
       },
       {
@@ -14273,7 +14305,7 @@
             ]
           }
         ],
-        "checkedAt": "2026-11-12T01:55:47.775Z",
+        "checkedAt": "2026-11-12T18:22:49.656Z",
         "status": "live"
       },
       {
@@ -14340,7 +14372,7 @@
             ]
           }
         ],
-        "checkedAt": "2026-11-12T01:55:47.776Z",
+        "checkedAt": "2026-11-12T18:22:49.657Z",
         "status": "live"
       },
       {
@@ -14384,7 +14416,7 @@
             "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos."
           }
         ],
-        "checkedAt": "2026-11-12T01:55:47.777Z",
+        "checkedAt": "2026-11-12T18:22:49.657Z",
         "status": "live"
       },
       {
@@ -14408,7 +14440,7 @@
             "limitsPt": "Créditos diários; filas e limites de resolução, conta e região."
           }
         ],
-        "checkedAt": "2026-11-12T01:55:47.777Z",
+        "checkedAt": "2026-11-12T18:22:49.657Z",
         "status": "live"
       },
       {
@@ -14435,7 +14467,7 @@
             ]
           }
         ],
-        "checkedAt": "2026-11-12T01:55:47.778Z",
+        "checkedAt": "2026-11-12T18:22:49.658Z",
         "status": "live"
       },
       {
@@ -14462,14 +14494,14 @@
             ]
           }
         ],
-        "checkedAt": "2026-11-12T01:55:47.778Z",
+        "checkedAt": "2026-11-12T18:22:49.658Z",
         "status": "live"
       },
       {
         "id": "flow-image-free",
         "name": "Google Flow · Images",
         "url": "https://support.google.com/flow/answer/16729550?hl=en",
-        "checkedAt": "2026-11-12T01:55:47.779Z",
+        "checkedAt": "2026-11-12T18:22:49.659Z",
         "status": "live"
       }
     ]
