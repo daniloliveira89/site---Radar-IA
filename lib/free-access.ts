@@ -18,6 +18,38 @@ export const writingChatAccess:FreeOffer[]=[{
  limitsEn:'Free chat access reported by the user. Check the selected model and quota in Z.ai; the API is separate.',
  limitsPt:'Acesso grátis no chat informado pelo usuário. Confira o modelo selecionado e a cota no Z.ai; a API é separada.',
 }];
+export const webDesignChatAccess:FreeOffer[]=[
+ {
+  model:'Inkling 2 Small',company:'Thinking Machines',route:'api',
+  url:'https://openrouter.ai/thinkingmachines/inkling-small:free',source:'https://openrouter.ai/api/v1/models',checkedAt:'',
+  aliases:['Inkling 2 Small (high)'],
+  limitsEn:'Free API route with limits on OpenRouter.',limitsPt:'Rota de API grátis com limites no OpenRouter.'
+ },
+ {
+  model:'Kimi K3',company:'Kimi',route:'chat',
+  url:'https://www.kimi.com/',source:'https://www.kimi.com/',checkedAt:'',reportedByUser:true,
+  aliases:['Kimi K3 (high)'],
+  limitsEn:'Free chat access on Kimi. Check daily quotas on the site.',limitsPt:'Acesso grátis no chat da Kimi. Confira as cotas diárias no site.'
+ },
+ {
+  model:'DeepSeek-V4.1-Flash',company:'DeepSeek',route:'chat',
+  url:'https://chat.deepseek.com/',source:'https://chat.deepseek.com/',checkedAt:'',
+  aliases:['DeepSeek V4.1 Flash 1017','DeepSeek-V4.1-Flash (medium)'],
+  limitsEn:'Free web chat access on DeepSeek.',limitsPt:'Acesso grátis no chat web da DeepSeek.'
+ },
+ {
+  model:'Muse Spark Open (xhigh)',company:'Meta',route:'chat',
+  url:'https://www.meta.ai/',source:'https://www.meta.ai/',checkedAt:'',reportedByUser:true,
+  aliases:['Muse Spark Open'],
+  limitsEn:'Free access on Meta AI.',limitsPt:'Acesso gratuito no Meta AI.'
+ },
+ {
+  model:'Gemini 3.7 Flash',company:'Google',route:'api',
+  url:'https://ai.google.dev/gemini-api/docs/pricing',source:'https://ai.google.dev/gemini-api/docs/pricing',checkedAt:'',
+  aliases:['Gemini 3.7 Flash (medium)'],
+  limitsEn:'Free tier with rate limits in Google AI Studio.',limitsPt:'Plano gratuito com limites de requisição no Google AI Studio.'
+ }
+];
 export const isPaidGrok47=(company:string,model:string)=>modelKey(company)==='xai'&&modelKey(model.split('/').at(-1)!.replace(/:free$/i,''))==='grok47';
 const routeModelId=(id:string)=>id.trim().toLowerCase().replace(/:free$/,'');
 export function freeOffer(company:string,model:string,offers:FreeOffer[]=initialFreeAccess.offers,modality:FreeModality='text'){
