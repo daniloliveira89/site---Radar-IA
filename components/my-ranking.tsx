@@ -1,6 +1,6 @@
 'use client';
 import {useMemo,useState} from 'react';
-import {Trophy,Search,X,ArrowUpRight,Crown,Medal,Sparkles,Terminal,Zap,Check,Code2,Palette,FileText,Globe,Layers,Cpu} from 'lucide-react';
+import {Trophy,Search,X,ArrowUpRight,Crown,Medal,Sparkles,Terminal,Zap,Check,Code2,Palette,FileText,Globe,Layers,Cpu,Atom,ShieldCheck} from 'lucide-react';
 import {RANKING_CATEGORIES,RANKED_AIS,type RankingCategory,type RankedAI} from '../lib/my-ranking';
 import Brand from './brand';
 import {useLanguage} from './language';
@@ -9,7 +9,7 @@ export default function MyRanking(){
   const {t,language}=useLanguage();
   const [selectedCategory,setSelectedCategory]=useState<RankingCategory>('all');
   const [query,setQuery]=useState('');
-  const [variantFilter,setVariantFilter]=useState<'all'|'antigravity'|'codex'>('all');
+  const [variantFilter,setVariantFilter]=useState<'all'|'antigravity'|'codex'|'aistudio'>('all');
 
   const filteredItems=useMemo(()=>{
     const q=query.toLowerCase().trim();
@@ -17,6 +17,7 @@ export default function MyRanking(){
       if(selectedCategory!=='all'&&item.category!==selectedCategory) return false;
       if(variantFilter==='antigravity'&&!item.antigravity) return false;
       if(variantFilter==='codex'&&!item.codex) return false;
+      if(variantFilter==='aistudio'&&!item.aiStudio) return false;
       if(!q) return true;
 
       const searchable=[
@@ -56,6 +57,8 @@ export default function MyRanking(){
       case 'image': return <Sparkles size={16}/>;
       case 'research': return <Globe size={16}/>;
       case 'context': return <Layers size={16}/>;
+      case 'science': return <Atom size={16}/>;
+      case 'security': return <ShieldCheck size={16}/>;
       default: return <Trophy size={16}/>;
     }
   };
@@ -69,16 +72,10 @@ export default function MyRanking(){
             <span>{t('PERSONALIZED LEADERBOARD','LEADERBOARD PERSONALIZADO')}</span>
           </div>
           <h2>{t('My AI Ranking · The Best AI for Every Task','Meu Ranking de IAs · A Melhor Escolha para Cada Tarefa')}</h2>
-          <p>
-            {t(
-              'A direct benchmark-backed guide mapping your active accounts and frontier models to the top tools for Coding, Creative Writing, Web Design, Image Generation, Deep Research, and Large Context.',
-              'Guia baseado em benchmarks oficiais correlacionando suas contas e modelos ativos com a melhor ferramenta para Programação, Escrita Criativa, Web Design, Geração de Imagens, Pesquisa Profunda e Contexto Gigante.'
-            )}
-          </p>
         </div>
         <div className="ranking-hero-stats">
           <div className="ranking-hero-stat">
-            <strong>6</strong>
+            <strong>{RANKING_CATEGORIES.length}</strong>
             <span>{t('Categories','Categorias')}</span>
           </div>
           <div className="ranking-hero-stat">
@@ -143,6 +140,14 @@ export default function MyRanking(){
           >
             <Terminal size={13}/>
             <span>Codex Ready</span>
+          </button>
+          <button
+            type="button"
+            className={variantFilter==='aistudio'?'active':''}
+            onClick={()=>setVariantFilter('aistudio')}
+          >
+            <Cpu size={13}/>
+            <span>Google AI Studio (Pro Estudos)</span>
           </button>
         </div>
 
@@ -246,6 +251,12 @@ export default function MyRanking(){
                               <span className="variant-pill codex" title={language==='en'?item.codexNoteEn:item.codexNotePt}>
                                 <Terminal size={11}/>
                                 <span>Codex</span>
+                              </span>
+                            )}
+                            {item.aiStudio&&(
+                              <span className="variant-pill aistudio" title={language==='en'?item.aiStudioNoteEn:item.aiStudioNotePt}>
+                                <Cpu size={11}/>
+                                <span>AI Studio · Pro Estudos</span>
                               </span>
                             )}
                           </div>

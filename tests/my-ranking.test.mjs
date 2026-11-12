@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {RANKING_CATEGORIES,RANKED_AIS} from '../lib/my-ranking.ts';
 import {MY_ACCOUNTS} from '../lib/my-ais.ts';
 
-test('my-ranking categories include all 6 key requested domains', () => {
+test('my-ranking categories include all 8 key requested domains', () => {
   const ids = RANKING_CATEGORIES.map(c => c.id);
   assert(ids.includes('code'), 'Missing code category');
   assert(ids.includes('writing'), 'Missing writing category');
@@ -11,7 +11,9 @@ test('my-ranking categories include all 6 key requested domains', () => {
   assert(ids.includes('image'), 'Missing image category');
   assert(ids.includes('research'), 'Missing research category');
   assert(ids.includes('context'), 'Missing context category');
-  assert.equal(RANKING_CATEGORIES.length, 6);
+  assert(ids.includes('science'), 'Missing science category');
+  assert(ids.includes('security'), 'Missing security category');
+  assert.equal(RANKING_CATEGORIES.length, 8);
 });
 
 test('every ranked AI model belongs to an active user account', () => {
@@ -49,4 +51,13 @@ test('category rank #1 models correspond to top benchmark winners', () => {
   const topImage = RANKED_AIS.find(i => i.category === 'image' && i.rank === 1);
   assert(topImage.model.includes('Imagen 3') || topImage.model.includes('Flow'), 'Top Image should be Imagen 3 / Flow');
   assert.equal(topImage.company, 'Google');
+
+  const topScience = RANKED_AIS.find(i => i.category === 'science' && i.rank === 1);
+  assert(topScience.model.includes('Gemini 4 Argon & Carbon'), 'Top Science should be Gemini 4 Argon & Carbon');
+  assert.equal(topScience.company, 'Google');
+  assert.equal(topScience.aiStudio, true);
+
+  const topSecurity = RANKED_AIS.find(i => i.category === 'security' && i.rank === 1);
+  assert(topSecurity.model.includes('Claude Sonnet'), 'Top Security should be Claude Sonnet');
+  assert.equal(topSecurity.company, 'Anthropic');
 });

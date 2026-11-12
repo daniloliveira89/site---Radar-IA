@@ -1,4 +1,4 @@
-export type RankingCategory = 'all' | 'code' | 'writing' | 'webdesign' | 'image' | 'research' | 'context';
+export type RankingCategory = 'all' | 'code' | 'writing' | 'webdesign' | 'image' | 'research' | 'context' | 'science' | 'security';
 
 export type CategoryMeta = {
   id: RankingCategory;
@@ -30,10 +30,13 @@ export type RankedAI = {
   whyBestEn: string;
   antigravity: boolean;
   codex: boolean;
+  aiStudio?: boolean;
   antigravityNotePt?: string;
   antigravityNoteEn?: string;
   codexNotePt?: string;
   codexNoteEn?: string;
+  aiStudioNotePt?: string;
+  aiStudioNoteEn?: string;
 };
 
 export const RANKING_CATEGORIES: CategoryMeta[] = [
@@ -90,6 +93,24 @@ export const RANKING_CATEGORIES: CategoryMeta[] = [
     descriptionEn: 'Processing full books, entire repositories, large documentations, and hours of video/audio in one prompt.',
     badgePt: '1M a 2M Tokens',
     badgeEn: '1M to 2M Tokens'
+  },
+  {
+    id: 'science',
+    namePt: 'Ciência & Pesquisa Científica',
+    nameEn: 'Science & Research',
+    descriptionPt: 'Raciocínio científico profundo, modelagem molecular, física teórica, química computacional e análise de hipóteses.',
+    descriptionEn: 'Deep scientific reasoning, molecular modeling, theoretical physics, computational chemistry and hypothesis analysis.',
+    badgePt: 'Ciência & Descoberta',
+    badgeEn: 'Science & Discovery'
+  },
+  {
+    id: 'security',
+    namePt: 'Cyber Security & Segurança Cibernética',
+    nameEn: 'Cyber Security & Threat Analysis',
+    descriptionPt: 'Auditoria de código-fonte (SAST), análise de vulnerabilidades, engenharia reversa, modelagem de ameaças e DevSecOps.',
+    descriptionEn: 'Source code auditing (SAST), vulnerability analysis, reverse engineering, threat modeling, and DevSecOps.',
+    badgePt: 'Segurança & Auditoria',
+    badgeEn: 'Security & Auditing'
   }
 ];
 
@@ -143,7 +164,10 @@ export const RANKED_AIS: RankedAI[] = [
     antigravityNotePt: 'Modelo nativo padrão do Antigravity Agent em Gemini Managed Agents com orquestração dinâmica.',
     antigravityNoteEn: 'Default native model for Antigravity Agent in Gemini Managed Agents with dynamic orchestration.',
     codexNotePt: 'Execução de scripts de código e geração automatizada de testes no terminal Codex.',
-    codexNoteEn: 'Code script execution and automated test generation in Codex terminal.'
+    codexNoteEn: 'Code script execution and automated test generation in Codex terminal.',
+    aiStudio: true,
+    aiStudioNotePt: 'Ambiente nativo do Google AI Studio com cota Gemini Pro Estudos e chaves de API sem custo.',
+    aiStudioNoteEn: 'Native Google AI Studio environment with Gemini Pro Education quota and free API keys.'
   },
   {
     id: 'code-3',
@@ -386,7 +410,10 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Converte capturas de tela e mockups Figma diretamente para layouts HTML/Tailwind limpos, com inspeção multimodal de alta precisão e sem dependências obsoletas.',
     whyBestEn: 'Converts screenshots and Figma mockups directly into clean HTML/Tailwind layouts, with high-accuracy multimodal inspection and no legacy bloat.',
     antigravity: true,
-    codex: true
+    codex: true,
+    aiStudio: true,
+    aiStudioNotePt: 'Acesso pelo Google AI Studio com Gemini 4 Hydrogen e Pro Estudos.',
+    aiStudioNoteEn: 'Available in Google AI Studio with Gemini 4 Hydrogen and Pro Education.'
   },
   {
     id: 'web-4',
@@ -430,7 +457,10 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Texturas naturais de pele, iluminação cinematográfica e extraordinária capacidade de renderizar palavras, logotipos e placas legíveis dentro da imagem.',
     whyBestEn: 'Natural skin textures, cinematic lighting, and extraordinary ability to render legible typography, signage, and logos inside the image.',
     antigravity: true,
-    codex: false
+    codex: false,
+    aiStudio: true,
+    aiStudioNotePt: 'Disponível no Google AI Studio e Gemini com suporte ao Imagen 3 Pro Estudos.',
+    aiStudioNoteEn: 'Available in Google AI Studio and Gemini with Imagen 3 Pro Education support.'
   },
   {
     id: 'image-2',
@@ -537,7 +567,10 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Otimizado especificamente para agentes autônomos, executando chamadas de busca em paralelo e integrando os resultados com 1M de tokens no Antigravity CLI e IDE.',
     whyBestEn: 'Specifically optimized for autonomous agents, running search calls in parallel and consolidating findings with 1M tokens in Antigravity CLI and IDE.',
     antigravity: true,
-    codex: true
+    codex: true,
+    aiStudio: true,
+    aiStudioNotePt: 'Integração no Google AI Studio com cota Gemini Pro Estudos para chamadas de busca e ferramentas.',
+    aiStudioNoteEn: 'Google AI Studio integration with Gemini Pro Education quota for search and tool calls.'
   },
   {
     id: 'research-3',
@@ -644,7 +677,10 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Excelente recuperação de detalhes específicos (agulha no palheiro) em vídeos de horas de duração, gravações de áudio e arquivos massivos.',
     whyBestEn: 'Top-tier needle-in-a-haystack retrieval accuracy across hours of video, audio recordings, and massive data files.',
     antigravity: true,
-    codex: true
+    codex: true,
+    aiStudio: true,
+    aiStudioNotePt: 'Suporte a contexto de 1M a 2M tokens diretamente no playground do Google AI Studio.',
+    aiStudioNoteEn: '1M to 2M token context window directly supported in Google AI Studio playground.'
   },
   {
     id: 'context-3',
@@ -664,6 +700,226 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Perfeita Coerência',
     whyBestPt: 'Embora tenha janela nominal menor que Kimi e Gemini, compreende dependências cruzadas e nuances sutis de código e contratos com perfeição.',
     whyBestEn: 'While having a smaller nominal window than Kimi and Gemini, it understands cross-dependencies and subtle nuances with unmatched coherence.',
+    antigravity: true,
+    codex: true
+  },
+
+  // --- CATEGORIA: CIÊNCIA & PESQUISA CIENTÍFICA ---
+  {
+    id: 'science-1',
+    rank: 1,
+    category: 'science',
+    model: 'Gemini 4 Argon & Carbon',
+    accountId: 'google-ai-studio',
+    accountName: 'Google AI Studio / Gemini',
+    company: 'Google',
+    tier: 'AI Studio & Pro Estudos',
+    tierEn: 'AI Studio & Pro Education',
+    tierBadge: 'edu',
+    url: 'https://aistudio.google.com/',
+    badge: '#1 Ciência & Modelagem',
+    badgeEn: '#1 Science & Discovery',
+    scoreMetric: 'Modelos Científicos DeepMind',
+    scoreValue: 'AlphaFold & Raciocínio 1M',
+    whyBestPt: 'Liderança global do Google DeepMind em IA científica (AlphaFold, AlphaProof, GMoD), combinando raciocínio em física, biologia computacional e síntese química com 1M de tokens.',
+    whyBestEn: 'Google DeepMind’s global leadership in scientific AI (AlphaFold, AlphaProof, GMoD), integrating physics, computational biology, and chemistry reasoning with a 1M token window.',
+    antigravity: true,
+    codex: true,
+    aiStudio: true,
+    aiStudioNotePt: 'Acesso prioritário no Google AI Studio com cota institucional Gemini Pro Estudos para experimentos científicos.',
+    aiStudioNoteEn: 'Priority access in Google AI Studio with institutional Gemini Pro Education quota for scientific workflows.'
+  },
+  {
+    id: 'science-2',
+    rank: 2,
+    category: 'science',
+    model: 'DeepSeek-R1',
+    accountId: 'deepseek',
+    accountName: 'Deep Search (DeepSeek)',
+    company: 'DeepSeek',
+    tier: 'Deep Search Free',
+    tierEn: 'Deep Search Free',
+    tierBadge: 'free',
+    url: 'https://chat.deepseek.com/',
+    badge: '97.3% MATH-500 & Provas Formais',
+    badgeEn: '97.3% MATH-500 & Formal Proofs',
+    scoreMetric: 'Raciocínio Matemático Puro',
+    scoreValue: '97.3% AIME / MATH',
+    whyBestPt: 'Imbatível no nível gratuito para demonstrações matemáticas rigorosas, derivações de física quântica e validação de cadeias lógicas científicas complexas.',
+    whyBestEn: 'Unmatched on the free tier for rigorous mathematical proofs, quantum physics derivations, and validating complex scientific logical chains.',
+    antigravity: true,
+    codex: true
+  },
+  {
+    id: 'science-3',
+    rank: 3,
+    category: 'science',
+    model: 'Claude Sonnet 5.5',
+    accountId: 'claude',
+    accountName: 'Claude',
+    company: 'Anthropic',
+    tier: 'Claude Free',
+    tierEn: 'Claude Free',
+    tierBadge: 'free',
+    url: 'https://claude.ai/',
+    badge: 'Análise Biomédica & Causalidade',
+    badgeEn: 'Biomedical & Causal Reasoning',
+    scoreMetric: 'Revisão por Pares & Artigos',
+    scoreValue: 'Rigor Crítico',
+    whyBestPt: 'Extraordinário na leitura crítica de papers biomédicos e metodologias científicas, apontando falhas metodológicas, vieses e causalidade sem alucinar conclusões.',
+    whyBestEn: 'Extraordinary at critical reading of biomedical papers and scientific methodologies, catching methodological flaws, biases, and confounding factors without hallucination.',
+    antigravity: true,
+    codex: true
+  },
+  {
+    id: 'science-4',
+    rank: 4,
+    category: 'science',
+    model: 'GPT-5 Thinking Mini / o3-mini',
+    accountId: 'chatgpt',
+    accountName: 'ChatGPT',
+    company: 'OpenAI',
+    tier: 'GPT Go & GPT Free',
+    tierEn: 'GPT Go & GPT Free',
+    tierBadge: 'go',
+    url: 'https://chatgpt.com/',
+    badge: 'STEM & Equações Diferenciais',
+    badgeEn: 'STEM & Differential Equations',
+    scoreMetric: 'Cálculo e Simulações STEM',
+    scoreValue: 'Alta Fidelidade',
+    whyBestPt: 'Execução precisa em cálculos de química estrutural, balanços estequiométricos de massa, termodinâmica e equações diferenciais para engenharia.',
+    whyBestEn: 'High precision in structural chemistry calculations, stoichiometric balances, thermodynamics, and differential equations for engineering.',
+    antigravity: true,
+    codex: true
+  },
+  {
+    id: 'science-5',
+    rank: 5,
+    category: 'science',
+    model: 'Kimi K3.1 Pro (2M)',
+    accountId: 'kimi',
+    accountName: 'Kimi (Moonshot)',
+    company: 'Kimi',
+    tier: 'Kimi Free',
+    tierEn: 'Kimi Free',
+    tierBadge: 'free',
+    url: 'https://www.kimi.com/',
+    badge: '2M Tokens para Coleções de Papers',
+    badgeEn: '2M Tokens for Paper Collections',
+    scoreMetric: 'Síntese de Literatura Longa',
+    scoreValue: 'Centenas de PDFs',
+    whyBestPt: 'Capacidade de engolir teses de doutorado e dezenas de papers densos em PDF de uma única vez para cruzar hipóteses e tabelas de dados experimentais.',
+    whyBestEn: 'Capable of ingesting full PhD dissertations and dozens of dense PDF papers in a single prompt to cross-reference hypotheses and experimental data tables.',
+    antigravity: true,
+    codex: true
+  },
+
+  // --- CATEGORIA: CYBER SECURITY & SEGURANÇA CIBERNÉTICA ---
+  {
+    id: 'security-1',
+    rank: 1,
+    category: 'security',
+    model: 'Claude Sonnet 5.5',
+    accountId: 'claude',
+    accountName: 'Claude',
+    company: 'Anthropic',
+    tier: 'Claude Free',
+    tierEn: 'Claude Free',
+    tierBadge: 'free',
+    url: 'https://claude.ai/',
+    badge: '#1 Auditoria de Código & SAST',
+    badgeEn: '#1 Code Auditing & SAST',
+    scoreMetric: 'Vulnerability Detection',
+    scoreValue: 'Referência Mundial SAST',
+    whyBestPt: 'Padrão ouro para análise estática de segurança (SAST): identifica falhas lógicas sutis, race conditions, injeções SQL, vulnerabilidades de autenticação e sugere patches defensivos impecáveis.',
+    whyBestEn: 'Gold standard for static application security testing (SAST): detects subtle logic flaws, race conditions, SQL injections, auth bugs, and writes flawless defensive patches.',
+    antigravity: true,
+    codex: true
+  },
+  {
+    id: 'security-2',
+    rank: 2,
+    category: 'security',
+    model: 'Gemini 4 Argon & Hydrogen',
+    accountId: 'google-ai-studio',
+    accountName: 'Google AI Studio / Gemini',
+    company: 'Google',
+    tier: 'AI Studio & Pro Estudos',
+    tierEn: 'AI Studio & Pro Education',
+    tierBadge: 'edu',
+    url: 'https://aistudio.google.com/',
+    badge: 'Auditoria de Repositórios 1M Tokens',
+    badgeEn: '1M Repo Auditing & DevSecOps',
+    scoreMetric: 'DevSecOps & Cloud Security',
+    scoreValue: '1M Tokens de Código',
+    whyBestPt: 'A janela de 1M de tokens no AI Studio permite carregar o repositório inteiro e toda a infraestrutura como código (Terraform, Kubernetes, IAM) para auditar conformidade CIS/NIST e brechas arquiteturais.',
+    whyBestEn: 'The 1M token window in AI Studio enables ingesting entire codebases and infrastructure-as-code (Terraform, Kubernetes, IAM) to audit CIS/NIST compliance and architecture posture.',
+    antigravity: true,
+    codex: true,
+    aiStudio: true,
+    aiStudioNotePt: 'Playground no Google AI Studio com Gemini Pro Estudos para varredura de repositórios completos sem limites de contexto.',
+    aiStudioNoteEn: 'Google AI Studio playground with Gemini Pro Education for scanning complete code repositories without context limits.'
+  },
+  {
+    id: 'security-3',
+    rank: 3,
+    category: 'security',
+    model: 'DeepSeek-R1',
+    accountId: 'deepseek',
+    accountName: 'Deep Search (DeepSeek)',
+    company: 'DeepSeek',
+    tier: 'Deep Search Free',
+    tierEn: 'Deep Search Free',
+    tierBadge: 'free',
+    url: 'https://chat.deepseek.com/',
+    badge: 'Engenharia Reversa & Criptoanálise',
+    badgeEn: 'Reverse Engineering & Cryptanalysis',
+    scoreMetric: 'Raciocínio Lógico de Exploits',
+    scoreValue: 'Desmontagem Passo a Passo',
+    whyBestPt: 'Altíssima habilidade de raciocínio dedutivo para desmontar trechos de código em Assembly, inspecionar lógica de descompilação (Ghidra/IDA Pro) e validar implementações criptográficas.',
+    whyBestEn: 'Exceptional deductive reasoning for dissecting Assembly code, inspecting decompiled logic (Ghidra/IDA Pro), and verifying cryptographic implementations.',
+    antigravity: true,
+    codex: true
+  },
+  {
+    id: 'security-4',
+    rank: 4,
+    category: 'security',
+    model: 'GPT-5 Thinking Mini / o3-mini',
+    accountId: 'chatgpt',
+    accountName: 'ChatGPT',
+    company: 'OpenAI',
+    tier: 'GPT Go & GPT Free',
+    tierEn: 'GPT Go & GPT Free',
+    tierBadge: 'go',
+    url: 'https://chatgpt.com/',
+    badge: 'Automação Defensiva & Pentest',
+    badgeEn: 'Defensive Automation & Pentest',
+    scoreMetric: 'Regras YARA & Triage SIEM',
+    scoreValue: 'DevSecOps Ágil',
+    whyBestPt: 'Rápido e cirúrgico para gerar regras YARA, assinaturas Suricata/Snort, scripts defensivos de pentest em Python e triagem estruturada de logs de incidentes em SIEM.',
+    whyBestEn: 'Fast and surgically accurate in generating YARA rules, Suricata/Snort signatures, defensive pentest Python scripts, and structured SIEM incident log triage.',
+    antigravity: true,
+    codex: true
+  },
+  {
+    id: 'security-5',
+    rank: 5,
+    category: 'security',
+    model: 'Grok 3',
+    accountId: 'grok',
+    accountName: 'Grok (xAI)',
+    company: 'xAI',
+    tier: 'Grok Free',
+    tierEn: 'Grok Free',
+    tierBadge: 'free',
+    url: 'https://grok.com/',
+    badge: 'Inteligência de Ameaças em Tempo Real',
+    badgeEn: 'Real-Time Threat Intelligence',
+    scoreMetric: 'CVE Tracking no X',
+    scoreValue: 'Zero-Day Monitoring',
+    whyBestPt: 'Monitoramento contínuo da rede social X e repositórios de pesquisadores para capturar anúncios imediatos de novos exploits zero-day, vazamentos e CVEs antes de entrarem em feeds convencionais.',
+    whyBestEn: 'Continuous monitoring of X and security researcher repos to catch immediate disclosures of zero-day exploits, leaks, and emerging CVEs before they hit conventional feeds.',
     antigravity: true,
     codex: true
   }
