@@ -155,3 +155,17 @@ body { line-height:1.5; }
 .news-card .article-title:hover h3 { color:var(--green); }
 .news-card .card-summary { margin:10px 0 0; }
 
+/* Mark all read button next to search box */
+.mark-all-read-button { display:inline-flex; align-items:center; gap:6px; height:35px; padding:0 12px; border:1px solid var(--line); border-radius:6px; background:var(--paper); color:var(--muted); font-size:11px; font-weight:500; cursor:pointer; white-space:nowrap; transition:all .16s ease; }
+.mark-all-read-button:hover { background:var(--soft); color:var(--green); border-color:var(--green); }
+.mark-all-read-button svg { color:var(--green); }
+
+/* Footer layout: scope tag centered in footer */
+footer { position:relative; display:flex; align-items:center; justify-content:space-between; }
+.footer-scope { position:absolute; left:50%; transform:translateX(-50%); margin:0; white-space:nowrap; }
+@media (max-width:700px) {
+  .mark-all-read-button { height:37px; font-size:10px; padding:0 10px; }
+  footer { flex-wrap:wrap; gap:12px; }
+  .footer-scope { position:static; transform:none; order:2; margin:6px auto; }
+}
+
