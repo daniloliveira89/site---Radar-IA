@@ -56,7 +56,6 @@ export default function MyRanking(){
       case 'webdesign': return <Palette size={16}/>;
       case 'image': return <Sparkles size={16}/>;
       case 'research': return <Globe size={16}/>;
-      case 'context': return <Layers size={16}/>;
       case 'science': return <Atom size={16}/>;
       case 'security': return <ShieldCheck size={16}/>;
       default: return <Trophy size={16}/>;
@@ -178,7 +177,6 @@ export default function MyRanking(){
                     </span>
                     <div>
                       <h3>{language==='en'?cat.nameEn:cat.namePt}</h3>
-                      <p>{language==='en'?cat.descriptionEn:cat.descriptionPt}</p>
                     </div>
                   </div>
                   <span className="category-header-tag">

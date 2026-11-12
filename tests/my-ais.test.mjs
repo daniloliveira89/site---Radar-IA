@@ -63,6 +63,13 @@ test('every account has available models with descriptions and isLatest flags', 
 
 test('every account includes configured Antigravity and Codex variants', () => {
   for (const acc of MY_ACCOUNTS) {
+    if (acc.id === 'chatgpt') {
+      assert.equal(acc.codex.supported, true, 'chatgpt must support Codex');
+      assert.equal(acc.antigravity.supported, false, 'chatgpt is dedicated to Codex, not Antigravity');
+      assert(acc.codex.models.length >= 2, 'chatgpt must list Codex models');
+      assert(acc.codex.notesPt.length > 0);
+      continue;
+    }
     assert.equal(acc.antigravity.supported, true, `${acc.id} must support Antigravity`);
     assert(acc.antigravity.models.length >= 2, `${acc.id} must list Antigravity models`);
     assert(acc.antigravity.notesPt.length > 0);

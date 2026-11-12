@@ -1,4 +1,4 @@
-export type RankingCategory = 'all' | 'code' | 'writing' | 'webdesign' | 'image' | 'research' | 'context' | 'science' | 'security';
+export type RankingCategory = 'all' | 'code' | 'writing' | 'webdesign' | 'image' | 'research' | 'science' | 'security';
 
 export type CategoryMeta = {
   id: RankingCategory;
@@ -78,21 +78,12 @@ export const RANKING_CATEGORIES: CategoryMeta[] = [
   },
   {
     id: 'research',
-    namePt: 'Pesquisa Profunda & Agentes',
-    nameEn: 'Deep Research & Agents',
+    namePt: 'Deep Research',
+    nameEn: 'Deep Research',
     descriptionPt: 'Varredura analítica de fontes simultâneas na web, checagem de fatos, navegação autônoma e uso de ferramentas.',
     descriptionEn: 'Analytical web browsing across multiple sources, fact-checking, autonomous agents, and tool use.',
     badgePt: 'Investigação & Web',
     badgeEn: 'Research & Web'
-  },
-  {
-    id: 'context',
-    namePt: 'Contexto Massivo (1M–2M)',
-    nameEn: 'Massive Context Window',
-    descriptionPt: 'Leitura de livros completos, repositórios de código inteiros, documentações extensas e horas de vídeo/áudio.',
-    descriptionEn: 'Processing full books, entire repositories, large documentations, and hours of video/audio in one prompt.',
-    badgePt: '1M a 2M Tokens',
-    badgeEn: '1M to 2M Tokens'
   },
   {
     id: 'science',
@@ -105,8 +96,8 @@ export const RANKING_CATEGORIES: CategoryMeta[] = [
   },
   {
     id: 'security',
-    namePt: 'Cyber Security & Segurança Cibernética',
-    nameEn: 'Cyber Security & Threat Analysis',
+    namePt: 'Cyber Security',
+    nameEn: 'Cyber Security',
     descriptionPt: 'Auditoria de código-fonte (SAST), análise de vulnerabilidades, engenharia reversa, modelagem de ameaças e DevSecOps.',
     descriptionEn: 'Source code auditing (SAST), vulnerability analysis, reverse engineering, threat modeling, and DevSecOps.',
     badgePt: 'Segurança & Auditoria',
@@ -212,10 +203,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Alta Precisão',
     whyBestPt: 'Especialista em lógica matemática e refatoração detalhada de scripts com reflexão interna para evitar erros de compilação.',
     whyBestEn: 'Specialized in mathematical logic and detailed script refactoring with internal reflection to prevent runtime errors.',
-    antigravity: true,
+    antigravity: false,
     codex: true,
-    antigravityNotePt: 'Total suporte via conectores MCP e rotas OpenAI no Antigravity.',
-    antigravityNoteEn: 'Full support via MCP connectors and OpenAI routes in Antigravity.',
     codexNotePt: 'Ambiente de desenvolvimento nativo para automação no Codex.',
     codexNoteEn: 'Native developer environment for automation in Codex.'
   },
@@ -344,7 +333,7 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Multi-formato',
     whyBestPt: 'Excelente adaptabilidade para posts em redes sociais, mensagens profissionais e diálogos dinâmicos com modulação fina de personalidade.',
     whyBestEn: 'Outstanding adaptability for social media posts, professional copywriting, and conversational dialogue with personality tuning.',
-    antigravity: true,
+    antigravity: false,
     codex: true
   },
 
@@ -433,7 +422,7 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Editor Visual Integrado',
     whyBestPt: 'O ambiente Canvas facilita editar blocos individuais de código frontend, ajustar estilos CSS e refatorar páginas com feedback visual direto.',
     whyBestEn: 'The Canvas environment makes it easy to edit individual frontend code blocks, adjust CSS styles, and refactor pages with immediate visual feedback.',
-    antigravity: true,
+    antigravity: false,
     codex: true
   },
 
@@ -501,8 +490,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Cenas Detalhadas',
     whyBestPt: 'Excelente interpretação de descrições complexas com múltiplos personagens, posicionamento espacial de objetos e estilos artísticos específicos.',
     whyBestEn: 'Outstanding interpretation of complex descriptions with multiple characters, spatial object placement, and specific artistic styles.',
-    antigravity: true,
-    codex: false
+    antigravity: false,
+    codex: true
   },
   {
     id: 'image-4',
@@ -590,7 +579,7 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Links Oficiais',
     whyBestPt: 'Respostas estruturadas com citações transparentes, links diretos para veículos oficiais e integração contínua de notícias do dia.',
     whyBestEn: 'Structured answers with transparent citations, direct links to official sources, and seamless daily news integration.',
-    antigravity: true,
+    antigravity: false,
     codex: true
   },
   {
@@ -632,74 +621,6 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Tempo Real X',
     whyBestPt: 'Detecta acontecimentos, opiniões da comunidade e lançamentos de tecnologia no momento em que ocorrem na rede social X.',
     whyBestEn: 'Detects breaking events, community sentiment, and tech releases the exact moment they unfold on the X platform.',
-    antigravity: true,
-    codex: true
-  },
-
-  // --- CATEGORIA: CONTEXTO MASSIVO (1M–2M) ---
-  {
-    id: 'context-1',
-    rank: 1,
-    category: 'context',
-    model: 'Kimi K3.1 Pro (2M Tokens)',
-    accountId: 'kimi',
-    accountName: 'Kimi (Moonshot)',
-    company: 'Kimi',
-    tier: 'Kimi Free',
-    tierEn: 'Kimi Free',
-    tierBadge: 'free',
-    url: 'https://www.kimi.com/',
-    badge: 'Maior Janela Gratuita do Mundo (2M)',
-    badgeEn: 'World’s Largest Free Window (2M)',
-    scoreMetric: 'Capacidade de Tokens',
-    scoreValue: '2.000.000 Tokens',
-    whyBestPt: 'Permite carregar livros inteiros, repositórios de programação completos e manuais jurídicos ou técnicos sem perda de retenção no plano grátis.',
-    whyBestEn: 'Allows loading entire books, full code repositories, and large legal/technical manuals without retention degradation on the free tier.',
-    antigravity: true,
-    codex: true
-  },
-  {
-    id: 'context-2',
-    rank: 2,
-    category: 'context',
-    model: 'Gemini 4 Hydrogen / 2.5 Pro',
-    accountId: 'google-ai-studio',
-    accountName: 'Google AI Studio / Gemini Web',
-    company: 'Google',
-    tier: 'AI Studio & Pro Estudos',
-    tierEn: 'AI Studio & Pro Education',
-    tierBadge: 'edu',
-    url: 'https://aistudio.google.com/',
-    badge: '1M Nativo a 2M Tokens',
-    badgeEn: '1M Native to 2M Tokens',
-    scoreMetric: 'Needle In A Haystack',
-    scoreValue: '99.8% Precisão',
-    whyBestPt: 'Excelente recuperação de detalhes específicos (agulha no palheiro) em vídeos de horas de duração, gravações de áudio e arquivos massivos.',
-    whyBestEn: 'Top-tier needle-in-a-haystack retrieval accuracy across hours of video, audio recordings, and massive data files.',
-    antigravity: true,
-    codex: true,
-    aiStudio: true,
-    aiStudioNotePt: 'Suporte a contexto de 1M a 2M tokens diretamente no playground do Google AI Studio.',
-    aiStudioNoteEn: '1M to 2M token context window directly supported in Google AI Studio playground.'
-  },
-  {
-    id: 'context-3',
-    rank: 3,
-    category: 'context',
-    model: 'Claude Sonnet 5.5 (200k)',
-    accountId: 'claude',
-    accountName: 'Claude',
-    company: 'Anthropic',
-    tier: 'Claude Free',
-    tierEn: 'Claude Free',
-    tierBadge: 'free',
-    url: 'https://claude.ai/',
-    badge: '200k Tokens de Alta Densidade',
-    badgeEn: '200k High-Density Tokens',
-    scoreMetric: 'Raciocínio Contextual',
-    scoreValue: 'Perfeita Coerência',
-    whyBestPt: 'Embora tenha janela nominal menor que Kimi e Gemini, compreende dependências cruzadas e nuances sutis de código e contratos com perfeição.',
-    whyBestEn: 'While having a smaller nominal window than Kimi and Gemini, it understands cross-dependencies and subtle nuances with unmatched coherence.',
     antigravity: true,
     codex: true
   },
@@ -789,7 +710,7 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Alta Fidelidade',
     whyBestPt: 'Execução precisa em cálculos de química estrutural, balanços estequiométricos de massa, termodinâmica e equações diferenciais para engenharia.',
     whyBestEn: 'High precision in structural chemistry calculations, stoichiometric balances, thermodynamics, and differential equations for engineering.',
-    antigravity: true,
+    antigravity: false,
     codex: true
   },
   {
@@ -899,7 +820,7 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'DevSecOps Ágil',
     whyBestPt: 'Rápido e cirúrgico para gerar regras YARA, assinaturas Suricata/Snort, scripts defensivos de pentest em Python e triagem estruturada de logs de incidentes em SIEM.',
     whyBestEn: 'Fast and surgically accurate in generating YARA rules, Suricata/Snort signatures, defensive pentest Python scripts, and structured SIEM incident log triage.',
-    antigravity: true,
+    antigravity: false,
     codex: true
   },
   {

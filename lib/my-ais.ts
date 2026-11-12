@@ -192,14 +192,14 @@ export const MY_ACCOUNTS: MyAccount[] = [
       }
     ],
     antigravity: {
-      supported: true,
-      models: ['GPT-4o', 'GPT-4o mini', 'o3-mini', 'GPT-5 Thinking'],
-      notesPt: 'Compatível com subagentes do Antigravity via OpenAI API e conectores MCP.',
-      notesEn: 'Compatible with Antigravity subagents via OpenAI API and MCP connectors.'
+      supported: false,
+      models: [],
+      notesPt: 'Conta dedicada ao ambiente Codex.',
+      notesEn: 'Account dedicated to the Codex environment.'
     },
     codex: {
       supported: true,
-      models: ['OpenAI Codex', 'GPT-4o', 'o3-mini'],
+      models: ['OpenAI Codex', 'GPT-4o', 'o3-mini', 'GPT-5 Thinking Mini'],
       notesPt: 'Ambiente nativo para automação, CLI autônoma e geração de software no Codex.',
       notesEn: 'Native environment for automation, autonomous CLI and software gen in Codex.'
     }

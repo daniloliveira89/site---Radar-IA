@@ -3,17 +3,25 @@ import assert from 'node:assert/strict';
 import {RANKING_CATEGORIES,RANKED_AIS} from '../lib/my-ranking.ts';
 import {MY_ACCOUNTS} from '../lib/my-ais.ts';
 
-test('my-ranking categories include all 8 key requested domains', () => {
+test('my-ranking categories include all 7 key requested domains without context', () => {
   const ids = RANKING_CATEGORIES.map(c => c.id);
   assert(ids.includes('code'), 'Missing code category');
   assert(ids.includes('writing'), 'Missing writing category');
   assert(ids.includes('webdesign'), 'Missing webdesign category');
   assert(ids.includes('image'), 'Missing image category');
   assert(ids.includes('research'), 'Missing research category');
-  assert(ids.includes('context'), 'Missing context category');
   assert(ids.includes('science'), 'Missing science category');
   assert(ids.includes('security'), 'Missing security category');
-  assert.equal(RANKING_CATEGORIES.length, 8);
+  assert(!ids.includes('context'), 'Context category should be removed');
+  assert.equal(RANKING_CATEGORIES.length, 7);
+
+  const secCat = RANKING_CATEGORIES.find(c => c.id === 'security');
+  assert.equal(secCat.namePt, 'Cyber Security');
+  assert.equal(secCat.nameEn, 'Cyber Security');
+
+  const resCat = RANKING_CATEGORIES.find(c => c.id === 'research');
+  assert.equal(resCat.namePt, 'Deep Research');
+  assert.equal(resCat.nameEn, 'Deep Research');
 });
 
 test('every ranked AI model belongs to an active user account', () => {
@@ -40,10 +48,6 @@ test('category rank #1 models correspond to top benchmark winners', () => {
   assert(topCode.model.includes('Claude Sonnet'), 'Top Code should be Claude Sonnet');
   assert.equal(topCode.company, 'Anthropic');
 
-  const topContext = RANKED_AIS.find(i => i.category === 'context' && i.rank === 1);
-  assert(topContext.model.includes('Kimi'), 'Top Context should be Kimi K3.1 Pro');
-  assert.equal(topContext.company, 'Kimi');
-
   const topResearch = RANKED_AIS.find(i => i.category === 'research' && i.rank === 1);
   assert(topResearch.model.includes('DeepSeek'), 'Top Research should be DeepSeek');
   assert.equal(topResearch.company, 'DeepSeek');
@@ -60,4 +64,13 @@ test('category rank #1 models correspond to top benchmark winners', () => {
   const topSecurity = RANKED_AIS.find(i => i.category === 'security' && i.rank === 1);
   assert(topSecurity.model.includes('Claude Sonnet'), 'Top Security should be Claude Sonnet');
   assert.equal(topSecurity.company, 'Anthropic');
+});
+
+test('all ChatGPT models are marked with Codex and not Antigravity', () => {
+  const gptItems = RANKED_AIS.filter(i => i.accountId === 'chatgpt');
+  assert(gptItems.length >= 5, 'Should have multiple ranked ChatGPT items');
+  for (const item of gptItems) {
+    assert.equal(item.codex, true, `${item.model} should be Codex ready`);
+    assert.equal(item.antigravity, false, `${item.model} should NOT be Antigravity ready`);
+  }
 });

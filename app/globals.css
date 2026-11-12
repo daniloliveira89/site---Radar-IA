@@ -198,11 +198,11 @@ footer { position:relative; display:flex; align-items:center; justify-content:sp
 
 .tier-badge { display:inline-flex; align-items:center; padding:4px 9px; border-radius:6px; font-size:10px; font-weight:650; letter-spacing:.2px; border:1px solid transparent; }
 .tier-edu { background:#e8f0fe; color:#1a73e8; border-color:#d2e3fc; }
-.tier-go { background:#e8f4ea; color:#137333; border-color:#ceead6; }
+.tier-go { background:#e0f2fe; color:#0369a1; border-color:#bae6fd; }
 .tier-free { background:var(--side); color:var(--muted); border-color:var(--line); }
 .tier-pro { background:#fef7e0; color:#b06000; border-color:#feefc3; }
 [data-theme=dark] .tier-edu { background:#1e293b; color:#70a7ff; border-color:#2a3b5c; }
-[data-theme=dark] .tier-go { background:#152c1e; color:#5cd685; border-color:#1e482e; }
+[data-theme=dark] .tier-go { background:#082f49; color:#38bdf8; border-color:#0c4a6e; }
 [data-theme=dark] .tier-pro { background:#302511; color:#f0b44a; border-color:#4d3b1b; }
 
 .my-ai-link-button { display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:6px; border:1px solid var(--line); color:var(--muted); transition:all .15s ease; }
