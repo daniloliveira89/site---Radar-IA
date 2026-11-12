@@ -23,7 +23,7 @@ function Plot({board,rows,offers,valueMode=false}:{board:Board,rows:BenchmarkRow
  return <div className={'score-chart'+(valueMode?' score-chart-value':'')} tabIndex={0} role="region" aria-label={t('Model comparison','Comparação de modelos')}>
  <table>
  <colgroup><col className="score-model-col"/><col className="score-access-col"/><col/>{valueMode&&<col className="score-ratio-col"/>}</colgroup>
- <thead><tr><th scope="col">{t('Model','Modelo')}</th><th scope="col">{isWeb?t('Company · Battles','Empresa · Comparações'):valueMode?t('Company · Access · Cost','Empresa · Acesso · Custo'):t('Company · Access','Empresa · Acesso')}</th><th scope="col">{isWeb?'Elo':t('Score','Nota')}{isElo&&<span className="score-range"> {formatScore(min)}–{formatScore(max)}</span>}</th>{valueMode&&<th scope="col">{t('$/Point ↓','$/Ponto ↓')}</th>}</tr></thead>
+ <thead><tr><th scope="col">{t('Model','Modelo')}</th><th scope="col">{isWeb?t('Company · Access · Battles','Empresa · Acesso · Comparações'):valueMode?t('Company · Access · Cost','Empresa · Acesso · Custo'):t('Company · Access','Empresa · Acesso')}</th><th scope="col">{isWeb?'Elo':t('Score','Nota')}{isElo&&<span className="score-range"> {formatScore(min)}–{formatScore(max)}</span>}</th>{valueMode&&<th scope="col">{t('$/Point ↓','$/Ponto ↓')}</th>}</tr></thead>
  <tbody>{rows.map((r,i)=>{
   const a=modelAccess(r.company,r.model,offers,board.id),value=costPerScore(r,board.id);
   const name=board.evaluation==='eq-bench'?formatLongformModel(r.model):r.model;
@@ -33,7 +33,7 @@ function Plot({board,rows,offers,valueMode=false}:{board:Board,rows:BenchmarkRow
   const interval=r.low!==undefined&&r.high!==undefined?'95% CI: '+formatScore(r.low)+'–'+formatScore(r.high):undefined;
   return <tr key={r.model}>
    <th scope="row"><div className="score-model"><span className="score-rank" aria-hidden="true">{i+1}</span><Brand name={r.company} small/><strong title={r.model}>{name}</strong></div></th>
-   <td>{isWeb?<div className="score-meta"><span>{r.company}</span><span>·</span><span>{r.samples?.toLocaleString(locale)||'—'}</span></div>:<div className="score-meta"><span>{r.company}{r.preview?t(' · preview',' · prévia'):''}</span><a className={'access-badge '+a.kind} href={a.url} target="_blank" rel="noopener noreferrer" title={accessTitle}>{t(a.en,a.pt)}</a>{valueMode&&<span className="score-price">{value!==undefined?money(r.costUSD!,locale)+' / '+costUnit(board,language):'—'}</span>}</div>}</td>
+   <td><div className="score-meta"><span>{r.company}{r.preview?t(' · preview',' · prévia'):''}</span><a className={'access-badge '+a.kind} href={a.url} target="_blank" rel="noopener noreferrer" title={accessTitle}>{t(a.en,a.pt)}</a>{isWeb&&<><span>·</span><span>{r.samples?.toLocaleString(locale)||'—'}</span></>}{valueMode&&<span className="score-price">{value!==undefined?money(r.costUSD!,locale)+' / '+costUnit(board,language):'—'}</span>}</div></td>
    <td><div className="score-meter" title={interval}><span className="score-track" aria-hidden="true"><span style={{width:Math.max(0,Math.min(100,(r.score-min)/(max-min)*100))+'%'}}/></span><strong>{formatScore(r.score)}</strong>{interval&&<span className="score-sr-only"> ({interval})</span>}</div></td>
    {valueMode&&<td className={'score-ratio '+(below?'score-regression':tie?'score-tie':'')} title={ratioTitle}>{value===undefined?'—':money(value,locale,true)}</td>}
   </tr>;
