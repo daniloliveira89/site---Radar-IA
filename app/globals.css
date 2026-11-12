@@ -289,15 +289,8 @@ footer { position:relative; display:flex; align-items:center; justify-content:sp
 .ranking-variants-filter button:hover { background:var(--soft); color:var(--green); border-color:var(--green); }
 .ranking-variants-filter button.active { background:var(--soft); color:var(--green); border-color:var(--green); font-weight:650; }
 
-.ranking-groups-container { display:flex; flex-direction:column; gap:36px; }
-.ranking-category-section { display:flex; flex-direction:column; gap:16px; }
-
-.category-section-header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 20px; background:var(--side); border:1px solid var(--line); border-radius:10px; }
-.category-header-main { display:flex; align-items:center; gap:14px; }
-.category-icon-bubble { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:9px; background:var(--paper); border:1px solid var(--line); color:var(--green); }
-.category-header-main h3 { margin:0 0 3px; font-size:16px; font-weight:750; color:var(--text); letter-spacing:-.3px; }
-.category-header-main p { margin:0; font-size:11px; color:var(--muted); line-height:1.5; }
-.category-header-tag { display:inline-flex; align-items:center; padding:5px 10px; border-radius:6px; background:var(--paper); border:1px solid var(--line); font-size:10px; font-weight:650; color:var(--green); white-space:nowrap; }
+.ranking-groups-container { display:flex; flex-direction:column; gap:16px; }
+.ranking-category-section { display:flex; flex-direction:column; gap:12px; }
 
 .ranking-cards-list { display:flex; flex-direction:column; gap:12px; }
 .ranking-card { display:flex; gap:16px; background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:18px 20px; transition:border-color .18s,box-shadow .18s; }
@@ -353,8 +346,6 @@ footer { position:relative; display:flex; align-items:center; justify-content:sp
   .ranking-category-tabs button { font-size:10px; padding:7px 10px; }
   .ranking-toolbar { flex-direction:column; align-items:stretch; }
   .ranking-variants-filter { overflow-x:auto; flex-wrap:nowrap; padding-bottom:4px; }
-  .category-section-header { flex-direction:column; align-items:flex-start; gap:10px; padding:14px; }
-  .category-header-tag { align-self:flex-start; }
   .ranking-card { flex-direction:column; gap:12px; padding:14px; }
   .rank-position-col { align-self:flex-start; }
   .open-ai-button { width:100%; justify-content:center; }

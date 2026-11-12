@@ -170,20 +170,6 @@ export default function MyRanking(){
             if(!items||!items.length) return null;
             return (
               <section key={cat.id} className="ranking-category-section">
-                <header className="category-section-header">
-                  <div className="category-header-main">
-                    <span className="category-icon-bubble">
-                      {categoryIcon(cat.id)}
-                    </span>
-                    <div>
-                      <h3>{language==='en'?cat.nameEn:cat.namePt}</h3>
-                    </div>
-                  </div>
-                  <span className="category-header-tag">
-                    {language==='en'?cat.badgeEn:cat.badgePt}
-                  </span>
-                </header>
-
                 <div className="ranking-cards-list">
                   {items.map(item=>(
                     <article key={item.id} className={`ranking-card rank-${item.rank}`}>
