@@ -20,6 +20,18 @@ export const writingChatAccess:FreeOffer[]=[{
 }];
 export const webDesignChatAccess:FreeOffer[]=[
  {
+  model:'Muse Wonder (max)',company:'Meta',route:'chat',
+  url:'https://www.meta.ai/',source:'https://www.meta.ai/',checkedAt:'',reportedByUser:true,
+  aliases:['Muse Wonder'],
+  limitsEn:'Free chat access on Meta AI.',limitsPt:'Acesso grátis no chat da Meta AI.'
+ },
+ {
+  model:'Muse Spark 1.3 (xhigh)',company:'Meta',route:'chat',
+  url:'https://www.meta.ai/',source:'https://www.meta.ai/',checkedAt:'',reportedByUser:true,
+  aliases:['Muse Spark 1.3'],
+  limitsEn:'Free chat access on Meta AI.',limitsPt:'Acesso grátis no chat da Meta AI.'
+ },
+ {
   model:'Inkling 2 Small',company:'Thinking Machines',route:'api',
   url:'https://openrouter.ai/thinkingmachines/inkling-small:free',source:'https://openrouter.ai/api/v1/models',checkedAt:'',
   aliases:['Inkling 2 Small (high)'],
@@ -32,10 +44,34 @@ export const webDesignChatAccess:FreeOffer[]=[
   limitsEn:'Free chat access on Kimi. Check daily quotas on the site.',limitsPt:'Acesso grátis no chat da Kimi. Confira as cotas diárias no site.'
  },
  {
+  model:'Muse Ember',company:'Meta',route:'chat',
+  url:'https://www.meta.ai/',source:'https://www.meta.ai/',checkedAt:'',reportedByUser:true,
+  aliases:['Muse Ember (medium)'],
+  limitsEn:'Free chat access on Meta AI.',limitsPt:'Acesso grátis no chat da Meta AI.'
+ },
+ {
+  model:'Kimi K3.1 Pro',company:'Kimi',route:'chat',
+  url:'https://www.kimi.com/',source:'https://www.kimi.com/',checkedAt:'',reportedByUser:true,
+  aliases:['Kimi K3.1 Pro (high)'],
+  limitsEn:'Free chat access on Kimi. Check daily quotas on the site.',limitsPt:'Acesso grátis no chat da Kimi. Confira as cotas diárias no site.'
+ },
+ {
+  model:'Muse Spark 1.2',company:'Meta',route:'chat',
+  url:'https://www.meta.ai/',source:'https://www.meta.ai/',checkedAt:'',reportedByUser:true,
+  aliases:['Muse Spark 1.2 (medium)'],
+  limitsEn:'Free chat access on Meta AI.',limitsPt:'Acesso grátis no chat da Meta AI.'
+ },
+ {
   model:'DeepSeek-V4.1-Flash',company:'DeepSeek',route:'chat',
   url:'https://chat.deepseek.com/',source:'https://chat.deepseek.com/',checkedAt:'',
   aliases:['DeepSeek V4.1 Flash 1017','DeepSeek-V4.1-Flash (medium)'],
   limitsEn:'Free web chat access on DeepSeek.',limitsPt:'Acesso grátis no chat web da DeepSeek.'
+ },
+ {
+  model:'MiMo-V2.6-Pro',company:'Xiaomi',route:'chat',
+  url:'https://ai.xiaomi.com/',source:'https://ai.xiaomi.com/',checkedAt:'',reportedByUser:true,
+  aliases:['MiMo-V2.6-Pro (high)'],
+  limitsEn:'Free access on Xiaomi MiMo.',limitsPt:'Acesso grátis no Xiaomi MiMo.'
  },
  {
   model:'Muse Spark Open (xhigh)',company:'Meta',route:'chat',
