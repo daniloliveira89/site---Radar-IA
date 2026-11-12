@@ -130,7 +130,7 @@ export default function MyAIs({feed}:{feed?:Feed}){
       {filteredAccounts.length>0 ? (
         <div className="my-ais-grid">
           {filteredAccounts.map(acc=>{
-            const latestRelease=findLatestProviderRelease(acc.company,feed);
+            const latestRelease=findLatestProviderRelease(acc.company,feed,null,acc.id);
             return (
               <article key={acc.id} className="my-ai-card">
                 <header className="my-ai-card-header">

@@ -30,3 +30,15 @@ test('GLM listing reads the publisher dates, accepts its official blog and rejec
   ['https://www.zhipuai.cn/zh/research/2',NEWS_START,'Novo modelo'],
  ]);
 });
+
+test('Google AI Studio changelog parses Gemini 4 Hydrogen and Argon releases', () => {
+ const source = SOURCES.find(s => s.id === 'google-aistudio');
+ assert(source, 'google-aistudio source should be defined');
+ const markdown = `## November 12, 2026\n\n* **Gemini 4 Hydrogen (gemini-4-hydrogen) generally available (GA)**: Released [Gemini 4 Hydrogen](/docs/models/gemini-4-hydrogen), bringing cutting-edge intelligence to everyone with speed and efficiency.\n\n## October 13, 2026\n\n* **Gemini 4 Argon (gemini-4-argon) generally available (GA)**: Released [Gemini 4 Argon](/docs/models/gemini-4-argon), our frontier reasoning model.`;
+ const rows = parseHtml(markdown, source);
+ assert.equal(rows.length, 2);
+ assert.equal(rows[0].originalTitle, 'Gemini 4 Hydrogen (gemini-4-hydrogen) generally available (GA)');
+ assert.equal(rows[0].url, 'https://ai.google.dev/docs/models/gemini-4-hydrogen');
+ assert.equal(rows[0].category, 'Modelos');
+ assert.equal(rows[0].newsKind, 'Novo modelo');
+});

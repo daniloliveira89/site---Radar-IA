@@ -2,13 +2,24 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {MY_ACCOUNTS,findLatestProviderRelease} from '../lib/my-ais.ts';
 
-test('my-ais accounts catalog contains all 8 required user accounts', () => {
+test('my-ais accounts catalog contains all required user accounts including Google AI Studio', () => {
   const ids = MY_ACCOUNTS.map(a => a.id);
-  const required = ['gemini', 'chatgpt', 'claude', 'grok', 'kimi', 'glm', 'deepseek', 'muse'];
+  const required = ['gemini', 'google-ai-studio', 'chatgpt', 'claude', 'grok', 'kimi', 'glm', 'deepseek', 'muse'];
   for (const req of required) {
     assert(ids.includes(req), `Missing account: ${req}`);
   }
-  assert.equal(MY_ACCOUNTS.length, 8);
+  assert.equal(MY_ACCOUNTS.length, 9);
+});
+
+test('gemini and google-ai-studio include Gemini 4 Hydrogen and Gemini 4 Argon models', () => {
+  const gemini = MY_ACCOUNTS.find(a => a.id === 'gemini');
+  assert(gemini.models.some(m => m.name.includes('Hydrogen')));
+  assert(gemini.models.some(m => m.name.includes('Argon')));
+
+  const studio = MY_ACCOUNTS.find(a => a.id === 'google-ai-studio');
+  assert(studio);
+  assert(studio.models.some(m => m.name.includes('Hydrogen')));
+  assert(studio.models.some(m => m.name.includes('Argon')));
 });
 
 test('my-ais tiers match requested user accounts', () => {

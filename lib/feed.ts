@@ -3,12 +3,13 @@ export type NewsKind = 'Novo modelo' | 'Teste grátis' | 'Ecossistema';
 export type Article = { id: string; company: string; title: string; originalTitle: string; excerpt: string; summary: string; url: string; date: string | null; category: Category; important: boolean; topics: string[]; newsKind?: NewsKind };
 export type SourceStatus = { id: string; company: string; name: string; url: string; status: 'ok' | 'error'; count: number; checkedAt: string; error?: string };
 export type Feed = { articles: Article[]; sources: SourceStatus[]; fetchedAt: string; nextCheckAt: string };
-type Source = { id: string; company: string; name: string; url: string; kind: 'rss' | 'html' | 'runway' | 'midjourney-versions' | 'z-ai-research'; path?: string };
+type Source = { id: string; company: string; name: string; url: string; kind: 'rss' | 'html' | 'runway' | 'midjourney-versions' | 'z-ai-research' | 'ai-studio-changelog'; path?: string };
 export const SOURCES: Source[] = [
   { id: 'openai', company: 'OpenAI', name: 'OpenAI News', url: 'https://openai.com/news/rss.xml', kind: 'rss' },
   { id: 'deepmind', company: 'Google', name: 'Google DeepMind', url: 'https://deepmind.google/blog/rss.xml', kind: 'rss' },
   { id: 'google', company: 'Google', name: 'Google AI', url: 'https://blog.google/technology/ai/rss/', kind: 'rss' },
   { id: 'google-dev', company: 'Google', name: 'Google Developers · AI Studio e Antigravity', url: 'https://developers.googleblog.com/feeds/posts/default', kind: 'rss' },
+  { id: 'google-aistudio', company: 'Google', name: 'Google AI Studio & Gemini API Changelog', url: 'https://ai.google.dev/gemini-api/docs/changelog', kind: 'ai-studio-changelog' },
   { id: 'anthropic', company: 'Anthropic', name: 'Anthropic · Claude', url: 'https://www.anthropic.com/news', kind: 'html', path: '/news/' },
   { id: 'anthropic-models', company: 'Anthropic', name: 'Anthropic · Modelos', url: 'https://www.anthropic.com/news/models', kind: 'html', path: '/news/' },
   { id: 'deepseek', company: 'DeepSeek', name: 'DeepSeek News', url: 'https://www.deepseek.com/en/news/', kind: 'html', path: '/en/news/' },
@@ -80,7 +81,7 @@ export function classify(title: string, excerpt: string, company: string) {
   return {category, important:!!kind, topics, summary,newsKind:kind};
 }
 export function displayTitle(title: string): string {
-  return title.replace(/^Introducing\s+(?:the\s+)?/i, 'Conheça ').replace(/^Meet\s+/i, 'Conheça ').replace(/^Announcing\s+/i, 'Anunciado: ').replace(/^Previewing\s+/i, 'Prévia: ').replace(/^New\s+/i, 'Novidade: ').replace(/\bnow available\b/gi, 'já disponível').replace(/\bfor everyone\b/gi, 'para todos').replace(/\bImage to Video\b/gi, 'imagem para vídeo').replace(/\bText to Video\b/gi, 'texto para vídeo').replace(/\bProduct Updates\b/gi, 'Novidades do produto').replace(/\bwith References\b/gi, 'com referências').replace(/\bVideo Upscale\b/gi, 'ampliação de vídeo').replace(/\bImage Editing\b/gi, 'edição de imagens').replace(/\bBackground Removal\b/gi,'remoção de fundo').replace(/\bBuilt to solve your hardest problems\b/gi,'criado para resolver problemas complexos').replace(/\bour next era of frontier intelligence\b/gi,'uma nova etapa de IA de fronteira').replace(/\bfor Robotics\b/gi,'para robótica').replace(/\band Intelligent UI\b/gi,'e a interface inteligente').replace(/DevDay (\d+) Recap/i,'Resumo do DevDay $1');
+  return title.replace(/^Introducing\s+(?:the\s+)?/i, 'Conheça ').replace(/^Meet\s+/i, 'Conheça ').replace(/^Announcing\s+/i, 'Anunciado: ').replace(/^Previewing\s+/i, 'Prévia: ').replace(/^New\s+/i, 'Novidade: ').replace(/\bnow available\b/gi, 'já disponível').replace(/\bfor everyone\b/gi, 'para todos').replace(/\bImage to Video\b/gi, 'imagem para vídeo').replace(/\bText to Video\b/gi, 'texto para vídeo').replace(/\bProduct Updates\b/gi, 'Novidades do produto').replace(/\bwith References\b/gi, 'com referências').replace(/\bVideo Upscale\b/gi, 'ampliação de vídeo').replace(/\bImage Editing\b/gi, 'edição de imagens').replace(/\bBackground Removal\b/gi,'remoção de fundo').replace(/\bBuilt to solve your hardest problems\b/gi,'criado para resolver problemas complexos').replace(/\bour next era of frontier intelligence\b/gi,'uma nova etapa de IA de fronteira').replace(/\bfor Robotics\b/gi,'para robótica').replace(/\band Intelligent UI\b/gi,'e a interface inteligente').replace(/DevDay (\d+) Recap/i,'Resumo do DevDay $1').replace(/\bgenerally available\s*(?:\(GA\))?/gi, 'disponibilidade geral (GA)');
 }
 function article(source: Source, title: string, excerpt: string, url: string, date: string | null): Article | null {
   title = clean(title).slice(0,240); excerpt = clean(excerpt);
@@ -142,9 +143,38 @@ function parseZaiResearch(html:string,source:Source):Article[]{
     return a?[a]:[];
   });
 }
+export function parseAiStudioChangelog(text: string, source: Source): Article[] {
+  const sections = text.split(/(?:^|\n)##\s+/).filter(s => /^[A-Za-z]+\s+\d{1,2}/.test(s));
+  const items: Article[] = [];
+  for (const s of sections) {
+    const lines = s.split('\n');
+    const header = lines[0];
+    const dateMatch = header.match(/^([A-Za-z]+\s+\d{1,2},?\s+20\d{2})/);
+    if (!dateMatch) continue;
+    const date = findDate(dateMatch[1]);
+    if (!date) continue;
+    const body = lines.slice(1).join('\n');
+    const entries = body.split(/\n\*\s+/).slice(1);
+    for (const entry of entries) {
+      const titleMatch = entry.match(/^\*\*([^*]+)\*\*/);
+      if (!titleMatch) continue;
+      const title = titleMatch[1].replace(/`/g, '').replace(/:\s*$/, '').trim();
+      const linkMatch = entry.match(/\[[^\]]+\]\(([^)]+)\)/);
+      let link = source.url;
+      if (linkMatch && linkMatch[1]) {
+        try { link = new URL(linkMatch[1], 'https://ai.google.dev/').href; } catch {}
+      }
+      const rawExcerpt = entry.replace(/^\*\*([^*]+)\*\*/, '').replace(/^[:\s-]+/, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/`([^`]+)`/g, '$1').trim();
+      const a = article(source, title, rawExcerpt, link, date);
+      if (a) items.push(a);
+    }
+  }
+  return items;
+}
 export function parseHtml(html: string, source: Source): Article[] {
   if(source.kind==='midjourney-versions')return parseMidjourneyVersions(html,source);
   if(source.kind==='z-ai-research')return parseZaiResearch(html,source);
+  if(source.kind==='ai-studio-changelog')return parseAiStudioChangelog(html,source);
   let safe = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,'');
   if(source.id==='kimi')safe = safe.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] || safe;
   const results = new Map<string,Article>();

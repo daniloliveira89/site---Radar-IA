@@ -35,56 +35,114 @@ export type MyAccount = {
 export const MY_ACCOUNTS: MyAccount[] = [
   {
     id: 'gemini',
-    name: 'Gemini',
+    name: 'Gemini (Web · Pro Estudos)',
     company: 'Google',
     tier: 'Gemini Pro Estudos',
     tierEn: 'Gemini Pro Education',
     tierBadge: 'edu',
     url: 'https://gemini.google.com/',
-    summaryPt: 'Conta institucional / Google Workspace for Education com acesso aos recursos avançados do Gemini, cotas ampliadas e integração Google AI.',
-    summaryEn: 'Institutional / Google Workspace for Education account with Gemini Advanced features, expanded quotas and Google AI integration.',
+    summaryPt: 'Conta institucional / Google Workspace for Education no Gemini Web com acesso aos novos modelos Gemini 4, cotas ampliadas, Gems personalizadas e integração Workspace.',
+    summaryEn: 'Institutional / Google Workspace for Education account on Gemini Web with access to new Gemini 4 models, expanded quotas, custom Gems, and Workspace integration.',
     models: [
       {
+        name: 'Gemini 4 Hydrogen',
+        descriptionPt: 'Versão mais recente no Gemini Web: velocidade extrema, respostas instantâneas e raciocínio eficiente com 4 níveis de thinking (low a xhigh) e 1M de contexto.',
+        descriptionEn: 'Latest release in Gemini Web: extreme speed, instant responses and efficient reasoning with 4 thinking levels (low to xhigh) and 1M context.',
+        isLatest: true,
+        badge: 'Mais Recente · GA'
+      },
+      {
+        name: 'Gemini 4 Argon',
+        descriptionPt: 'Versão mais recente de alto poder: heavy-duty frontier model para raciocínio analítico profundo, matemática, ciências e fluxos agênticos complexos.',
+        descriptionEn: 'Latest high-power release: heavy-duty frontier model for deep analytical reasoning, mathematics, science, and complex agentic workflows.',
+        isLatest: true,
+        badge: 'Raciocínio Avançado'
+      },
+      {
         name: 'Gemini 3.8 Flash',
-        descriptionPt: 'Versão mais recente: multimodal ultrarrápido com raciocínio e síntese integrada.',
-        descriptionEn: 'Latest release: ultra-fast multimodal with integrated reasoning and synthesis.',
-        isLatest: true,
-        badge: 'Mais Recente'
+        descriptionPt: 'Multimodal ágil e estável integrado com Workspace, Drive e Docs.',
+        descriptionEn: 'Agile and stable multimodal integrated with Workspace, Drive, and Docs.'
       },
       {
-        name: 'Gemini 3.1 Pro / 2.5 Pro',
-        descriptionPt: 'Raciocínio profundo de alto desempenho com janela de contexto estendida de 2M tokens.',
-        descriptionEn: 'High-performance deep reasoning with extended 2M token context window.',
-        isLatest: true,
-        badge: 'Pro / Avançado'
-      },
-      {
-        name: 'Gemini 2.5 Flash',
-        descriptionPt: 'Multimodal de baixa latência ideal para respostas imediatas e tarefas diárias.',
-        descriptionEn: 'Low-latency multimodal ideal for immediate responses and everyday workflows.'
-      },
-      {
-        name: 'Gemini Advanced Thinking',
-        descriptionPt: 'Cadeia de pensamento explícita para resolver problemas lógicos e matemáticos complexos.',
-        descriptionEn: 'Explicit chain of thought to solve complex logical and mathematical problems.'
+        name: 'Gemini 2.5 Pro / 3.1 Pro',
+        descriptionPt: 'Janela de contexto ultra-longa de 2M tokens para síntese de documentos e arquivos de grande escala.',
+        descriptionEn: 'Ultra-long 2M token context window for large-scale documents and file analysis.'
       },
       {
         name: 'Imagen 3 / Google Flow',
-        descriptionPt: 'Geração fotorrealista de imagens e assets visuais integrados ao ecossistema Google.',
-        descriptionEn: 'Photorealistic image generation and visual assets integrated with Google ecosystem.'
+        descriptionPt: 'Geração fotorrealista de imagens integrada ao ecossistema Google.',
+        descriptionEn: 'Photorealistic image generation integrated with Google ecosystem.'
       }
     ],
     antigravity: {
       supported: true,
-      models: ['Gemini 3.8 Flash', 'Gemini 2.5 Pro', 'Gemini 2.5 Flash', 'Flash Thinking'],
-      notesPt: 'Nativamente integrado no Antigravity CLI e IDE via Google AI Studio e Google Cloud.',
-      notesEn: 'Natively integrated in Antigravity CLI and IDE via Google AI Studio and Google Cloud.'
+      models: ['Gemini 4 Hydrogen', 'Gemini 4 Argon', 'Gemini 3.8 Flash'],
+      notesPt: 'Nativamente integrado no Antigravity CLI e IDE via autenticação Google Workspace e Google Cloud.',
+      notesEn: 'Natively integrated in Antigravity CLI and IDE via Google Workspace and Google Cloud authentication.'
     },
     codex: {
       supported: true,
-      models: ['Gemini 3.8 Flash', 'Gemini 2.5 Pro (Code)'],
-      notesPt: 'Suporte completo no terminal Codex via Google Cloud Code CLI e APIs de automação.',
-      notesEn: 'Full support in Codex terminal via Google Cloud Code CLI and automation APIs.'
+      models: ['Gemini 4 Hydrogen (Code)', 'Gemini 4 Argon'],
+      notesPt: 'Execução de scripts, geração de código e automação de terminal no Codex.',
+      notesEn: 'Script execution, code generation and terminal automation in Codex.'
+    }
+  },
+  {
+    id: 'google-ai-studio',
+    name: 'Google AI Studio',
+    company: 'Google',
+    tier: 'AI Studio Free & Pro',
+    tierEn: 'AI Studio Free & Pro',
+    tierBadge: 'edu',
+    url: 'https://aistudio.google.com/',
+    summaryPt: 'Ambiente oficial para desenvolvedores com acesso direto à Gemini API, chaves de API com cota grátis generosa, controle de thinking budget e prototipagem rápida.',
+    summaryEn: 'Official developer environment with direct Gemini API access, free-tier API keys, thinking budget controls, and fast prototyping.',
+    models: [
+      {
+        name: 'Gemini 4 Hydrogen (gemini-4-hydrogen)',
+        descriptionPt: 'Versão mais recente: modelo workhorse até 2.5x mais rápido que o 3.8 Flash, cota gratuita na API, thinking xhigh e 1M de contexto unificado.',
+        descriptionEn: 'Latest release: workhorse model up to 2.5x faster than 3.8 Flash, free API quota, xhigh thinking and unified 1M context.',
+        isLatest: true,
+        badge: 'Mais Recente · GA'
+      },
+      {
+        name: 'Gemini 4 Argon (gemini-4-argon)',
+        descriptionPt: 'Heavy-duty reasoning para código complexo, orquestração de subagentes e matemática avançada com decode longo de 1M tokens.',
+        descriptionEn: 'Heavy-duty reasoning for complex code, subagent orchestration and advanced math with 1M token long decode.',
+        isLatest: true,
+        badge: 'Frontier Reasoning'
+      },
+      {
+        name: 'Gemini 4 Carbon (gemini-4-carbon)',
+        descriptionPt: 'Capacidade máxima de raciocínio multimodal sustentado para programação agêntica contínua e pesquisa científica.',
+        descriptionEn: 'Maximum sustained multimodal reasoning for continuous agentic coding and scientific research.',
+        isLatest: true,
+        badge: 'Raciocínio Máximo'
+      },
+      {
+        name: 'Gemini Decision 1 (gemini-decision-1)',
+        descriptionPt: 'Modelo especializado em decisões rápidas, calibradas e avaliação por rubricas em texto, áudio e vídeo.',
+        descriptionEn: 'Specialized model for fast, calibrated decisions and rubric evaluations across text, audio, and video.',
+        isLatest: true,
+        badge: 'Novo · Decisões'
+      },
+      {
+        name: 'Gemini 3.8 Flash',
+        descriptionPt: 'Chamadas de ferramentas (tool use), structured JSON e geração ágil de baixa latência.',
+        descriptionEn: 'Tool calling, structured JSON outputs, and low-latency fast generation.'
+      }
+    ],
+    antigravity: {
+      supported: true,
+      models: ['Gemini 4 Hydrogen', 'Gemini 4 Argon', 'Gemini 4 Carbon', 'Gemini Decision 1'],
+      notesPt: 'Chaves de API do Google AI Studio fornecem a inteligência nativa do Antigravity CLI e IDE, com suporte direto ao Orquestrador multimodelo.',
+      notesEn: 'Google AI Studio API keys power native Antigravity CLI and IDE intelligence, with dynamic multi-model Orchestrator switching.'
+    },
+    codex: {
+      supported: true,
+      models: ['Gemini 4 Hydrogen (Code)', 'Gemini 4 Argon', 'Gemini 4 Carbon'],
+      notesPt: 'Integração de APIs de alta velocidade no terminal Codex para geração, refatoração e testes de software.',
+      notesEn: 'High-speed API integration into Codex terminal for software generation, refactoring, and test suites.'
     }
   },
   {
@@ -431,8 +489,19 @@ export const MY_ACCOUNTS: MyAccount[] = [
   }
 ];
 
-export function findLatestProviderRelease(company: string, feed?: Feed | null, benchmarks?: Benchmarks | null): { modelName?: string; date?: string; url?: string; title?: string } | null {
+export function findLatestProviderRelease(company: string, feed?: Feed | null, benchmarks?: Benchmarks | null, accountId?: string): { modelName?: string; date?: string; url?: string; title?: string } | null {
   if (feed?.articles) {
+    if (accountId === 'google-ai-studio') {
+      const studioArticle = feed.articles.find(a => a.company === company && (a.url.includes('ai.google.dev') || a.url.includes('aistudio') || a.originalTitle.toLowerCase().includes('hydrogen') || a.originalTitle.toLowerCase().includes('argon')));
+      if (studioArticle) {
+        return {
+          modelName: studioArticle.title,
+          date: studioArticle.date || undefined,
+          url: studioArticle.url,
+          title: studioArticle.title
+        };
+      }
+    }
     const article = feed.articles.find(a => a.company === company && a.date);
     if (article) {
       return {
