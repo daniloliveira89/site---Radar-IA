@@ -7,7 +7,7 @@
       "description": "Desempenho agregado nas avaliações da Artificial Analysis. Configuração de raciocínio preservada no nome.",
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "methodology": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
-      "checkedAt": "2026-11-12T20:09:12.284Z",
+      "checkedAt": "2026-11-13T01:09:14.825Z",
       "rows": [
         {
           "model": "Claude Fable 5.2 (max)",
@@ -37,7 +37,7 @@
           "model": "Gemini 4 Carbon (high)",
           "company": "Google",
           "score": 60,
-          "costUSD": 7.76,
+          "costUSD": 5.48,
           "costUnit": "task",
           "preview": false
         },
@@ -53,7 +53,7 @@
           "model": "Gemini 4 Carbon (medium)",
           "company": "Google",
           "score": 58,
-          "costUSD": 6.59,
+          "costUSD": 4.68,
           "costUnit": "task",
           "preview": false
         },
@@ -117,7 +117,7 @@
           "model": "Gemini 4 Carbon (low)",
           "company": "Google",
           "score": 54,
-          "costUSD": 7.19,
+          "costUSD": 5.22,
           "costUnit": "task",
           "preview": false
         },
@@ -181,7 +181,7 @@
           "model": "Gemini 4 Argon (high)",
           "company": "Google",
           "score": 50,
-          "costUSD": 9.95,
+          "costUSD": 4.97,
           "costUnit": "task",
           "preview": false
         },
@@ -891,7 +891,7 @@
       "description": "Geração de imagem a partir de texto. Preferências humanas em comparações cegas; não mede edição de imagem.",
       "source": "https://artificialanalysis.ai/image/leaderboard/text-to-image",
       "methodology": "https://artificialanalysis.ai/methodology/image",
-      "checkedAt": "2026-11-12T20:09:12.318Z",
+      "checkedAt": "2026-11-13T01:09:14.881Z",
       "rows": [
         {
           "model": "GPT Image 2.6 Sunburst (max)",
@@ -2121,7 +2121,7 @@
       "description": "Geração de vídeo com áudio a partir de texto. Não mistura resultados de imagem para vídeo ou vídeo sem áudio.",
       "source": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
       "methodology": "https://artificialanalysis.ai/video/methodology",
-      "checkedAt": "2026-11-12T20:09:12.452Z",
+      "checkedAt": "2026-11-13T01:09:14.908Z",
       "rows": [
         {
           "model": "Wan 3.0",
@@ -12647,7 +12647,7 @@
         "company": "Z AI",
         "score": 81.8,
         "preview": false,
-        "costUSD": 0.73495,
+        "costUSD": 1.8419999999999999,
         "costUnit": "1m-tokens"
       },
       {
@@ -12701,7 +12701,7 @@
         "company": "Kimi",
         "score": 79.9,
         "preview": false,
-        "costUSD": 4.51155,
+        "costUSD": 4.324450000000001,
         "costUnit": "1m-tokens"
       },
       {
@@ -12781,7 +12781,7 @@
         "company": "DeepSeek",
         "score": 75.6,
         "preview": false,
-        "costUSD": 1.333449,
+        "costUSD": 1.43289,
         "costUnit": "1m-tokens"
       },
       {
@@ -12811,7 +12811,7 @@
         "company": "DeepSeek",
         "score": 74,
         "preview": false,
-        "costUSD": 0.75,
+        "costUSD": 0.211,
         "costUnit": "1m-tokens"
       },
       {
@@ -12819,7 +12819,7 @@
         "company": "Xiaomi",
         "score": 73.7,
         "preview": false,
-        "costUSD": 1.14,
+        "costUSD": 0.6525,
         "costUnit": "1m-tokens"
       },
       {
@@ -13259,7 +13259,7 @@
         "company": "Google",
         "score": 50.7,
         "preview": false,
-        "costUSD": 0.185,
+        "costUSD": 0.16575,
         "costUnit": "1m-tokens"
       },
       {
@@ -13593,9 +13593,9 @@
         "preview": false
       }
     ],
-    "checkedAt": "2026-11-12T20:09:12.575Z",
+    "checkedAt": "2026-11-13T01:09:14.912Z",
     "status": "live",
-    "priceCheckedAt": "2026-11-12T20:09:12.575Z"
+    "priceCheckedAt": "2026-11-13T01:09:14.912Z"
   },
   "webDesign": {
     "id": "text",
@@ -13610,28 +13610,28 @@
       {
         "model": "Muse Wonder (max)",
         "company": "Meta",
-        "score": 1380,
-        "samples": 4889,
+        "score": 1379,
+        "samples": 4892,
         "preview": false
       },
       {
         "model": "Muse Spark 1.3 (xhigh)",
         "company": "Meta",
         "score": 1361,
-        "samples": 23948,
+        "samples": 23949,
         "preview": false
       },
       {
         "model": "Claude Fable 5.2",
         "company": "Anthropic",
-        "score": 1352,
-        "samples": 1258,
+        "score": 1353,
+        "samples": 1268,
         "preview": false
       },
       {
         "model": "GPT-6 Astra (xhigh)",
         "company": "OpenAI",
-        "score": 1341,
+        "score": 1340,
         "samples": 5673,
         "preview": false
       },
@@ -13639,14 +13639,14 @@
         "model": "Kimi K3",
         "company": "Kimi",
         "score": 1337,
-        "samples": 4781,
+        "samples": 4783,
         "preview": false
       },
       {
         "model": "Inkling 2 Small",
         "company": "Thinking Machines",
-        "score": 1332,
-        "samples": 2225,
+        "score": 1333,
+        "samples": 2239,
         "preview": false
       },
       {
@@ -13660,14 +13660,14 @@
         "model": "Claude Opus 5.5",
         "company": "Anthropic",
         "score": 1325,
-        "samples": 3875,
+        "samples": 3879,
         "preview": false
       },
       {
         "model": "Kimi K3.1 Pro",
         "company": "Kimi",
         "score": 1323,
-        "samples": 3653,
+        "samples": 3654,
         "preview": false
       },
       {
@@ -13681,49 +13681,42 @@
         "model": "Gemini 4 Argon",
         "company": "Google",
         "score": 1317,
-        "samples": 8554,
+        "samples": 8567,
         "preview": false
       },
       {
         "model": "GPT-6.1 Sol",
         "company": "OpenAI",
         "score": 1315,
-        "samples": 3864,
+        "samples": 3866,
         "preview": false
       },
       {
         "model": "MiMo-V2.6-Pro",
         "company": "Xiaomi",
-        "score": 1312,
-        "samples": 18028,
-        "preview": false
-      },
-      {
-        "model": "Muse Spark 1.2",
-        "company": "Meta",
         "score": 1311,
-        "samples": 28299,
+        "samples": 18038,
         "preview": false
       },
       {
         "model": "Claude Sonnet 5.5",
         "company": "Anthropic",
         "score": 1311,
-        "samples": 3032,
+        "samples": 3037,
+        "preview": false
+      },
+      {
+        "model": "Muse Spark 1.2",
+        "company": "Meta",
+        "score": 1310,
+        "samples": 28299,
         "preview": false
       },
       {
         "model": "Muse Spark Open (xhigh)",
         "company": "Meta",
-        "score": 1308,
-        "samples": 3926,
-        "preview": false
-      },
-      {
-        "model": "Claude Fable 5.1",
-        "company": "Anthropic",
-        "score": 1306,
-        "samples": 5372,
+        "score": 1307,
+        "samples": 3929,
         "preview": false
       },
       {
@@ -13731,6 +13724,13 @@
         "company": "Anthropic",
         "score": 1305,
         "samples": 9899,
+        "preview": false
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "company": "Anthropic",
+        "score": 1305,
+        "samples": 5372,
         "preview": false
       },
       {
@@ -13744,13 +13744,13 @@
         "model": "Gemini 3.7 Flash",
         "company": "Google",
         "score": 1296,
-        "samples": 46716,
+        "samples": 46718,
         "preview": false
       }
     ],
-    "publishedAt": "2026-11-12T20:02:51.272Z",
+    "publishedAt": "2026-11-13T00:06:01.281Z",
     "status": "live",
-    "checkedAt": "2026-11-12T20:09:12.977Z"
+    "checkedAt": "2026-11-13T01:09:15.197Z"
   },
   "freeAccess": {
     "offers": [
@@ -13760,7 +13760,7 @@
         "route": "api",
         "url": "https://openrouter.ai/baidu/ernie-5.5-flash-preview:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "modelIds": [
           "baidu/ernie-5.5-flash-preview",
           "baidu/ernie-5.5-flash-preview-20261110"
@@ -13772,7 +13772,7 @@
         "route": "api",
         "url": "https://openrouter.ai/thinkingmachines/inkling-2-small:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "modelIds": [
           "thinkingmachines/inkling-2-small",
           "thinkingmachines/inkling-2-small-20261107"
@@ -13784,10 +13784,22 @@
         "route": "api",
         "url": "https://openrouter.ai/liquid/lfm-3-1.7b:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "modelIds": [
           "liquid/lfm-3-1.7b",
           "liquid/lfm-3-1.7b-20261106"
+        ]
+      },
+      {
+        "model": "Particle-1",
+        "company": "Particle AI",
+        "route": "api",
+        "url": "https://openrouter.ai/particle-ai/particle-1:free",
+        "source": "https://openrouter.ai/api/v1/models",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
+        "modelIds": [
+          "particle-ai/particle-1",
+          "particle-ai/particle-1-20261027"
         ]
       },
       {
@@ -13796,7 +13808,7 @@
         "route": "api",
         "url": "https://openrouter.ai/recursive/flint-v1.0:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "modelIds": [
           "recursive/flint-v1.0",
           "recursive/flint-v1.0-20261021"
@@ -13808,7 +13820,7 @@
         "route": "api",
         "url": "https://openrouter.ai/nvidia/nemotron-3.5-super-vl:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "modelIds": [
           "nvidia/nemotron-3.5-super-vl",
           "nvidia/nemotron-3.5-super-vl-20261015"
@@ -13820,7 +13832,7 @@
         "route": "api",
         "url": "https://openrouter.ai/apodex/apodex-1.1-mini:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "modelIds": [
           "apodex/apodex-1.1-mini",
           "apodex/apodex-1.1-mini-20261001"
@@ -13832,7 +13844,7 @@
         "route": "api",
         "url": "https://openrouter.ai/dots-studio/dots-3-note-preview:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "modelIds": [
           "dots-studio/dots-3-note-preview",
           "dots-studio/dots-3-note-preview-20260813"
@@ -13844,7 +13856,7 @@
         "route": "api",
         "url": "https://openrouter.ai/liquid/lfm-2.5-2.6b:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "modelIds": [
           "liquid/lfm-2.5-2.6b",
           "liquid/lfm-2.5-2.6b-20260811"
@@ -13856,7 +13868,7 @@
         "route": "api",
         "url": "https://openrouter.ai/nvidia/nemotron-3.5-lightning:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "modelIds": [
           "nvidia/nemotron-3.5-lightning",
           "nvidia/nemotron-3.5-lightning-20260807"
@@ -13868,7 +13880,7 @@
         "route": "api",
         "url": "https://openrouter.ai/cohere/north-mini-code:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "modelIds": [
           "cohere/north-mini-code",
           "cohere/north-mini-code-20260617"
@@ -13880,7 +13892,7 @@
         "route": "api",
         "url": "https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "modelIds": [
           "nvidia/nemotron-3-ultra-550b-a55b",
           "nvidia/nemotron-3-ultra-550b-a55b-20260604"
@@ -13892,7 +13904,7 @@
         "route": "api",
         "url": "https://openrouter.ai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "modelIds": [
           "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
           "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428"
@@ -13904,7 +13916,7 @@
         "route": "api",
         "url": "https://openrouter.ai/google/gemma-4-26b-a4b-it:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "modelIds": [
           "google/gemma-4-26b-a4b-it",
           "google/gemma-4-26b-a4b-it-20260403"
@@ -13916,7 +13928,7 @@
         "route": "api",
         "url": "https://openrouter.ai/google/gemma-4-31b-it:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "modelIds": [
           "google/gemma-4-31b-it",
           "google/gemma-4-31b-it-20260402"
@@ -14056,7 +14068,7 @@
         "route": "chat",
         "url": "https://chat.deepseek.com/",
         "source": "https://www.deepseek.com/en/",
-        "checkedAt": "2026-11-12T20:09:11.519Z"
+        "checkedAt": "2026-11-13T01:09:13.440Z"
       },
       {
         "model": "GPT-6 Luna",
@@ -14064,7 +14076,7 @@
         "route": "chat",
         "url": "https://chatgpt.com/",
         "source": "https://chatgpt.com/pricing/",
-        "checkedAt": "2026-11-12T20:09:11.520Z"
+        "checkedAt": "2026-11-13T01:09:13.441Z"
       },
       {
         "model": "GPT-5 Thinking Mini",
@@ -14072,7 +14084,7 @@
         "route": "chat",
         "url": "https://chatgpt.com/",
         "source": "https://chatgpt.com/pricing/",
-        "checkedAt": "2026-11-12T20:09:11.520Z"
+        "checkedAt": "2026-11-13T01:09:13.441Z"
       },
       {
         "model": "Claude Sonnet 5.5",
@@ -14080,7 +14092,7 @@
         "route": "chat",
         "url": "https://claude.ai/",
         "source": "https://claude.com/pricing",
-        "checkedAt": "2026-11-12T20:09:11.521Z",
+        "checkedAt": "2026-11-13T01:09:13.442Z",
         "scope": "family"
       },
       {
@@ -14089,7 +14101,7 @@
         "route": "chat",
         "url": "https://claude.ai/",
         "source": "https://claude.com/pricing",
-        "checkedAt": "2026-11-12T20:09:11.521Z",
+        "checkedAt": "2026-11-13T01:09:13.442Z",
         "scope": "family"
       },
       {
@@ -14105,7 +14117,7 @@
           "Nano Banana 2 (Gemini 3.1 Flash Image)"
         ],
         "source": "https://gemini.google/overview/image-generation/",
-        "checkedAt": "2026-11-12T18:22:49.656Z"
+        "checkedAt": "2026-11-13T01:09:13.443Z"
       },
       {
         "model": "Veo 3.1 Fast",
@@ -14120,7 +14132,7 @@
           "Veo 3.1 Fast (Audio)"
         ],
         "source": "https://support.google.com/flow/answer/16526234?hl=en",
-        "checkedAt": "2026-11-12T20:09:11.523Z"
+        "checkedAt": "2026-11-13T01:09:13.443Z"
       },
       {
         "model": "Veo 3.1 Lite",
@@ -14132,7 +14144,7 @@
         "limitsEn": "Daily credits, off-peak availability and resolution limits apply.",
         "limitsPt": "Créditos diários, disponibilidade fora do pico e limites de resolução.",
         "source": "https://support.google.com/flow/answer/16526234?hl=en",
-        "checkedAt": "2026-11-12T20:09:11.523Z"
+        "checkedAt": "2026-11-13T01:09:13.443Z"
       },
       {
         "model": "Gemini Omni Flash 1.1",
@@ -14147,7 +14159,7 @@
           "Gemini Omni 1.1 Flash"
         ],
         "source": "https://support.google.com/flow/answer/16526234?hl=en",
-        "checkedAt": "2026-11-12T20:09:11.523Z"
+        "checkedAt": "2026-11-13T01:09:13.443Z"
       },
       {
         "model": "Nano Banana 2 Lite",
@@ -14163,7 +14175,7 @@
           "Gemini 3.1 Flash-Lite Image (nano-banana-2-lite)"
         ],
         "source": "https://support.google.com/flow/answer/16526234?hl=en",
-        "checkedAt": "2026-11-12T20:09:11.523Z"
+        "checkedAt": "2026-11-13T01:09:13.443Z"
       },
       {
         "model": "Recraft V4.1 Utility",
@@ -14175,7 +14187,7 @@
         "limitsEn": "Daily credits; public images and restricted commercial rights.",
         "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos.",
         "source": "https://www.recraft.ai/blog/midjourney-alternative",
-        "checkedAt": "2026-11-12T20:09:11.524Z"
+        "checkedAt": "2026-11-13T01:09:13.444Z"
       },
       {
         "model": "Recraft V4.1 Utility Pro",
@@ -14187,7 +14199,7 @@
         "limitsEn": "Daily credits; public images and restricted commercial rights.",
         "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos.",
         "source": "https://www.recraft.ai/blog/midjourney-alternative",
-        "checkedAt": "2026-11-12T20:09:11.524Z"
+        "checkedAt": "2026-11-13T01:09:13.444Z"
       },
       {
         "model": "Recraft V4.1 Flash",
@@ -14199,7 +14211,7 @@
         "limitsEn": "Daily credits; public images and restricted commercial rights.",
         "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos.",
         "source": "https://www.recraft.ai/blog/midjourney-alternative",
-        "checkedAt": "2026-11-12T20:09:11.524Z"
+        "checkedAt": "2026-11-13T01:09:13.444Z"
       },
       {
         "model": "Seedream 4.5",
@@ -14211,7 +14223,7 @@
         "limitsEn": "Daily credits; queues, resolution and account/region limits apply.",
         "limitsPt": "Créditos diários; filas e limites de resolução, conta e região.",
         "source": "https://dreamina.capcut.com/pt-br/resource/seedream-4-5",
-        "checkedAt": "2026-11-12T20:09:11.525Z"
+        "checkedAt": "2026-11-13T01:09:13.444Z"
       },
       {
         "model": "Dreamina Seedance 2.5",
@@ -14226,7 +14238,7 @@
           "Dreamina Seedance 2.5 (720p)"
         ],
         "source": "https://dreamina.capcut.com/pt-br/seedance/seedance-2-5",
-        "checkedAt": "2026-11-12T20:09:11.525Z"
+        "checkedAt": "2026-11-13T01:09:13.445Z"
       },
       {
         "model": "Dreamina Seedance 2.0",
@@ -14241,7 +14253,7 @@
           "Dreamina Seedance 2.0 (720p)"
         ],
         "source": "https://dreamina.capcut.com/tools/seedance-2-0",
-        "checkedAt": "2026-11-12T20:09:11.526Z"
+        "checkedAt": "2026-11-13T01:09:13.446Z"
       },
       {
         "model": "Nano Banana Pro",
@@ -14249,7 +14261,7 @@
         "route": "web",
         "url": "https://labs.google/fx/tools/flow",
         "source": "https://support.google.com/flow/answer/16729550?hl=en",
-        "checkedAt": "2026-11-12T20:09:11.527Z",
+        "checkedAt": "2026-11-13T01:09:13.446Z",
         "scope": "model",
         "modality": "image",
         "aliases": [
@@ -14265,7 +14277,7 @@
       {
         "id": "router",
         "url": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-12T20:09:11.518Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "status": "live"
       },
       {
@@ -14277,19 +14289,19 @@
       {
         "id": "deepseek",
         "url": "https://www.deepseek.com/en/",
-        "checkedAt": "2026-11-12T20:09:11.519Z",
+        "checkedAt": "2026-11-13T01:09:13.440Z",
         "status": "live"
       },
       {
         "id": "openai",
         "url": "https://chatgpt.com/pricing/",
-        "checkedAt": "2026-11-12T20:09:11.520Z",
+        "checkedAt": "2026-11-13T01:09:13.441Z",
         "status": "live"
       },
       {
         "id": "anthropic",
         "url": "https://claude.com/pricing",
-        "checkedAt": "2026-11-12T20:09:11.521Z",
+        "checkedAt": "2026-11-13T01:09:13.442Z",
         "status": "live"
       },
       {
@@ -14317,8 +14329,8 @@
             ]
           }
         ],
-        "checkedAt": "2026-11-12T18:22:49.656Z",
-        "status": "saved"
+        "checkedAt": "2026-11-13T01:09:13.443Z",
+        "status": "live"
       },
       {
         "id": "flow-free",
@@ -14384,7 +14396,7 @@
             ]
           }
         ],
-        "checkedAt": "2026-11-12T20:09:11.523Z",
+        "checkedAt": "2026-11-13T01:09:13.443Z",
         "status": "live"
       },
       {
@@ -14428,7 +14440,7 @@
             "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos."
           }
         ],
-        "checkedAt": "2026-11-12T20:09:11.524Z",
+        "checkedAt": "2026-11-13T01:09:13.444Z",
         "status": "live"
       },
       {
@@ -14452,7 +14464,7 @@
             "limitsPt": "Créditos diários; filas e limites de resolução, conta e região."
           }
         ],
-        "checkedAt": "2026-11-12T20:09:11.525Z",
+        "checkedAt": "2026-11-13T01:09:13.444Z",
         "status": "live"
       },
       {
@@ -14479,7 +14491,7 @@
             ]
           }
         ],
-        "checkedAt": "2026-11-12T20:09:11.525Z",
+        "checkedAt": "2026-11-13T01:09:13.445Z",
         "status": "live"
       },
       {
@@ -14506,14 +14518,14 @@
             ]
           }
         ],
-        "checkedAt": "2026-11-12T20:09:11.526Z",
+        "checkedAt": "2026-11-13T01:09:13.446Z",
         "status": "live"
       },
       {
         "id": "flow-image-free",
         "name": "Google Flow · Images",
         "url": "https://support.google.com/flow/answer/16729550?hl=en",
-        "checkedAt": "2026-11-12T20:09:11.527Z",
+        "checkedAt": "2026-11-13T01:09:13.446Z",
         "status": "live"
       }
     ]
