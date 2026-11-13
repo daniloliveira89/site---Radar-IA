@@ -64,30 +64,6 @@ export default function MyRanking(){
 
   return (
     <section className="my-ranking-panel" aria-label={t('My AI Ranking','Ranking das Minhas IAs')}>
-      <div className="ranking-hero">
-        <div className="ranking-hero-copy">
-          <div className="ranking-hero-tag">
-            <Trophy size={14}/>
-            <span>{t('PERSONALIZED LEADERBOARD','LEADERBOARD PERSONALIZADO')}</span>
-          </div>
-          <h2>{t('My AI Ranking · The Best AI for Every Task','Meu Ranking de IAs · A Melhor Escolha para Cada Tarefa')}</h2>
-        </div>
-        <div className="ranking-hero-stats">
-          <div className="ranking-hero-stat">
-            <strong>{RANKING_CATEGORIES.length}</strong>
-            <span>{t('Categories','Categorias')}</span>
-          </div>
-          <div className="ranking-hero-stat">
-            <strong>#1</strong>
-            <span>{t('Top picks','Melhores escolhas')}</span>
-          </div>
-          <div className="ranking-hero-stat">
-            <strong>100%</strong>
-            <span>{t('Your accounts','Suas contas')}</span>
-          </div>
-        </div>
-      </div>
-
       <div className="ranking-category-tabs" role="tablist" aria-label={t('Filter ranking by category','Filtrar ranking por categoria')}>
         <button
           type="button"
@@ -130,7 +106,7 @@ export default function MyRanking(){
             onClick={()=>setVariantFilter('antigravity')}
           >
             <Zap size={13}/>
-            <span>Antigravity Ready</span>
+            <span>Antigravity</span>
           </button>
           <button
             type="button"
@@ -138,7 +114,7 @@ export default function MyRanking(){
             onClick={()=>setVariantFilter('codex')}
           >
             <Terminal size={13}/>
-            <span>Codex Ready</span>
+            <span>Codex</span>
           </button>
           <button
             type="button"
@@ -146,7 +122,7 @@ export default function MyRanking(){
             onClick={()=>setVariantFilter('aistudio')}
           >
             <Cpu size={13}/>
-            <span>Google AI Studio (Pro Estudos)</span>
+            <span>Google AI Studio</span>
           </button>
         </div>
 
@@ -240,7 +216,7 @@ export default function MyRanking(){
                             {item.aiStudio&&(
                               <span className="variant-pill aistudio" title={language==='en'?item.aiStudioNoteEn:item.aiStudioNotePt}>
                                 <Cpu size={11}/>
-                                <span>AI Studio · Pro Estudos</span>
+                                <span>Google AI Studio</span>
                               </span>
                             )}
                           </div>

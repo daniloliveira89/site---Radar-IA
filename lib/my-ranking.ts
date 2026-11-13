@@ -114,7 +114,7 @@ export const RANKED_AIS: RankedAI[] = [
     model: 'Claude Sonnet 5.5',
     accountId: 'claude',
     accountName: 'Claude',
-    company: 'Anthropic',
+    company: 'Claude',
     tier: 'Claude Free',
     tierEn: 'Claude Free',
     tierBadge: 'free',
@@ -125,12 +125,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Líder Absoluto',
     whyBestPt: 'É a inteligência mais precisa do mundo para arquitetura de software, refatoração de código complexo e seguimento estrito de instruções sem alucinar dependências.',
     whyBestEn: 'The world’s most accurate model for software architecture, complex code refactoring, and strict instruction following without hallucinating dependencies.',
-    antigravity: true,
-    codex: true,
-    antigravityNotePt: 'Suporte prioritário nos subagentes do Antigravity CLI e IDE via API da Anthropic.',
-    antigravityNoteEn: 'Priority support in Antigravity CLI and IDE subagents via Anthropic API.',
-    codexNotePt: 'Compatível diretamente via Claude Code CLI e fluxos de automação de engenharia no Codex.',
-    codexNoteEn: 'Directly compatible via Claude Code CLI and engineering automation workflows in Codex.'
+    antigravity: false,
+    codex: false
   },
   {
     id: 'code-2',
@@ -151,11 +147,9 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Velocidade extrema de execução (2.5x mais rápido), 4 níveis de thinking (até xhigh), decode de até 1M de tokens para gerar sistemas inteiros e paralelização de chamadas de ferramentas.',
     whyBestEn: 'Extreme execution speed (2.5x faster), 4 thinking levels (up to xhigh), long decode up to 1M tokens to generate entire systems, and tool calling parallelization.',
     antigravity: true,
-    codex: true,
+    codex: false,
     antigravityNotePt: 'Modelo nativo padrão do Antigravity Agent em Gemini Managed Agents com orquestração dinâmica.',
     antigravityNoteEn: 'Default native model for Antigravity Agent in Gemini Managed Agents with dynamic orchestration.',
-    codexNotePt: 'Execução de scripts de código e geração automatizada de testes no terminal Codex.',
-    codexNoteEn: 'Code script execution and automated test generation in Codex terminal.',
     aiStudio: true,
     aiStudioNotePt: 'Ambiente nativo do Google AI Studio com cota Gemini Pro Estudos e chaves de API sem custo.',
     aiStudioNoteEn: 'Native Google AI Studio environment with Gemini Pro Education quota and free API keys.'
@@ -178,12 +172,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: '97.3% Matemática',
     whyBestPt: 'Raciocínio lógico puro e resolução passo a passo de desafios algorítmicos difíceis, competindo com os maiores modelos fechados sem exigir assinatura paga.',
     whyBestEn: 'Pure logical reasoning and step-by-step resolution of complex algorithmic challenges, competing with top proprietary models at zero cost.',
-    antigravity: true,
-    codex: true,
-    antigravityNotePt: 'Compatível com subagentes do Antigravity via DeepSeek API oficial e rotas OpenRouter.',
-    antigravityNoteEn: 'Compatible with Antigravity subagents via official DeepSeek API and OpenRouter routes.',
-    codexNotePt: 'Excelente para depuração profunda e análise de algoritmos complexos no Codex.',
-    codexNoteEn: 'Excellent for deep debugging and algorithmic analysis in Codex.'
+    antigravity: false,
+    codex: false
   },
   {
     id: 'code-4',
@@ -226,8 +216,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Frontier Grade',
     whyBestPt: 'Combina raciocínio analítico com busca em tempo real para consultar as versões mais recentes de bibliotecas e documentações técnicas recém-lançadas.',
     whyBestEn: 'Combines analytical reasoning with real-time web search to look up the latest library versions and newly published docs.',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   },
 
   // --- CATEGORIA: ESCRITA CRIATIVA & REDAÇÃO ---
@@ -249,8 +239,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Top 1 Ranking',
     whyBestPt: 'Líder isolado na Arena de Escrita Criativa: vocabulário expressivo, ritmo de parágrafo envolvente e capacidade única de manter metáforas e coerência poética sem soar artificial.',
     whyBestEn: 'Sole leader in Creative Writing Arena: expressive vocabulary, captivating prose rhythm, and unique ability to sustain metaphors without feeling artificial.',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   },
   {
     id: 'writing-2',
@@ -259,7 +249,7 @@ export const RANKED_AIS: RankedAI[] = [
     model: 'Claude Sonnet 5.5 / 3.5 Sonnet',
     accountId: 'claude',
     accountName: 'Claude',
-    company: 'Anthropic',
+    company: 'Claude',
     tier: 'Claude Free',
     tierEn: 'Claude Free',
     tierBadge: 'free',
@@ -270,8 +260,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Referência Mundial',
     whyBestPt: 'Redação limpa, humana e cativante. Não utiliza muletas linguísticas comuns em LLMs e ajusta o tom com precisão impecável (formal, bem-humorado, técnico ou lírico).',
     whyBestEn: 'Clean, human, and captivating writing. Avoids common LLM tropes and adapts tone with exceptional precision (formal, witty, technical, or literary).',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   },
   {
     id: 'writing-3',
@@ -291,8 +281,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: '2M Tokens Contínuos',
     whyBestPt: 'Ideal para contos longos, capítulos de livros e ensaios enciclopédicos: retém personagens, pontos da trama e referências espalhadas por centenas de páginas.',
     whyBestEn: 'Ideal for longform stories, book chapters, and encyclopedic essays: retains characters, plot points, and references across hundreds of pages.',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   },
   {
     id: 'writing-4',
@@ -313,7 +303,7 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Geração rápida de artigos, e-mails estruturados e relatórios abrangentes integrados diretamente ao Google Docs e ao ecossistema do Workspace.',
     whyBestEn: 'Fast generation of articles, structured emails, and comprehensive reports integrated directly into Google Docs and Workspace.',
     antigravity: true,
-    codex: true
+    codex: false
   },
   {
     id: 'writing-5',
@@ -356,8 +346,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: '1243 Elo · Top 1',
     whyBestPt: 'Campeão indiscutível do ranking mundial de criação de sites: gera composições visuais refinadas, paletas modernas, hierarquia tipográfica sofisticada e código HTML/CSS responsivo de nível profissional.',
     whyBestEn: 'Undisputed worldwide champion on the website generation leaderboard: produces refined visual compositions, modern palettes, sophisticated typography and pro-grade responsive HTML/CSS.',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   },
   {
     id: 'web-2',
@@ -366,7 +356,7 @@ export const RANKED_AIS: RankedAI[] = [
     model: 'Claude Sonnet 5.5 + Artifacts',
     accountId: 'claude',
     accountName: 'Claude',
-    company: 'Anthropic',
+    company: 'Claude',
     tier: 'Claude Free',
     tierEn: 'Claude Free',
     tierBadge: 'free',
@@ -377,8 +367,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Artifacts Interativos',
     whyBestPt: 'Permite visualizar, testar e interagir instantaneamente com componentes React, Tailwind CSS e protótipos web funcionais diretamente no painel lateral do navegador.',
     whyBestEn: 'Allows instantaneous preview, testing, and interaction with React, Tailwind CSS, and functioning web prototypes in the side panel.',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   },
   {
     id: 'web-3',
@@ -399,7 +389,7 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Converte capturas de tela e mockups Figma diretamente para layouts HTML/Tailwind limpos, com inspeção multimodal de alta precisão e sem dependências obsoletas.',
     whyBestEn: 'Converts screenshots and Figma mockups directly into clean HTML/Tailwind layouts, with high-accuracy multimodal inspection and no legacy bloat.',
     antigravity: true,
-    codex: true,
+    codex: false,
     aiStudio: true,
     aiStudioNotePt: 'Acesso pelo Google AI Studio com Gemini 4 Hydrogen e Pro Estudos.',
     aiStudioNoteEn: 'Available in Google AI Studio with Gemini 4 Hydrogen and Pro Education.'
@@ -469,7 +459,7 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Alta Resolução Grátis',
     whyBestPt: 'Geração ultrarrápida sem cotas restritivas, excelente para concept art, ilustrações vibrantes, wallpapers e mídia visual digital.',
     whyBestEn: 'Ultra-fast image generation without strict quotas, great for concept art, vibrant illustrations, wallpapers, and digital visual media.',
-    antigravity: true,
+    antigravity: false,
     codex: false
   },
   {
@@ -511,7 +501,7 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Flux Engine',
     whyBestPt: 'Menor incidência de restrições arbitrárias para sátiras, experimentos conceituais ousados e renderização nítida de detalhes visuais.',
     whyBestEn: 'Lower incidence of heavy filter restrictions for conceptual satire, bold visual experiments, and crisp image details.',
-    antigravity: true,
+    antigravity: false,
     codex: false
   },
 
@@ -534,8 +524,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Dezenas de Fontes',
     whyBestPt: 'Examina e cruza dezenas de páginas da web simultaneamente, sintetizando dados complexos, documentações acadêmicas e relatórios sem exigir nenhum plano pago.',
     whyBestEn: 'Scans and cross-references dozens of web pages simultaneously, synthesizing complex data, research papers, and reports completely free.',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   },
   {
     id: 'research-2',
@@ -556,7 +546,7 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Otimizado especificamente para agentes autônomos, executando chamadas de busca em paralelo e integrando os resultados com 1M de tokens no Antigravity CLI e IDE.',
     whyBestEn: 'Specifically optimized for autonomous agents, running search calls in parallel and consolidating findings with 1M tokens in Antigravity CLI and IDE.',
     antigravity: true,
-    codex: true,
+    codex: false,
     aiStudio: true,
     aiStudioNotePt: 'Integração no Google AI Studio com cota Gemini Pro Estudos para chamadas de busca e ferramentas.',
     aiStudioNoteEn: 'Google AI Studio integration with Gemini Pro Education quota for search and tool calls.'
@@ -600,8 +590,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Web & Documentos',
     whyBestPt: 'Navega de forma autônoma em links longos e relatórios em PDF, extraindo tabelas de dados e fatos históricos em profundidade.',
     whyBestEn: 'Autonomously navigates long links and PDF reports, extracting data tables and in-depth historical facts.',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   },
   {
     id: 'research-5',
@@ -621,8 +611,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Tempo Real X',
     whyBestPt: 'Detecta acontecimentos, opiniões da comunidade e lançamentos de tecnologia no momento em que ocorrem na rede social X.',
     whyBestEn: 'Detects breaking events, community sentiment, and tech releases the exact moment they unfold on the X platform.',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   },
 
   // --- CATEGORIA: CIÊNCIA & PESQUISA CIENTÍFICA ---
@@ -645,7 +635,7 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Liderança global do Google DeepMind em IA científica (AlphaFold, AlphaProof, GMoD), combinando raciocínio em física, biologia computacional e síntese química com 1M de tokens.',
     whyBestEn: 'Google DeepMind’s global leadership in scientific AI (AlphaFold, AlphaProof, GMoD), integrating physics, computational biology, and chemistry reasoning with a 1M token window.',
     antigravity: true,
-    codex: true,
+    codex: false,
     aiStudio: true,
     aiStudioNotePt: 'Acesso prioritário no Google AI Studio com cota institucional Gemini Pro Estudos para experimentos científicos.',
     aiStudioNoteEn: 'Priority access in Google AI Studio with institutional Gemini Pro Education quota for scientific workflows.'
@@ -668,8 +658,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: '97.3% AIME / MATH',
     whyBestPt: 'Imbatível no nível gratuito para demonstrações matemáticas rigorosas, derivações de física quântica e validação de cadeias lógicas científicas complexas.',
     whyBestEn: 'Unmatched on the free tier for rigorous mathematical proofs, quantum physics derivations, and validating complex scientific logical chains.',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   },
   {
     id: 'science-3',
@@ -678,7 +668,7 @@ export const RANKED_AIS: RankedAI[] = [
     model: 'Claude Sonnet 5.5',
     accountId: 'claude',
     accountName: 'Claude',
-    company: 'Anthropic',
+    company: 'Claude',
     tier: 'Claude Free',
     tierEn: 'Claude Free',
     tierBadge: 'free',
@@ -689,8 +679,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Rigor Crítico',
     whyBestPt: 'Extraordinário na leitura crítica de papers biomédicos e metodologias científicas, apontando falhas metodológicas, vieses e causalidade sem alucinar conclusões.',
     whyBestEn: 'Extraordinary at critical reading of biomedical papers and scientific methodologies, catching methodological flaws, biases, and confounding factors without hallucination.',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   },
   {
     id: 'science-4',
@@ -731,8 +721,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Centenas de PDFs',
     whyBestPt: 'Capacidade de engolir teses de doutorado e dezenas de papers densos em PDF de uma única vez para cruzar hipóteses e tabelas de dados experimentais.',
     whyBestEn: 'Capable of ingesting full PhD dissertations and dozens of dense PDF papers in a single prompt to cross-reference hypotheses and experimental data tables.',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   },
 
   // --- CATEGORIA: CYBER SECURITY & SEGURANÇA CIBERNÉTICA ---
@@ -743,7 +733,7 @@ export const RANKED_AIS: RankedAI[] = [
     model: 'Claude Sonnet 5.5',
     accountId: 'claude',
     accountName: 'Claude',
-    company: 'Anthropic',
+    company: 'Claude',
     tier: 'Claude Free',
     tierEn: 'Claude Free',
     tierBadge: 'free',
@@ -754,8 +744,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Referência Mundial SAST',
     whyBestPt: 'Padrão ouro para análise estática de segurança (SAST): identifica falhas lógicas sutis, race conditions, injeções SQL, vulnerabilidades de autenticação e sugere patches defensivos impecáveis.',
     whyBestEn: 'Gold standard for static application security testing (SAST): detects subtle logic flaws, race conditions, SQL injections, auth bugs, and writes flawless defensive patches.',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   },
   {
     id: 'security-2',
@@ -776,7 +766,7 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'A janela de 1M de tokens no AI Studio permite carregar o repositório inteiro e toda a infraestrutura como código (Terraform, Kubernetes, IAM) para auditar conformidade CIS/NIST e brechas arquiteturais.',
     whyBestEn: 'The 1M token window in AI Studio enables ingesting entire codebases and infrastructure-as-code (Terraform, Kubernetes, IAM) to audit CIS/NIST compliance and architecture posture.',
     antigravity: true,
-    codex: true,
+    codex: false,
     aiStudio: true,
     aiStudioNotePt: 'Playground no Google AI Studio com Gemini Pro Estudos para varredura de repositórios completos sem limites de contexto.',
     aiStudioNoteEn: 'Google AI Studio playground with Gemini Pro Education for scanning complete code repositories without context limits.'
@@ -799,8 +789,8 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Desmontagem Passo a Passo',
     whyBestPt: 'Altíssima habilidade de raciocínio dedutivo para desmontar trechos de código em Assembly, inspecionar lógica de descompilação (Ghidra/IDA Pro) e validar implementações criptográficas.',
     whyBestEn: 'Exceptional deductive reasoning for dissecting Assembly code, inspecting decompiled logic (Ghidra/IDA Pro), and verifying cryptographic implementations.',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   },
   {
     id: 'security-4',
@@ -841,7 +831,7 @@ export const RANKED_AIS: RankedAI[] = [
     scoreValue: 'Zero-Day Monitoring',
     whyBestPt: 'Monitoramento contínuo da rede social X e repositórios de pesquisadores para capturar anúncios imediatos de novos exploits zero-day, vazamentos e CVEs antes de entrarem em feeds convencionais.',
     whyBestEn: 'Continuous monitoring of X and security researcher repos to catch immediate disclosures of zero-day exploits, leaks, and emerging CVEs before they hit conventional feeds.',
-    antigravity: true,
-    codex: true
+    antigravity: false,
+    codex: false
   }
 ];

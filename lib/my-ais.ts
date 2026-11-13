@@ -81,10 +81,10 @@ export const MY_ACCOUNTS: MyAccount[] = [
       notesEn: 'Natively integrated in Antigravity CLI and IDE via Google Workspace and Google Cloud authentication.'
     },
     codex: {
-      supported: true,
-      models: ['Gemini 4 Hydrogen (Code)', 'Gemini 4 Argon'],
-      notesPt: 'Execução de scripts, geração de código e automação de terminal no Codex.',
-      notesEn: 'Script execution, code generation and terminal automation in Codex.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente exclusivo do ecossistema Google Workspace e Antigravity.',
+      notesEn: 'Exclusive environment for Google Workspace and Antigravity ecosystem.'
     }
   },
   {
@@ -132,10 +132,10 @@ export const MY_ACCOUNTS: MyAccount[] = [
       notesEn: 'Google AI Studio API keys power native Antigravity CLI and IDE intelligence, with dynamic multi-model Orchestrator switching.'
     },
     codex: {
-      supported: true,
-      models: ['Gemini 4 Hydrogen (Code)', 'Gemini 4 Argon'],
-      notesPt: 'Integração de APIs de alta velocidade no terminal Codex para geração, refatoração e testes de software.',
-      notesEn: 'High-speed API integration into Codex terminal for software generation, refactoring, and test suites.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente de desenvolvimento nativo do Google com Gemini API e Antigravity.',
+      notesEn: 'Native Google developer environment with Gemini API and Antigravity.'
     }
   },
   {
@@ -233,16 +233,16 @@ export const MY_ACCOUNTS: MyAccount[] = [
       }
     ],
     antigravity: {
-      supported: true,
-      models: ['Claude Sonnet 5.5', 'Claude Haiku 5.5', 'Claude 3.5 Sonnet'],
-      notesPt: 'Suporte a subagentes de pesquisa e geração de artefatos com a API da Anthropic.',
-      notesEn: 'Support for research subagents and artifact generation with Anthropic API.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente web e API independente da Claude.',
+      notesEn: 'Standalone Claude web and API environment.'
     },
     codex: {
-      supported: true,
-      models: ['Claude Sonnet 5.5 (Claude Code)', 'Claude 3.5 Sonnet'],
-      notesPt: 'Integrável via Claude Code CLI e automações de engenharia no Codex.',
-      notesEn: 'Integratable via Claude Code CLI and engineering automations in Codex.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente web e API independente da Claude.',
+      notesEn: 'Standalone Claude web and API environment.'
     }
   },
   {
@@ -275,16 +275,16 @@ export const MY_ACCOUNTS: MyAccount[] = [
       }
     ],
     antigravity: {
-      supported: true,
-      models: ['Grok 3', 'Grok 2 (API)'],
-      notesPt: 'Compatível no Antigravity via xAI API oficial e rotas OpenRouter.',
-      notesEn: 'Compatible in Antigravity via official xAI API and OpenRouter routes.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente web e API independente da xAI.',
+      notesEn: 'Standalone xAI web and API environment.'
     },
     codex: {
-      supported: true,
-      models: ['Grok 3 Mini', 'Grok 2'],
-      notesPt: 'Acessível via scripts CLI e chaves de API compatíveis com terminal.',
-      notesEn: 'Accessible via CLI scripts and terminal-compatible API keys.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente web e API independente da xAI.',
+      notesEn: 'Standalone xAI web and API environment.'
     }
   },
   {
@@ -324,16 +324,16 @@ export const MY_ACCOUNTS: MyAccount[] = [
       }
     ],
     antigravity: {
-      supported: true,
-      models: ['Kimi K3', 'Kimi K3.1 Pro'],
-      notesPt: 'Excelente para subagentes de leitura de repositórios gigantes e documentações no Antigravity.',
-      notesEn: 'Outstanding for reading giant repos and deep documentation subagents in Antigravity.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente web e API independente da Kimi / Moonshot.',
+      notesEn: 'Standalone Kimi / Moonshot web and API environment.'
     },
     codex: {
-      supported: true,
-      models: ['Kimi K3.1 Pro', 'Moonshot API'],
-      notesPt: 'Inspeção profunda de bases de código complexas direto nas sessões de desenvolvimento.',
-      notesEn: 'Deep inspection of complex codebases directly within dev sessions.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente web e API independente da Kimi / Moonshot.',
+      notesEn: 'Standalone Kimi / Moonshot web and API environment.'
     }
   },
   {
@@ -371,16 +371,16 @@ export const MY_ACCOUNTS: MyAccount[] = [
       }
     ],
     antigravity: {
-      supported: true,
-      models: ['GLM-5.3', 'GLM-4-Flash'],
-      notesPt: 'Conexão via API Z.ai com compatibilidade OpenAI para subagentes do Antigravity.',
-      notesEn: 'Connection via Z.ai API with OpenAI compatibility for Antigravity subagents.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente web e API independente da Z.ai / GLM.',
+      notesEn: 'Standalone Z.ai / GLM web and API environment.'
     },
     codex: {
-      supported: true,
-      models: ['GLM-4-Plus', 'GLM-4-Flash'],
-      notesPt: 'Automações ágeis de código e refatoração assistida no Codex.',
-      notesEn: 'Fast code automations and assisted refactoring in Codex.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente web e API independente da Z.ai / GLM.',
+      notesEn: 'Standalone Z.ai / GLM web and API environment.'
     }
   },
   {
@@ -420,16 +420,16 @@ export const MY_ACCOUNTS: MyAccount[] = [
       }
     ],
     antigravity: {
-      supported: true,
-      models: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-V4.1-Flash'],
-      notesPt: 'Nativamente suportado via DeepSeek API / OpenRouter nos subagentes do Antigravity.',
-      notesEn: 'Natively supported via DeepSeek API / OpenRouter in Antigravity subagents.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente web e API independente da DeepSeek.',
+      notesEn: 'Standalone DeepSeek web and API environment.'
     },
     codex: {
-      supported: true,
-      models: ['DeepSeek-R1 (Coding)', 'DeepSeek-V3'],
-      notesPt: 'Excelente custo-benefício e acurácia cirúrgica para geração de software no Codex.',
-      notesEn: 'Outstanding accuracy and cost efficiency for software generation in Codex.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente web e API independente da DeepSeek.',
+      notesEn: 'Standalone DeepSeek web and API environment.'
     }
   },
   {
@@ -468,16 +468,16 @@ export const MY_ACCOUNTS: MyAccount[] = [
       }
     ],
     antigravity: {
-      supported: true,
-      models: ['Llama 3.3 70B', 'Muse Spark Open', 'Llama 3.1 405B'],
-      notesPt: 'Executável localmente (Ollama) ou em nuvem (Groq/OpenRouter) com os agentes Antigravity.',
-      notesEn: 'Runnable locally (Ollama) or in cloud (Groq/OpenRouter) with Antigravity agents.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente web e ferramentas independentes da Meta AI / Muse.',
+      notesEn: 'Standalone Meta AI / Muse web and tooling environment.'
     },
     codex: {
-      supported: true,
-      models: ['Llama 3.3 70B (Code)', 'CodeLlama'],
-      notesPt: 'Compatível com tarefas de programação e autocompletar em ambientes Codex.',
-      notesEn: 'Compatible with coding tasks and code completion in Codex environments.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente web e ferramentas independentes da Meta AI / Muse.',
+      notesEn: 'Standalone Meta AI / Muse web and tooling environment.'
     }
   }
 ];

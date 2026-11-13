@@ -66,22 +66,29 @@ test('every account has available models with descriptions and isLatest flags', 
   }
 });
 
-test('every account includes configured Antigravity and Codex variants', () => {
+test('accounts include strictly configured Antigravity and Codex ecosystems', () => {
   for (const acc of MY_ACCOUNTS) {
-    if (acc.id === 'chatgpt') {
-      assert.equal(acc.codex.supported, true, 'chatgpt must support Codex');
-      assert.equal(acc.antigravity.supported, false, 'chatgpt is dedicated to Codex, not Antigravity');
-      assert(acc.codex.models.length >= 2, 'chatgpt must list Codex models');
-      assert(acc.codex.notesPt.length > 0);
+    if (acc.id === 'gemini' || acc.id === 'google-ai-studio') {
+      assert.equal(acc.antigravity.supported, true, `${acc.id} must support Antigravity`);
+      assert(acc.antigravity.models.length >= 2, `${acc.id} must list Antigravity models`);
+      assert.equal(acc.codex.supported, false, `${acc.id} must not be in Codex ecosystem`);
+      assert.equal(acc.codex.models.length, 0);
       continue;
     }
-    assert.equal(acc.antigravity.supported, true, `${acc.id} must support Antigravity`);
-    assert(acc.antigravity.models.length >= 2, `${acc.id} must list Antigravity models`);
-    assert(acc.antigravity.notesPt.length > 0);
 
-    assert.equal(acc.codex.supported, true, `${acc.id} must support Codex`);
-    assert(acc.codex.models.length >= 2, `${acc.id} must list Codex models`);
-    assert(acc.codex.notesPt.length > 0);
+    if (acc.id === 'chatgpt') {
+      assert.equal(acc.codex.supported, true, 'chatgpt must support Codex');
+      assert(acc.codex.models.length >= 2, 'chatgpt must list Codex models');
+      assert.equal(acc.antigravity.supported, false, 'chatgpt must not support Antigravity');
+      assert.equal(acc.antigravity.models.length, 0);
+      continue;
+    }
+
+    // Third-party standalone accounts: neither Antigravity nor Codex
+    assert.equal(acc.antigravity.supported, false, `${acc.id} must not support Antigravity`);
+    assert.equal(acc.codex.supported, false, `${acc.id} must not support Codex`);
+    assert.equal(acc.antigravity.models.length, 0);
+    assert.equal(acc.codex.models.length, 0);
   }
 });
 

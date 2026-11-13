@@ -46,7 +46,7 @@ test('category rank #1 models correspond to top benchmark winners', () => {
 
   const topCode = RANKED_AIS.find(i => i.category === 'code' && i.rank === 1);
   assert(topCode.model.includes('Claude Sonnet'), 'Top Code should be Claude Sonnet');
-  assert.equal(topCode.company, 'Anthropic');
+  assert.equal(topCode.company, 'Claude');
 
   const topResearch = RANKED_AIS.find(i => i.category === 'research' && i.rank === 1);
   assert(topResearch.model.includes('DeepSeek'), 'Top Research should be DeepSeek');
@@ -63,7 +63,22 @@ test('category rank #1 models correspond to top benchmark winners', () => {
 
   const topSecurity = RANKED_AIS.find(i => i.category === 'security' && i.rank === 1);
   assert(topSecurity.model.includes('Claude Sonnet'), 'Top Security should be Claude Sonnet');
-  assert.equal(topSecurity.company, 'Anthropic');
+  assert.equal(topSecurity.company, 'Claude');
+});
+
+test('all ranked models follow strict ecosystem mapping (only Google in Antigravity, only OpenAI in Codex)', () => {
+  for (const item of RANKED_AIS) {
+    if (item.company === 'Google') {
+      assert.equal(item.antigravity, true, `${item.model} (Google) must be in Antigravity`);
+      assert.equal(item.codex, false, `${item.model} (Google) must NOT be in Codex`);
+    } else if (item.company === 'OpenAI') {
+      assert.equal(item.antigravity, false, `${item.model} (OpenAI) must NOT be in Antigravity`);
+      assert.equal(item.codex, true, `${item.model} (OpenAI) must be in Codex`);
+    } else {
+      assert.equal(item.antigravity, false, `${item.model} (${item.company}) must NOT be in Antigravity`);
+      assert.equal(item.codex, false, `${item.model} (${item.company}) must NOT be in Codex`);
+    }
+  }
 });
 
 test('all ChatGPT models are marked with Codex and not Antigravity', () => {
