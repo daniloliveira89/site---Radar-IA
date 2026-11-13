@@ -35,7 +35,7 @@ export type MyAccount = {
 export const MY_ACCOUNTS: MyAccount[] = [
   {
     id: 'gemini',
-    name: 'Gemini Web Pro Study',
+    name: 'Gemini Web Pro Education',
     company: 'Google',
     tier: 'Gemini Pro Estudos',
     tierEn: 'Gemini Pro Education',

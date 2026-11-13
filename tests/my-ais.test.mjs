@@ -13,7 +13,7 @@ test('my-ais accounts catalog contains all required user accounts including Goog
 
 test('gemini and google-ai-studio include Gemini 4 Hydrogen and Gemini 4 Argon models', () => {
   const gemini = MY_ACCOUNTS.find(a => a.id === 'gemini');
-  assert.equal(gemini.name, 'Gemini Web Pro Study');
+  assert.equal(gemini.name, 'Gemini Web Pro Education');
   assert(gemini.models.some(m => m.name.includes('Hydrogen')));
   assert(gemini.models.some(m => m.name.includes('Argon')));
 
