@@ -51,12 +51,6 @@ export default function MyAIs({feed}:{feed?:Feed}){
         <div className="my-ais-hero-copy">
           <span className="terminal-label">{t('ACTIVE ACCOUNTS & VARIANTS','CONTAS ATIVAS & VARIANTES')}</span>
           <h2>{t('My AIs & Dev Workspaces','Minhas IAs & Ambientes de Desenvolvimento')}</h2>
-          <p>
-            {t(
-              'Your configured accounts, active tiers, latest available frontier models, and dedicated variants for Antigravity and Codex environments.',
-              'Suas contas ativas, planos em uso, versões mais recentes dos modelos de ponta e variantes configuradas para Antigravity e Codex.'
-            )}
-          </p>
         </div>
         <div className="my-ais-stats">
           <div className="my-ais-stat-card">
