@@ -13,6 +13,7 @@ test('my-ais accounts catalog contains all required user accounts including Goog
 
 test('gemini and google-ai-studio include Gemini 4 Hydrogen and Gemini 4 Argon models', () => {
   const gemini = MY_ACCOUNTS.find(a => a.id === 'gemini');
+  assert.equal(gemini.name, 'Gemini Web Pro Study');
   assert(gemini.models.some(m => m.name.includes('Hydrogen')));
   assert(gemini.models.some(m => m.name.includes('Argon')));
 
@@ -20,6 +21,9 @@ test('gemini and google-ai-studio include Gemini 4 Hydrogen and Gemini 4 Argon m
   assert(studio);
   assert(studio.models.some(m => m.name.includes('Hydrogen')));
   assert(studio.models.some(m => m.name.includes('Argon')));
+  assert(!studio.models.some(m => m.name.includes('Carbon')), 'Google AI Studio should not list Gemini 4 Carbon');
+  assert(!studio.antigravity.models.includes('Gemini 4 Carbon'), 'Antigravity models should not include Gemini 4 Carbon');
+  assert(!studio.codex.models.includes('Gemini 4 Carbon'), 'Codex models should not include Gemini 4 Carbon');
 });
 
 test('my-ais tiers match requested user accounts', () => {
@@ -32,6 +36,7 @@ test('my-ais tiers match requested user accounts', () => {
 
   const claude = MY_ACCOUNTS.find(a => a.id === 'claude');
   assert(claude.tier.toLowerCase().includes('free'));
+  assert.equal(claude.company, 'Claude');
 
   const grok = MY_ACCOUNTS.find(a => a.id === 'grok');
   assert(grok.tier.toLowerCase().includes('free'));

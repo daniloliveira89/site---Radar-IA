@@ -630,7 +630,7 @@ export const RANKED_AIS: RankedAI[] = [
     id: 'science-1',
     rank: 1,
     category: 'science',
-    model: 'Gemini 4 Argon & Carbon',
+    model: 'Gemini 4 Argon & Hydrogen',
     accountId: 'google-ai-studio',
     accountName: 'Google AI Studio / Gemini',
     company: 'Google',

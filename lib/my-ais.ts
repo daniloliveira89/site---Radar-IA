@@ -35,7 +35,7 @@ export type MyAccount = {
 export const MY_ACCOUNTS: MyAccount[] = [
   {
     id: 'gemini',
-    name: 'Gemini (Web · Pro Estudos)',
+    name: 'Gemini Web Pro Study',
     company: 'Google',
     tier: 'Gemini Pro Estudos',
     tierEn: 'Gemini Pro Education',
@@ -113,13 +113,6 @@ export const MY_ACCOUNTS: MyAccount[] = [
         badge: 'Frontier Reasoning'
       },
       {
-        name: 'Gemini 4 Carbon (gemini-4-carbon)',
-        descriptionPt: 'Capacidade máxima de raciocínio multimodal sustentado para programação agêntica contínua e pesquisa científica.',
-        descriptionEn: 'Maximum sustained multimodal reasoning for continuous agentic coding and scientific research.',
-        isLatest: true,
-        badge: 'Raciocínio Máximo'
-      },
-      {
         name: 'Gemini Decision 1 (gemini-decision-1)',
         descriptionPt: 'Modelo especializado em decisões rápidas, calibradas e avaliação por rubricas em texto, áudio e vídeo.',
         descriptionEn: 'Specialized model for fast, calibrated decisions and rubric evaluations across text, audio, and video.',
@@ -134,13 +127,13 @@ export const MY_ACCOUNTS: MyAccount[] = [
     ],
     antigravity: {
       supported: true,
-      models: ['Gemini 4 Hydrogen', 'Gemini 4 Argon', 'Gemini 4 Carbon', 'Gemini Decision 1'],
+      models: ['Gemini 4 Hydrogen', 'Gemini 4 Argon', 'Gemini Decision 1'],
       notesPt: 'Chaves de API do Google AI Studio fornecem a inteligência nativa do Antigravity CLI e IDE, com suporte direto ao Orquestrador multimodelo.',
       notesEn: 'Google AI Studio API keys power native Antigravity CLI and IDE intelligence, with dynamic multi-model Orchestrator switching.'
     },
     codex: {
       supported: true,
-      models: ['Gemini 4 Hydrogen (Code)', 'Gemini 4 Argon', 'Gemini 4 Carbon'],
+      models: ['Gemini 4 Hydrogen (Code)', 'Gemini 4 Argon'],
       notesPt: 'Integração de APIs de alta velocidade no terminal Codex para geração, refatoração e testes de software.',
       notesEn: 'High-speed API integration into Codex terminal for software generation, refactoring, and test suites.'
     }
@@ -207,13 +200,13 @@ export const MY_ACCOUNTS: MyAccount[] = [
   {
     id: 'claude',
     name: 'Claude',
-    company: 'Anthropic',
+    company: 'Claude',
     tier: 'Claude Free',
     tierEn: 'Claude Free',
     tierBadge: 'free',
     url: 'https://claude.ai/',
-    summaryPt: 'Plano gratuito da Anthropic com cota diária recorrente nos modelos líderes de raciocínio e escrita.',
-    summaryEn: 'Anthropic free plan with recurring daily quota on leading reasoning and writing models.',
+    summaryPt: 'Plano gratuito do Claude com cota diária recorrente nos modelos líderes de raciocínio e escrita.',
+    summaryEn: 'Claude free plan with recurring daily quota on leading reasoning and writing models.',
     models: [
       {
         name: 'Claude Sonnet 5.5',
@@ -502,7 +495,7 @@ export function findLatestProviderRelease(company: string, feed?: Feed | null, b
         };
       }
     }
-    const article = feed.articles.find(a => a.company === company && a.date);
+    const article = feed.articles.find(a => (a.company === company || (company === 'Claude' && a.company === 'Anthropic')) && a.date);
     if (article) {
       return {
         modelName: article.title,
@@ -513,7 +506,7 @@ export function findLatestProviderRelease(company: string, feed?: Feed | null, b
     }
   }
   if (benchmarks?.webDesign?.rows) {
-    const webRow = benchmarks.webDesign.rows.find(r => r.company === company);
+    const webRow = benchmarks.webDesign.rows.find(r => r.company === company || (company === 'Claude' && r.company === 'Anthropic'));
     if (webRow) {
       return {
         modelName: webRow.model,

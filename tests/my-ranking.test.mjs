@@ -57,7 +57,7 @@ test('category rank #1 models correspond to top benchmark winners', () => {
   assert.equal(topImage.company, 'Google');
 
   const topScience = RANKED_AIS.find(i => i.category === 'science' && i.rank === 1);
-  assert(topScience.model.includes('Gemini 4 Argon & Carbon'), 'Top Science should be Gemini 4 Argon & Carbon');
+  assert(topScience.model.includes('Gemini 4 Argon'), 'Top Science should be Gemini 4 Argon');
   assert.equal(topScience.company, 'Google');
   assert.equal(topScience.aiStudio, true);
 

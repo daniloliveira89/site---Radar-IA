@@ -9,7 +9,7 @@ import {useLanguage} from './language';
 export default function MyAIs({feed}:{feed?:Feed}){
   const {t,language,locale}=useLanguage();
   const [query,setQuery]=useState('');
-  const [filter,setFilter]=useState<'all'|'antigravity'|'codex'|'free'|'pro'>('all');
+  const [filter,setFilter]=useState<string>('all');
 
   const clock=(v:string)=>new Intl.DateTimeFormat(locale,{dateStyle:'short',timeStyle:'short',timeZone:'America/Sao_Paulo'}).format(new Date(v));
 
@@ -20,6 +20,7 @@ export default function MyAIs({feed}:{feed?:Feed}){
       if(filter==='codex'&&!acc.codex.supported) return false;
       if(filter==='free'&&(acc.tierBadge!=='free')) return false;
       if(filter==='pro'&&(acc.tierBadge!=='pro'&&acc.tierBadge!=='edu'&&acc.tierBadge!=='go')) return false;
+      if(filter!=='all'&&filter!=='antigravity'&&filter!=='codex'&&filter!=='free'&&filter!=='pro'&&acc.id!==filter) return false;
       if(!q) return true;
 
       const searchableText=[
@@ -82,6 +83,17 @@ export default function MyAIs({feed}:{feed?:Feed}){
           >
             {t('All accounts','Todas as contas')} ({MY_ACCOUNTS.length})
           </button>
+          {MY_ACCOUNTS.map(acc=>(
+            <button
+              key={acc.id}
+              type="button"
+              className={filter===acc.id?'active':''}
+              onClick={()=>setFilter(acc.id)}
+            >
+              <Brand name={acc.company} small/>
+              <span>{acc.name}</span>
+            </button>
+          ))}
           <button
             type="button"
             className={filter==='antigravity'?'active':''}
@@ -138,7 +150,7 @@ export default function MyAIs({feed}:{feed?:Feed}){
                     <Brand name={acc.company}/>
                     <div>
                       <h3>{acc.name}</h3>
-                      <span>{acc.company}</span>
+                      {acc.company!==acc.name&&<span>{acc.company}</span>}
                     </div>
                   </div>
                   <div className="my-ai-header-actions">
