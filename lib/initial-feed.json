@@ -386,7 +386,7 @@
       "url": "https://openai.com/news/rss.xml",
       "status": "ok",
       "count": 5,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     },
     {
       "id": "deepmind",
@@ -395,7 +395,7 @@
       "url": "https://deepmind.google/blog/rss.xml",
       "status": "ok",
       "count": 4,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     },
     {
       "id": "google",
@@ -404,7 +404,7 @@
       "url": "https://blog.google/technology/ai/rss/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     },
     {
       "id": "google-dev",
@@ -413,7 +413,7 @@
       "url": "https://developers.googleblog.com/feeds/posts/default",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     },
     {
       "id": "google-aistudio",
@@ -422,7 +422,7 @@
       "url": "https://ai.google.dev/gemini-api/docs/changelog",
       "status": "ok",
       "count": 5,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     },
     {
       "id": "anthropic",
@@ -431,7 +431,7 @@
       "url": "https://www.anthropic.com/news",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     },
     {
       "id": "anthropic-models",
@@ -440,7 +440,7 @@
       "url": "https://www.anthropic.com/news/models",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     },
     {
       "id": "deepseek",
@@ -449,7 +449,7 @@
       "url": "https://www.deepseek.com/en/news/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     },
     {
       "id": "xai",
@@ -458,7 +458,7 @@
       "url": "https://x.ai/news",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-13T17:48:52.950Z",
+      "checkedAt": "2026-11-14T00:54:38.582Z",
       "error": "HTTP 403"
     },
     {
@@ -468,16 +468,17 @@
       "url": "https://www.kimi.com/en/blog/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     },
     {
       "id": "z-ai",
       "company": "Z AI",
       "name": "Z.ai · GLM",
       "url": "https://www.zhipuai.cn/en/research",
-      "status": "ok",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z",
+      "error": "fetch failed"
     },
     {
       "id": "bfl",
@@ -486,7 +487,7 @@
       "url": "https://blackforestlabs.ai/blog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     },
     {
       "id": "runway",
@@ -495,7 +496,7 @@
       "url": "https://runwayml.com/changelog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     },
     {
       "id": "luma",
@@ -504,7 +505,7 @@
       "url": "https://lumalabs.ai/news",
       "status": "ok",
       "count": 6,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     },
     {
       "id": "midjourney",
@@ -513,7 +514,7 @@
       "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-13T17:48:52.950Z",
+      "checkedAt": "2026-11-14T00:54:38.582Z",
       "error": "HTTP 403"
     },
     {
@@ -523,7 +524,7 @@
       "url": "https://blogs.microsoft.com/feed/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     },
     {
       "id": "meta",
@@ -532,7 +533,7 @@
       "url": "https://about.fb.com/feed/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     },
     {
       "id": "mistral",
@@ -541,9 +542,9 @@
       "url": "https://mistral.ai/news/rss",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-13T17:48:52.950Z"
+      "checkedAt": "2026-11-14T00:54:38.582Z"
     }
   ],
-  "fetchedAt": "2026-11-13T17:48:52.950Z",
-  "nextCheckAt": "2026-11-13T23:48:52.950Z"
+  "fetchedAt": "2026-11-14T00:54:38.582Z",
+  "nextCheckAt": "2026-11-14T06:54:38.582Z"
 }
