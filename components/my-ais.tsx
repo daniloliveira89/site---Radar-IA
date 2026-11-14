@@ -19,8 +19,7 @@ export default function MyAIs({feed}:{feed?:Feed}){
       if(filter==='antigravity'&&!acc.antigravity.supported) return false;
       if(filter==='codex'&&!acc.codex.supported) return false;
       if(filter==='free'&&(acc.tierBadge!=='free')) return false;
-      if(filter==='pro'&&(acc.tierBadge!=='pro'&&acc.tierBadge!=='edu'&&acc.tierBadge!=='go')) return false;
-      if(filter!=='all'&&filter!=='antigravity'&&filter!=='codex'&&filter!=='free'&&filter!=='pro'&&acc.id!==filter) return false;
+      if(filter!=='all'&&filter!=='antigravity'&&filter!=='codex'&&filter!=='free'&&acc.id!==filter) return false;
       if(!q) return true;
 
       const searchableText=[
@@ -93,7 +92,7 @@ export default function MyAIs({feed}:{feed?:Feed}){
             className={filter==='antigravity'?'active':''}
             onClick={()=>setFilter('antigravity')}
           >
-            <Sparkles size={13}/>
+            <Brand name="Google" small/>
             <span>Antigravity</span>
           </button>
           <button
@@ -101,7 +100,7 @@ export default function MyAIs({feed}:{feed?:Feed}){
             className={filter==='codex'?'active':''}
             onClick={()=>setFilter('codex')}
           >
-            <Terminal size={13}/>
+            <Brand name="OpenAI" small/>
             <span>Codex</span>
           </button>
           <button
@@ -110,13 +109,6 @@ export default function MyAIs({feed}:{feed?:Feed}){
             onClick={()=>setFilter('free')}
           >
             <span>{t('Free accounts','Contas gratuitas')}</span>
-          </button>
-          <button
-            type="button"
-            className={filter==='pro'?'active':''}
-            onClick={()=>setFilter('pro')}
-          >
-            <span>{t('Pro / Education / Go','Pro / Estudos / Go')}</span>
           </button>
         </div>
 
@@ -218,7 +210,7 @@ export default function MyAIs({feed}:{feed?:Feed}){
                     <div className="variant-box antigravity-box">
                       <div className="variant-box-top">
                         <span className="variant-name">
-                          <Zap size={13}/>
+                          <Brand name="Google" small/>
                           <strong>Antigravity</strong>
                         </span>
                         <span className="variant-status">
@@ -239,7 +231,7 @@ export default function MyAIs({feed}:{feed?:Feed}){
                     <div className="variant-box codex-box">
                       <div className="variant-box-top">
                         <span className="variant-name">
-                          <Terminal size={13}/>
+                          <Brand name="OpenAI" small/>
                           <strong>Codex</strong>
                         </span>
                         <span className="variant-status">

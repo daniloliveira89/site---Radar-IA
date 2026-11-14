@@ -105,7 +105,7 @@ export default function MyRanking(){
             className={variantFilter==='antigravity'?'active':''}
             onClick={()=>setVariantFilter('antigravity')}
           >
-            <Zap size={13}/>
+            <Brand name="Google" small/>
             <span>Antigravity</span>
           </button>
           <button
@@ -113,7 +113,7 @@ export default function MyRanking(){
             className={variantFilter==='codex'?'active':''}
             onClick={()=>setVariantFilter('codex')}
           >
-            <Terminal size={13}/>
+            <Brand name="OpenAI" small/>
             <span>Codex</span>
           </button>
           <button
@@ -203,13 +203,13 @@ export default function MyRanking(){
                           <div className="rank-variants">
                             {item.antigravity&&(
                               <span className="variant-pill antigravity" title={language==='en'?item.antigravityNoteEn:item.antigravityNotePt}>
-                                <Zap size={11}/>
+                                <Brand name="Google" small/>
                                 <span>Antigravity</span>
                               </span>
                             )}
                             {item.codex&&(
                               <span className="variant-pill codex" title={language==='en'?item.codexNoteEn:item.codexNotePt}>
-                                <Terminal size={11}/>
+                                <Brand name="OpenAI" small/>
                                 <span>Codex</span>
                               </span>
                             )}
