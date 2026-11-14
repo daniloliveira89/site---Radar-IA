@@ -1,0 +1,34 @@
+AUDITORIA TÉCNICA — site---Radar-IA
+Data: 14/11/2026 (America/Sao_Paulo)
+Repositório: https://github.com/daniloliveira89/site---Radar-IA
+Branch examinada: main
+Commit examinado: 4e7cb0dbdb0a0b6f651802eeeb1d0d170e7dc595
+Escopo: revisão dos fluxos principais. Somente AUDITORIA.txt é acrescentado; nenhuma melhoria foi aplicada ao projeto.
+Método e limites: Revisão dos coletores, publicação e principais componentes; 51 arquivos iniciais de texto e o snapshot de benchmarks/manifest necessários à suíte foram lidos. Os 63 testes existentes passaram com Node 24.21.0. As fontes de notícias, preços e rankings não foram consultadas ao vivo, e a atualidade de seus valores não foi certificada.
+Prioridades: P1 = alta; P2 = média; P3 = baixa. Ordem sugerida de aplicação:
+
+1. [P2] Validar dados locais e respostas antes de restaurá-los na interface
+Evidência: app/page.tsx:17,27-33,38; components/benchmarks.tsx:46-55
+Constatação e impacto: A leitura genérica aceita qualquer JSON válido como o tipo TypeScript esperado. radar-saved={} chega a saved.map; um radar-feed-v3 contendo articles mas sem sources chega a feed.sources.filter. As respostas de comparação também recebem validação superficial. Dados corrompidos podem derrubar a página.
+Melhoria sugerida: Validar esquemas em tempo de execução, incluindo datas, arrays, números finitos e campos usados por cada componente. Recuperar separadamente cada preferência e conservar a última edição válida.
+Como validar depois: Valores locais de tipo errado, feed sem sources e notas/datas inválidas não causam tela em branco; a aplicação recupera dados válidos e explica o descarte.
+
+2. [P2] Controlar concorrência e prazo das atualizações da interface
+Evidência: app/page.tsx:32,38; components/benchmarks.tsx:46-59; components/pricing.tsx:10
+Constatação e impacto: As rotinas de atualização não têm cancelamento, prazo nem proteção contra respostas fora de ordem. Eventos de visibilidade, intervalo e clique podem sobrepor chamadas; uma resposta anterior pode terminar depois e substituir uma edição mais recente, ou deixar loading ativo por muito tempo.
+Melhoria sugerida: Usar AbortController/prazo e uma geração de requisição ou fila para aceitar apenas a resposta relevante. Conferir a data/revisão da edição antes de substituir dados já exibidos.
+Como validar depois: Simular duas respostas em ordem invertida e uma requisição que não termina: a edição nova permanece e o estado de carregamento termina no prazo.
+
+3. [P2] Separar catálogos e rankings manuais do conteúdo atualizado pela coleta
+Evidência: scripts/update-data.mjs:9-20; lib/my-ais.ts:35,593; lib/my-ranking.ts:108; components/my-ranking.tsx:4
+Constatação e impacto: A coleta agendada atualiza notícias, benchmarks e planos. MY_ACCOUNTS e RANKED_AIS continuam listas estáticas em código; encontrar um lançamento recente no feed não atualiza automaticamente esses catálogos ou a ordem editorial. A comparação pode mudar enquanto o ranking pessoal continua com a edição antiga.
+Melhoria sugerida: Derivar as partes objetivas do ranking a partir dos snapshots e mapear versões por identificadores estáveis. Para escolhas editoriais/manuais, mostrar data de revisão e sinalizar divergências com a coleta em vez de sugerir atualização automática integral.
+Como validar depois: Atualizar um snapshot com um novo líder ou versão de modelo: a seção pessoal é atualizada segundo regras explícitas ou mostra que requer revisão manual, preservando avaliações editoriais identificadas.
+
+4. [P3] Dar recuperação às preferências e aos artigos salvos
+Evidência: app/page.tsx:33,40
+Constatação e impacto: As gravações de leituras, artigos salvos e tema ignoram erros de localStorage; a interface pode anunciar 'salva neste navegador' mesmo quando a gravação falhou. Também não há exportação dessas escolhas.
+Melhoria sugerida: Informar falhas de salvamento e oferecer exportação/importação versionada de preferências e artigos salvos, com validação do arquivo e controle de conflitos entre abas.
+Como validar depois: Com armazenamento cheio, o usuário recebe aviso e consegue exportar os itens. Um arquivo exportado restaura as escolhas após limpar o armazenamento.
+
+As referências pertencem ao commit examinado. Os testes sugeridos ainda não foram implementados. Esta revisão não atesta ausência de outros problemas nem valida a atualidade de informações externas.
