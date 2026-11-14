@@ -12,7 +12,7 @@
           "note": "Limited access",
           "notePt": "Acesso limitado",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Go",
@@ -70,7 +70,7 @@
       "notePt": "Assinaturas web nos EUA. A API é cobrada separadamente. O preço do Go varia por país.",
       "currency": "USD",
       "verifiedAt": "2026-10-23T19:48:45.804915+00:00",
-      "checkedAt": "2026-11-14T00:54:38.666Z",
+      "checkedAt": "2026-11-14T07:38:33.515Z",
       "status": "partial",
       "automatic": true
     },
@@ -86,7 +86,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Google AI Plus",
@@ -95,7 +95,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Google AI Pro",
@@ -104,7 +104,7 @@
           "note": "Your existing plan",
           "notePt": "Seu plano atual",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Google AI Ultra 5x",
@@ -113,7 +113,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Google AI Ultra 20x",
@@ -122,7 +122,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         }
       ],
       "category": "assistant",
@@ -130,7 +130,7 @@
       "notePt": "Preços dos EUA. Inclui benefícios elegíveis de Gemini, Flow e Antigravity; os limites variam por ferramenta. Créditos Cloud/API têm condições próprias.",
       "currency": "USD",
       "verifiedAt": "2026-10-23T19:48:45.804925+00:00",
-      "checkedAt": "2026-11-14T00:54:38.666Z",
+      "checkedAt": "2026-11-14T07:38:33.515Z",
       "status": "live",
       "automatic": true
     },
@@ -146,7 +146,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Pro",
@@ -155,7 +155,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Max 5x",
@@ -181,7 +181,7 @@
       "notePt": "O Pro anual cobra US$ 200 de uma vez. Créditos de API do Max têm critérios de elegibilidade; uso adicional é separado.",
       "currency": "USD",
       "verifiedAt": "2026-10-23T19:48:45.804927+00:00",
-      "checkedAt": "2026-11-14T00:54:38.666Z",
+      "checkedAt": "2026-11-14T07:38:33.515Z",
       "status": "partial",
       "automatic": true
     },
@@ -241,7 +241,7 @@
       "notePt": "Planos atuais para novas assinaturas. Planos SuperGrok antigos podem ser diferentes. Modelos de terceiros no Cursor são cobrados à parte.",
       "currency": "USD",
       "verifiedAt": "2026-10-23T19:48:45.804929+00:00",
-      "checkedAt": "2026-11-14T00:54:38.666Z",
+      "checkedAt": "2026-11-14T07:38:33.515Z",
       "status": "saved",
       "automatic": true
     },
@@ -257,7 +257,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Pro",
@@ -266,7 +266,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Max",
@@ -275,7 +275,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Ultra",
@@ -284,7 +284,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         }
       ],
       "category": "assistant",
@@ -292,7 +292,7 @@
       "notePt": "Planos internacionais em USD. Moderato, Allegretto, Allegro e Vivace são nomes antigos. Créditos da assinatura e cobrança de API são diferentes.",
       "currency": "USD",
       "verifiedAt": "2026-10-23T19:48:45.804930+00:00",
-      "checkedAt": "2026-11-14T00:54:38.666Z",
+      "checkedAt": "2026-11-14T07:38:33.515Z",
       "status": "live",
       "automatic": true
     },
@@ -338,7 +338,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "365 Personal",
@@ -356,7 +356,7 @@
           "note": "AI benefits may be owner-only",
           "notePt": "Benefícios de IA podem ser só do titular",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "365 Premium",
@@ -374,7 +374,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         }
       ],
       "category": "assistant",
@@ -382,7 +382,7 @@
       "notePt": "Preços web para consumidores nos EUA. Limites e compartilhamento de IA são diferentes dos de armazenamento/família.",
       "currency": "USD",
       "verifiedAt": "2026-10-23T19:48:45.804932+00:00",
-      "checkedAt": "2026-11-14T00:54:38.666Z",
+      "checkedAt": "2026-11-14T07:38:33.515Z",
       "status": "partial",
       "automatic": true
     },
@@ -420,7 +420,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Pro",
@@ -429,7 +429,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Education",
@@ -438,7 +438,7 @@
           "note": "Verified students · eligibility applies",
           "notePt": "Estudantes verificados · critérios aplicáveis",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Team",
@@ -447,7 +447,7 @@
           "note": "Per user / month",
           "notePt": "Por usuário / mês",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         }
       ],
       "category": "assistant",
@@ -455,7 +455,7 @@
       "notePt": "O Vibe era o Le Chat. Preços publicados em USD sem impostos. Créditos de API incluídos seguem as regras do plano.",
       "currency": "USD",
       "verifiedAt": "2026-10-23T19:48:45.804933+00:00",
-      "checkedAt": "2026-11-14T00:54:38.666Z",
+      "checkedAt": "2026-11-14T07:38:33.515Z",
       "status": "live",
       "automatic": true
     },
@@ -501,7 +501,7 @@
           "note": "125 one-time credits",
           "notePt": "125 créditos, uma única vez",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Standard",
@@ -510,7 +510,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Pro",
@@ -519,7 +519,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Max",
@@ -528,7 +528,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         }
       ],
       "category": "creative",
@@ -536,7 +536,7 @@
       "notePt": "Assinatura web por usuário. O anual é pago de uma vez. Max é o plano atual; Unlimited é um plano antigo.",
       "currency": "USD",
       "verifiedAt": "2026-10-23T19:48:45.804935+00:00",
-      "checkedAt": "2026-11-14T00:54:38.666Z",
+      "checkedAt": "2026-11-14T07:38:33.515Z",
       "status": "live",
       "automatic": true
     },
@@ -552,7 +552,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Pro",
@@ -561,7 +561,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         },
         {
           "name": "Ultra",
@@ -570,7 +570,7 @@
           "note": "",
           "notePt": "",
           "status": "live",
-          "verifiedAt": "2026-11-14T00:54:38.666Z"
+          "verifiedAt": "2026-11-14T07:38:33.515Z"
         }
       ],
       "category": "creative",
@@ -578,7 +578,7 @@
       "notePt": "Planos web individuais. Créditos consumidos dependem do modelo, duração e resolução. Team e Enterprise têm valores sob consulta.",
       "currency": "USD",
       "verifiedAt": "2026-10-23T19:48:45.804936+00:00",
-      "checkedAt": "2026-11-14T00:54:38.666Z",
+      "checkedAt": "2026-11-14T07:38:33.515Z",
       "status": "live",
       "automatic": true
     },
@@ -658,7 +658,7 @@
       "notePt": "Os quatro planos são pagos. A cobrança anual é feita de uma vez. Stealth Mode exige Pro ou Mega.",
       "currency": "USD",
       "verifiedAt": "2026-10-23T19:48:45.804938+00:00",
-      "checkedAt": "2026-11-14T00:54:38.666Z",
+      "checkedAt": "2026-11-14T07:38:33.515Z",
       "status": "saved",
       "automatic": true
     }
