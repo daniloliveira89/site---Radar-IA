@@ -89,22 +89,6 @@ export default function MyAIs({feed}:{feed?:Feed}){
           ))}
           <button
             type="button"
-            className={filter==='antigravity'?'active':''}
-            onClick={()=>setFilter('antigravity')}
-          >
-            <Brand name="Google" small/>
-            <span>Antigravity</span>
-          </button>
-          <button
-            type="button"
-            className={filter==='codex'?'active':''}
-            onClick={()=>setFilter('codex')}
-          >
-            <Brand name="OpenAI" small/>
-            <span>Codex</span>
-          </button>
-          <button
-            type="button"
             className={filter==='free'?'active':''}
             onClick={()=>setFilter('free')}
           >

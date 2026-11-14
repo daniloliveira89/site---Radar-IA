@@ -2,13 +2,13 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {MY_ACCOUNTS,findLatestProviderRelease} from '../lib/my-ais.ts';
 
-test('my-ais accounts catalog contains all required user accounts including Google AI Studio', () => {
+test('my-ais accounts catalog contains all required user accounts including Google AI Studio, Antigravity and Codex', () => {
   const ids = MY_ACCOUNTS.map(a => a.id);
-  const required = ['gemini', 'google-ai-studio', 'chatgpt', 'claude', 'grok', 'kimi', 'glm', 'deepseek', 'muse'];
+  const required = ['gemini', 'google-ai-studio', 'antigravity', 'chatgpt', 'codex', 'claude', 'grok', 'kimi', 'glm', 'deepseek', 'muse'];
   for (const req of required) {
     assert(ids.includes(req), `Missing account: ${req}`);
   }
-  assert.equal(MY_ACCOUNTS.length, 9);
+  assert.equal(MY_ACCOUNTS.length, 11);
 });
 
 test('gemini and google-ai-studio include Gemini 4 Hydrogen and Gemini 4 Argon models', () => {
@@ -68,7 +68,7 @@ test('every account has available models with descriptions and isLatest flags', 
 
 test('accounts include strictly configured Antigravity and Codex ecosystems', () => {
   for (const acc of MY_ACCOUNTS) {
-    if (acc.id === 'gemini' || acc.id === 'google-ai-studio') {
+    if (acc.id === 'gemini' || acc.id === 'google-ai-studio' || acc.id === 'antigravity') {
       assert.equal(acc.antigravity.supported, true, `${acc.id} must support Antigravity`);
       assert(acc.antigravity.models.length >= 2, `${acc.id} must list Antigravity models`);
       assert.equal(acc.codex.supported, false, `${acc.id} must not be in Codex ecosystem`);
@@ -76,10 +76,10 @@ test('accounts include strictly configured Antigravity and Codex ecosystems', ()
       continue;
     }
 
-    if (acc.id === 'chatgpt') {
-      assert.equal(acc.codex.supported, true, 'chatgpt must support Codex');
-      assert(acc.codex.models.length >= 2, 'chatgpt must list Codex models');
-      assert.equal(acc.antigravity.supported, false, 'chatgpt must not support Antigravity');
+    if (acc.id === 'chatgpt' || acc.id === 'codex') {
+      assert.equal(acc.codex.supported, true, `${acc.id} must support Codex`);
+      assert(acc.codex.models.length >= 2, `${acc.id} must list Codex models`);
+      assert.equal(acc.antigravity.supported, false, `${acc.id} must not support Antigravity`);
       assert.equal(acc.antigravity.models.length, 0);
       continue;
     }
@@ -90,6 +90,18 @@ test('accounts include strictly configured Antigravity and Codex ecosystems', ()
     assert.equal(acc.antigravity.models.length, 0);
     assert.equal(acc.codex.models.length, 0);
   }
+});
+
+test('filtering by antigravity returns Antigravity account and filtering by codex returns Codex account', () => {
+  const antigravity = MY_ACCOUNTS.find(a => a.id === 'antigravity');
+  assert(antigravity, 'Antigravity account must exist');
+  assert.equal(antigravity.name, 'Antigravity');
+  assert.equal(antigravity.company, 'Google');
+
+  const codex = MY_ACCOUNTS.find(a => a.id === 'codex');
+  assert(codex, 'Codex account must exist');
+  assert.equal(codex.name, 'Codex');
+  assert.equal(codex.company, 'OpenAI');
 });
 
 test('findLatestProviderRelease locates latest articles for providers from feed', () => {

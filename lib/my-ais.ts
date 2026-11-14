@@ -139,6 +139,57 @@ export const MY_ACCOUNTS: MyAccount[] = [
     }
   },
   {
+    id: 'antigravity',
+    name: 'Antigravity',
+    company: 'Google',
+    tier: 'Antigravity Pro Education',
+    tierEn: 'Antigravity Pro Education',
+    tierBadge: 'edu',
+    url: 'https://deepmind.google/technologies/gemini/',
+    summaryPt: 'Ambiente de desenvolvimento e orquestração agêntica avançada do Google DeepMind (CLI e IDE), integrado nativamente aos modelos Gemini 4, subagentes autônomos, chaves de API educacionais e 1M de contexto.',
+    summaryEn: 'Advanced agentic development and orchestration environment by Google DeepMind (CLI and IDE), natively integrated with Gemini 4 models, autonomous subagents, educational API keys, and 1M context.',
+    models: [
+      {
+        name: 'Gemini 4 Argon (gemini-4-argon)',
+        descriptionPt: 'Modelo frontier de raciocínio pesado para código complexo, orquestração de subagentes e matemática com decode longo de 1M tokens.',
+        descriptionEn: 'Heavy-duty frontier reasoning model for complex code, subagent orchestration and advanced math with 1M token long decode.',
+        isLatest: true,
+        badge: 'Frontier Reasoning'
+      },
+      {
+        name: 'Gemini 4 Hydrogen (gemini-4-hydrogen)',
+        descriptionPt: 'Modelo workhorse de alta velocidade até 2.5x mais rápido, raciocínio eficiente com 4 níveis de thinking e 1M de contexto unificado.',
+        descriptionEn: 'High-speed workhorse model up to 2.5x faster, efficient reasoning with 4 thinking levels and unified 1M context.',
+        isLatest: true,
+        badge: 'Mais Recente · GA'
+      },
+      {
+        name: 'Gemini Decision 1 (gemini-decision-1)',
+        descriptionPt: 'Modelo especializado em decisões rápidas, calibradas e avaliação por rubricas em texto, áudio e vídeo.',
+        descriptionEn: 'Specialized model for fast, calibrated decisions and rubric evaluations across text, audio, and video.',
+        isLatest: true,
+        badge: 'Novo · Decisões'
+      },
+      {
+        name: 'Gemini 3.8 Flash',
+        descriptionPt: 'Chamadas simultâneas de ferramentas, structured outputs em JSON e execução ágil de baixa latência.',
+        descriptionEn: 'Tool calling, structured JSON outputs, and low-latency fast generation.'
+      }
+    ],
+    antigravity: {
+      supported: true,
+      models: ['Gemini 4 Argon', 'Gemini 4 Hydrogen', 'Gemini Decision 1', 'Gemini 3.8 Flash'],
+      notesPt: 'Ambiente nativo do Antigravity CLI e IDE com orquestrador multimodelo dinâmico.',
+      notesEn: 'Native Antigravity CLI and IDE environment with dynamic multi-model orchestrator.'
+    },
+    codex: {
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente exclusivo do ecossistema Google Workspace e Antigravity.',
+      notesEn: 'Exclusive environment for Google Workspace and Antigravity ecosystem.'
+    }
+  },
+  {
     id: 'chatgpt',
     name: 'ChatGPT',
     company: 'OpenAI',
@@ -193,6 +244,63 @@ export const MY_ACCOUNTS: MyAccount[] = [
     codex: {
       supported: true,
       models: ['OpenAI Codex', 'GPT-4o', 'o3-mini', 'GPT-5 Thinking Mini'],
+      notesPt: 'Ambiente nativo para automação, CLI autônoma e geração de software no Codex.',
+      notesEn: 'Native environment for automation, autonomous CLI and software gen in Codex.'
+    }
+  },
+  {
+    id: 'codex',
+    name: 'Codex',
+    company: 'OpenAI',
+    tier: 'Codex CLI & Terminal',
+    tierEn: 'Codex CLI & Terminal',
+    tierBadge: 'go',
+    url: 'https://chatgpt.com/',
+    summaryPt: 'Ambiente de automação e engenharia de software da OpenAI para terminal e linha de comando, executando scripts, refatoração de repositórios e geração autônoma de código.',
+    summaryEn: 'OpenAI software engineering and automation environment for terminal and CLI, running scripts, repository refactoring, and autonomous code generation.',
+    models: [
+      {
+        name: 'OpenAI Codex',
+        descriptionPt: 'Motor nativo especializado em comandos de terminal, automação de scripts e depuração em tempo real.',
+        descriptionEn: 'Native engine specialized in terminal commands, script automation, and real-time debugging.',
+        isLatest: true,
+        badge: 'Nativo'
+      },
+      {
+        name: 'GPT-5 Thinking Mini',
+        descriptionPt: 'Raciocínio analítico guiado por reflexão para resolução passo a passo de algoritmos complexos.',
+        descriptionEn: 'Logical and math reasoning guided by structured reflection to solve difficult algorithmic tasks.',
+        isLatest: true,
+        badge: 'Thinking'
+      },
+      {
+        name: 'GPT-4o',
+        descriptionPt: 'Modelo multimodal avançado para inspeção de capturas de tela, diagramas técnicos e documentações de software.',
+        descriptionEn: 'Advanced multimodal model for inspecting screenshots, technical diagrams, and software docs.'
+      },
+      {
+        name: 'o3-mini / o1-mini',
+        descriptionPt: 'Especialista em refatoração de código, STEM, suítes de teste unitário e otimização de performance.',
+        descriptionEn: 'Specialized in code refactoring, STEM, unit test suites, and performance optimization.'
+      },
+      {
+        name: 'GPT-6 Luna',
+        descriptionPt: 'Nova geração ágil e de alta velocidade de resposta para autocompletar e edição interativa de arquivos.',
+        descriptionEn: 'New agile, highly responsive generation for code autocomplete and interactive file edits.'
+        ,
+        isLatest: true,
+        badge: 'Mais Recente'
+      }
+    ],
+    antigravity: {
+      supported: false,
+      models: [],
+      notesPt: 'Conta dedicada ao ambiente OpenAI e Codex.',
+      notesEn: 'Account dedicated to OpenAI and Codex environment.'
+    },
+    codex: {
+      supported: true,
+      models: ['OpenAI Codex', 'GPT-5 Thinking Mini', 'GPT-4o', 'o3-mini'],
       notesPt: 'Ambiente nativo para automação, CLI autônoma e geração de software no Codex.',
       notesEn: 'Native environment for automation, autonomous CLI and software gen in Codex.'
     }
