@@ -16,10 +16,8 @@ export default function MyAIs({feed}:{feed?:Feed}){
   const filteredAccounts=useMemo(()=>{
     const q=query.toLowerCase().trim();
     return MY_ACCOUNTS.filter(acc=>{
-      if(filter==='antigravity'&&!acc.antigravity.supported) return false;
-      if(filter==='codex'&&!acc.codex.supported) return false;
       if(filter==='free'&&(acc.tierBadge!=='free')) return false;
-      if(filter!=='all'&&filter!=='antigravity'&&filter!=='codex'&&filter!=='free'&&acc.id!==filter) return false;
+      if(filter!=='all'&&filter!=='free'&&acc.id!==filter) return false;
       if(!q) return true;
 
       const searchableText=[

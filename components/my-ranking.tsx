@@ -178,10 +178,12 @@ export default function MyRanking(){
                           <div className="model-titles">
                             <h4>{item.model}</h4>
                             <div className="model-account-meta">
-                              <span>{item.accountName}</span>
+                              <span>
+                                {variantFilter==='antigravity' ? 'Antigravity' : variantFilter==='codex' ? 'Codex' : item.accountName}
+                              </span>
                               <span className="bullet-dot">·</span>
                               <span className={`tier-badge tier-${item.tierBadge}`}>
-                                {language==='en'?item.tierEn:item.tier}
+                                {variantFilter==='antigravity' ? 'Google Antigravity' : variantFilter==='codex' ? 'OpenAI Codex' : (language==='en'?item.tierEn:item.tier)}
                               </span>
                             </div>
                           </div>
