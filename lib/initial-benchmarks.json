@@ -7,894 +7,406 @@
       "description": "Desempenho agregado nas avaliações da Artificial Analysis. Configuração de raciocínio preservada no nome.",
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "methodology": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
-      "checkedAt": "2026-11-14T07:38:35.386Z",
+      "checkedAt": "2026-11-14T16:38:02.143Z",
       "rows": [
         {
-          "model": "Claude Fable 5.2 (max)",
-          "company": "Anthropic",
-          "score": 65,
-          "costUSD": 26.54,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Fable 5.2 (xhigh)",
-          "company": "Anthropic",
-          "score": 62,
-          "costUSD": 14.83,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Fable 5.2 (high)",
-          "company": "Anthropic",
-          "score": 62,
-          "costUSD": 9.08,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Gemini 4 Carbon (high)",
-          "company": "Google",
-          "score": 60,
-          "costUSD": 5.48,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Opus 5.5 (max)",
-          "company": "Anthropic",
-          "score": 59,
-          "costUSD": 10.04,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Gemini 4 Carbon (medium)",
-          "company": "Google",
-          "score": 58,
-          "costUSD": 4.68,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Opus 5.5 (xhigh)",
-          "company": "Anthropic",
-          "score": 57,
-          "costUSD": 6.05,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6 Astra (max)",
-          "company": "OpenAI",
-          "score": 57,
-          "costUSD": 6.24,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Fable 5.2 (medium)",
-          "company": "Anthropic",
-          "score": 56,
-          "costUSD": 3.8,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6 Astra (xhigh)",
-          "company": "OpenAI",
-          "score": 55,
-          "costUSD": 3.66,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6 Astra (high)",
-          "company": "OpenAI",
-          "score": 55,
-          "costUSD": 3.24,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6.1 Sol (max)",
-          "company": "OpenAI",
-          "score": 55,
-          "costUSD": 1.27,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Sonnet 5.5 (max)",
-          "company": "Anthropic",
-          "score": 55,
-          "costUSD": 10.02,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Gemini 4 Carbon (low)",
-          "company": "Google",
-          "score": 54,
-          "costUSD": 5.22,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Fable 5.2 (low)",
-          "company": "Anthropic",
-          "score": 54,
-          "costUSD": 3.1,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Gemini 4 Hydrogen (xhigh)",
-          "company": "Google",
-          "score": 54,
-          "costUSD": 3.16,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6.1 Sol (xhigh)",
-          "company": "OpenAI",
-          "score": 52,
-          "costUSD": 0.76,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Opus 5.5 (high)",
-          "company": "Anthropic",
-          "score": 52,
-          "costUSD": 3.46,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6 Astra (medium)",
-          "company": "OpenAI",
-          "score": 52,
-          "costUSD": 2.73,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6.1 Terra (max)",
-          "company": "OpenAI",
-          "score": 51,
+          "model": "Solar Pro 4",
+          "company": "$0.96",
+          "score": 62.5,
           "costUSD": 0.96,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Gemini 4 Hydrogen (high)",
-          "company": "Google",
-          "score": 51,
-          "costUSD": 1.87,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Gemini 4 Argon (high)",
-          "company": "Google",
-          "score": 50,
-          "costUSD": 4.97,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6.1 Sol (high)",
-          "company": "OpenAI",
-          "score": 50,
-          "costUSD": 0.59,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Muse Wonder Full (max)",
-          "company": "Meta",
-          "score": 50,
-          "preview": false
-        },
-        {
-          "model": "Claude Sonnet 5.5 (xhigh)",
-          "company": "Anthropic",
-          "score": 50,
-          "costUSD": 4.09,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Opus 5.5 (medium)",
-          "company": "Anthropic",
-          "score": 48,
-          "costUSD": 2.45,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Gemini 4 Argon (medium)",
-          "company": "Google",
-          "score": 48,
-          "costUSD": 4.31,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Kimi K3.1 Pro",
-          "company": "Kimi",
-          "score": 46,
-          "costUSD": 3.68,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6.1 Sol (medium)",
-          "company": "OpenAI",
-          "score": 46,
-          "costUSD": 0.36,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6.1 Terra (xhigh)",
-          "company": "OpenAI",
-          "score": 45,
-          "costUSD": 0.4,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Muse Wonder (max)",
-          "company": "Meta",
-          "score": 44,
-          "costUSD": 6.95,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6 Astra (low)",
-          "company": "OpenAI",
-          "score": 43,
-          "costUSD": 1.42,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6.1 Terra (high)",
-          "company": "OpenAI",
-          "score": 42,
-          "costUSD": 0.26,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Sonnet 5.5 (high)",
-          "company": "Anthropic",
-          "score": 42,
-          "costUSD": 1.64,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Gemini 4 Hydrogen (medium)",
-          "company": "Google",
-          "score": 41,
-          "costUSD": 0.8,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Muse Wonder (high)",
-          "company": "Meta",
-          "score": 41,
-          "costUSD": 4.56,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6.1 Terra (medium)",
-          "company": "OpenAI",
-          "score": 38,
-          "costUSD": 0.17,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Haiku 5.5 (max)",
-          "company": "Anthropic",
-          "score": 36,
-          "costUSD": 0.41,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Muse Ember (max)",
-          "company": "Meta",
-          "score": 36,
-          "costUSD": 0.14,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Grok 4.7 (xhigh)",
-          "company": "xAI",
-          "score": 35,
-          "costUSD": 7.77,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Grok 4.7 (high)",
-          "company": "xAI",
-          "score": 35,
-          "costUSD": 6.18,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6.1 Sol (low)",
-          "company": "OpenAI",
-          "score": 35,
-          "costUSD": 0.16,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Opus 5.5 (low)",
-          "company": "Anthropic",
-          "score": 35,
-          "costUSD": 0.98,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Haiku 5.5 (xhigh)",
-          "company": "Anthropic",
-          "score": 35,
-          "costUSD": 0.25,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Tencent Hy4",
-          "company": "Tencent",
-          "score": 35,
-          "costUSD": 1.03,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Muse Ember (xhigh)",
-          "company": "Meta",
-          "score": 34,
-          "costUSD": 0.12,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Qwen3.8 Max (0902)",
-          "company": "Alibaba",
-          "score": 34,
-          "costUSD": 10.02,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "DeepSeek V4.1 Flash 1017 (max)",
-          "company": "DeepSeek",
-          "score": 33,
-          "costUSD": 0.6,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GLM-5.3 (max)",
-          "company": "Z AI",
-          "score": 32,
-          "costUSD": 5.01,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Grok 4.7 (low)",
-          "company": "xAI",
-          "score": 31,
-          "costUSD": 2.92,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Gemini 3.8 Flash (high)",
-          "company": "Google",
-          "score": 31,
-          "costUSD": 7.77,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Sonnet 5.5 (medium)",
-          "company": "Anthropic",
-          "score": 31,
-          "costUSD": 0.78,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Inkling 2 Small",
-          "company": "Thinking Machines",
-          "score": 31,
-          "costUSD": 1.18,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6.1 Terra (non-reasoning)",
-          "company": "OpenAI",
-          "score": 31,
-          "costUSD": 0.23,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Gemini 3.8 Flash (medium)",
-          "company": "Google",
-          "score": 30,
-          "costUSD": 6.26,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "MiMo-V2.6-Pro",
-          "company": "Xiaomi",
-          "score": 30,
-          "costUSD": 0.26,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Claude Haiku 5.5 (high)",
-          "company": "Anthropic",
-          "score": 30,
-          "costUSD": 0.16,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Ling 3.1 Flash 1019",
-          "company": "InclusionAI",
-          "score": 30,
-          "costUSD": 3.19,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6.1 Terra (low)",
-          "company": "OpenAI",
-          "score": 29,
-          "costUSD": 0.0713,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "MiniMax-M3.1-Flash",
-          "company": "MiniMax",
-          "score": 29,
-          "costUSD": 0.49,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "DeepSeek V4.1 Flash 1017 (high)",
-          "company": "DeepSeek",
-          "score": 29,
-          "costUSD": 0.46,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Qwen3.8-Flash-Next",
-          "company": "Alibaba",
-          "score": 29,
-          "costUSD": 0.57,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Step 5 Preview",
-          "company": "StepFun",
-          "score": 29,
-          "costUSD": 2.35,
-          "costUnit": "task",
-          "preview": true
-        },
-        {
-          "model": "GPT-6 Luna (max)",
-          "company": "OpenAI",
-          "score": 28,
-          "costUSD": 0.15,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GLM-5.3-Flash",
-          "company": "Z AI",
-          "score": 28,
-          "costUSD": 0.58,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Gemini 4 Hydrogen (low)",
-          "company": "Google",
-          "score": 27,
-          "costUSD": 0.29,
           "costUnit": "task",
           "preview": false
         },
         {
           "model": "MiMo-V2.6-Flash",
-          "company": "Xiaomi",
-          "score": 27,
+          "company": "$0.13",
+          "score": 50.5,
           "costUSD": 0.13,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "Mistral Large 4 (high)",
-          "company": "Mistral",
-          "score": 26,
-          "costUSD": 2.06,
+          "model": "Qwen3.8 Max (0902)",
+          "company": "$10.02",
+          "score": 48.6,
+          "costUSD": 10.02,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "Claude Sonnet 5.5 (low)",
-          "company": "Anthropic",
-          "score": 26,
-          "costUSD": 0.51,
+          "model": "GLM-5.3-Flash",
+          "company": "$0.58",
+          "score": 46.8,
+          "costUSD": 0.58,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "Muse Spark Open (xhigh)",
-          "company": "Meta",
-          "score": 25,
-          "costUSD": 2.02,
+          "model": "Claude Fable 5.2 Max, Default Fallback",
+          "company": "$26.54",
+          "score": 45.3,
+          "costUSD": 26.54,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "Claude Haiku 5.5 (medium)",
-          "company": "Anthropic",
-          "score": 25,
-          "costUSD": 0.0918,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Agnes 2.5 Pro Theta",
-          "company": "Sapiens AI",
-          "score": 24,
-          "costUSD": 0.57,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6 Luna (xhigh)",
-          "company": "OpenAI",
-          "score": 23,
-          "costUSD": 0.1,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Mistral Large 4 (medium)",
-          "company": "Mistral",
-          "score": 23,
-          "costUSD": 1.41,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GLM-5.3 (low)",
-          "company": "Z AI",
-          "score": 23,
-          "costUSD": 1.57,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "DeepSeek V4 Pro 0813 (max)",
-          "company": "DeepSeek",
-          "score": 23,
-          "costUSD": 1.77,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Gemini 3.8 Flash (low)",
-          "company": "Google",
-          "score": 23,
-          "preview": false
-        },
-        {
-          "model": "GPT-6 Luna (high)",
-          "company": "OpenAI",
-          "score": 21,
-          "costUSD": 0.0729,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "DeepSeek V4 Pro 0813 (high)",
-          "company": "DeepSeek",
-          "score": 21,
-          "costUSD": 0.85,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Nanbeige4.3-33B",
-          "company": "Nanbeige",
-          "score": 20,
-          "preview": false
-        },
-        {
-          "model": "Qwen3.8 27B (xhigh)",
-          "company": "Alibaba",
-          "score": 20,
+          "model": "Qwen3.8 27B Xhigh",
+          "company": "$3.53",
+          "score": 43.7,
           "costUSD": 3.53,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "JT-4.1 Flash 236B A21B",
-          "company": "China Mobile",
-          "score": 19,
-          "preview": false
-        },
-        {
-          "model": "MiniMax-M3",
-          "company": "MiniMax",
-          "score": 19,
-          "costUSD": 1.29,
+          "model": "Kimi K3.1 Pro",
+          "company": "$3.68",
+          "score": 39.7,
+          "costUSD": 3.68,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "Claude Haiku 5.5 (low)",
-          "company": "Anthropic",
-          "score": 19,
-          "costUSD": 0.0438,
+          "model": "MiMo-V2.6-Pro",
+          "company": "$0.26",
+          "score": 35.6,
+          "costUSD": 0.26,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "DeepSeek V4.1 Flash 1017 (non-reasoning)",
-          "company": "DeepSeek",
-          "score": 19,
-          "costUSD": 0.43,
+          "model": "Qwen3.8-Flash-Next",
+          "company": "$0.57",
+          "score": 34.7,
+          "costUSD": 0.57,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "GPT-6 Luna (medium)",
-          "company": "OpenAI",
-          "score": 18,
-          "costUSD": 0.0422,
+          "model": "Claude Sonnet 5.5 Max, Default Fallback",
+          "company": "$10.02",
+          "score": 33.9,
+          "costUSD": 10.02,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "K2 Horizon 375B A23B",
-          "company": "Institute of Foundation Models",
-          "score": 18,
-          "costUSD": 0,
+          "model": "Inkling 2 Small",
+          "company": "$1.18",
+          "score": 31.9,
+          "costUSD": 1.18,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "Beam 1.0",
-          "company": "Reflection",
-          "score": 18,
-          "costUSD": 0.28,
+          "model": "Gemini 4 Carbon High",
+          "company": "$5.48",
+          "score": 31.3,
+          "costUSD": 5.48,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "Qwen3.8 27B (medium)",
-          "company": "Alibaba",
-          "score": 17,
-          "costUSD": 2.16,
+          "model": "Gemini 4 Argon High",
+          "company": "$4.97",
+          "score": 29.4,
+          "costUSD": 4.97,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "Qwen3.8 27B (low)",
-          "company": "Alibaba",
-          "score": 16,
-          "costUSD": 1.91,
+          "model": "Grok 4.7 Xhigh",
+          "company": "$7.77",
+          "score": 26.9,
+          "costUSD": 7.77,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "Solar Pro 4",
-          "company": "Upstage",
-          "score": 14,
-          "costUSD": 0.96,
+          "model": "GLM-5.3 Max",
+          "company": "$5.01",
+          "score": 25.8,
+          "costUSD": 5.01,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Agnes 2.5 Pro Theta",
+          "company": "$0.57",
+          "score": 25.5,
+          "costUSD": 0.57,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Claude Opus 5.5 Max, Default Fallback",
+          "company": "$10.04",
+          "score": 25.4,
+          "costUSD": 10.04,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6 Astra Max",
+          "company": "$6.24",
+          "score": 23.8,
+          "costUSD": 6.24,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6.1 Sol Max",
+          "company": "$1.27",
+          "score": 23.1,
+          "costUSD": 1.27,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "DeepSeek V4 Pro 0813 Max",
+          "company": "$1.77",
+          "score": 19.7,
+          "costUSD": 1.77,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "MiniMax-M3.1-Flash",
+          "company": "$0.49",
+          "score": 16.8,
+          "costUSD": 0.49,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Claude Haiku 5.5 Max",
+          "company": "$0.41",
+          "score": 14.9,
+          "costUSD": 0.41,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Gemini 4 Hydrogen Xhigh",
+          "company": "$3.16",
+          "score": 14.8,
+          "costUSD": 3.16,
           "costUnit": "task",
           "preview": false
         },
         {
           "model": "Apodex 1.1",
-          "company": "Apodex",
-          "score": 14,
+          "company": "$0.76",
+          "score": 14.8,
           "costUSD": 0.76,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "Nemotron 3.5 Super VL",
-          "company": "NVIDIA",
+          "model": "GPT-6.1 Terra Max",
+          "company": "$0.96",
+          "score": 14.6,
+          "costUSD": 0.96,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Muse Wonder Max",
+          "company": "$6.95",
+          "score": 14.6,
+          "costUSD": 6.95,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Step 5 Preview",
+          "company": "$2.35",
+          "score": 14.5,
+          "costUSD": 2.35,
+          "costUnit": "task",
+          "preview": true
+        },
+        {
+          "model": "Gemini 3.8 Flash High",
+          "company": "$7.77",
+          "score": 14.4,
+          "costUSD": 7.77,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Tencent Hy4",
+          "company": "$1.03",
+          "score": 14.2,
+          "costUSD": 1.03,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "DeepSeek V4.1 Flash 1017 Max",
+          "company": "$0.60",
           "score": 14,
+          "costUSD": 0.6,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "MiniMax-M3",
+          "company": "$1.29",
+          "score": 13.7,
+          "costUSD": 1.29,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Mistral Large 4 High",
+          "company": "$2.06",
+          "score": 13.1,
+          "costUSD": 2.06,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6 Luna Max",
+          "company": "$0.15",
+          "score": 12,
+          "costUSD": 0.15,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Granite 4.2 8B",
+          "company": "$0.0405",
+          "score": 11.5,
+          "costUSD": 0.0405,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Inkling Xhigh",
+          "company": "$1.35",
+          "score": 11,
+          "costUSD": 1.35,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Muse Spark Open Xhigh",
+          "company": "$2.02",
+          "score": 7.9,
+          "costUSD": 2.02,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "gpt-oss-120b High",
+          "company": "$0.35",
+          "score": 7.5,
+          "costUSD": 0.35,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Nemotron 3.5 Super VL",
+          "company": "$0.56",
+          "score": 6.1,
           "costUSD": 0.56,
           "costUnit": "task",
           "preview": false
         },
         {
           "model": "Inkling Small",
-          "company": "Thinking Machines",
-          "score": 13,
+          "company": "$0.20",
+          "score": 5.8,
           "costUSD": 0.2,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "DeepSeek V4 Pro 0813 (non-reasoning)",
-          "company": "DeepSeek",
-          "score": 13,
-          "costUSD": 0.98,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Inkling (xhigh)",
-          "company": "Thinking Machines",
-          "score": 12,
-          "costUSD": 1.35,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Nemotron 3 Ultra",
-          "company": "NVIDIA",
-          "score": 12,
-          "costUSD": 2.21,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Gemini 3.5 Flash-Lite",
-          "company": "Google",
-          "score": 12,
-          "costUSD": 0.69,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Qwen3.8 27B (non-reasoning)",
-          "company": "Alibaba",
-          "score": 10,
-          "costUSD": 3.77,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6 Luna (low)",
-          "company": "OpenAI",
-          "score": 10,
-          "costUSD": 0.0051,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "GPT-6 Luna (non-reasoning)",
-          "company": "OpenAI",
-          "score": 9,
-          "costUSD": 0.0714,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "K-EXAONE 2.0",
-          "company": "LG AI Research",
-          "score": 8,
-          "preview": false
-        },
-        {
-          "model": "Muse Glimmer (high)",
-          "company": "Meta",
-          "score": 6,
+          "model": "Muse Glimmer High",
+          "company": "$0.18",
+          "score": 5.4,
           "costUSD": 0.18,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "Command A+",
-          "company": "Cohere",
-          "score": 6,
-          "costUSD": 0,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Nemotron 3.5 Lightning",
-          "company": "NVIDIA",
-          "score": 6,
-          "costUSD": 0.31,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Granite 4.2 8B",
-          "company": "IBM",
-          "score": 5,
-          "costUSD": 0.0405,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "Granite 4.2 3B",
-          "company": "IBM",
-          "score": 5,
-          "preview": false
-        },
-        {
           "model": "Mistral Medium 3.5",
-          "company": "Mistral",
-          "score": 5,
+          "company": "$1.04",
+          "score": 4.5,
           "costUSD": 1.04,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "Gemma 4 31B",
-          "company": "Google",
-          "score": 4,
-          "preview": false
-        },
-        {
-          "model": "Mistral Small 4",
-          "company": "Mistral",
-          "score": 4,
-          "costUSD": 0.0399,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "gpt-oss-120b (high)",
-          "company": "OpenAI",
-          "score": 4,
-          "costUSD": 0.35,
-          "costUnit": "task",
-          "preview": false
-        },
-        {
-          "model": "North Mini Code",
-          "company": "Cohere",
-          "score": 3,
+          "model": "K2 Horizon 375B A23B",
+          "company": "$0.00",
+          "score": 4.3,
           "costUSD": 0,
           "costUnit": "task",
           "preview": false
         },
         {
-          "model": "Nemotron 3 Nano 4B",
-          "company": "NVIDIA",
-          "score": 2,
+          "model": "Nemotron 3 Ultra 550B A55B Reasoning",
+          "company": "$2.21",
+          "score": 4.3,
+          "costUSD": 2.21,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Nemotron 3.5 Lightning",
+          "company": "$0.31",
+          "score": 4.2,
+          "costUSD": 0.31,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Muse Ember Max",
+          "company": "$0.14",
+          "score": 3.3,
+          "costUSD": 0.14,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Command A+",
+          "company": "$0.00",
+          "score": 3.1,
+          "costUSD": 0,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "North Mini Code",
+          "company": "$0.00",
+          "score": 2.9,
+          "costUSD": 0,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Beam 1.0",
+          "company": "$0.28",
+          "score": 2.1,
+          "costUSD": 0.28,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Gemini 3.5 Flash-Lite",
+          "company": "$0.69",
+          "score": 1.7,
+          "costUSD": 0.69,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Mistral Small 4 Reasoning",
+          "company": "$0.0399",
+          "score": 1.7,
+          "costUSD": 0.0399,
+          "costUnit": "task",
           "preview": false
         }
       ],
@@ -907,7 +419,7 @@
       "description": "Geração de imagem a partir de texto. Preferências humanas em comparações cegas; não mede edição de imagem.",
       "source": "https://artificialanalysis.ai/image/leaderboard/text-to-image",
       "methodology": "https://artificialanalysis.ai/methodology/image",
-      "checkedAt": "2026-11-14T07:38:35.980Z",
+      "checkedAt": "2026-11-14T16:38:02.127Z",
       "rows": [
         {
           "model": "GPT Image 2.6 Sunburst (max)",
@@ -2157,7 +1669,7 @@
       "description": "Geração de vídeo com áudio a partir de texto. Não mistura resultados de imagem para vídeo ou vídeo sem áudio.",
       "source": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
       "methodology": "https://artificialanalysis.ai/video/methodology",
-      "checkedAt": "2026-11-14T07:38:35.894Z",
+      "checkedAt": "2026-11-14T16:38:02.244Z",
       "rows": [
         {
           "model": "Wan 3.0",
@@ -13133,7 +12645,7 @@
         "company": "DeepSeek",
         "score": 59.1,
         "preview": false,
-        "costUSD": 1.325,
+        "costUSD": 1.4284999999999999,
         "costUnit": "1m-tokens"
       },
       {
@@ -13629,9 +13141,9 @@
         "preview": false
       }
     ],
-    "checkedAt": "2026-11-14T07:38:35.820Z",
+    "checkedAt": "2026-11-14T16:38:02.273Z",
     "status": "live",
-    "priceCheckedAt": "2026-11-14T07:38:35.820Z"
+    "priceCheckedAt": "2026-11-14T16:38:02.273Z"
   },
   "webDesign": {
     "id": "text",
@@ -13646,78 +13158,78 @@
       {
         "model": "Muse Wonder (max)",
         "company": "Meta",
-        "score": 1378,
-        "samples": 4890,
+        "score": 1379,
+        "samples": 4892,
         "preview": false
       },
       {
         "model": "Muse Spark 1.3 (xhigh)",
         "company": "Meta",
         "score": 1360,
-        "samples": 23956,
+        "samples": 23969,
         "preview": false
       },
       {
         "model": "Claude Fable 5.2",
         "company": "Anthropic",
         "score": 1351,
-        "samples": 1324,
+        "samples": 1335,
         "preview": false
       },
       {
         "model": "GPT-6 Astra (xhigh)",
         "company": "OpenAI",
         "score": 1340,
-        "samples": 5700,
+        "samples": 5719,
         "preview": false
       },
       {
         "model": "Kimi K3",
         "company": "Kimi",
         "score": 1336,
-        "samples": 4812,
+        "samples": 4818,
         "preview": false
       },
       {
         "model": "Inkling 2 Small",
         "company": "Thinking Machines",
         "score": 1335,
-        "samples": 2268,
+        "samples": 2275,
         "preview": false
       },
       {
         "model": "Muse Ember",
         "company": "Meta",
         "score": 1330,
-        "samples": 1741,
+        "samples": 1743,
         "preview": false
       },
       {
         "model": "Claude Opus 5.5",
         "company": "Anthropic",
         "score": 1326,
-        "samples": 3898,
+        "samples": 3901,
+        "preview": false
+      },
+      {
+        "model": "Gemini 4 Hydrogen",
+        "company": "Google",
+        "score": 1321,
+        "samples": 606,
         "preview": false
       },
       {
         "model": "Kimi K3.1 Pro",
         "company": "Kimi",
         "score": 1321,
-        "samples": 3675,
-        "preview": false
-      },
-      {
-        "model": "Gemini 4 Hydrogen",
-        "company": "Google",
-        "score": 1320,
-        "samples": 536,
+        "samples": 3678,
         "preview": false
       },
       {
         "model": "Gemini 4 Carbon",
         "company": "Google",
         "score": 1319,
-        "samples": 1125,
+        "samples": 1170,
         "preview": false
       },
       {
@@ -13731,42 +13243,42 @@
         "model": "Gemini 4 Argon",
         "company": "Google",
         "score": 1316,
-        "samples": 8591,
+        "samples": 8595,
         "preview": false
       },
       {
         "model": "GPT-6.1 Sol",
         "company": "OpenAI",
-        "score": 1316,
-        "samples": 3898,
+        "score": 1315,
+        "samples": 3904,
         "preview": false
       },
       {
         "model": "MiMo-V2.6-Pro",
         "company": "Xiaomi",
         "score": 1311,
-        "samples": 18058,
+        "samples": 18061,
         "preview": false
       },
       {
         "model": "Claude Sonnet 5.5",
         "company": "Anthropic",
         "score": 1309,
-        "samples": 3082,
+        "samples": 3092,
         "preview": false
       },
       {
         "model": "Muse Spark 1.2",
         "company": "Meta",
         "score": 1309,
-        "samples": 28316,
+        "samples": 28324,
         "preview": false
       },
       {
         "model": "Muse Spark Open (xhigh)",
         "company": "Meta",
-        "score": 1306,
-        "samples": 3971,
+        "score": 1305,
+        "samples": 3983,
         "preview": false
       },
       {
@@ -13780,13 +13292,13 @@
         "model": "Claude Opus 5",
         "company": "Anthropic",
         "score": 1304,
-        "samples": 9903,
+        "samples": 9911,
         "preview": false
       }
     ],
-    "publishedAt": "2026-11-14T06:06:46.191Z",
+    "publishedAt": "2026-11-14T16:06:36.785Z",
     "status": "live",
-    "checkedAt": "2026-11-14T07:38:35.905Z"
+    "checkedAt": "2026-11-14T16:38:02.436Z"
   },
   "freeAccess": {
     "offers": [
@@ -13796,7 +13308,7 @@
         "route": "api",
         "url": "https://openrouter.ai/inclusionai/ling-3.2-flash:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "modelIds": [
           "inclusionai/ling-3.2-flash",
           "inclusionai/ling-3.2-flash-20261113"
@@ -13808,7 +13320,7 @@
         "route": "api",
         "url": "https://openrouter.ai/baidu/ernie-5.5-flash-preview:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "modelIds": [
           "baidu/ernie-5.5-flash-preview",
           "baidu/ernie-5.5-flash-preview-20261110"
@@ -13820,7 +13332,7 @@
         "route": "api",
         "url": "https://openrouter.ai/thinkingmachines/inkling-2-small:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "modelIds": [
           "thinkingmachines/inkling-2-small",
           "thinkingmachines/inkling-2-small-20261107"
@@ -13832,7 +13344,7 @@
         "route": "api",
         "url": "https://openrouter.ai/liquid/lfm-3-1.7b:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "modelIds": [
           "liquid/lfm-3-1.7b",
           "liquid/lfm-3-1.7b-20261106"
@@ -13844,7 +13356,7 @@
         "route": "api",
         "url": "https://openrouter.ai/particle-ai/particle-1:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "modelIds": [
           "particle-ai/particle-1",
           "particle-ai/particle-1-20261027"
@@ -13856,7 +13368,7 @@
         "route": "api",
         "url": "https://openrouter.ai/recursive/flint-v1.0:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "modelIds": [
           "recursive/flint-v1.0",
           "recursive/flint-v1.0-20261021"
@@ -13868,7 +13380,7 @@
         "route": "api",
         "url": "https://openrouter.ai/nvidia/nemotron-3.5-super-vl:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "modelIds": [
           "nvidia/nemotron-3.5-super-vl",
           "nvidia/nemotron-3.5-super-vl-20261015"
@@ -13880,7 +13392,7 @@
         "route": "api",
         "url": "https://openrouter.ai/dots-studio/dots-3-note-preview:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "modelIds": [
           "dots-studio/dots-3-note-preview",
           "dots-studio/dots-3-note-preview-20260813"
@@ -13892,7 +13404,7 @@
         "route": "api",
         "url": "https://openrouter.ai/nvidia/nemotron-3.5-lightning:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "modelIds": [
           "nvidia/nemotron-3.5-lightning",
           "nvidia/nemotron-3.5-lightning-20260807"
@@ -13904,7 +13416,7 @@
         "route": "api",
         "url": "https://openrouter.ai/cohere/north-mini-code:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "modelIds": [
           "cohere/north-mini-code",
           "cohere/north-mini-code-20260617"
@@ -13916,7 +13428,7 @@
         "route": "api",
         "url": "https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "modelIds": [
           "nvidia/nemotron-3-ultra-550b-a55b",
           "nvidia/nemotron-3-ultra-550b-a55b-20260604"
@@ -13928,7 +13440,7 @@
         "route": "api",
         "url": "https://openrouter.ai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "modelIds": [
           "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
           "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428"
@@ -13940,7 +13452,7 @@
         "route": "api",
         "url": "https://openrouter.ai/google/gemma-4-26b-a4b-it:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "modelIds": [
           "google/gemma-4-26b-a4b-it",
           "google/gemma-4-26b-a4b-it-20260403"
@@ -13952,7 +13464,7 @@
         "route": "api",
         "url": "https://openrouter.ai/google/gemma-4-31b-it:free",
         "source": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "modelIds": [
           "google/gemma-4-31b-it",
           "google/gemma-4-31b-it-20260402"
@@ -14092,7 +13604,7 @@
         "route": "chat",
         "url": "https://chat.deepseek.com/",
         "source": "https://www.deepseek.com/en/",
-        "checkedAt": "2026-11-14T07:38:33.504Z"
+        "checkedAt": "2026-11-14T16:38:00.899Z"
       },
       {
         "model": "GPT-6 Luna",
@@ -14116,7 +13628,7 @@
         "route": "chat",
         "url": "https://claude.ai/",
         "source": "https://claude.com/pricing",
-        "checkedAt": "2026-11-14T07:38:33.506Z",
+        "checkedAt": "2026-11-14T16:38:00.900Z",
         "scope": "family"
       },
       {
@@ -14125,7 +13637,7 @@
         "route": "chat",
         "url": "https://claude.ai/",
         "source": "https://claude.com/pricing",
-        "checkedAt": "2026-11-14T07:38:33.506Z",
+        "checkedAt": "2026-11-14T16:38:00.900Z",
         "scope": "family"
       },
       {
@@ -14141,7 +13653,7 @@
           "Nano Banana 2 (Gemini 3.1 Flash Image)"
         ],
         "source": "https://gemini.google/overview/image-generation/",
-        "checkedAt": "2026-11-14T07:38:33.506Z"
+        "checkedAt": "2026-11-14T16:38:00.901Z"
       },
       {
         "model": "Veo 3.1 Fast",
@@ -14156,7 +13668,7 @@
           "Veo 3.1 Fast (Audio)"
         ],
         "source": "https://support.google.com/flow/answer/16526234?hl=en",
-        "checkedAt": "2026-11-14T07:38:33.507Z"
+        "checkedAt": "2026-11-14T16:38:00.901Z"
       },
       {
         "model": "Veo 3.1 Lite",
@@ -14168,7 +13680,7 @@
         "limitsEn": "Daily credits, off-peak availability and resolution limits apply.",
         "limitsPt": "Créditos diários, disponibilidade fora do pico e limites de resolução.",
         "source": "https://support.google.com/flow/answer/16526234?hl=en",
-        "checkedAt": "2026-11-14T07:38:33.507Z"
+        "checkedAt": "2026-11-14T16:38:00.901Z"
       },
       {
         "model": "Gemini Omni Flash 1.1",
@@ -14183,7 +13695,7 @@
           "Gemini Omni 1.1 Flash"
         ],
         "source": "https://support.google.com/flow/answer/16526234?hl=en",
-        "checkedAt": "2026-11-14T07:38:33.507Z"
+        "checkedAt": "2026-11-14T16:38:00.901Z"
       },
       {
         "model": "Nano Banana 2 Lite",
@@ -14199,7 +13711,7 @@
           "Gemini 3.1 Flash-Lite Image (nano-banana-2-lite)"
         ],
         "source": "https://support.google.com/flow/answer/16526234?hl=en",
-        "checkedAt": "2026-11-14T07:38:33.507Z"
+        "checkedAt": "2026-11-14T16:38:00.901Z"
       },
       {
         "model": "Recraft V4.1 Utility",
@@ -14211,7 +13723,7 @@
         "limitsEn": "Daily credits; public images and restricted commercial rights.",
         "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos.",
         "source": "https://www.recraft.ai/blog/midjourney-alternative",
-        "checkedAt": "2026-11-14T07:38:33.508Z"
+        "checkedAt": "2026-11-14T16:38:00.902Z"
       },
       {
         "model": "Recraft V4.1 Utility Pro",
@@ -14223,7 +13735,7 @@
         "limitsEn": "Daily credits; public images and restricted commercial rights.",
         "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos.",
         "source": "https://www.recraft.ai/blog/midjourney-alternative",
-        "checkedAt": "2026-11-14T07:38:33.508Z"
+        "checkedAt": "2026-11-14T16:38:00.902Z"
       },
       {
         "model": "Recraft V4.1 Flash",
@@ -14235,7 +13747,7 @@
         "limitsEn": "Daily credits; public images and restricted commercial rights.",
         "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos.",
         "source": "https://www.recraft.ai/blog/midjourney-alternative",
-        "checkedAt": "2026-11-14T07:38:33.508Z"
+        "checkedAt": "2026-11-14T16:38:00.902Z"
       },
       {
         "model": "Seedream 4.5",
@@ -14247,7 +13759,7 @@
         "limitsEn": "Daily credits; queues, resolution and account/region limits apply.",
         "limitsPt": "Créditos diários; filas e limites de resolução, conta e região.",
         "source": "https://dreamina.capcut.com/pt-br/resource/seedream-4-5",
-        "checkedAt": "2026-11-14T07:38:33.508Z"
+        "checkedAt": "2026-11-14T16:38:00.902Z"
       },
       {
         "model": "Dreamina Seedance 2.5",
@@ -14262,7 +13774,7 @@
           "Dreamina Seedance 2.5 (720p)"
         ],
         "source": "https://dreamina.capcut.com/pt-br/seedance/seedance-2-5",
-        "checkedAt": "2026-11-14T07:38:33.509Z"
+        "checkedAt": "2026-11-14T16:38:00.903Z"
       },
       {
         "model": "Dreamina Seedance 2.0",
@@ -14277,7 +13789,7 @@
           "Dreamina Seedance 2.0 (720p)"
         ],
         "source": "https://dreamina.capcut.com/tools/seedance-2-0",
-        "checkedAt": "2026-11-14T07:38:33.509Z"
+        "checkedAt": "2026-11-14T16:38:00.903Z"
       },
       {
         "model": "Nano Banana Pro",
@@ -14285,7 +13797,7 @@
         "route": "web",
         "url": "https://labs.google/fx/tools/flow",
         "source": "https://support.google.com/flow/answer/16729550?hl=en",
-        "checkedAt": "2026-11-14T07:38:33.510Z",
+        "checkedAt": "2026-11-14T16:38:00.903Z",
         "scope": "model",
         "modality": "image",
         "aliases": [
@@ -14301,7 +13813,7 @@
       {
         "id": "router",
         "url": "https://openrouter.ai/api/v1/models",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "status": "live"
       },
       {
@@ -14313,19 +13825,19 @@
       {
         "id": "deepseek",
         "url": "https://www.deepseek.com/en/",
-        "checkedAt": "2026-11-14T07:38:33.504Z",
+        "checkedAt": "2026-11-14T16:38:00.899Z",
         "status": "live"
       },
       {
         "id": "openai",
         "url": "https://chatgpt.com/pricing/",
         "checkedAt": "2026-11-14T07:38:33.505Z",
-        "status": "live"
+        "status": "saved"
       },
       {
         "id": "anthropic",
         "url": "https://claude.com/pricing",
-        "checkedAt": "2026-11-14T07:38:33.506Z",
+        "checkedAt": "2026-11-14T16:38:00.900Z",
         "status": "live"
       },
       {
@@ -14353,7 +13865,7 @@
             ]
           }
         ],
-        "checkedAt": "2026-11-14T07:38:33.506Z",
+        "checkedAt": "2026-11-14T16:38:00.901Z",
         "status": "live"
       },
       {
@@ -14420,7 +13932,7 @@
             ]
           }
         ],
-        "checkedAt": "2026-11-14T07:38:33.507Z",
+        "checkedAt": "2026-11-14T16:38:00.901Z",
         "status": "live"
       },
       {
@@ -14464,7 +13976,7 @@
             "limitsPt": "Créditos diários; imagens públicas e direitos comerciais restritos."
           }
         ],
-        "checkedAt": "2026-11-14T07:38:33.508Z",
+        "checkedAt": "2026-11-14T16:38:00.902Z",
         "status": "live"
       },
       {
@@ -14488,7 +14000,7 @@
             "limitsPt": "Créditos diários; filas e limites de resolução, conta e região."
           }
         ],
-        "checkedAt": "2026-11-14T07:38:33.508Z",
+        "checkedAt": "2026-11-14T16:38:00.902Z",
         "status": "live"
       },
       {
@@ -14515,7 +14027,7 @@
             ]
           }
         ],
-        "checkedAt": "2026-11-14T07:38:33.509Z",
+        "checkedAt": "2026-11-14T16:38:00.903Z",
         "status": "live"
       },
       {
@@ -14542,14 +14054,14 @@
             ]
           }
         ],
-        "checkedAt": "2026-11-14T07:38:33.509Z",
+        "checkedAt": "2026-11-14T16:38:00.903Z",
         "status": "live"
       },
       {
         "id": "flow-image-free",
         "name": "Google Flow · Images",
         "url": "https://support.google.com/flow/answer/16729550?hl=en",
-        "checkedAt": "2026-11-14T07:38:33.510Z",
+        "checkedAt": "2026-11-14T16:38:00.903Z",
         "status": "live"
       }
     ]
