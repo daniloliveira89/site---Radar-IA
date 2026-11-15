@@ -27,13 +27,21 @@ export function parseBoard(html:string,id:Board['id']):BenchmarkRow[]{
  const headerRows=[...table.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].filter(m=>/<th\b/i.test(m[1]));
  const headers=[...(headerRows.at(-1)?.[1]||'').matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/gi)].map(m=>clean(m[1]));
  const costColumn=headers.findIndex(h=>id==='text'?/^Cost per Task\s+USD$/i.test(h):/^Pricing(?:\s+\d+)?$/i.test(h));
+ const modelCol=headers.findIndex(h=>/^Model$/i.test(h));
+ const mCol=modelCol>=0?modelCol:(id==='text'?0:2);
+ const scoreCol=headers.findIndex(h=>/Intelligence Index|Elo/i.test(h));
+ const sCol=scoreCol>=0?scoreCol:(id==='text'?1:3);
+ const creatorCol=headers.findIndex(h=>/^(?:Creator|Company|Provider)$/i.test(h));
  const rows:BenchmarkRow[]=[];
  for(const tr of table.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)){
   const raw=[...tr[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map(m=>m[1]),cells=raw.map(clean);
-  const model=id==='text'?cells[0]:cells[2],scoreText=id==='text'?cells[3]:cells[3];
+  const model=cells[mCol],scoreText=cells[sCol];
   if(!model||!scoreText||scoreText.includes('*'))continue;
   const score=Number(scoreText.match(/^\s*(\d+(?:\.\d+)?)/)?.[1]);if(!Number.isFinite(score)||score<=0||score>(id==='text'?100:2500))continue;
-  const provider=id==='text'?cells[2]:raw[2]?.match(/alt="([^"]+) logo"/)?.[1]||'';
+  const imgAlt=raw[mCol]?.match(/alt="([^"]+)"/i)?.[1]||raw.map(r=>r.match(/alt="([^"]+)"/i)?.[1]).find(Boolean);
+  let provider=imgAlt?imgAlt.replace(/\s+logo$/i,'').trim():'';
+  if(!provider&&creatorCol>=0)provider=cells[creatorCol]||'';
+  if(!provider&&cells[2]&&!/^\$|^\d/.test(cells[2]))provider=cells[2];
   const company=provider.replace('SpaceXAI','xAI').replace('SpaceXSI','xAI').replace('Microsoft AI','Microsoft').replace('Luma Labs','Luma').replace('Bytedance','ByteDance').replace('ByteDance Seed','ByteDance').replace('Alibaba-ATH','Alibaba').replace('KlingAI','Kling');
   const interval=scoreText.match(/interval\s+(\d+)\s+to\s+(\d+)/i);
   rows.push({model,company:company||'Não informado',score,...(costColumn>=0?parseBenchmarkCost(cells[costColumn]||'',id):{}),...(interval?{low:Number(interval[1]),high:Number(interval[2])}:{}),...(id!=='text'?{samples:Number(cells[4]?.replace(/[^0-9]/g,''))||0}:{}),preview:/\bpreview|beta|experimental/i.test(model)});
