@@ -10,7 +10,7 @@
       "checkedAt": "2026-11-14T23:57:49.931Z",
       "rows": [
         {
-          "model": "Claude Fable 5.2 Max, Default Fallback",
+          "model": "Claude Fable 5.2 (max with fallback)",
           "company": "Anthropic",
           "score": 65,
           "costUSD": 26.54,
@@ -18,7 +18,7 @@
           "preview": false
         },
         {
-          "model": "Gemini 4 Carbon High",
+          "model": "Gemini 4 Carbon (high)",
           "company": "Google",
           "score": 60,
           "costUSD": 5.48,
@@ -26,7 +26,7 @@
           "preview": false
         },
         {
-          "model": "Claude Opus 5.5 Max, Default Fallback",
+          "model": "Claude Opus 5.5 (max with fallback)",
           "company": "Anthropic",
           "score": 59,
           "costUSD": 10.04,
@@ -34,7 +34,7 @@
           "preview": false
         },
         {
-          "model": "GPT-6 Astra Max",
+          "model": "GPT-6 Astra (max)",
           "company": "OpenAI",
           "score": 57,
           "costUSD": 6.24,
@@ -42,7 +42,7 @@
           "preview": false
         },
         {
-          "model": "GPT-6.1 Sol Max",
+          "model": "GPT-6.1 Sol (max)",
           "company": "OpenAI",
           "score": 55,
           "costUSD": 1.27,
@@ -50,7 +50,7 @@
           "preview": false
         },
         {
-          "model": "Claude Sonnet 5.5 Max, Default Fallback",
+          "model": "Claude Sonnet 5.5 (max with fallback)",
           "company": "Anthropic",
           "score": 55,
           "costUSD": 10.02,
@@ -58,7 +58,7 @@
           "preview": false
         },
         {
-          "model": "Gemini 4 Hydrogen Xhigh",
+          "model": "Gemini 4 Hydrogen (xhigh)",
           "company": "Google",
           "score": 54,
           "costUSD": 3.16,
@@ -66,7 +66,7 @@
           "preview": false
         },
         {
-          "model": "GPT-6.1 Terra Max",
+          "model": "GPT-6.1 Terra (max)",
           "company": "OpenAI",
           "score": 51,
           "costUSD": 0.96,
@@ -74,7 +74,7 @@
           "preview": false
         },
         {
-          "model": "Gemini 4 Argon High",
+          "model": "Gemini 4 Argon (high)",
           "company": "Google",
           "score": 50,
           "costUSD": 4.97,
@@ -82,7 +82,7 @@
           "preview": false
         },
         {
-          "model": "Muse Wonder Full Max",
+          "model": "Muse Wonder Full (max)",
           "company": "Meta",
           "score": 50,
           "preview": false
@@ -96,7 +96,7 @@
           "preview": false
         },
         {
-          "model": "Muse Wonder Max",
+          "model": "Muse Wonder (max)",
           "company": "Meta",
           "score": 44,
           "costUSD": 6.95,
@@ -104,7 +104,7 @@
           "preview": false
         },
         {
-          "model": "Claude Haiku 5.5 Max",
+          "model": "Claude Haiku 5.5 (max)",
           "company": "Anthropic",
           "score": 36,
           "costUSD": 0.41,
@@ -112,7 +112,7 @@
           "preview": false
         },
         {
-          "model": "Muse Ember Max",
+          "model": "Muse Ember (max)",
           "company": "Meta",
           "score": 36,
           "costUSD": 0.14,
@@ -120,7 +120,7 @@
           "preview": false
         },
         {
-          "model": "Grok 4.7 Xhigh",
+          "model": "Grok 4.7 (xhigh)",
           "company": "xAI",
           "score": 35,
           "costUSD": 7.77,
@@ -144,7 +144,7 @@
           "preview": false
         },
         {
-          "model": "DeepSeek V4.1 Flash 1017 Max",
+          "model": "DeepSeek V4.1 Flash 1017 (max)",
           "company": "DeepSeek",
           "score": 33,
           "costUSD": 0.6,
@@ -152,7 +152,7 @@
           "preview": false
         },
         {
-          "model": "GLM-5.3 Max",
+          "model": "GLM-5.3 (max)",
           "company": "Z AI",
           "score": 32,
           "costUSD": 5.01,
@@ -160,7 +160,7 @@
           "preview": false
         },
         {
-          "model": "Gemini 3.8 Flash High",
+          "model": "Gemini 3.8 Flash (high)",
           "company": "Google",
           "score": 31,
           "costUSD": 7.77,
@@ -216,7 +216,7 @@
           "preview": true
         },
         {
-          "model": "GPT-6 Luna Max",
+          "model": "GPT-6 Luna (max)",
           "company": "OpenAI",
           "score": 28,
           "costUSD": 0.15,
@@ -240,7 +240,7 @@
           "preview": false
         },
         {
-          "model": "Mistral Large 4 High",
+          "model": "Mistral Large 4 (high)",
           "company": "Mistral",
           "score": 26,
           "costUSD": 2.06,
@@ -248,7 +248,7 @@
           "preview": false
         },
         {
-          "model": "Muse Spark Open Xhigh",
+          "model": "Muse Spark Open (xhigh)",
           "company": "Meta",
           "score": 25,
           "costUSD": 2.02,
@@ -264,7 +264,7 @@
           "preview": false
         },
         {
-          "model": "DeepSeek V4 Pro 0813 Max",
+          "model": "DeepSeek V4 Pro 0813 (max)",
           "company": "DeepSeek",
           "score": 23,
           "costUSD": 1.77,
@@ -278,7 +278,7 @@
           "preview": false
         },
         {
-          "model": "Qwen3.8 27B Xhigh",
+          "model": "Qwen3.8 27B (xhigh)",
           "company": "Alibaba",
           "score": 20,
           "costUSD": 3.53,
@@ -348,7 +348,7 @@
           "preview": false
         },
         {
-          "model": "Inkling Xhigh",
+          "model": "Inkling (xhigh)",
           "company": "Thinking Machines",
           "score": 12,
           "costUSD": 1.35,
@@ -356,7 +356,7 @@
           "preview": false
         },
         {
-          "model": "Nemotron 3 Ultra 550B A55B Reasoning",
+          "model": "Nemotron 3 Ultra 550B A55B (reasoning)",
           "company": "NVIDIA",
           "score": 12,
           "costUSD": 2.21,
@@ -378,7 +378,7 @@
           "preview": false
         },
         {
-          "model": "Muse Glimmer High",
+          "model": "Muse Glimmer (high)",
           "company": "Meta",
           "score": 6,
           "costUSD": 0.18,
@@ -424,13 +424,13 @@
           "preview": false
         },
         {
-          "model": "Gemma 4 31B Reasoning",
+          "model": "Gemma 4 31B (reasoning)",
           "company": "Google",
           "score": 4,
           "preview": false
         },
         {
-          "model": "Mistral Small 4 Reasoning",
+          "model": "Mistral Small 4 (reasoning)",
           "company": "Mistral",
           "score": 4,
           "costUSD": 0.0399,
@@ -438,7 +438,7 @@
           "preview": false
         },
         {
-          "model": "gpt-oss-120b High",
+          "model": "gpt-oss-120b (high)",
           "company": "OpenAI",
           "score": 4,
           "costUSD": 0.35,

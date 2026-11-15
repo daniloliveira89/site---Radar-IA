@@ -35,7 +35,16 @@ export function parseBoard(html:string,id:Board['id']):BenchmarkRow[]{
  const rows:BenchmarkRow[]=[];
  for(const tr of table.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)){
   const raw=[...tr[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map(m=>m[1]),cells=raw.map(clean);
-  const model=cells[mCol],scoreText=cells[sCol];
+  let model=cells[mCol];
+  if(id==='text'&&raw[mCol]){
+   const spanMatch=raw[mCol].match(/<span\b[^>]*>([\s\S]*?)<\/span>/i);
+   if(spanMatch){
+    const intensity=clean(spanMatch[1]).replace(/,\s*default fallback/i,' with fallback').toLowerCase();
+    const baseName=clean(raw[mCol].replace(/<span\b[\s\S]*?<\/span>/gi,''));
+    model=`${baseName} (${intensity})`;
+   }
+  }
+  const scoreText=cells[sCol];
   if(!model||!scoreText||scoreText.includes('*'))continue;
   const score=Number(scoreText.match(/^\s*(\d+(?:\.\d+)?)/)?.[1]);if(!Number.isFinite(score)||score<=0||score>(id==='text'?100:2500))continue;
   const imgAlt=raw[mCol]?.match(/alt="([^"]+)"/i)?.[1]||raw.map(r=>r.match(/alt="([^"]+)"/i)?.[1]).find(Boolean);

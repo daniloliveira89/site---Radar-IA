@@ -7,7 +7,16 @@ import {modelAccess} from '../lib/model-access.ts';
 const data=JSON.parse(fs.readFileSync(new URL('../lib/initial-benchmarks.json',import.meta.url)));
 test('free ranking preserves verified distinct models and source scores',()=>{
  const b=data.boards[0],offers=(data.freeAccess||initialFreeAccess).offers,rows=selectComparisonRows(b.rows,'free','text',offers);assert(rows.length<=10);assert.equal(new Set(rows.map(r=>modelKey(r.model))).size,rows.length);
+ assert(rows.some(r=>r.company==='Anthropic'&&r.model.includes('Claude Sonnet 5.5')),'Claude Sonnet 5.5 must be in Top 10 free');
+ assert(rows.some(r=>r.company==='OpenAI'&&r.model.includes('GPT-6 Luna')),'GPT-6 Luna must be in Top 10 free');
  for(const [i,r] of rows.entries()){assert(b.rows.includes(r));assert(freeOffer(r.company,r.model,offers));if(i)assert(rows[i-1].score>=r.score);}
+});
+test('language models with intensity have them formatted in parentheses',()=>{
+ const b=data.boards[0];
+ const expectedWithParentheses=['Claude Fable 5.2 (max with fallback)','Gemini 4 Carbon (high)','GPT-6 Astra (max)','Claude Sonnet 5.5 (max with fallback)','Gemini 4 Hydrogen (xhigh)','GPT-6 Luna (max)'];
+ for(const name of expectedWithParentheses){
+  assert(b.rows.some(r=>r.model===name),`Expected model with parentheses: ${name}`);
+ }
 });
 test('free selection excludes trials and unknown models and does not pad or repeat efforts',()=>{
  const rows=[{model:'Unknown paid model',company:'Google',score:99},{model:'Gemini 3.8 Flash (high)',company:'Google',score:41},{model:'Gemini 3.8 Flash (medium)',company:'Google',score:40}].map(r=>({...r,preview:false}));
