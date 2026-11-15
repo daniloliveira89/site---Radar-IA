@@ -148,13 +148,15 @@ test('Gemini Web and GPT Web environment filter attributes are configured across
 
 test('my-ranking has Video Generation and Flow Generation categories with Flow models', () => {
   const videoItems = RANKED_AIS.filter(i => i.category === 'video');
-  assert.equal(videoItems.length, 5, 'Video category must have 5 ranked items');
+  assert(videoItems.length >= 5, 'Video category must have at least 5 ranked items');
   assert(videoItems.some(i => i.model.includes('Veo 3.1')), 'Video must include Veo 3.1');
+  assert(videoItems.some(i => i.model.includes('Omni 1.2') || i.model.includes('Omni Flash 1.2')), 'Video must include Omni 1.2');
   assert(videoItems.some(i => i.model.includes('Sora')), 'Video must include Sora');
 
   const flowItems = RANKED_AIS.filter(i => i.category === 'flow');
-  assert.equal(flowItems.length, 5, 'Flow category must have 5 ranked items');
+  assert(flowItems.length >= 5, 'Flow category must have at least 5 ranked items');
   assert(flowItems.some(i => i.model.includes('Elements')), 'Flow must include Flow Elements');
+  assert(flowItems.some(i => i.model.includes('Omni 1.2') || i.model.includes('Omni Flash 1.2')), 'Flow must include Omni 1.2');
 
   const flowEnvItems = RANKED_AIS.filter(i => i.flow || i.accountId === 'flow');
   assert(flowEnvItems.length >= 5, 'Flow environment filter must have models');

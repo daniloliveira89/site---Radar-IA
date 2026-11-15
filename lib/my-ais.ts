@@ -72,6 +72,11 @@ export const MY_ACCOUNTS: MyAccount[] = [
         name: 'Imagen 3 / Google Flow',
         descriptionPt: 'Geração fotorrealista de imagens integrada ao ecossistema Google.',
         descriptionEn: 'Photorealistic image generation integrated with Google ecosystem.'
+      },
+      {
+        name: 'Gemini Omni 1.2 (Omni Multimodal)',
+        descriptionPt: 'Capacidades multimodais avançadas para geração de vídeo, análise dinâmica e raciocínio audiovisual integrado ao ecossistema Gemini e Flow.',
+        descriptionEn: 'Advanced multimodal capabilities for video generation, dynamic analysis, and audiovisual reasoning integrated into Gemini and Flow ecosystem.'
       }
     ],
     antigravity: {
@@ -118,6 +123,13 @@ export const MY_ACCOUNTS: MyAccount[] = [
         descriptionEn: 'Specialized model for fast, calibrated decisions and rubric evaluations across text, audio, and video.',
         isLatest: true,
         badge: 'Novo · Decisões'
+      },
+      {
+        name: 'Gemini Omni Flash 1.2 (gemini-omni-flash-1.2)',
+        descriptionPt: 'Motor multimodal nativo de alta velocidade para geração, ingestão e análise de fluxos de vídeo e áudio em tempo real com baixa latência na Gemini API.',
+        descriptionEn: 'Native high-speed multimodal engine for real-time video/audio stream generation, ingestion, and analysis with low latency in the Gemini API.',
+        isLatest: true,
+        badge: 'Multimodal API · Vídeo'
       },
       {
         name: 'Gemini 3.8 Flash',
@@ -178,8 +190,8 @@ export const MY_ACCOUNTS: MyAccount[] = [
     tierEn: 'Flow Creative Studio & Veo',
     tierBadge: 'pro',
     url: 'https://labs.google/flow',
-    summaryPt: 'Plataforma oficial de criação cinematográfica e estúdio de IA do Google (Labs / DeepMind), alimentada pelos modelos Veo e Imagen, com geração de vídeo 4K, áudio nativo, controle de consistência de personagens (Elements) e timeline de edição.',
-    summaryEn: 'Official Google AI filmmaking platform and creative studio (Labs / DeepMind) powered by Veo and Imagen models, featuring 4K video generation, native audio, character consistency controls (Elements), and editing timeline.',
+    summaryPt: 'Plataforma oficial de criação cinematográfica e estúdio de IA do Google (Labs / DeepMind), alimentada pelos modelos Veo, Gemini Omni e Imagen, com geração de vídeo 4K, áudio nativo, controle de consistência de personagens (Elements) e timeline de edição.',
+    summaryEn: 'Official Google AI filmmaking platform and creative studio (Labs / DeepMind) powered by Veo, Gemini Omni, and Imagen models, featuring 4K video generation, native audio, character consistency controls (Elements), and editing timeline.',
     models: [
       {
         name: 'Veo 3.1 (veo-3.1)',
@@ -194,6 +206,13 @@ export const MY_ACCOUNTS: MyAccount[] = [
         descriptionEn: 'Fast high-resolution video generation with cinematic camera controls (pan, tilt, dolly, zoom) and frame interpolation.',
         isLatest: true,
         badge: 'Direção de Câmera'
+      },
+      {
+        name: 'Gemini Omni Flash 1.2 (Omni 1.2)',
+        descriptionPt: 'Modelo multimodal de alta velocidade para geração e compreensão dinâmica de vídeo, áudio sincronizado e orquestração temporal de cenas no Flow.',
+        descriptionEn: 'High-speed multimodal model for video generation, dynamic video understanding, synchronized audio, and temporal scene orchestration in Flow.',
+        isLatest: true,
+        badge: 'Multimodal Vídeo & Áudio'
       },
       {
         name: 'Nano Banana Pro (Gemini 3 Pro Image)',

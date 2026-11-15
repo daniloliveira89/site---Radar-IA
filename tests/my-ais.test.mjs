@@ -158,4 +158,8 @@ test('flow account includes Google Flow products and creative models', () => {
   assert(flow.models.some(m => m.name.includes('Veo 2')), 'Must include Veo 2');
   assert(flow.models.some(m => m.name.includes('Nano Banana Pro')), 'Must include Nano Banana Pro');
   assert(flow.models.some(m => m.name.includes('Scenebuilder') || m.name.includes('Elements')), 'Must include Scenebuilder/Elements');
+  assert(flow.models.some(m => m.name.includes('Omni 1.2') || m.name.includes('Omni Flash 1.2')), 'Flow must include Omni 1.2');
+
+  const studio = MY_ACCOUNTS.find(a => a.id === 'google-ai-studio');
+  assert(studio.models.some(m => m.name.includes('Omni Flash 1.2')), 'Google AI Studio must include Omni Flash 1.2');
 });
