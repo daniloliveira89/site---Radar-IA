@@ -53,6 +53,8 @@ test('benchmarks snapshot contains all newly added models across Video, Image an
  assert(imageModels.includes('Midjourney v7 (preview)'), 'Midjourney v7 must be in Image');
  assert(imageModels.includes('Adobe Firefly Image 3'), 'Adobe Firefly must be in Image');
  assert(imageModels.includes('Stable Diffusion 3.5 Large'), 'Stable Diffusion 3.5 Large must be in Image');
+ assert(imageModels.includes('Higgsfield Soul 2.0'), 'Higgsfield Soul 2.0 must be in Image');
+ assert(imageModels.includes('Higgsfield Soul'), 'Higgsfield Soul must be in Image');
 
  const text = data.boards.find(b => b.id === 'text');
  assert(text, 'Text board must exist');

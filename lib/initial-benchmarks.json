@@ -609,6 +609,17 @@
           "samples": 8500
         },
         {
+          "model": "Higgsfield Soul 2.0",
+          "company": "Higgsfield",
+          "score": 1215,
+          "costUSD": 25,
+          "costUnit": "1k-images",
+          "low": 1202,
+          "high": 1228,
+          "samples": 4890,
+          "preview": false
+        },
+        {
           "model": "GPT Image 2.5 Flare (max)",
           "company": "OpenAI",
           "score": 1210,
@@ -670,6 +681,17 @@
           "low": 1155,
           "high": 1179,
           "samples": 8091,
+          "preview": false
+        },
+        {
+          "model": "Higgsfield Soul",
+          "company": "Higgsfield",
+          "score": 1162,
+          "costUSD": 18,
+          "costUnit": "1k-images",
+          "low": 1148,
+          "high": 1176,
+          "samples": 3410,
           "preview": false
         },
         {
