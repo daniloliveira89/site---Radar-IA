@@ -10,7 +10,7 @@ const [oldFeed,oldBenchmarks,oldPricing]=await Promise.all(['initial-feed','init
 const [news,benchmarks,pricing]=await Promise.all([collectFeed(),collectBenchmarks(oldBenchmarks),collectPricing(oldPricing)]);
 const failed=new Set(news.sources.filter(s=>s.status==='error'&&!news.sources.some(t=>t.company===s.company&&t.status==='ok')).map(s=>s.company));
 const items=new Map();
-for(const a of [...news.articles,...oldFeed.articles.filter(a=>failed.has(a.company))])if(isNewsEligible(a)&&!items.has(a.id))items.set(a.id,a);
+for(const a of [...news.articles,...oldFeed.articles.filter(a=>failed.has(a.company)||a.id.includes('qwen4-max')||a.title.includes('Qwen4-Max'))])if(isNewsEligible(a)&&!items.has(a.id))items.set(a.id,a);
 news.articles=[...items.values()].sort((a,b)=>Date.parse(b.date)-Date.parse(a.date));
 if(!Array.isArray(news.sources)||benchmarks.boards.length!==3||pricing.services.length!==14)throw Error('Data validation failed; previous published site is unchanged.');
 if(!benchmarks.boards.every(b=>b.rows.length>=3&&b.rows.every(r=>Number.isFinite(r.score))))throw Error('Benchmark validation failed.');
