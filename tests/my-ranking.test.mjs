@@ -71,9 +71,13 @@ test('all ranked models follow strict ecosystem mapping (only Google in Antigrav
     if (item.accountId === 'gemini') {
       assert.equal(item.antigravity, false, `${item.model} in Gemini Pro Education must NOT have Antigravity`);
       assert.equal(item.codex, false);
-    } else if (item.company === 'Google') {
+    } else if (item.accountId === 'antigravity') {
       assert.equal(item.antigravity, true, `${item.model} (${item.accountId}) must be in Antigravity`);
-      assert.equal(item.codex, false, `${item.model} (Google) must NOT be in Codex`);
+      assert.equal(item.codex, false);
+    } else if (item.accountId === 'google-ai-studio') {
+      assert.equal(item.antigravity, false, `${item.model} in Google AI Studio is not in user Antigravity`);
+      assert.equal(item.aiStudio, true, `${item.model} must be marked as aiStudio`);
+      assert.equal(item.codex, false);
     } else if (item.company === 'OpenAI') {
       assert.equal(item.antigravity, false, `${item.model} (OpenAI) must NOT be in Antigravity`);
       assert.equal(item.codex, true, `${item.model} (OpenAI) must be in Codex`);
@@ -90,11 +94,11 @@ test('Google AI Studio has separate Gemini 4 Argon and Gemini 4 Hydrogen models 
 
   const studioArgon = RANKED_AIS.filter(i => i.accountId === 'google-ai-studio' && i.model === 'Gemini 4 Argon');
   assert(studioArgon.length >= 1, 'Google AI Studio must have separate Gemini 4 Argon');
-  assert(studioArgon.every(m => m.accountName === 'Google AI Studio' && m.tier === 'AI Studio Free & Pro' && m.antigravity === true));
+  assert(studioArgon.every(m => m.accountName === 'Google AI Studio' && m.tier === 'AI Studio Free & Pro' && m.aiStudio === true && m.antigravity === false));
 
   const studioHydrogen = RANKED_AIS.filter(i => i.accountId === 'google-ai-studio' && i.model === 'Gemini 4 Hydrogen');
   assert(studioHydrogen.length >= 1, 'Google AI Studio must have separate Gemini 4 Hydrogen');
-  assert(studioHydrogen.every(m => m.accountName === 'Google AI Studio' && m.tier === 'AI Studio Free & Pro' && m.antigravity === true));
+  assert(studioHydrogen.every(m => m.accountName === 'Google AI Studio' && m.tier === 'AI Studio Free & Pro' && m.aiStudio === true && m.antigravity === false));
 });
 
 test('all ChatGPT models are marked with Codex and not Antigravity', () => {

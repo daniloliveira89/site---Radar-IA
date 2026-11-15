@@ -126,10 +126,10 @@ export const MY_ACCOUNTS: MyAccount[] = [
       }
     ],
     antigravity: {
-      supported: true,
-      models: ['Gemini 4 Hydrogen', 'Gemini 4 Argon', 'Gemini Decision 1'],
-      notesPt: 'Chaves de API do Google AI Studio fornecem a inteligência nativa do Antigravity CLI e IDE, com suporte direto ao Orquestrador multimodelo.',
-      notesEn: 'Google AI Studio API keys power native Antigravity CLI and IDE intelligence, with dynamic multi-model Orchestrator switching.'
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente oficial para desenvolvedores via Google AI Studio com Gemini API (separado do ambiente Antigravity da conta do usuário).',
+      notesEn: 'Official developer environment via Google AI Studio with Gemini API (separate from user Antigravity account environment).'
     },
     codex: {
       supported: false,
@@ -146,41 +146,22 @@ export const MY_ACCOUNTS: MyAccount[] = [
     tierEn: 'Antigravity CLI & IDE',
     tierBadge: 'pro',
     url: 'https://deepmind.google/technologies/gemini/',
-    summaryPt: 'Ambiente de desenvolvimento e orquestração agêntica avançada do Google DeepMind (CLI e IDE), integrado nativamente aos modelos Gemini 4, subagentes autônomos, chaves de API educacionais e 1M de contexto.',
-    summaryEn: 'Advanced agentic development and orchestration environment by Google DeepMind (CLI and IDE), natively integrated with Gemini 4 models, autonomous subagents, educational API keys, and 1M context.',
+    summaryPt: 'Ambiente de desenvolvimento e orquestração agêntica avançada do Google DeepMind (CLI e IDE), integrado nativamente ao modelo Gemini 3.8 Flash com 1M de contexto e tool calling.',
+    summaryEn: 'Advanced agentic development and orchestration environment by Google DeepMind (CLI and IDE), natively integrated with Gemini 3.8 Flash model with 1M context and tool calling.',
     models: [
       {
-        name: 'Gemini 4 Argon (gemini-4-argon)',
-        descriptionPt: 'Modelo frontier de raciocínio pesado para código complexo, orquestração de subagentes e matemática com decode longo de 1M tokens.',
-        descriptionEn: 'Heavy-duty frontier reasoning model for complex code, subagent orchestration and advanced math with 1M token long decode.',
-        isLatest: true,
-        badge: 'Frontier Reasoning'
-      },
-      {
-        name: 'Gemini 4 Hydrogen (gemini-4-hydrogen)',
-        descriptionPt: 'Modelo workhorse de alta velocidade até 2.5x mais rápido, raciocínio eficiente com 4 níveis de thinking e 1M de contexto unificado.',
-        descriptionEn: 'High-speed workhorse model up to 2.5x faster, efficient reasoning with 4 thinking levels and unified 1M context.',
-        isLatest: true,
-        badge: 'Mais Recente · GA'
-      },
-      {
-        name: 'Gemini Decision 1 (gemini-decision-1)',
-        descriptionPt: 'Modelo especializado em decisões rápidas, calibradas e avaliação por rubricas em texto, áudio e vídeo.',
-        descriptionEn: 'Specialized model for fast, calibrated decisions and rubric evaluations across text, audio, and video.',
-        isLatest: true,
-        badge: 'Novo · Decisões'
-      },
-      {
         name: 'Gemini 3.8 Flash',
-        descriptionPt: 'Chamadas simultâneas de ferramentas, structured outputs em JSON e execução ágil de baixa latência.',
-        descriptionEn: 'Tool calling, structured JSON outputs, and low-latency fast generation.'
+        descriptionPt: 'Modelo ativo no Antigravity CLI e IDE para chamadas simultâneas de ferramentas, structured outputs em JSON, raciocínio ágil e baixa latência.',
+        descriptionEn: 'Active model in Antigravity CLI and IDE for simultaneous tool calling, structured JSON outputs, agile reasoning, and low latency.',
+        isLatest: true,
+        badge: 'Ativo · CLI & IDE'
       }
     ],
     antigravity: {
       supported: true,
-      models: ['Gemini 4 Argon', 'Gemini 4 Hydrogen', 'Gemini Decision 1', 'Gemini 3.8 Flash'],
-      notesPt: 'Ambiente nativo do Antigravity CLI e IDE com orquestrador multimodelo dinâmico.',
-      notesEn: 'Native Antigravity CLI and IDE environment with dynamic multi-model orchestrator.'
+      models: ['Gemini 3.8 Flash'],
+      notesPt: 'Ambiente oficial do Antigravity CLI e IDE utilizando o modelo Gemini 3.8 Flash ativo para agentes e ferramentas.',
+      notesEn: 'Official Antigravity CLI and IDE environment using the active Gemini 3.8 Flash model for agents and tools.'
     },
     codex: {
       supported: false,

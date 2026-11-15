@@ -18,6 +18,22 @@
           "preview": false
         },
         {
+          "model": "Claude Fable 5.2 (xhigh)",
+          "company": "Anthropic",
+          "score": 62,
+          "costUSD": 14.83,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Claude Fable 5.2 (high)",
+          "company": "Anthropic",
+          "score": 62,
+          "costUSD": 9.08,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "Gemini 4 Carbon (high)",
           "company": "Google",
           "score": 60,
@@ -34,10 +50,50 @@
           "preview": false
         },
         {
+          "model": "Gemini 4 Carbon (medium)",
+          "company": "Google",
+          "score": 58,
+          "costUSD": 4.68,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Claude Opus 5.5 (xhigh)",
+          "company": "Anthropic",
+          "score": 57,
+          "costUSD": 6.05,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "GPT-6 Astra (max)",
           "company": "OpenAI",
           "score": 57,
           "costUSD": 6.24,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Claude Fable 5.2 (medium)",
+          "company": "Anthropic",
+          "score": 56,
+          "costUSD": 3.8,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6 Astra (xhigh)",
+          "company": "OpenAI",
+          "score": 55,
+          "costUSD": 3.66,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6 Astra (high)",
+          "company": "OpenAI",
+          "score": 55,
+          "costUSD": 3.24,
           "costUnit": "task",
           "preview": false
         },
@@ -58,10 +114,50 @@
           "preview": false
         },
         {
+          "model": "Gemini 4 Carbon (low)",
+          "company": "Google",
+          "score": 54,
+          "costUSD": 5.22,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Claude Fable 5.2 (low)",
+          "company": "Anthropic",
+          "score": 54,
+          "costUSD": 3.1,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "Gemini 4 Hydrogen (xhigh)",
           "company": "Google",
           "score": 54,
           "costUSD": 3.16,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6.1 Sol (xhigh)",
+          "company": "OpenAI",
+          "score": 52,
+          "costUSD": 0.76,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Claude Opus 5.5 (high)",
+          "company": "Anthropic",
+          "score": 52,
+          "costUSD": 3.46,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6 Astra (medium)",
+          "company": "OpenAI",
+          "score": 52,
+          "costUSD": 2.73,
           "costUnit": "task",
           "preview": false
         },
@@ -74,6 +170,14 @@
           "preview": false
         },
         {
+          "model": "Gemini 4 Hydrogen (high)",
+          "company": "Google",
+          "score": 51,
+          "costUSD": 1.87,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "Gemini 4 Argon (high)",
           "company": "Google",
           "score": 50,
@@ -82,9 +186,41 @@
           "preview": false
         },
         {
+          "model": "GPT-6.1 Sol (high)",
+          "company": "OpenAI",
+          "score": 50,
+          "costUSD": 0.59,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "Muse Wonder Full (max)",
           "company": "Meta",
           "score": 50,
+          "preview": false
+        },
+        {
+          "model": "Claude Sonnet 5.5 (xhigh)",
+          "company": "Anthropic",
+          "score": 50,
+          "costUSD": 4.09,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Claude Opus 5.5 (medium)",
+          "company": "Anthropic",
+          "score": 48,
+          "costUSD": 2.45,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Gemini 4 Argon (medium)",
+          "company": "Google",
+          "score": 48,
+          "costUSD": 4.31,
+          "costUnit": "task",
           "preview": false
         },
         {
@@ -96,10 +232,74 @@
           "preview": false
         },
         {
+          "model": "GPT-6.1 Sol (medium)",
+          "company": "OpenAI",
+          "score": 46,
+          "costUSD": 0.36,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6.1 Terra (xhigh)",
+          "company": "OpenAI",
+          "score": 45,
+          "costUSD": 0.4,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "Muse Wonder (max)",
           "company": "Meta",
           "score": 44,
           "costUSD": 6.95,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6 Astra (low)",
+          "company": "OpenAI",
+          "score": 43,
+          "costUSD": 1.42,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6.1 Terra (high)",
+          "company": "OpenAI",
+          "score": 42,
+          "costUSD": 0.26,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Claude Sonnet 5.5 (high)",
+          "company": "Anthropic",
+          "score": 42,
+          "costUSD": 1.64,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Gemini 4 Hydrogen (medium)",
+          "company": "Google",
+          "score": 41,
+          "costUSD": 0.8,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Muse Wonder (high)",
+          "company": "Meta",
+          "score": 41,
+          "costUSD": 4.56,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6.1 Terra (medium)",
+          "company": "OpenAI",
+          "score": 38,
+          "costUSD": 0.17,
           "costUnit": "task",
           "preview": false
         },
@@ -128,10 +328,50 @@
           "preview": false
         },
         {
+          "model": "Grok 4.7 (high)",
+          "company": "xAI",
+          "score": 35,
+          "costUSD": 6.18,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6.1 Sol (low)",
+          "company": "OpenAI",
+          "score": 35,
+          "costUSD": 0.16,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Claude Opus 5.5 (low)",
+          "company": "Anthropic",
+          "score": 35,
+          "costUSD": 0.98,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Claude Haiku 5.5 (xhigh)",
+          "company": "Anthropic",
+          "score": 35,
+          "costUSD": 0.25,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "Tencent Hy4",
           "company": "Tencent",
           "score": 35,
           "costUSD": 1.03,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Muse Ember (xhigh)",
+          "company": "Meta",
+          "score": 34,
+          "costUSD": 0.12,
           "costUnit": "task",
           "preview": false
         },
@@ -160,10 +400,26 @@
           "preview": false
         },
         {
+          "model": "Grok 4.7 (low)",
+          "company": "xAI",
+          "score": 31,
+          "costUSD": 2.92,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "Gemini 3.8 Flash (high)",
           "company": "Google",
           "score": 31,
           "costUSD": 7.77,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Claude Sonnet 5.5 (medium)",
+          "company": "Anthropic",
+          "score": 31,
+          "costUSD": 0.78,
           "costUnit": "task",
           "preview": false
         },
@@ -176,10 +432,34 @@
           "preview": false
         },
         {
+          "model": "GPT-6.1 Terra (non-reasoning)",
+          "company": "OpenAI",
+          "score": 31,
+          "costUSD": 0.23,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Gemini 3.8 Flash (medium)",
+          "company": "Google",
+          "score": 30,
+          "costUSD": 6.26,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "MiMo-V2.6-Pro",
           "company": "Xiaomi",
           "score": 30,
           "costUSD": 0.26,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Claude Haiku 5.5 (high)",
+          "company": "Anthropic",
+          "score": 30,
+          "costUSD": 0.16,
           "costUnit": "task",
           "preview": false
         },
@@ -192,10 +472,26 @@
           "preview": false
         },
         {
+          "model": "GPT-6.1 Terra (low)",
+          "company": "OpenAI",
+          "score": 29,
+          "costUSD": 0.0713,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "MiniMax-M3.1-Flash",
           "company": "MiniMax",
           "score": 29,
           "costUSD": 0.49,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "DeepSeek V4.1 Flash 1017 (high)",
+          "company": "DeepSeek",
+          "score": 29,
+          "costUSD": 0.46,
           "costUnit": "task",
           "preview": false
         },
@@ -232,6 +528,14 @@
           "preview": false
         },
         {
+          "model": "Gemini 4 Hydrogen (low)",
+          "company": "Google",
+          "score": 27,
+          "costUSD": 0.29,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "MiMo-V2.6-Flash",
           "company": "Xiaomi",
           "score": 27,
@@ -248,10 +552,26 @@
           "preview": false
         },
         {
+          "model": "Claude Sonnet 5.5 (low)",
+          "company": "Anthropic",
+          "score": 26,
+          "costUSD": 0.51,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "Muse Spark Open (xhigh)",
           "company": "Meta",
           "score": 25,
           "costUSD": 2.02,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Claude Haiku 5.5 (medium)",
+          "company": "Anthropic",
+          "score": 25,
+          "costUSD": 0.0918,
           "costUnit": "task",
           "preview": false
         },
@@ -264,10 +584,56 @@
           "preview": false
         },
         {
+          "model": "GPT-6 Luna (xhigh)",
+          "company": "OpenAI",
+          "score": 23,
+          "costUSD": 0.1,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Mistral Large 4 (medium)",
+          "company": "Mistral",
+          "score": 23,
+          "costUSD": 1.41,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GLM-5.3 (low)",
+          "company": "Z AI",
+          "score": 23,
+          "costUSD": 1.57,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "DeepSeek V4 Pro 0813 (max)",
           "company": "DeepSeek",
           "score": 23,
           "costUSD": 1.77,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Gemini 3.8 Flash (low)",
+          "company": "Google",
+          "score": 23,
+          "preview": false
+        },
+        {
+          "model": "GPT-6 Luna (high)",
+          "company": "OpenAI",
+          "score": 21,
+          "costUSD": 0.0729,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "DeepSeek V4 Pro 0813 (high)",
+          "company": "DeepSeek",
+          "score": 21,
+          "costUSD": 0.85,
           "costUnit": "task",
           "preview": false
         },
@@ -300,6 +666,30 @@
           "preview": false
         },
         {
+          "model": "Claude Haiku 5.5 (low)",
+          "company": "Anthropic",
+          "score": 19,
+          "costUSD": 0.0438,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "DeepSeek V4.1 Flash 1017 (non-reasoning)",
+          "company": "DeepSeek",
+          "score": 19,
+          "costUSD": 0.43,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6 Luna (medium)",
+          "company": "OpenAI",
+          "score": 18,
+          "costUSD": 0.0422,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "K2 Horizon 375B A23B",
           "company": "Institute of Foundation Models",
           "score": 18,
@@ -312,6 +702,22 @@
           "company": "Reflection",
           "score": 18,
           "costUSD": 0.28,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Qwen3.8 27B (medium)",
+          "company": "Alibaba",
+          "score": 17,
+          "costUSD": 2.16,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Qwen3.8 27B (low)",
+          "company": "Alibaba",
+          "score": 16,
+          "costUSD": 1.91,
           "costUnit": "task",
           "preview": false
         },
@@ -348,6 +754,14 @@
           "preview": false
         },
         {
+          "model": "DeepSeek V4 Pro 0813 (non-reasoning)",
+          "company": "DeepSeek",
+          "score": 13,
+          "costUSD": 0.98,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
           "model": "Inkling (xhigh)",
           "company": "Thinking Machines",
           "score": 12,
@@ -356,7 +770,7 @@
           "preview": false
         },
         {
-          "model": "Nemotron 3 Ultra 550B A55B (reasoning)",
+          "model": "Nemotron 3 Ultra",
           "company": "NVIDIA",
           "score": 12,
           "costUSD": 2.21,
@@ -368,6 +782,30 @@
           "company": "Google",
           "score": 12,
           "costUSD": 0.69,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "Qwen3.8 27B (non-reasoning)",
+          "company": "Alibaba",
+          "score": 10,
+          "costUSD": 3.77,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6 Luna (low)",
+          "company": "OpenAI",
+          "score": 10,
+          "costUSD": 0.0051,
+          "costUnit": "task",
+          "preview": false
+        },
+        {
+          "model": "GPT-6 Luna (non-reasoning)",
+          "company": "OpenAI",
+          "score": 9,
+          "costUSD": 0.0714,
           "costUnit": "task",
           "preview": false
         },
@@ -424,13 +862,13 @@
           "preview": false
         },
         {
-          "model": "Gemma 4 31B (reasoning)",
+          "model": "Gemma 4 31B",
           "company": "Google",
           "score": 4,
           "preview": false
         },
         {
-          "model": "Mistral Small 4 (reasoning)",
+          "model": "Mistral Small 4",
           "company": "Mistral",
           "score": 4,
           "costUSD": 0.0399,
@@ -454,7 +892,7 @@
           "preview": false
         },
         {
-          "model": "NVIDIA Nemotron 3 Nano 4B",
+          "model": "Nemotron 3 Nano 4B",
           "company": "NVIDIA",
           "score": 2,
           "preview": false

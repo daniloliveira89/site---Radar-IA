@@ -281,6 +281,22 @@
       "checkedAt": "2026-10-30T18:57:46.627Z"
     },
     {
+      "model": "GPT-6.1 Sol",
+      "company": "OpenAI",
+      "route": "chat",
+      "url": "https://chatgpt.com/",
+      "source": "https://chatgpt.com/pricing/",
+      "checkedAt": "2026-10-30T18:57:46.627Z"
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "company": "OpenAI",
+      "route": "chat",
+      "url": "https://chatgpt.com/",
+      "source": "https://chatgpt.com/pricing/",
+      "checkedAt": "2026-10-30T18:57:46.627Z"
+    },
+    {
       "model": "Claude Sonnet 5.5",
       "company": "Anthropic",
       "route": "chat",

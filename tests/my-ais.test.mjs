@@ -56,7 +56,8 @@ test('my-ais tiers match requested user accounts', () => {
 
 test('every account has available models with descriptions and isLatest flags', () => {
   for (const acc of MY_ACCOUNTS) {
-    assert(acc.models.length >= 3, `${acc.id} should have at least 3 models`);
+    const minModels = acc.id === 'antigravity' ? 1 : 3;
+    assert(acc.models.length >= minModels, `${acc.id} should have at least ${minModels} models`);
     for (const model of acc.models) {
       assert(model.name && model.name.length > 0);
       assert(model.descriptionPt && model.descriptionPt.length > 0);
@@ -68,23 +69,15 @@ test('every account has available models with descriptions and isLatest flags', 
 
 test('accounts include strictly configured Antigravity and Codex ecosystems', () => {
   for (const acc of MY_ACCOUNTS) {
-    if (acc.id === 'google-ai-studio' || acc.id === 'antigravity') {
+    if (acc.id === 'antigravity') {
       assert.equal(acc.antigravity.supported, true, `${acc.id} must support Antigravity`);
-      assert(acc.antigravity.models.length >= 2, `${acc.id} must list Antigravity models`);
+      assert(acc.antigravity.models.length >= 1, `${acc.id} must list Antigravity models`);
       assert.equal(acc.codex.supported, false, `${acc.id} must not be in Codex ecosystem`);
       assert.equal(acc.codex.models.length, 0);
       continue;
     }
 
-    if (acc.id === 'gemini') {
-      assert.equal(acc.antigravity.supported, false, 'Gemini Web Pro Education account does not grant Antigravity access');
-      assert.equal(acc.antigravity.models.length, 0);
-      assert.equal(acc.codex.supported, false);
-      assert.equal(acc.codex.models.length, 0);
-      continue;
-    }
-
-    if (acc.id === 'chatgpt' || acc.id === 'codex') {
+    if (acc.id === 'codex') {
       assert.equal(acc.codex.supported, true, `${acc.id} must support Codex`);
       assert(acc.codex.models.length >= 2, `${acc.id} must list Codex models`);
       assert.equal(acc.antigravity.supported, false, `${acc.id} must not support Antigravity`);
@@ -92,7 +85,15 @@ test('accounts include strictly configured Antigravity and Codex ecosystems', ()
       continue;
     }
 
-    // Third-party standalone accounts: neither Antigravity nor Codex
+    if (acc.id === 'chatgpt') {
+      assert.equal(acc.codex.supported, true, `${acc.id} must support Codex`);
+      assert(acc.codex.models.length >= 2, `${acc.id} must list Codex models`);
+      assert.equal(acc.antigravity.supported, false, `${acc.id} must not support Antigravity`);
+      assert.equal(acc.antigravity.models.length, 0);
+      continue;
+    }
+
+    // Google AI Studio, Gemini Web Pro Education, and third-party accounts
     assert.equal(acc.antigravity.supported, false, `${acc.id} must not support Antigravity`);
     assert.equal(acc.codex.supported, false, `${acc.id} must not support Codex`);
     assert.equal(acc.antigravity.models.length, 0);
