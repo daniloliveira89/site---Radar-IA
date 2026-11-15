@@ -92,3 +92,12 @@ test('OpenRouter free routes match exact EQ-Bench IDs without mixing versions',(
  const row={model:'google/gemma-4-31B-it',company:'Google',score:75};
  assert.deepEqual(selectComparisonRows([row],'free','text',[offer]),[row]);
 });
+
+test('language cost per score free enforces minimum cutoff score of 27, including GPT-6 Luna and excluding models below 27', () => {
+ const b = data.boards[0], offers = (data.freeAccess || initialFreeAccess).offers;
+ const valueFree = selectComparisonRows(b.rows, 'value-free', 'text', offers);
+ assert(valueFree.length > 0, 'Must have free value rows');
+ assert(valueFree.every(r => r.score >= 27), 'All language cost per score free rows must have score >= 27');
+ assert(valueFree.some(r => r.model.includes('GPT-6 Luna')), 'GPT-6 Luna (score 28) must be included');
+ assert(!valueFree.some(r => r.score < 27), 'No models with score < 27 can appear in free cost per score');
+});
