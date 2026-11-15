@@ -3,7 +3,13 @@ export type NewsBrief={summary:string;evolution?:string};
 type EditorialBrief={company:string;path:RegExp;en:NewsBrief;pt:NewsBrief;source:string};
 // Concise editorial summaries verified against the linked official announcements.
 // Do not infer improvements for an unreviewed model from its provider or version name.
-const reviewed:EditorialBrief[]=[{
+const reviewed:EditorialBrief[]=[
+{
+ company:'Alibaba',path:/\/qwen4-max\/?$/,
+ source:'https://qwenlm.github.io/blog/qwen4-max',
+ en:{summary:'Alibaba Cloud introduces the developer preview of Qwen4-Max with a 1-million-token context window.',evolution:'Features deep chain-of-thought reasoning, multimodal inputs across text, image and video, and output generation up to 393k tokens.'},
+ pt:{summary:'Alibaba Cloud lança o developer preview do Qwen4-Max com janela de contexto de 1 milhão de tokens.',evolution:'Traz raciocínio profundo integrado (chain-of-thought), suporte multimodal a texto, imagem e vídeo, e geração de até 393 mil tokens de saída.'}
+},{
  company:'Kimi',path:/\/kimi-k3-1-pro\/?$/,
  source:'https://www.kimi.ai/blog/kimi-k3-1-pro',
  en:{summary:'A new Kimi K3-series model with a one-million-token context window.',evolution:'Compared with K3, the launch reports gains in coding, 3D creation and financial research. A Highspeed variant is also available.'},

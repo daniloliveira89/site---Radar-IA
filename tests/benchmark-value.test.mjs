@@ -7,7 +7,7 @@ import {selectComparisonRows,DEFAULT_COMPARISON_MODE,selectNonRedLanguageValueRo
 
 const row=(model,score,costUSD,costUnit='task')=>({model,company:'Test',score,costUSD,costUnit,preview:false});
 test('cost ranking uses a same-unit ratio and keeps unknown prices unranked at the end',()=>{
- const rows=[row('Strong costly',50,5),row('Better value',20,.2),row('Unknown',80,undefined),row('Zero API price',5,0),row('Wrong unit',99,.01,'minute'),row('Negative',20,-1),row('No score',0,1),row('NaN',50,NaN),row('Infinity',50,Infinity)];
+ const rows=[row('Strong costly',50,5),row('Better value',40,.4),row('Unknown',80,undefined),row('Zero API price',35,0),row('Wrong unit',99,.01,'minute'),row('Negative',40,-1),row('No score',0,1),row('NaN',50,NaN),row('Infinity',50,Infinity)];
  const selected=selectComparisonRows(rows,'value','text');assert.deepEqual(selected.slice(0,3).map(r=>r.model),['Zero API price','Better value','Strong costly']);assert(selected.slice(3).every(r=>costPerScore(r,'text')===undefined));
  assert.equal(costPerScore(rows[1],'text'),.01);assert.equal(rows[0].score,50);
  assert.equal(costPerScore(row('Zero score',0,0),'text'),undefined);
@@ -73,4 +73,16 @@ test('language cost view can fill 20 non-red slots from the entire priced board'
  assert.equal(result.length,20);
  assert(result.every((r,i)=>!isBelowAnyAbove(result,i)));
  assert.deepEqual(selectNonRedLanguageValueRows([unknown,dominated,eligible[21]]),[eligible[21]]);
+});
+
+test('language cost per score enforces minimum cutoff score of 30, excluding K2 Horizon', () => {
+ const data = JSON.parse(fs.readFileSync(new URL('../lib/initial-benchmarks.json', import.meta.url)));
+ const textBoard = data.boards.find(b => b.id === 'text');
+ const nonRed = selectNonRedLanguageValueRows(textBoard.rows);
+ assert(nonRed.every(r => r.score >= 30), 'All non-red language value models must have score >= 30');
+ assert(!nonRed.some(r => r.model.includes('K2 Horizon')), 'K2 Horizon must not appear in non-red language value');
+
+ const valueRows = selectComparisonRows(textBoard.rows, 'value', 'text');
+ assert(valueRows.every(r => r.score >= 30), 'All value rows must have score >= 30');
+ assert(!valueRows.some(r => r.model.includes('K2 Horizon')), 'K2 Horizon must not appear in language cost per score');
 });

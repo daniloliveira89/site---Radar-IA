@@ -5,20 +5,25 @@ const core=['Anthropic','OpenAI','Google','Kimi','DeepSeek','xAI','Meta','Alibab
 function companyComparisonLimit(id:Board['id']){return id==='text'?15:12;}
 export function comparisonLimit(id:Board['id']){return id==='image'?20:companyComparisonLimit(id);}
 export const DEFAULT_COMPARISON_MODE='value';
+export const MIN_LANGUAGE_SCORE=30;
 export function costComparisonLimit(id:Board['id']){return id==='text'?20:10;}
 export function freeComparisonLimit(id:Board['id']){return id==='text'?10:5;}
 function sortByValue(a:BenchmarkRow,b:BenchmarkRow,id:Board['id']){
  return (costPerScore(a,id)??Infinity)-(costPerScore(b,id)??Infinity)||b.score-a.score||a.model.localeCompare(b.model);
 }
 export function selectNonRedLanguageValueRows(rows:BenchmarkRow[]):BenchmarkRow[]{
- const priced=rows.filter(row=>costPerScore(row,'text')!==undefined).sort((a,b)=>sortByValue(a,b,'text'));
+ const priced=rows.filter(row=>row.score>=MIN_LANGUAGE_SCORE&&costPerScore(row,'text')!==undefined).sort((a,b)=>sortByValue(a,b,'text'));
  // Filter the whole leaderboard before taking the highest scores, so red rows do not consume a slot.
  return filterRedValueRows(priced,'text',true).sort((a,b)=>b.score-a.score||sortByValue(a,b,'text'))
   .slice(0,costComparisonLimit('text')).sort((a,b)=>sortByValue(a,b,'text'));
 }
 export function selectComparisonRows(rows:BenchmarkRow[],mode:string,id:Board['id'],offers:FreeOffer[]=initialFreeAccess.offers):BenchmarkRow[]{
  const ordered=[...rows].sort((a,b)=>b.score-a.score);
- if(mode==='value')return ordered.slice(0,costComparisonLimit(id)).sort((a,b)=>sortByValue(a,b,id));
+ if(mode==='value'){
+  const eligible=id==='text'?ordered.filter(r=>r.score>=MIN_LANGUAGE_SCORE):ordered;
+  const candidates=eligible.length>=costComparisonLimit(id)?eligible:(eligible.length>0?eligible:ordered);
+  return candidates.slice(0,costComparisonLimit(id)).sort((a,b)=>sortByValue(a,b,id));
+ }
  if(mode==='free'||mode==='value-free'){
   const seen=new Set<string>();
   const free=ordered.filter(r=>{const offer=freeOffer(r.company,r.model,offers,id);if(!offer)return false;const key=modelKey(offer.company)+':'+modelKey(offer.model);if(seen.has(key))return false;seen.add(key);return true;}).slice(0,freeComparisonLimit(id));

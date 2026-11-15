@@ -106,8 +106,8 @@ body { line-height:1.5; }
 .score-meta .access-badge { font-size:10px; flex:none; }
 .score-price { color:var(--text); }
 .score-price, .score-rank, .score-meter strong { flex:none; }
-.score-track { display:block; flex:1; min-width:26px; height:4px; background:var(--line); border-radius:20px; }
-.score-track > span { display:block; height:100%; background:var(--accent); border-radius:inherit; }
+.score-track { display:block; flex:1; min-width:26px; height:5px; background:var(--line); border-radius:20px; overflow:hidden; }
+.score-track > span { display:block; height:100%; background:linear-gradient(90deg, #4f46e5 0%, #06b6d4 100%); border-radius:inherit; transition:width .2s ease, opacity .2s ease; }
 .score-meter strong { font-size:12px; font-weight:650; text-align:right; min-width:32px; }
 .score-range { margin-left:4px; letter-spacing:0; font-size:9px; font-weight:500; }
 .score-chart-value th:last-child, .score-ratio { text-align:right; }

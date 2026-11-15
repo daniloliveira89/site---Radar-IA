@@ -88,6 +88,12 @@
           "preview": false
         },
         {
+          "model": "Qwen4-Max (preview)",
+          "company": "Alibaba",
+          "score": 48,
+          "preview": true
+        },
+        {
           "model": "Kimi K3.1 Pro",
           "company": "Kimi",
           "score": 46,
@@ -2182,6 +2188,15 @@
           "costUSD": 15,
           "costUnit": "1m-tokens",
           "preview": false
+        },
+        {
+          "model": "Qwen4-Max-Preview",
+          "company": "Alibaba",
+          "score": 1508,
+          "low": 1498,
+          "high": 1518,
+          "samples": 3420,
+          "preview": true
         },
         {
           "model": "Claude Opus 4.6",
@@ -7796,6 +7811,15 @@
         "preview": false
       },
       {
+        "model": "Qwen4-Max-Preview",
+        "company": "Alibaba",
+        "score": 1495,
+        "low": 1482,
+        "high": 1508,
+        "samples": 2180,
+        "preview": true
+      },
+      {
         "model": "Muse Wonder (Max)",
         "company": "Meta",
         "score": 1494,
@@ -12779,6 +12803,12 @@
         "preview": false,
         "costUSD": 1.125,
         "costUnit": "1m-tokens"
+      },
+      {
+        "model": "Qwen/Qwen4-Max-Preview",
+        "company": "Alibaba",
+        "score": 55.8,
+        "preview": true
       },
       {
         "model": "gemini-3-flash-preview",

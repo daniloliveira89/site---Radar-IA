@@ -1,6 +1,24 @@
 {
   "articles": [
     {
+      "id": "Alibaba:https://qwenlm.github.io/blog/qwen4-max",
+      "company": "Alibaba",
+      "title": "Alibaba lança preview do Qwen4-Max com janela de contexto de 1M e raciocínio profundo",
+      "originalTitle": "Alibaba launches Qwen4-Max preview with 1M context window and native reasoning",
+      "excerpt": "Alibaba Cloud officially introduces the Qwen4-Max developer preview, featuring unified 1M context tokens, extended output up to 393k tokens, integrated chain-of-thought reasoning, and multimodal capabilities across text, image, and video.",
+      "url": "https://qwenlm.github.io/blog/qwen4-max",
+      "date": "2026-11-11T12:00:00.000Z",
+      "category": "Modelos",
+      "important": true,
+      "topics": [
+        "modelos de ponta",
+        "raciocínio avançado",
+        "agentes e ferramentas"
+      ],
+      "summary": "Alibaba Cloud disponibiliza preview do Qwen4-Max com contexto unificado de 1M tokens, raciocínio integrado (chain-of-thought) e suporte multimodal nativo.",
+      "newsKind": "Novo modelo"
+    },
+    {
       "id": "OpenAI:https://openai.com/index/introducing-chatgpt-wallet",
       "company": "OpenAI",
       "title": "Conheça ChatGPT Wallet",
