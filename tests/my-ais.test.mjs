@@ -4,11 +4,11 @@ import {MY_ACCOUNTS,findLatestProviderRelease} from '../lib/my-ais.ts';
 
 test('my-ais accounts catalog contains all required user accounts including Google AI Studio, Antigravity and Codex', () => {
   const ids = MY_ACCOUNTS.map(a => a.id);
-  const required = ['gemini', 'google-ai-studio', 'antigravity', 'chatgpt', 'codex', 'claude', 'grok', 'kimi', 'glm', 'deepseek', 'muse'];
+  const required = ['gemini', 'google-ai-studio', 'antigravity', 'flow', 'chatgpt', 'codex', 'claude', 'grok', 'kimi', 'glm', 'deepseek', 'muse'];
   for (const req of required) {
     assert(ids.includes(req), `Missing account: ${req}`);
   }
-  assert.equal(MY_ACCOUNTS.length, 11);
+  assert.equal(MY_ACCOUNTS.length, 12);
 });
 
 test('gemini and google-ai-studio include Gemini 4 Hydrogen and Gemini 4 Argon models', () => {
@@ -147,4 +147,15 @@ test('findLatestProviderRelease locates latest articles for providers from feed'
 
   const none = findLatestProviderRelease('NonExistent', dummyFeed);
   assert.equal(none, null);
+});
+
+test('flow account includes Google Flow products and creative models', () => {
+  const flow = MY_ACCOUNTS.find(a => a.id === 'flow');
+  assert(flow, 'Flow account must exist');
+  assert.equal(flow.company, 'Google');
+  assert(flow.name.includes('Flow'));
+  assert(flow.models.some(m => m.name.includes('Veo 3.1')), 'Must include Veo 3.1');
+  assert(flow.models.some(m => m.name.includes('Veo 2')), 'Must include Veo 2');
+  assert(flow.models.some(m => m.name.includes('Nano Banana Pro')), 'Must include Nano Banana Pro');
+  assert(flow.models.some(m => m.name.includes('Scenebuilder') || m.name.includes('Elements')), 'Must include Scenebuilder/Elements');
 });

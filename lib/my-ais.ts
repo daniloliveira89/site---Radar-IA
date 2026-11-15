@@ -171,6 +171,65 @@ export const MY_ACCOUNTS: MyAccount[] = [
     }
   },
   {
+    id: 'flow',
+    name: 'Google Flow',
+    company: 'Google',
+    tier: 'Flow Creative Studio & Veo',
+    tierEn: 'Flow Creative Studio & Veo',
+    tierBadge: 'pro',
+    url: 'https://labs.google/flow',
+    summaryPt: 'Plataforma oficial de criação cinematográfica e estúdio de IA do Google (Labs / DeepMind), alimentada pelos modelos Veo e Imagen, com geração de vídeo 4K, áudio nativo, controle de consistência de personagens (Elements) e timeline de edição.',
+    summaryEn: 'Official Google AI filmmaking platform and creative studio (Labs / DeepMind) powered by Veo and Imagen models, featuring 4K video generation, native audio, character consistency controls (Elements), and editing timeline.',
+    models: [
+      {
+        name: 'Veo 3.1 (veo-3.1)',
+        descriptionPt: 'Modelo de ponta de geração de vídeo do Google com renderização até 4K, física realista, efeitos sonoros e áudio nativo sincronizado.',
+        descriptionEn: 'Google flagship video generation model with up to 4K resolution, realistic physics simulation, and native synchronized audio/SFX.',
+        isLatest: true,
+        badge: 'Flagship Vídeo · 4K'
+      },
+      {
+        name: 'Veo 2 (veo-2)',
+        descriptionPt: 'Geração ágil de vídeo de alta resolução com controle cinematográfico de câmera (pan, tilt, dolly, zoom) e interpolação de quadros.',
+        descriptionEn: 'Fast high-resolution video generation with cinematic camera controls (pan, tilt, dolly, zoom) and frame interpolation.',
+        isLatest: true,
+        badge: 'Direção de Câmera'
+      },
+      {
+        name: 'Nano Banana Pro (Gemini 3 Pro Image)',
+        descriptionPt: 'Geração de imagens de ultra-alta resolução (2K) e fidelidade visual com cota de 20 imagens/dia no Flow para criação de concept art e âncoras de cena.',
+        descriptionEn: 'Ultra-high resolution 2K image generation and visual fidelity with 20 daily images in Flow for concept art and scene anchors.',
+        isLatest: true,
+        badge: '2K Scene Anchor'
+      },
+      {
+        name: 'Imagen 3 (Flow Canvas)',
+        descriptionPt: 'Renderização fotorrealista de elementos visuais, texturas detalhadas e enquadramento estilístico para cenas cinematográficas.',
+        descriptionEn: 'Photorealistic rendering of visual elements, detailed textures, and stylistic framing for cinematic scenes.'
+      },
+      {
+        name: 'Flow Scenebuilder & Elements',
+        descriptionPt: 'Ferramenta de consistência de personagens, objetos e cenários entre tomadas com linha do tempo para montagem de narrativas contínuas.',
+        descriptionEn: 'Cross-scene character, object, and environment consistency tool with storyboard timeline for continuous narratives.',
+        isLatest: true,
+        badge: 'Consistência Multi-Shot'
+      }
+    ],
+    antigravity: {
+      supported: false,
+      models: [],
+      notesPt: 'Ambiente de estúdio criativo independente do Google Labs/DeepMind.',
+      notesEn: 'Standalone Google Labs/DeepMind creative studio environment.'
+    },
+    codex: {
+      supported: false,
+      models: [],
+      notesPt: 'Exclusivo do ecossistema Google Labs e DeepMind.',
+      notesEn: 'Exclusive to Google Labs and DeepMind ecosystem.'
+    }
+  },
+
+  {
     id: 'chatgpt',
     name: 'ChatGPT',
     company: 'OpenAI',
@@ -600,6 +659,17 @@ export const MY_ACCOUNTS: MyAccount[] = [
 
 export function findLatestProviderRelease(company: string, feed?: Feed | null, benchmarks?: Benchmarks | null, accountId?: string): { modelName?: string; date?: string; url?: string; title?: string } | null {
   if (feed?.articles) {
+    if (accountId === 'flow') {
+      const flowArticle = feed.articles.find(a => (a.company === 'Google' || a.url.includes('google')) && (a.url.includes('flow') || a.url.includes('veo') || a.originalTitle.toLowerCase().includes('veo') || a.originalTitle.toLowerCase().includes('flow')));
+      if (flowArticle) {
+        return {
+          modelName: flowArticle.title,
+          date: flowArticle.date || undefined,
+          url: flowArticle.url,
+          title: flowArticle.title
+        };
+      }
+    }
     if (accountId === 'google-ai-studio') {
       const studioArticle = feed.articles.find(a => a.company === company && (a.url.includes('ai.google.dev') || a.url.includes('aistudio') || a.originalTitle.toLowerCase().includes('hydrogen') || a.originalTitle.toLowerCase().includes('argon')));
       if (studioArticle) {

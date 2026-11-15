@@ -3,17 +3,19 @@ import assert from 'node:assert/strict';
 import {RANKING_CATEGORIES,RANKED_AIS} from '../lib/my-ranking.ts';
 import {MY_ACCOUNTS} from '../lib/my-ais.ts';
 
-test('my-ranking categories include all 7 key requested domains without context', () => {
+test('my-ranking categories include all 9 key domains including video and flow', () => {
   const ids = RANKING_CATEGORIES.map(c => c.id);
   assert(ids.includes('code'), 'Missing code category');
   assert(ids.includes('writing'), 'Missing writing category');
   assert(ids.includes('webdesign'), 'Missing webdesign category');
   assert(ids.includes('image'), 'Missing image category');
+  assert(ids.includes('video'), 'Missing video category');
+  assert(ids.includes('flow'), 'Missing flow category');
   assert(ids.includes('research'), 'Missing research category');
   assert(ids.includes('science'), 'Missing science category');
   assert(ids.includes('security'), 'Missing security category');
   assert(!ids.includes('context'), 'Context category should be removed');
-  assert.equal(RANKING_CATEGORIES.length, 7);
+  assert.equal(RANKING_CATEGORIES.length, 9);
 
   const secCat = RANKING_CATEGORIES.find(c => c.id === 'security');
   assert.equal(secCat.namePt, 'Cyber Security');
@@ -55,6 +57,14 @@ test('category rank #1 models correspond to top benchmark winners', () => {
   const topImage = RANKED_AIS.find(i => i.category === 'image' && i.rank === 1);
   assert(topImage.model.includes('Sunburst'), 'Top Image should be GPT Image 2.6 Sunburst');
   assert.equal(topImage.company, 'OpenAI');
+
+  const topVideo = RANKED_AIS.find(i => i.category === 'video' && i.rank === 1);
+  assert(topVideo.model.includes('Veo'), 'Top Video should be Veo 3.1');
+  assert.equal(topVideo.company, 'Google');
+
+  const topFlow = RANKED_AIS.find(i => i.category === 'flow' && i.rank === 1);
+  assert(topFlow.model.includes('Veo') || topFlow.model.includes('Flow'), 'Top Flow should be Veo / Flow');
+  assert.equal(topFlow.company, 'Google');
 
   const topScience = RANKED_AIS.find(i => i.category === 'science' && i.rank === 1);
   assert(topScience.model.includes('Gemini 4 Argon'), 'Top Science should be Gemini 4 Argon');
@@ -134,4 +144,19 @@ test('Gemini Web and GPT Web environment filter attributes are configured across
   assert(gptItems.some(i => i.model.includes('Sunburst')), 'GPT Web should include Sunburst');
   assert(gptItems.some(i => i.model.includes('Flare')), 'GPT Web should include Flare');
   assert(gptItems.some(i => i.model.includes('Luna')), 'GPT Web should include Luna');
+});
+
+test('my-ranking has Video Generation and Flow Generation categories with Flow models', () => {
+  const videoItems = RANKED_AIS.filter(i => i.category === 'video');
+  assert.equal(videoItems.length, 5, 'Video category must have 5 ranked items');
+  assert(videoItems.some(i => i.model.includes('Veo 3.1')), 'Video must include Veo 3.1');
+  assert(videoItems.some(i => i.model.includes('Sora')), 'Video must include Sora');
+
+  const flowItems = RANKED_AIS.filter(i => i.category === 'flow');
+  assert.equal(flowItems.length, 5, 'Flow category must have 5 ranked items');
+  assert(flowItems.some(i => i.model.includes('Elements')), 'Flow must include Flow Elements');
+
+  const flowEnvItems = RANKED_AIS.filter(i => i.flow || i.accountId === 'flow');
+  assert(flowEnvItems.length >= 5, 'Flow environment filter must have models');
+  assert(flowEnvItems.every(i => i.company === 'Google'), 'All Flow environment items are Google');
 });

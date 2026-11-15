@@ -1,6 +1,6 @@
 'use client';
 import {useMemo,useState} from 'react';
-import {Trophy,Search,X,ArrowUpRight,Crown,Medal,Sparkles,Terminal,Zap,Check,Code2,Palette,FileText,Globe,Layers,Cpu,Atom,ShieldCheck} from 'lucide-react';
+import {Trophy,Search,X,ArrowUpRight,Crown,Medal,Sparkles,Terminal,Zap,Check,Code2,Palette,FileText,Globe,Layers,Cpu,Atom,ShieldCheck,Video,Clapperboard} from 'lucide-react';
 import {RANKING_CATEGORIES,RANKED_AIS,type RankingCategory,type RankedAI} from '../lib/my-ranking';
 import Brand from './brand';
 import {useLanguage} from './language';
@@ -9,7 +9,7 @@ export default function MyRanking(){
   const {t,language}=useLanguage();
   const [selectedCategory,setSelectedCategory]=useState<RankingCategory>('all');
   const [query,setQuery]=useState('');
-  const [variantFilter,setVariantFilter]=useState<'all'|'gemini'|'gpt'|'antigravity'|'codex'|'aistudio'>('all');
+  const [variantFilter,setVariantFilter]=useState<'all'|'gemini'|'gpt'|'flow'|'antigravity'|'codex'|'aistudio'>('all');
 
   const filteredItems=useMemo(()=>{
     const q=query.toLowerCase().trim();
@@ -17,6 +17,7 @@ export default function MyRanking(){
       if(selectedCategory!=='all'&&item.category!==selectedCategory) return false;
       if(variantFilter==='gemini'&&!item.geminiWeb&&item.accountId!=='gemini') return false;
       if(variantFilter==='gpt'&&!item.gptWeb&&item.accountId!=='chatgpt') return false;
+      if(variantFilter==='flow'&&!item.flow&&item.accountId!=='flow') return false;
       if(variantFilter==='antigravity'&&!item.antigravity) return false;
       if(variantFilter==='codex'&&!item.codex) return false;
       if(variantFilter==='aistudio'&&!item.aiStudio) return false;
@@ -35,7 +36,8 @@ export default function MyRanking(){
         item.whyBestPt,
         item.whyBestEn,
         item.geminiWeb ? 'gemini web' : '',
-        item.gptWeb ? 'gpt web' : ''
+        item.gptWeb ? 'gpt web' : '',
+        item.flow ? 'flow google flow' : ''
       ].join(' ').toLowerCase();
 
       return searchable.includes(q);
@@ -59,6 +61,8 @@ export default function MyRanking(){
       case 'writing': return <FileText size={16}/>;
       case 'webdesign': return <Palette size={16}/>;
       case 'image': return <Sparkles size={16}/>;
+      case 'video': return <Video size={16}/>;
+      case 'flow': return <Clapperboard size={16}/>;
       case 'research': return <Globe size={16}/>;
       case 'science': return <Atom size={16}/>;
       case 'security': return <ShieldCheck size={16}/>;
@@ -121,6 +125,15 @@ export default function MyRanking(){
           >
             <Brand name="OpenAI" small/>
             <span>GPT Web</span>
+          </button>
+          <button
+            type="button"
+            className={variantFilter==='flow'?'active':''}
+            onClick={()=>setVariantFilter('flow')}
+            title={t('Google Flow Studio plan','Plano Google Flow Studio')}
+          >
+            <Brand name="Google" small/>
+            <span>Google Flow</span>
           </button>
           <button
             type="button"
@@ -235,6 +248,12 @@ export default function MyRanking(){
                               <span className="variant-pill gpt" title={language==='en'?item.gptWebNoteEn:item.gptWebNotePt}>
                                 <Brand name="OpenAI" small/>
                                 <span>GPT Web</span>
+                              </span>
+                            )}
+                            {item.flow&&(
+                              <span className="variant-pill flow" title={language==='en'?item.flowNoteEn:item.flowNotePt}>
+                                <Brand name="Google" small/>
+                                <span>Google Flow</span>
                               </span>
                             )}
                             {item.antigravity&&(

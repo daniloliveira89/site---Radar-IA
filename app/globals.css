@@ -333,6 +333,8 @@ footer { position:relative; display:flex; align-items:center; justify-content:sp
 [data-theme="dark"] .variant-pill.gemini { border-color:color-mix(in srgb,#6e9dff 45%,var(--line)); color:#6e9dff; }
 .variant-pill.gpt { border-color:color-mix(in srgb,#10a37f 45%,var(--line)); color:#10a37f; }
 [data-theme="dark"] .variant-pill.gpt { border-color:color-mix(in srgb,#9bc9bc 45%,var(--line)); color:#9bc9bc; }
+.variant-pill.flow { border-color:color-mix(in srgb,#ea4335 45%,var(--line)); color:#ea4335; }
+[data-theme="dark"] .variant-pill.flow { border-color:color-mix(in srgb,#ff8a80 45%,var(--line)); color:#ff8a80; }
 
 .open-ai-button { display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border-radius:6px; background:var(--soft); color:var(--green); border:1px solid var(--line); font-size:11px; font-weight:650; transition:all .15s ease; margin-left:auto; }
 .open-ai-button:hover { background:var(--green); color:#fff; border-color:var(--green); }
