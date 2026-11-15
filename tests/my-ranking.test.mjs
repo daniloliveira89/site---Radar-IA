@@ -66,10 +66,13 @@ test('category rank #1 models correspond to top benchmark winners', () => {
   assert.equal(topSecurity.company, 'Claude');
 });
 
-test('all ranked models follow strict ecosystem mapping (only Google in Antigravity, only OpenAI in Codex)', () => {
+test('all ranked models follow strict ecosystem mapping (only Google in Antigravity, only OpenAI in Codex, Pro Education excluded from Antigravity)', () => {
   for (const item of RANKED_AIS) {
-    if (item.company === 'Google') {
-      assert.equal(item.antigravity, true, `${item.model} (Google) must be in Antigravity`);
+    if (item.accountId === 'gemini') {
+      assert.equal(item.antigravity, false, `${item.model} in Gemini Pro Education must NOT have Antigravity`);
+      assert.equal(item.codex, false);
+    } else if (item.company === 'Google') {
+      assert.equal(item.antigravity, true, `${item.model} (${item.accountId}) must be in Antigravity`);
       assert.equal(item.codex, false, `${item.model} (Google) must NOT be in Codex`);
     } else if (item.company === 'OpenAI') {
       assert.equal(item.antigravity, false, `${item.model} (OpenAI) must NOT be in Antigravity`);
@@ -79,6 +82,19 @@ test('all ranked models follow strict ecosystem mapping (only Google in Antigrav
       assert.equal(item.codex, false, `${item.model} (${item.company}) must NOT be in Codex`);
     }
   }
+});
+
+test('Google AI Studio has separate Gemini 4 Argon and Gemini 4 Hydrogen models without joined strings', () => {
+  const joined = RANKED_AIS.filter(i => i.model.includes('&') && (i.model.includes('Hydrogen') || i.model.includes('Argon')));
+  assert.equal(joined.length, 0, 'No ranked model should bundle Hydrogen & Argon together');
+
+  const studioArgon = RANKED_AIS.filter(i => i.accountId === 'google-ai-studio' && i.model === 'Gemini 4 Argon');
+  assert(studioArgon.length >= 1, 'Google AI Studio must have separate Gemini 4 Argon');
+  assert(studioArgon.every(m => m.accountName === 'Google AI Studio' && m.tier === 'AI Studio Free & Pro' && m.antigravity === true));
+
+  const studioHydrogen = RANKED_AIS.filter(i => i.accountId === 'google-ai-studio' && i.model === 'Gemini 4 Hydrogen');
+  assert(studioHydrogen.length >= 1, 'Google AI Studio must have separate Gemini 4 Hydrogen');
+  assert(studioHydrogen.every(m => m.accountName === 'Google AI Studio' && m.tier === 'AI Studio Free & Pro' && m.antigravity === true));
 });
 
 test('all ChatGPT models are marked with Codex and not Antigravity', () => {

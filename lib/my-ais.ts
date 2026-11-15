@@ -75,10 +75,10 @@ export const MY_ACCOUNTS: MyAccount[] = [
       }
     ],
     antigravity: {
-      supported: true,
-      models: ['Gemini 4 Hydrogen', 'Gemini 4 Argon', 'Gemini 3.8 Flash'],
-      notesPt: 'Nativamente integrado no Antigravity CLI e IDE via autenticação Google Workspace e Google Cloud.',
-      notesEn: 'Natively integrated in Antigravity CLI and IDE via Google Workspace and Google Cloud authentication.'
+      supported: false,
+      models: [],
+      notesPt: 'A conta Gemini Web Pro Education não dá acesso ao Antigravity CLI e IDE para os modelos avançados (Argon e Hydrogen).',
+      notesEn: 'Gemini Web Pro Education account does not grant Antigravity CLI and IDE access for advanced models (Argon and Hydrogen).'
     },
     codex: {
       supported: false,
@@ -93,7 +93,7 @@ export const MY_ACCOUNTS: MyAccount[] = [
     company: 'Google',
     tier: 'AI Studio Free & Pro',
     tierEn: 'AI Studio Free & Pro',
-    tierBadge: 'edu',
+    tierBadge: 'free',
     url: 'https://aistudio.google.com/',
     summaryPt: 'Ambiente oficial para desenvolvedores com acesso direto à Gemini API, chaves de API com cota grátis generosa, controle de thinking budget e prototipagem rápida.',
     summaryEn: 'Official developer environment with direct Gemini API access, free-tier API keys, thinking budget controls, and fast prototyping.',
@@ -142,9 +142,9 @@ export const MY_ACCOUNTS: MyAccount[] = [
     id: 'antigravity',
     name: 'Antigravity',
     company: 'Google',
-    tier: 'Antigravity Pro Education',
-    tierEn: 'Antigravity Pro Education',
-    tierBadge: 'edu',
+    tier: 'Antigravity CLI & IDE',
+    tierEn: 'Antigravity CLI & IDE',
+    tierBadge: 'pro',
     url: 'https://deepmind.google/technologies/gemini/',
     summaryPt: 'Ambiente de desenvolvimento e orquestração agêntica avançada do Google DeepMind (CLI e IDE), integrado nativamente aos modelos Gemini 4, subagentes autônomos, chaves de API educacionais e 1M de contexto.',
     summaryEn: 'Advanced agentic development and orchestration environment by Google DeepMind (CLI and IDE), natively integrated with Gemini 4 models, autonomous subagents, educational API keys, and 1M context.',

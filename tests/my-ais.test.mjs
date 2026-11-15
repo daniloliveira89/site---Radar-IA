@@ -68,10 +68,18 @@ test('every account has available models with descriptions and isLatest flags', 
 
 test('accounts include strictly configured Antigravity and Codex ecosystems', () => {
   for (const acc of MY_ACCOUNTS) {
-    if (acc.id === 'gemini' || acc.id === 'google-ai-studio' || acc.id === 'antigravity') {
+    if (acc.id === 'google-ai-studio' || acc.id === 'antigravity') {
       assert.equal(acc.antigravity.supported, true, `${acc.id} must support Antigravity`);
       assert(acc.antigravity.models.length >= 2, `${acc.id} must list Antigravity models`);
       assert.equal(acc.codex.supported, false, `${acc.id} must not be in Codex ecosystem`);
+      assert.equal(acc.codex.models.length, 0);
+      continue;
+    }
+
+    if (acc.id === 'gemini') {
+      assert.equal(acc.antigravity.supported, false, 'Gemini Web Pro Education account does not grant Antigravity access');
+      assert.equal(acc.antigravity.models.length, 0);
+      assert.equal(acc.codex.supported, false);
       assert.equal(acc.codex.models.length, 0);
       continue;
     }
