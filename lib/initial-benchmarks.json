@@ -37,7 +37,7 @@
           "model": "GPT-6 Astra (max)",
           "company": "OpenAI",
           "score": 57,
-          "costUSD": 6.24,
+          "costUSD": 2.85,
           "costUnit": "task",
           "preview": false
         },
@@ -97,7 +97,7 @@
           "model": "Kimi K3.1 Pro",
           "company": "Kimi",
           "score": 46,
-          "costUSD": 3.68,
+          "costUSD": 0.69,
           "costUnit": "task",
           "preview": false
         },
@@ -153,7 +153,7 @@
           "model": "DeepSeek V4.1 Flash 1017 (max)",
           "company": "DeepSeek",
           "score": 33,
-          "costUSD": 0.6,
+          "costUSD": 0.11,
           "costUnit": "task",
           "preview": false
         },
@@ -185,7 +185,7 @@
           "model": "MiMo-V2.6-Pro",
           "company": "Xiaomi",
           "score": 30,
-          "costUSD": 0.26,
+          "costUSD": 0.09,
           "costUnit": "task",
           "preview": false
         },

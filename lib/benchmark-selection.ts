@@ -7,6 +7,7 @@ export function comparisonLimit(id:Board['id']){return id==='image'?20:companyCo
 export const DEFAULT_COMPARISON_MODE='value';
 export const MIN_LANGUAGE_SCORE=30;
 export const MIN_LANGUAGE_FREE_SCORE=27;
+export const NON_RED_LANGUAGE_LIMIT=10;
 export function costComparisonLimit(id:Board['id']){return id==='text'?20:10;}
 export function freeComparisonLimit(id:Board['id']){return id==='text'?10:5;}
 function sortByValue(a:BenchmarkRow,b:BenchmarkRow,id:Board['id']){
@@ -16,7 +17,7 @@ export function selectNonRedLanguageValueRows(rows:BenchmarkRow[]):BenchmarkRow[
  const priced=rows.filter(row=>row.score>=MIN_LANGUAGE_SCORE&&costPerScore(row,'text')!==undefined).sort((a,b)=>sortByValue(a,b,'text'));
  // Filter the whole leaderboard before taking the highest scores, so red rows do not consume a slot.
  return filterRedValueRows(priced,'text',true).sort((a,b)=>b.score-a.score||sortByValue(a,b,'text'))
-  .slice(0,costComparisonLimit('text')).sort((a,b)=>sortByValue(a,b,'text'));
+  .slice(0,NON_RED_LANGUAGE_LIMIT).sort((a,b)=>sortByValue(a,b,'text'));
 }
 export function selectComparisonRows(rows:BenchmarkRow[],mode:string,id:Board['id'],offers:FreeOffer[]=initialFreeAccess.offers):BenchmarkRow[]{
  const ordered=[...rows].sort((a,b)=>b.score-a.score);

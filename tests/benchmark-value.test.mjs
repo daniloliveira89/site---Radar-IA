@@ -64,13 +64,13 @@ test('hide red preserves original candidates, ties, new highs, missing prices an
  assert.deepEqual(filterRedValueRows([],'text',true),[]);
 });
 
-test('language cost view can fill 20 non-red slots from the entire priced board',()=>{
+test('language cost view can fill 10 non-red slots from the entire priced board',()=>{
  const eligible=Array.from({length:22},(_,i)=>row('Eligible '+i,40+i,(40+i)*(i+1)));
  const dominated=row('Lower score at higher cost per point',50,50*30);
  const unknown=row('Unpriced',100,undefined);
  const result=selectNonRedLanguageValueRows([dominated,unknown,...eligible.slice().reverse()]);
- assert.deepEqual(result,eligible.slice(2));
- assert.equal(result.length,20);
+ assert.deepEqual(result,eligible.slice(12));
+ assert.equal(result.length,10);
  assert(result.every((r,i)=>!isBelowAnyAbove(result,i)));
  assert.deepEqual(selectNonRedLanguageValueRows([unknown,dominated,eligible[21]]),[eligible[21]]);
 });
@@ -79,6 +79,7 @@ test('language cost per score enforces minimum cutoff score of 30, excluding K2 
  const data = JSON.parse(fs.readFileSync(new URL('../lib/initial-benchmarks.json', import.meta.url)));
  const textBoard = data.boards.find(b => b.id === 'text');
  const nonRed = selectNonRedLanguageValueRows(textBoard.rows);
+ assert.equal(nonRed.length, 10, 'Expected exactly 10 non-red models in Language & reasoning');
  assert(nonRed.every(r => r.score >= 30), 'All non-red language value models must have score >= 30');
  assert(!nonRed.some(r => r.model.includes('K2 Horizon')), 'K2 Horizon must not appear in non-red language value');
 
