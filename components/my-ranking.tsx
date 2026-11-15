@@ -9,12 +9,14 @@ export default function MyRanking(){
   const {t,language}=useLanguage();
   const [selectedCategory,setSelectedCategory]=useState<RankingCategory>('all');
   const [query,setQuery]=useState('');
-  const [variantFilter,setVariantFilter]=useState<'all'|'antigravity'|'codex'|'aistudio'>('all');
+  const [variantFilter,setVariantFilter]=useState<'all'|'gemini'|'gpt'|'antigravity'|'codex'|'aistudio'>('all');
 
   const filteredItems=useMemo(()=>{
     const q=query.toLowerCase().trim();
     return RANKED_AIS.filter(item=>{
       if(selectedCategory!=='all'&&item.category!==selectedCategory) return false;
+      if(variantFilter==='gemini'&&!item.geminiWeb&&item.accountId!=='gemini') return false;
+      if(variantFilter==='gpt'&&!item.gptWeb&&item.accountId!=='chatgpt') return false;
       if(variantFilter==='antigravity'&&!item.antigravity) return false;
       if(variantFilter==='codex'&&!item.codex) return false;
       if(variantFilter==='aistudio'&&!item.aiStudio) return false;
@@ -31,7 +33,9 @@ export default function MyRanking(){
         item.scoreMetric,
         item.scoreValue,
         item.whyBestPt,
-        item.whyBestEn
+        item.whyBestEn,
+        item.geminiWeb ? 'gemini web' : '',
+        item.gptWeb ? 'gpt web' : ''
       ].join(' ').toLowerCase();
 
       return searchable.includes(q);
@@ -99,6 +103,24 @@ export default function MyRanking(){
             onClick={()=>setVariantFilter('all')}
           >
             {t('All','Todos')}
+          </button>
+          <button
+            type="button"
+            className={variantFilter==='gemini'?'active':''}
+            onClick={()=>setVariantFilter('gemini')}
+            title={t('Gemini Web Pro Education plan','Plano Gemini Pro Estudos')}
+          >
+            <Brand name="Google" small/>
+            <span>Gemini Web</span>
+          </button>
+          <button
+            type="button"
+            className={variantFilter==='gpt'?'active':''}
+            onClick={()=>setVariantFilter('gpt')}
+            title={t('GPT Go & GPT Free plan','Plano GPT Go & GPT Free')}
+          >
+            <Brand name="OpenAI" small/>
+            <span>GPT Web</span>
           </button>
           <button
             type="button"
@@ -203,6 +225,18 @@ export default function MyRanking(){
 
                         <div className="rank-card-actions">
                           <div className="rank-variants">
+                            {item.geminiWeb&&(
+                              <span className="variant-pill gemini" title={language==='en'?item.geminiWebNoteEn:item.geminiWebNotePt}>
+                                <Brand name="Google" small/>
+                                <span>Gemini Web</span>
+                              </span>
+                            )}
+                            {item.gptWeb&&(
+                              <span className="variant-pill gpt" title={language==='en'?item.gptWebNoteEn:item.gptWebNotePt}>
+                                <Brand name="OpenAI" small/>
+                                <span>GPT Web</span>
+                              </span>
+                            )}
                             {item.antigravity&&(
                               <span className="variant-pill antigravity" title={language==='en'?item.antigravityNoteEn:item.antigravityNotePt}>
                                 <Brand name="Google" small/>

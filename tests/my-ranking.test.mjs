@@ -121,3 +121,17 @@ test('image category in my-ranking includes GPT Image 2.6 Sunburst and Flare wit
   assert.equal(flare.codex, true, 'Flare must be Codex enabled');
   assert.equal(flare.company, 'OpenAI');
 });
+
+test('Gemini Web and GPT Web environment filter attributes are configured across categories', () => {
+  const geminiItems = RANKED_AIS.filter(i => i.geminiWeb || i.accountId === 'gemini');
+  assert(geminiItems.length >= 8, 'Expected at least 8 Gemini Web models in ranking');
+  assert(geminiItems.some(i => i.model === 'Gemini 4 Argon'), 'Gemini Web should include Argon');
+  assert(geminiItems.some(i => i.model === 'Gemini 4 Hydrogen'), 'Gemini Web should include Hydrogen');
+  assert(geminiItems.some(i => i.model.includes('Imagen 3')), 'Gemini Web should include Imagen 3');
+
+  const gptItems = RANKED_AIS.filter(i => i.gptWeb || i.accountId === 'chatgpt');
+  assert(gptItems.length >= 8, 'Expected at least 8 GPT Web models in ranking');
+  assert(gptItems.some(i => i.model.includes('Sunburst')), 'GPT Web should include Sunburst');
+  assert(gptItems.some(i => i.model.includes('Flare')), 'GPT Web should include Flare');
+  assert(gptItems.some(i => i.model.includes('Luna')), 'GPT Web should include Luna');
+});

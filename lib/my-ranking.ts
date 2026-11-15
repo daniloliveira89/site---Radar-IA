@@ -37,6 +37,12 @@ export type RankedAI = {
   codexNoteEn?: string;
   aiStudioNotePt?: string;
   aiStudioNoteEn?: string;
+  geminiWeb?: boolean;
+  gptWeb?: boolean;
+  geminiWebNotePt?: string;
+  geminiWebNoteEn?: string;
+  gptWebNotePt?: string;
+  gptWebNoteEn?: string;
 };
 
 export const RANKING_CATEGORIES: CategoryMeta[] = [
@@ -147,6 +153,9 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Modelo de raciocínio pesado para arquitetura de software complexa, matemática avançada, depuração profunda e geração de sistemas completos com 1M de tokens de contexto.',
     whyBestEn: 'Heavy-duty reasoning model for complex software architecture, advanced math, deep debugging, and generating entire systems with 1M token context.',
     antigravity: false,
+    geminiWeb: true,
+    geminiWebNotePt: 'Disponível no Gemini Web Pro Education (plano Gemini Pro Estudos).',
+    geminiWebNoteEn: 'Available in Gemini Web Pro Education (Gemini Pro Education plan).',
     codex: false,
     aiStudio: true,
     aiStudioNotePt: 'Ambiente oficial para desenvolvedores no Google AI Studio com acesso à Gemini API (Pay-as-you-go).',
@@ -171,6 +180,9 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Velocidade extrema de execução (até 2.5x mais rápido), 4 níveis de thinking (até xhigh), paralelização de chamadas de ferramentas e 1M de contexto unificado.',
     whyBestEn: 'Extreme execution speed (up to 2.5x faster), 4 thinking levels (up to xhigh), tool calling parallelization, and unified 1M context.',
     antigravity: false,
+    geminiWeb: true,
+    geminiWebNotePt: 'Disponível no Gemini Web Pro Education (plano Gemini Pro Estudos).',
+    geminiWebNoteEn: 'Available in Gemini Web Pro Education (Gemini Pro Education plan).',
     codex: false,
     aiStudio: true,
     aiStudioNotePt: 'Ambiente oficial para desenvolvedores no Google AI Studio com acesso à Gemini API (Pay-as-you-go).',
@@ -217,6 +229,9 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestEn: 'Specialized in mathematical logic and detailed script refactoring with internal reflection to prevent runtime errors.',
     antigravity: false,
     codex: true,
+    gptWeb: true,
+    gptWebNotePt: 'Disponível no ChatGPT Web (plano GPT Go & GPT Free).',
+    gptWebNoteEn: 'Available in ChatGPT Web (GPT Go & GPT Free plan).',
     codexNotePt: 'Ambiente de desenvolvimento nativo para automação no Codex.',
     codexNoteEn: 'Native developer environment for automation in Codex.'
   },
@@ -327,6 +342,9 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Geração rápida de artigos, e-mails estruturados e relatórios abrangentes integrados diretamente ao Google Docs e ao ecossistema do Workspace.',
     whyBestEn: 'Fast generation of articles, structured emails, and comprehensive reports integrated directly into Google Docs and Workspace.',
     antigravity: false,
+    geminiWeb: true,
+    geminiWebNotePt: 'Disponível no Gemini Web Pro Education (plano Gemini Pro Estudos).',
+    geminiWebNoteEn: 'Available in Gemini Web Pro Education (Gemini Pro Education plan).',
     codex: false
   },
   {
@@ -348,7 +366,10 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Excelente adaptabilidade para posts em redes sociais, mensagens profissionais e diálogos dinâmicos com modulação fina de personalidade.',
     whyBestEn: 'Outstanding adaptability for social media posts, professional copywriting, and conversational dialogue with personality tuning.',
     antigravity: false,
-    codex: true
+    codex: true,
+    gptWeb: true,
+    gptWebNotePt: 'Disponível no ChatGPT Web (plano GPT Go & GPT Free).',
+    gptWebNoteEn: 'Available in ChatGPT Web (GPT Go & GPT Free plan).',
   },
 
   // --- CATEGORIA: WEB DESIGN & FRONTEND ---
@@ -413,6 +434,9 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Converte capturas de tela e mockups Figma diretamente para layouts HTML/Tailwind limpos, com inspeção multimodal de alta precisão e sem dependências obsoletas.',
     whyBestEn: 'Converts screenshots and Figma mockups directly into clean HTML/Tailwind layouts, with high-accuracy multimodal inspection and no legacy bloat.',
     antigravity: false,
+    geminiWeb: true,
+    geminiWebNotePt: 'Disponível no Gemini Web Pro Education (plano Gemini Pro Estudos).',
+    geminiWebNoteEn: 'Available in Gemini Web Pro Education (Gemini Pro Education plan).',
     codex: false,
     aiStudio: true,
     aiStudioNotePt: 'Acesso oficial pelo Google AI Studio com acesso à Gemini API (Pay-as-you-go).',
@@ -437,7 +461,10 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'O ambiente Canvas facilita editar blocos individuais de código frontend, ajustar estilos CSS e refatorar páginas com feedback visual direto.',
     whyBestEn: 'The Canvas environment makes it easy to edit individual frontend code blocks, adjust CSS styles, and refactor pages with immediate visual feedback.',
     antigravity: false,
-    codex: true
+    codex: true,
+    gptWeb: true,
+    gptWebNotePt: 'Disponível no ChatGPT Web (plano GPT Go & GPT Free).',
+    gptWebNoteEn: 'Available in ChatGPT Web (GPT Go & GPT Free plan).',
   },
   {
     id: 'web-flash',
@@ -484,6 +511,9 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestEn: '#1 global ranking model with 1261 Elo. Pinnacle photorealism, cinematic lighting, accurate typography rendering, and visual coherence in complex prompts.',
     antigravity: false,
     codex: true,
+    gptWeb: true,
+    gptWebNotePt: 'Disponível no ChatGPT Web (plano GPT Go & GPT Free).',
+    gptWebNoteEn: 'Available in ChatGPT Web (GPT Go & GPT Free plan).',
     codexNotePt: 'Disponível no ChatGPT e Codex CLI para geração e inspeção visual de alta fidelidade.',
     codexNoteEn: 'Available in ChatGPT and Codex CLI for high-fidelity image generation and visual inspection.'
   },
@@ -507,6 +537,9 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestEn: 'Ultra-fast high-fidelity variant (1227 Elo), generating high-res images in seconds with strong prompt adherence and wide dynamic color range.',
     antigravity: false,
     codex: true,
+    gptWeb: true,
+    gptWebNotePt: 'Disponível no ChatGPT Web (plano GPT Go & GPT Free).',
+    gptWebNoteEn: 'Available in ChatGPT Web (GPT Go & GPT Free plan).',
     codexNotePt: 'Disponível no ChatGPT e Codex CLI para prototipagem visual e assets ágeis.',
     codexNoteEn: 'Available in ChatGPT and Codex CLI for visual prototyping and agile assets.'
   },
@@ -529,6 +562,9 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Texturas naturais de pele, iluminação cinematográfica e extraordinária capacidade de renderizar palavras, logotipos e placas legíveis dentro da imagem.',
     whyBestEn: 'Natural skin textures, cinematic lighting, and extraordinary ability to render legible typography, signage, and logos inside the image.',
     antigravity: false,
+    geminiWeb: true,
+    geminiWebNotePt: 'Disponível no Gemini Web Pro Education (plano Gemini Pro Estudos).',
+    geminiWebNoteEn: 'Available in Gemini Web Pro Education (Gemini Pro Education plan).',
     codex: false
   },
   {
@@ -615,6 +651,9 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Otimizado especificamente para agentes autônomos, executando chamadas de busca em paralelo e integrando os resultados com 1M de tokens no Antigravity CLI e IDE.',
     whyBestEn: 'Specifically optimized for autonomous agents, running search calls in parallel and consolidating findings with 1M tokens in Antigravity CLI and IDE.',
     antigravity: false,
+    geminiWeb: true,
+    geminiWebNotePt: 'Disponível no Gemini Web Pro Education (plano Gemini Pro Estudos).',
+    geminiWebNoteEn: 'Available in Gemini Web Pro Education (Gemini Pro Education plan).',
     codex: false,
     aiStudio: true,
     aiStudioNotePt: 'Disponível no Google AI Studio com acesso à Gemini API (Pay-as-you-go) para chamadas de busca e ferramentas.',
@@ -639,7 +678,10 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Respostas estruturadas com citações transparentes, links diretos para veículos oficiais e integração contínua de notícias do dia.',
     whyBestEn: 'Structured answers with transparent citations, direct links to official sources, and seamless daily news integration.',
     antigravity: false,
-    codex: true
+    codex: true,
+    gptWeb: true,
+    gptWebNotePt: 'Disponível no ChatGPT Web (plano GPT Go & GPT Free).',
+    gptWebNoteEn: 'Available in ChatGPT Web (GPT Go & GPT Free plan).',
   },
   {
     id: 'research-4',
@@ -727,6 +769,9 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Liderança global do Google DeepMind em IA científica (AlphaFold, AlphaProof, GMoD), combinando raciocínio em física, biologia computacional e síntese química com 1M de tokens de contexto.',
     whyBestEn: 'Google DeepMind’s global leadership in scientific AI (AlphaFold, AlphaProof, GMoD), integrating physics, computational biology, and chemistry reasoning with a 1M token context window.',
     antigravity: false,
+    geminiWeb: true,
+    geminiWebNotePt: 'Disponível no Gemini Web Pro Education (plano Gemini Pro Estudos).',
+    geminiWebNoteEn: 'Available in Gemini Web Pro Education (Gemini Pro Education plan).',
     codex: false,
     aiStudio: true,
     antigravityNotePt: 'Integrado ao Antigravity CLI e IDE via API do Google AI Studio para workflows científicos agênticos.',
@@ -753,6 +798,9 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Processamento em lote ultrarrápido de artigos científicos, cruzamento de dados experimentais em larga escala e geração ágil de hipóteses.',
     whyBestEn: 'Ultra-fast batch processing of scientific literature, large-scale experimental data cross-referencing, and rapid hypothesis generation.',
     antigravity: false,
+    geminiWeb: true,
+    geminiWebNotePt: 'Disponível no Gemini Web Pro Education (plano Gemini Pro Estudos).',
+    geminiWebNoteEn: 'Available in Gemini Web Pro Education (Gemini Pro Education plan).',
     codex: false,
     aiStudio: true,
     antigravityNotePt: 'Integrado ao Antigravity CLI e IDE via API do Google AI Studio para automação de pesquisa.',
@@ -821,7 +869,10 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Execução precisa em cálculos de química estrutural, balanços estequiométricos de massa, termodinâmica e equações diferenciais para engenharia.',
     whyBestEn: 'High precision in structural chemistry calculations, stoichiometric balances, thermodynamics, and differential equations for engineering.',
     antigravity: false,
-    codex: true
+    codex: true,
+    gptWeb: true,
+    gptWebNotePt: 'Disponível no ChatGPT Web (plano GPT Go & GPT Free).',
+    gptWebNoteEn: 'Available in ChatGPT Web (GPT Go & GPT Free plan).',
   },
   {
     id: 'science-flash',
@@ -888,6 +939,9 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'A janela de 1M de tokens no AI Studio permite carregar o repositório inteiro e toda a infraestrutura como código (Terraform, Kubernetes, IAM) para auditar conformidade CIS/NIST e brechas arquiteturais com raciocínio frontier.',
     whyBestEn: 'The 1M token window in AI Studio enables ingesting entire codebases and infrastructure-as-code (Terraform, Kubernetes, IAM) to audit CIS/NIST compliance and architecture posture with frontier reasoning.',
     antigravity: false,
+    geminiWeb: true,
+    geminiWebNotePt: 'Disponível no Gemini Web Pro Education (plano Gemini Pro Estudos).',
+    geminiWebNoteEn: 'Available in Gemini Web Pro Education (Gemini Pro Education plan).',
     codex: false,
     aiStudio: true,
     antigravityNotePt: 'Integrado ao Antigravity CLI e IDE via API do Google AI Studio para auditoria estática e DevSecOps agêntico.',
@@ -914,6 +968,9 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Varredura ultrarrápida em pipelines de CI/CD para detecção de secrets expostos, dependências vulneráveis e triagem de alertas de segurança com baixa latência.',
     whyBestEn: 'Ultra-fast CI/CD pipeline scanning for exposed secrets, vulnerable dependencies, and low-latency security alert triage.',
     antigravity: false,
+    geminiWeb: true,
+    geminiWebNotePt: 'Disponível no Gemini Web Pro Education (plano Gemini Pro Estudos).',
+    geminiWebNoteEn: 'Available in Gemini Web Pro Education (Gemini Pro Education plan).',
     codex: false,
     aiStudio: true,
     antigravityNotePt: 'Integrado ao Antigravity CLI e IDE via API do Google AI Studio para automação de segurança defensiva.',
@@ -961,7 +1018,10 @@ export const RANKED_AIS: RankedAI[] = [
     whyBestPt: 'Rápido e cirúrgico para gerar regras YARA, assinaturas Suricata/Snort, scripts defensivos de pentest em Python e triagem estruturada de logs de incidentes em SIEM.',
     whyBestEn: 'Fast and surgically accurate in generating YARA rules, Suricata/Snort signatures, defensive pentest Python scripts, and structured SIEM incident log triage.',
     antigravity: false,
-    codex: true
+    codex: true,
+    gptWeb: true,
+    gptWebNotePt: 'Disponível no ChatGPT Web (plano GPT Go & GPT Free).',
+    gptWebNoteEn: 'Available in ChatGPT Web (GPT Go & GPT Free plan).',
   },
   {
     id: 'security-flash',
