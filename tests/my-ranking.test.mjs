@@ -94,11 +94,11 @@ test('Google AI Studio has separate Gemini 4 Argon and Gemini 4 Hydrogen models 
 
   const studioArgon = RANKED_AIS.filter(i => i.accountId === 'google-ai-studio' && i.model === 'Gemini 4 Argon');
   assert(studioArgon.length >= 1, 'Google AI Studio must have separate Gemini 4 Argon');
-  assert(studioArgon.every(m => m.accountName === 'Google AI Studio' && m.tier === 'AI Studio Free & Pro' && m.aiStudio === true && m.antigravity === false));
+  assert(studioArgon.every(m => m.accountName === 'Google AI Studio' && m.tier === 'AI Studio Pro & Pay-as-you-go' && m.tierBadge === 'pro' && m.aiStudio === true && m.antigravity === false));
 
   const studioHydrogen = RANKED_AIS.filter(i => i.accountId === 'google-ai-studio' && i.model === 'Gemini 4 Hydrogen');
   assert(studioHydrogen.length >= 1, 'Google AI Studio must have separate Gemini 4 Hydrogen');
-  assert(studioHydrogen.every(m => m.accountName === 'Google AI Studio' && m.tier === 'AI Studio Free & Pro' && m.aiStudio === true && m.antigravity === false));
+  assert(studioHydrogen.every(m => m.accountName === 'Google AI Studio' && m.tier === 'AI Studio Pro & Pay-as-you-go' && m.tierBadge === 'pro' && m.aiStudio === true && m.antigravity === false));
 });
 
 test('all ChatGPT models are marked with Codex and not Antigravity', () => {

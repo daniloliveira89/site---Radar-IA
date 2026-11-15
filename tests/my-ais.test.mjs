@@ -31,6 +31,14 @@ test('my-ais tiers match requested user accounts', () => {
   assert(gemini.tier.includes('Estudos'));
   assert.equal(gemini.tierBadge, 'edu');
 
+  const studio = MY_ACCOUNTS.find(a => a.id === 'google-ai-studio');
+  assert.equal(studio.tierBadge, 'pro');
+  assert(!studio.tier.toLowerCase().includes('free'));
+  assert(studio.tier.includes('Pay-as-you-go') || studio.tier.includes('Pro'));
+
+  const freeAccounts = MY_ACCOUNTS.filter(a => a.tierBadge === 'free');
+  assert(!freeAccounts.some(a => a.id === 'google-ai-studio'), 'Google AI Studio must not appear in free accounts');
+
   const gpt = MY_ACCOUNTS.find(a => a.id === 'chatgpt');
   assert(gpt.tier.includes('Go') && gpt.tier.includes('Free'));
 

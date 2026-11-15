@@ -136,9 +136,9 @@ export const RANKED_AIS: RankedAI[] = [
     accountId: 'google-ai-studio',
     accountName: 'Google AI Studio',
     company: 'Google',
-    tier: 'AI Studio Free & Pro',
-    tierEn: 'AI Studio Free & Pro',
-    tierBadge: 'free',
+    tier: 'AI Studio Pro & Pay-as-you-go',
+    tierEn: 'AI Studio Pro & Pay-as-you-go',
+    tierBadge: 'pro',
     url: 'https://aistudio.google.com/',
     badge: 'Frontier Reasoning · 1M Decode',
     badgeEn: 'Frontier Reasoning · 1M Decode',
@@ -149,8 +149,8 @@ export const RANKED_AIS: RankedAI[] = [
     antigravity: false,
     codex: false,
     aiStudio: true,
-    aiStudioNotePt: 'Ambiente oficial para desenvolvedores no Google AI Studio com cota gratuita da Gemini API.',
-    aiStudioNoteEn: 'Official developer environment in Google AI Studio with free Gemini API quota.'
+    aiStudioNotePt: 'Ambiente oficial para desenvolvedores no Google AI Studio com acesso à Gemini API (Pay-as-you-go).',
+    aiStudioNoteEn: 'Official developer environment in Google AI Studio with Gemini API access (Pay-as-you-go).'
   },
   {
     id: 'code-3',
@@ -160,9 +160,9 @@ export const RANKED_AIS: RankedAI[] = [
     accountId: 'google-ai-studio',
     accountName: 'Google AI Studio',
     company: 'Google',
-    tier: 'AI Studio Free & Pro',
-    tierEn: 'AI Studio Free & Pro',
-    tierBadge: 'free',
+    tier: 'AI Studio Pro & Pay-as-you-go',
+    tierEn: 'AI Studio Pro & Pay-as-you-go',
+    tierBadge: 'pro',
     url: 'https://aistudio.google.com/',
     badge: '54 Artificial Analysis Index',
     badgeEn: '54 Artificial Analysis Index',
@@ -173,8 +173,8 @@ export const RANKED_AIS: RankedAI[] = [
     antigravity: false,
     codex: false,
     aiStudio: true,
-    aiStudioNotePt: 'Ambiente oficial para desenvolvedores no Google AI Studio com cota gratuita da Gemini API.',
-    aiStudioNoteEn: 'Official developer environment in Google AI Studio with free Gemini API quota.'
+    aiStudioNotePt: 'Ambiente oficial para desenvolvedores no Google AI Studio com acesso à Gemini API (Pay-as-you-go).',
+    aiStudioNoteEn: 'Official developer environment in Google AI Studio with Gemini API access (Pay-as-you-go).'
   },
   {
     id: 'code-4',
@@ -402,9 +402,9 @@ export const RANKED_AIS: RankedAI[] = [
     accountId: 'google-ai-studio',
     accountName: 'Google AI Studio',
     company: 'Google',
-    tier: 'AI Studio Free & Pro',
-    tierEn: 'AI Studio Free & Pro',
-    tierBadge: 'free',
+    tier: 'AI Studio Pro & Pay-as-you-go',
+    tierEn: 'AI Studio Pro & Pay-as-you-go',
+    tierBadge: 'pro',
     url: 'https://aistudio.google.com/',
     badge: 'Visão Multimodal + Live Code',
     badgeEn: 'Multimodal Vision + Live Code',
@@ -415,8 +415,8 @@ export const RANKED_AIS: RankedAI[] = [
     antigravity: false,
     codex: false,
     aiStudio: true,
-    aiStudioNotePt: 'Acesso oficial pelo Google AI Studio com cota gratuita da Gemini API.',
-    aiStudioNoteEn: 'Official access via Google AI Studio with free Gemini API quota.'
+    aiStudioNotePt: 'Acesso oficial pelo Google AI Studio com acesso à Gemini API (Pay-as-you-go).',
+    aiStudioNoteEn: 'Official access via Google AI Studio with Gemini API access (Pay-as-you-go).'
   },
   {
     id: 'web-4',
@@ -579,9 +579,9 @@ export const RANKED_AIS: RankedAI[] = [
     accountId: 'google-ai-studio',
     accountName: 'Google AI Studio',
     company: 'Google',
-    tier: 'AI Studio Free & Pro',
-    tierEn: 'AI Studio Free & Pro',
-    tierBadge: 'free',
+    tier: 'AI Studio Pro & Pay-as-you-go',
+    tierEn: 'AI Studio Pro & Pay-as-you-go',
+    tierBadge: 'pro',
     url: 'https://aistudio.google.com/',
     badge: 'Agente de Pesquisa com Tools',
     badgeEn: 'Search Agent with Tools',
@@ -592,8 +592,8 @@ export const RANKED_AIS: RankedAI[] = [
     antigravity: false,
     codex: false,
     aiStudio: true,
-    aiStudioNotePt: 'Disponível no Google AI Studio com cota gratuita da Gemini API para chamadas de busca e ferramentas.',
-    aiStudioNoteEn: 'Available in Google AI Studio with free Gemini API quota for search and tool calls.'
+    aiStudioNotePt: 'Disponível no Google AI Studio com acesso à Gemini API (Pay-as-you-go) para chamadas de busca e ferramentas.',
+    aiStudioNoteEn: 'Available in Google AI Studio with Gemini API access (Pay-as-you-go) for search and tool calls.'
   },
   {
     id: 'research-3',
@@ -691,9 +691,9 @@ export const RANKED_AIS: RankedAI[] = [
     accountId: 'google-ai-studio',
     accountName: 'Google AI Studio',
     company: 'Google',
-    tier: 'AI Studio Free & Pro',
-    tierEn: 'AI Studio Free & Pro',
-    tierBadge: 'free',
+    tier: 'AI Studio Pro & Pay-as-you-go',
+    tierEn: 'AI Studio Pro & Pay-as-you-go',
+    tierBadge: 'pro',
     url: 'https://aistudio.google.com/',
     badge: '#1 Ciência & Modelagem',
     badgeEn: '#1 Science & Discovery',
@@ -706,8 +706,8 @@ export const RANKED_AIS: RankedAI[] = [
     aiStudio: true,
     antigravityNotePt: 'Integrado ao Antigravity CLI e IDE via API do Google AI Studio para workflows científicos agênticos.',
     antigravityNoteEn: 'Integrated in Antigravity CLI and IDE via Google AI Studio API for agentic scientific workflows.',
-    aiStudioNotePt: 'Acesso oficial no Google AI Studio com cota gratuita da Gemini API para experimentos e cálculos científicos.',
-    aiStudioNoteEn: 'Official access in Google AI Studio with free Gemini API quota for scientific experiments and computations.'
+    aiStudioNotePt: 'Acesso oficial no Google AI Studio com acesso à Gemini API (Pay-as-you-go) para experimentos e cálculos científicos.',
+    aiStudioNoteEn: 'Official access in Google AI Studio with Gemini API access (Pay-as-you-go) for scientific experiments and computations.'
   },
   {
     id: 'science-2',
@@ -717,9 +717,9 @@ export const RANKED_AIS: RankedAI[] = [
     accountId: 'google-ai-studio',
     accountName: 'Google AI Studio',
     company: 'Google',
-    tier: 'AI Studio Free & Pro',
-    tierEn: 'AI Studio Free & Pro',
-    tierBadge: 'free',
+    tier: 'AI Studio Pro & Pay-as-you-go',
+    tierEn: 'AI Studio Pro & Pay-as-you-go',
+    tierBadge: 'pro',
     url: 'https://aistudio.google.com/',
     badge: 'Síntese e Análise Rápida de Dados',
     badgeEn: 'Fast Data Synthesis & Analysis',
@@ -732,8 +732,8 @@ export const RANKED_AIS: RankedAI[] = [
     aiStudio: true,
     antigravityNotePt: 'Integrado ao Antigravity CLI e IDE via API do Google AI Studio para automação de pesquisa.',
     antigravityNoteEn: 'Integrated in Antigravity CLI and IDE via Google AI Studio API for research automation.',
-    aiStudioNotePt: 'Acesso oficial no Google AI Studio com cota gratuita da Gemini API para processamento ágil de dados científicos.',
-    aiStudioNoteEn: 'Official access in Google AI Studio with free Gemini API quota for rapid scientific data processing.'
+    aiStudioNotePt: 'Acesso oficial no Google AI Studio com acesso à Gemini API (Pay-as-you-go) para processamento ágil de dados científicos.',
+    aiStudioNoteEn: 'Official access in Google AI Studio with Gemini API access (Pay-as-you-go) for rapid scientific data processing.'
   },
   {
     id: 'science-3',
@@ -852,9 +852,9 @@ export const RANKED_AIS: RankedAI[] = [
     accountId: 'google-ai-studio',
     accountName: 'Google AI Studio',
     company: 'Google',
-    tier: 'AI Studio Free & Pro',
-    tierEn: 'AI Studio Free & Pro',
-    tierBadge: 'free',
+    tier: 'AI Studio Pro & Pay-as-you-go',
+    tierEn: 'AI Studio Pro & Pay-as-you-go',
+    tierBadge: 'pro',
     url: 'https://aistudio.google.com/',
     badge: 'Auditoria de Repositórios 1M Tokens',
     badgeEn: '1M Repo Auditing & DevSecOps',
@@ -867,8 +867,8 @@ export const RANKED_AIS: RankedAI[] = [
     aiStudio: true,
     antigravityNotePt: 'Integrado ao Antigravity CLI e IDE via API do Google AI Studio para auditoria estática e DevSecOps agêntico.',
     antigravityNoteEn: 'Integrated in Antigravity CLI and IDE via Google AI Studio API for static auditing and agentic DevSecOps.',
-    aiStudioNotePt: 'Playground oficial no Google AI Studio com cota gratuita da Gemini API para varredura de repositórios completos com 1M de tokens.',
-    aiStudioNoteEn: 'Official playground in Google AI Studio with free Gemini API quota for scanning entire repositories with 1M tokens.'
+    aiStudioNotePt: 'Playground oficial no Google AI Studio com acesso à Gemini API (Pay-as-you-go) para varredura de repositórios completos com 1M de tokens.',
+    aiStudioNoteEn: 'Official playground in Google AI Studio with Gemini API access (Pay-as-you-go) for scanning entire repositories with 1M tokens.'
   },
   {
     id: 'security-3',
@@ -878,9 +878,9 @@ export const RANKED_AIS: RankedAI[] = [
     accountId: 'google-ai-studio',
     accountName: 'Google AI Studio',
     company: 'Google',
-    tier: 'AI Studio Free & Pro',
-    tierEn: 'AI Studio Free & Pro',
-    tierBadge: 'free',
+    tier: 'AI Studio Pro & Pay-as-you-go',
+    tierEn: 'AI Studio Pro & Pay-as-you-go',
+    tierBadge: 'pro',
     url: 'https://aistudio.google.com/',
     badge: 'Varredura Rápida de Vulnerabilidades',
     badgeEn: 'Fast Vulnerability Scanning',
@@ -893,8 +893,8 @@ export const RANKED_AIS: RankedAI[] = [
     aiStudio: true,
     antigravityNotePt: 'Integrado ao Antigravity CLI e IDE via API do Google AI Studio para automação de segurança defensiva.',
     antigravityNoteEn: 'Integrated in Antigravity CLI and IDE via Google AI Studio API for defensive security automation.',
-    aiStudioNotePt: 'Acesso oficial no Google AI Studio com cota gratuita da Gemini API para automação de segurança.',
-    aiStudioNoteEn: 'Official access in Google AI Studio with free Gemini API quota for security automation.'
+    aiStudioNotePt: 'Acesso oficial no Google AI Studio com acesso à Gemini API (Pay-as-you-go) para automação de segurança.',
+    aiStudioNoteEn: 'Official access in Google AI Studio with Gemini API access (Pay-as-you-go) for security automation.'
   },
   {
     id: 'security-4',
