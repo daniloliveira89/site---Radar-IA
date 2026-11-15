@@ -1,7 +1,7 @@
 import type {BenchmarkRow,Board} from './benchmarks.ts';
 import {freeOffer,modelKey,initialFreeAccess,type FreeOffer} from './free-access.ts';
 import {costPerScore,filterRedValueRows} from './benchmark-value.ts';
-const core=['Anthropic','OpenAI','Google','Kimi','DeepSeek','xAI','Meta','Alibaba','Mistral','Microsoft','Black Forest Labs','ByteDance','Runway','Luma','Midjourney','Kling','MiniMax','HeyGen','Utopai Studios','Ideogram','Recraft'];
+const core=['Anthropic','OpenAI','Google','Kimi','DeepSeek','xAI','Meta','Alibaba','Mistral','Microsoft','Black Forest Labs','ByteDance','Runway','Luma','Midjourney','Kling','MiniMax','HeyGen','Utopai Studios','Ideogram','Recraft','Higgsfield','Adobe','Stability AI','Amazon','01.AI','Baidu','AI21 Labs','Haiper AI','Tripo AI','Deemos','Meshy','CSM','Sloyd','Spline'];
 function companyComparisonLimit(id:Board['id']){return id==='text'?15:12;}
 export function comparisonLimit(id:Board['id']){return id==='image'?20:companyComparisonLimit(id);}
 export const DEFAULT_COMPARISON_MODE='value';

@@ -1,9 +1,11 @@
 'use client';
 import {useEffect,useMemo,useState} from 'react';
-import {RefreshCw,ArrowUpRight,ChevronDown,Sparkles,PenLine,Image,Video,Table2,PanelsTopLeft} from 'lucide-react';
+import {RefreshCw,ArrowUpRight,ChevronDown,Sparkles,PenLine,Image,Video,Table2,PanelsTopLeft,Box} from 'lucide-react';
 import initial from '../lib/initial-benchmarks.json';
 import initialWebDesign from '../lib/initial-web-design.json';
+import initialThreeD from '../lib/initial-3d.json';
 import {WEB_DESIGN_LIMIT} from '../lib/web-design';
+import {THREE_D_TOOLS} from '../lib/three-d';
 import {formatLongformModel} from '../lib/longform-writing';
 import type {Benchmarks,BenchmarkRow,Board} from '../lib/benchmarks';
 import {modelAccess} from '../lib/model-access';
@@ -13,7 +15,7 @@ import {useLanguage} from './language';
 import {comparisonLimit,freeComparisonLimit,selectComparisonRows,DEFAULT_COMPARISON_MODE,selectNonRedLanguageValueRows} from '../lib/benchmark-selection';
 import {costPerScore,highestScoreAbove,isBelowAnyAbove,isTiedWithBestAbove,filterRedValueRows} from '../lib/benchmark-value';
 const unitLabels={text:['task','tarefa'],image:['1,000 images','1.000 imagens'],video:['min','min']};
-function costUnit(board:Board,language:string){return (board.evaluation==='arena'||board.evaluation==='eq-bench')&&board.id==='text'?(language==='en'?'1M tokens · 50:50':'1M tokens · 50:50'):unitLabels[board.id][language==='en'?0:1];}
+function costUnit(board:Board,language:string){return (board.evaluation==='arena'||board.evaluation==='eq-bench')&&board.id==='text'?(language==='en'?'1M tokens · 50:50':'1M tokens · 50:50'):unitLabels[board.id]?.[language==='en'?0:1]||'unit';}
 function money(value:number,locale:string,ratio=false){return new Intl.NumberFormat(locale,{style:'currency',currency:'USD',minimumFractionDigits:2,maximumFractionDigits:ratio?6:2}).format(value);}
 function Plot({board,rows,offers,valueMode=false}:{board:Board,rows:BenchmarkRow[],offers:FreeOffer[],valueMode?:boolean}){
  const {t,language,locale}=useLanguage(),isWeb=board.evaluation==='design-arena',isElo=isWeb||board.evaluation==='arena'||board.id!=='text';
@@ -45,7 +47,7 @@ function Plot({board,rows,offers,valueMode=false}:{board:Board,rows:BenchmarkRow
 }
 export default function Comparisons({onSourceChange}:{onSourceChange?:(source:Board)=>void}={}){
  const {t,locale,language}=useLanguage();
- const [data,setData]=useState<Benchmarks>({...initial as Benchmarks,webDesign:((initial as Benchmarks).webDesign?.rows.length??0)>=WEB_DESIGN_LIMIT?(initial as Benchmarks).webDesign:initialWebDesign as Board}),[active,setActive]=useState('text'),[provider,setProvider]=useState('aa'),[mode,setMode]=useState<string>(DEFAULT_COMPARISON_MODE),[imageMode,setImageMode]=useState('top'),[writingMode,setWritingMode]=useState('top'),[writingSource,setWritingSource]=useState('eq-bench'),[longformMode,setLongformMode]=useState('top'),[webMode,setWebMode]=useState('top'),[loading,setLoading]=useState(false),[table,setTable]=useState(false),[hideRed,setHideRed]=useState(false);
+ const [data,setData]=useState<Benchmarks>({...initial as Benchmarks,webDesign:((initial as Benchmarks).webDesign?.rows.length??0)>=WEB_DESIGN_LIMIT?(initial as Benchmarks).webDesign:initialWebDesign as Board,threeD:((initial as Benchmarks).threeD?.rows.length??0)>=3?(initial as Benchmarks).threeD:initialThreeD as Board}),[active,setActive]=useState('text'),[provider,setProvider]=useState('aa'),[mode,setMode]=useState<string>(DEFAULT_COMPARISON_MODE),[imageMode,setImageMode]=useState('top'),[writingMode,setWritingMode]=useState('top'),[writingSource,setWritingSource]=useState('eq-bench'),[longformMode,setLongformMode]=useState('top'),[webMode,setWebMode]=useState('top'),[threeDMode,setThreeDMode]=useState('all'),[loading,setLoading]=useState(false),[table,setTable]=useState(false),[hideRed,setHideRed]=useState(false);
  const saved=(b?:Board):Board|undefined=>b&&{...b,status:'saved'};
  async function refresh(manual=false){
   setLoading(true);
@@ -56,48 +58,128 @@ export default function Comparisons({onSourceChange}:{onSourceChange?:(source:Bo
     creativeWriting:v.creativeWriting?.rows.length?v.creativeWriting:saved(p.creativeWriting),
     creativeWritingLongform:v.creativeWritingLongform?.rows.length?v.creativeWritingLongform:saved(p.creativeWritingLongform),
     webDesign:(v.webDesign?.rows.length??0)>=WEB_DESIGN_LIMIT?v.webDesign:p.webDesign,
+    threeD:v.threeD?.rows.length?v.threeD:p.threeD,
    }));
   }catch{
-   setData(p=>({...p,boards:p.boards.map(b=>({...b,status:'saved'})),arenas:p.arenas?.map(b=>({...b,status:'saved'})),creativeWriting:saved(p.creativeWriting),creativeWritingLongform:saved(p.creativeWritingLongform),webDesign:saved(p.webDesign)}));
+   setData(p=>({...p,boards:p.boards.map(b=>({...b,status:'saved'})),arenas:p.arenas?.map(b=>({...b,status:'saved'})),creativeWriting:saved(p.creativeWriting),creativeWritingLongform:saved(p.creativeWritingLongform),webDesign:saved(p.webDesign),threeD:saved(p.threeD)}));
   }finally{setLoading(false);}
  }
  useEffect(()=>{refresh();},[]);
  const access=useMemo(()=>withFlowImageAccess(data.freeAccess||initialFreeAccess),[data.freeAccess]);
- const isImage=active==='image',isWeb=active==='web-design',isWriting=active==='writing',isLongform=isWriting&&writingSource==='eq-bench',isArena=!isWeb&&(isWriting?!isLongform:provider==='arena');
+ const isImage=active==='image',isWeb=active==='web-design',is3D=active==='3d',isWriting=active==='writing',isLongform=isWriting&&writingSource==='eq-bench',isArena=!isWeb&&!is3D&&(isWriting?!isLongform:provider==='arena');
  const offers=useMemo(()=>isWriting?[...writingChatAccess,...access.offers]:isWeb?[...webDesignChatAccess,...access.offers]:access.offers,[isWriting,isWeb,access.offers]);
  const boards=isArena?(data.arenas||[]):data.boards;
  const writingBoard=isLongform?'creativeWritingLongform':'creativeWriting';
- const board=isWeb?data.webDesign:isWriting?(data[writingBoard]||(initial as Benchmarks)[writingBoard]):boards.find(b=>b.id===active)||boards[0];
- const viewMode=isWeb?webMode:isLongform?longformMode:isWriting?writingMode:isImage?imageMode:mode,valueMode=viewMode==='value'||viewMode==='value-free',freeMode=viewMode==='free'||viewMode==='value-free';
- const selectedRows=useMemo(()=>board?(isWeb?(webMode==='free'?selectComparisonRows(board.rows,'free','text',offers).slice(0,10):board.rows.slice(0,WEB_DESIGN_LIMIT)):selectComparisonRows(board.rows,viewMode,board.id,offers)):[],[board,isWeb,webMode,viewMode,offers]);
+ const board=is3D?(data.threeD||(initialThreeD as Board)):isWeb?data.webDesign:isWriting?(data[writingBoard]||(initial as Benchmarks)[writingBoard]):boards.find(b=>b.id===active)||boards[0];
+ const viewMode=is3D?threeDMode:isWeb?webMode:isLongform?longformMode:isWriting?writingMode:isImage?imageMode:mode,valueMode=viewMode==='value'||viewMode==='value-free',freeMode=viewMode==='free'||viewMode==='value-free';
+ const selectedRows=useMemo(()=>{
+  if(!board)return [];
+  if(is3D){
+   return threeDMode==='free'?board.rows.filter(r=>r.costUSD===0||r.model.includes('Tripo')||r.model.includes('Meshy')||r.model.includes('Genie')||r.model.includes('CSM')||r.model.includes('Sloyd')||r.model.includes('Spline')):board.rows;
+  }
+  if(isWeb){
+   return webMode==='free'?selectComparisonRows(board.rows,'free','text',offers).slice(0,10):board.rows.slice(0,WEB_DESIGN_LIMIT);
+  }
+  return selectComparisonRows(board.rows,viewMode,board.id,offers);
+ },[board,is3D,threeDMode,isWeb,webMode,viewMode,offers]);
  const expandedLanguageValue=active==='text'&&!isArena&&viewMode==='value'&&hideRed;
  const rows=useMemo(()=>board?(expandedLanguageValue?selectNonRedLanguageValueRows(board.rows):filterRedValueRows(selectedRows,board.id,valueMode&&hideRed)):[],[board,selectedRows,valueMode,hideRed,expandedLanguageValue]);
  const sourceMode=isWriting?writingSource:provider;
  const sources=isWriting?[{id:'eq-bench',name:'EQ-Bench Longform'},{id:'arena',name:'Arena'}]:[{id:'aa',name:'Artificial Analysis'},{id:'arena',name:'Arena'}];
  useEffect(()=>{if(board)onSourceChange?.(board);},[board,onSourceChange]);
- const title=(b:Board)=>isWeb?t('Web Design','Design de sites'):isWriting?t('Creative Writing','Escrita criativa'):b.evaluation==='arena'&&b.id==='text'?t('Text · English','Texto · inglês'):b.id==='text'?t('Language & reasoning','Linguagem e raciocínio'):b.id==='image'?t('Image generation','Criação de imagem'):t('Video generation','Criação de vídeo');
+ const title=(b:Board)=>is3D?t('3D Modeling & Generation','Modelagem e geração 3D'):isWeb?t('Web Design','Design de sites'):isWriting?t('Creative Writing','Escrita criativa'):b.evaluation==='arena'&&b.id==='text'?t('Text · English','Texto · inglês'):b.id==='text'?t('Language & reasoning','Linguagem e raciocínio'):b.id==='image'?t('Image generation','Criação de imagem'):t('Video generation','Criação de vídeo');
  if(!board)return <div className="empty-state">{t('Benchmarks unavailable.','Avaliações indisponíveis.')}</div>;
  return <section className="benchmarks-panel">
- {!isWeb&&<div className="evaluation-tabs" role="group" aria-label={t('Evaluation source','Fonte de avaliação')}>{sources.map(source=><button key={source.id} aria-pressed={sourceMode===source.id} className={sourceMode===source.id?'active':''} onClick={()=>(isWriting?setWritingSource:setProvider)(source.id)}>{source.name}</button>)}</div>}
+ {!isWeb&&!is3D&&<div className="evaluation-tabs" role="group" aria-label={t('Evaluation source','Fonte de avaliação')}>{sources.map(source=><button key={source.id} aria-pressed={sourceMode===source.id} className={sourceMode===source.id?'active':''} onClick={()=>(isWriting?setWritingSource:setProvider)(source.id)}>{source.name}</button>)}</div>}
  <div className="comparison-toolbar"><div className="modality-tabs" role="group" aria-label={t('Modality','Modalidade')}>{([
    ['text',Sparkles,t('Language','Linguagem')],
    ['writing',PenLine,t('Creative Writing','Escrita criativa')],
    ['web-design',PanelsTopLeft,t('Web Design','Design de sites')],
    ['image',Image,t('Image','Imagem')],
    ['video',Video,t('Video','Vídeo')],
- ] as const).map(([id,Icon,label])=><button key={id} className={active===id?'active':''} aria-pressed={active===id} onClick={()=>setActive(id)}><Icon size={16}/>{label}</button>)}</div>{isWeb&&<a className="ranking-source-link" href={board.source} target="_blank" rel="noopener noreferrer">DesignArena <ArrowUpRight size={13}/></a>}{!isWeb&&!isWriting&&<a className="ranking-source-link" href="https://artificialanalysis.ai/leaderboards/models" target="_blank" rel="noopener noreferrer">Artificial Analysis <ArrowUpRight size={13}/></a>}{(isArena||isLongform)&&<a className="arena-source-link" href={board.source} target="_blank" rel="noopener noreferrer">{isLongform?'EQ-Bench':'Arena'} <ArrowUpRight size={13}/></a>}<button className={'refresh-button compact-refresh '+(loading?'refreshing':'')} disabled={loading} onClick={()=>refresh(true)} aria-label={t('Refresh comparisons','Atualizar comparativos')} title={t('Refresh','Atualizar')}><RefreshCw size={16}/></button></div>
- <div className="benchmark-chart-card dense-chart-card"><div className="benchmark-chart-heading"><h3>{title(board)} <small className="chart-row-count">{t(`${rows.length} models`,`${rows.length} modelos`)}</small></h3><div className="comparison-filters">{isWeb?<label className="period-select"><select aria-label={t('Model selection','Seleção de modelos')} value={webMode} onChange={e=>setWebMode(e.target.value)}><option value="top">{t(`Top ${WEB_DESIGN_LIMIT} results`,`${WEB_DESIGN_LIMIT} maiores resultados`)}</option><option value="free">{t('Top 10 free','Top 10 grátis')}</option></select><ChevronDown size={14}/></label>:<>
+   ['3d',Box,t('3D Modeling','Modelagem 3D')],
+ ] as const).map(([id,Icon,label])=><button key={id} className={active===id?'active':''} aria-pressed={active===id} onClick={()=>setActive(id)}><Icon size={16}/>{label}</button>)}</div>{isWeb&&<a className="ranking-source-link" href={board.source} target="_blank" rel="noopener noreferrer">DesignArena <ArrowUpRight size={13}/></a>}{is3D&&<a className="ranking-source-link" href="https://www.tripo3d.ai/" target="_blank" rel="noopener noreferrer">Tripo3D Hub <ArrowUpRight size={13}/></a>}{!isWeb&&!is3D&&!isWriting&&<a className="ranking-source-link" href="https://artificialanalysis.ai/leaderboards/models" target="_blank" rel="noopener noreferrer">Artificial Analysis <ArrowUpRight size={13}/></a>}{(isArena||isLongform)&&<a className="arena-source-link" href={board.source} target="_blank" rel="noopener noreferrer">{isLongform?'EQ-Bench':'Arena'} <ArrowUpRight size={13}/></a>}<button className={'refresh-button compact-refresh '+(loading?'refreshing':'')} disabled={loading} onClick={()=>refresh(true)} aria-label={t('Refresh comparisons','Atualizar comparativos')} title={t('Refresh','Atualizar')}><RefreshCw size={16}/></button></div>
+ <div className="benchmark-chart-card dense-chart-card"><div className="benchmark-chart-heading"><h3>{title(board)} <small className="chart-row-count">{t(`${rows.length} models`,`${rows.length} modelos`)}</small></h3><div className="comparison-filters">{is3D?<label className="period-select"><select aria-label={t('Model selection','Seleção de modelos')} value={threeDMode} onChange={e=>setThreeDMode(e.target.value)}><option value="all">{t('Top results','Maiores resultados')}</option><option value="free">{t('With free tier / trial','Com plano grátis / teste')}</option></select><ChevronDown size={14}/></label>:isWeb?<label className="period-select"><select aria-label={t('Model selection','Seleção de modelos')} value={webMode} onChange={e=>setWebMode(e.target.value)}><option value="top">{t(`Top ${WEB_DESIGN_LIMIT} results`,`${WEB_DESIGN_LIMIT} maiores resultados`)}</option><option value="free">{t('Top 10 free','Top 10 grátis')}</option></select><ChevronDown size={14}/></label>:<>
   <label className="period-select"><select aria-label={t('Model selection','Seleção de modelos')} value={viewMode} onChange={e=>(isLongform?setLongformMode:isWriting?setWritingMode:isImage?setImageMode:setMode)(e.target.value)}><option value="companies">{t('One per company','Um por empresa')}</option><option value="top">{t(`Top ${comparisonLimit(board.id)} results`,`${comparisonLimit(board.id)} maiores resultados`)}</option><option value="free">{isWriting?t('Free models','Modelos grátis'):isArena?t('Verified free models','Modelos grátis verificados'):t(`Top ${freeComparisonLimit(board.id)} free`,`Top ${freeComparisonLimit(board.id)} grátis`)}</option><option value="value">{t('Cost per score','Custo por ponto')}</option><option value="value-free">{t('Cost per score Free','Custo por ponto grátis')}</option></select><ChevronDown size={14}/></label>{valueMode&&<label className="period-select"><select aria-label={t('Score visibility','Visibilidade das notas')} value={hideRed?'hide-red':'all'} onChange={e=>setHideRed(e.target.value==='hide-red')}><option value="all">{t('Show all models','Mostrar todos os modelos')}</option><option value="hide-red">{t('Hide red models','Ocultar modelos em vermelho')}</option></select><ChevronDown size={14}/></label>}
   </>}</div></div>
 
- {freeMode&&!isWeb&&selectedRows.length<freeComparisonLimit(board.id)&&<p className="compact-status">{isWriting?t(`${selectedRows.length} models with free access in this benchmark.`,`${selectedRows.length} modelos com acesso grátis nesta avaliação.`):t(`${selectedRows.length} verified free models available in this benchmark.`,`${selectedRows.length} modelos com acesso grátis verificado nesta avaliação.`)}</p>}
- {isLongform?<p className="value-caption">{t('Longform fiction · eight chapters · AI-judged score from 0 to 100','Ficção longa · oito capítulos · nota de 0 a 100 dada por IA')}</p>:isWriting?<p className="value-caption">{t('Arena votes on creative prompts, such as stories and other creative texts. It does not evaluate entire books.','Votos da Arena em propostas de escrita, como histórias e outros textos criativos. A avaliação não mede livros completos.')}</p>:isArena&&<p className="value-caption">{t('Human preference','Preferência humana')}{board.id==='text'?' · English':''} · {t('Separate scale from AA','Escala separada da AA')}</p>}
+ {freeMode&&!isWeb&&!is3D&&selectedRows.length<freeComparisonLimit(board.id)&&<p className="compact-status">{isWriting?t(`${selectedRows.length} models with free access in this benchmark.`,`${selectedRows.length} modelos com acesso grátis nesta avaliação.`):t(`${selectedRows.length} verified free models available in this benchmark.`,`${selectedRows.length} modelos com acesso grátis verificado nesta avaliação.`)}</p>}
+ {is3D?<p className="value-caption">{t('3D generation Elo · mesh density, UV mapping, PBR texture fidelity & auto-rigging','Elo de geração 3D · densidade de malha, mapeamento UV, texturização PBR e auto-rigging')}</p>:isLongform?<p className="value-caption">{t('Longform fiction · eight chapters · AI-judged score from 0 to 100','Ficção longa · oito capítulos · nota de 0 a 100 dada por IA')}</p>:isWriting?<p className="value-caption">{t('Arena votes on creative prompts, such as stories and other creative texts. It does not evaluate entire books.','Votos da Arena em propostas de escrita, como histórias e outros textos criativos. A avaliação não mede livros completos.')}</p>:isArena&&<p className="value-caption">{t('Human preference','Preferência humana')}{board.id==='text'?' · English':''} · {t('Separate scale from AA','Escala separada da AA')}</p>}
  {valueMode&&isLongform&&<p className="free-value-note">{t('API price reference:','Referência de preço da API:')} <a href="https://openrouter.ai/models" target="_blank" rel="noopener noreferrer">OpenRouter</a> · {t('1M tokens (50% input, 50% output). Missing prices show —.','1 milhão de tokens (50% entrada, 50% saída). Preços ausentes aparecem como —.')}</p>}
  {valueMode&&isArena&&<p className="free-value-note">{board.id==='text'?t('API reference: 1M tokens, 50% input + 50% output. Compare within this source only.','Referência de API: 1M tokens, 50% entrada + 50% saída. Compare apenas nesta fonte.'):t('Arena publishes no comparable API price for this board. Cost per score is unavailable (—); models remain ordered by score.','A Arena não publica preço de API comparável nesta tabela. Custo por ponto indisponível (—); modelos permanecem ordenados por nota.')}</p>}
  {valueMode&&freeMode&&<p className="free-value-note">{t('Free quotas apply. The API price shown is separate from free access.','Há cotas grátis. O preço de API exibido é separado do acesso grátis.')}</p>}
- {rows.length>0?<Plot board={board} rows={rows} offers={offers} valueMode={valueMode}/>:<div className="empty-state">{isWeb?t('The DesignArena ranking is temporarily unavailable.','O ranking do DesignArena está temporariamente indisponível.'):isLongform&&!freeMode?t('EQ-Bench Longform is currently unavailable. Try refreshing later.','O EQ-Bench Longform está indisponível. Tente atualizar mais tarde.'):isArena&&!freeMode?t('Arena is currently unavailable. Try refreshing later.','A Arena está indisponível. Tente atualizar mais tarde.'):valueMode?t('No published API prices in this edition.','Nenhum preço de API publicado nesta edição.'):t('No verified free models in this edition.','Nenhum modelo grátis verificado nesta edição.')}</div>}
- {freeMode&&!isWeb&&board.id==='text'&&<div className="unranked-chats"><span>{t('More chats · model to confirm','Mais chats · modelo a confirmar')}</span>{[{company:'xAI',name:'Grok',url:'https://grok.com/'},{company:'Kimi',name:'Kimi',url:'https://www.kimi.com/'}].map(chat=><a key={chat.name} href={chat.url} target="_blank" rel="noopener noreferrer" title={t('The free tier’s exact model was not matched to this benchmark. No score is assigned.','A versão exata do plano grátis não foi identificada nesta avaliação. Nenhuma nota foi atribuída.')}><Brand name={chat.company} small/>{chat.name}<ArrowUpRight size={12}/></a>)}</div>}
- {isWeb?<div className="comparison-bottom"><details className="quiet-details benchmark-details"><summary>{t('Details','Detalhes')}</summary><div className="details-body">
+ {rows.length>0?<Plot board={board} rows={rows} offers={offers} valueMode={valueMode}/>:<div className="empty-state">{is3D?t('3D modeling comparison is currently unavailable.','O comparativo 3D está indisponível.'):isWeb?t('The DesignArena ranking is temporarily unavailable.','O ranking do DesignArena está temporariamente indisponível.'):isLongform&&!freeMode?t('EQ-Bench Longform is currently unavailable. Try refreshing later.','O EQ-Bench Longform está indisponível. Tente atualizar mais tarde.'):isArena&&!freeMode?t('Arena is currently unavailable. Try refreshing later.','A Arena está indisponível. Tente atualizar mais tarde.'):valueMode?t('No published API prices in this edition.','Nenhum preço de API publicado nesta edição.'):t('No verified free models in this edition.','Nenhum modelo grátis verificado nesta edição.')}</div>}
+ 
+ {is3D&&<div className="three-d-plans-container" style={{marginTop:'28px',paddingTop:'22px',borderTop:'1px solid var(--line)'}}>
+  <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',marginBottom:'16px',flexWrap:'wrap',gap:'8px'}}>
+   <div>
+    <h4 style={{margin:0,fontSize:'16px',fontWeight:650,color:'var(--text)'}}>{t('3D Projects · Plans, Pricing & Features Comparison','Projetos 3D · Comparativo de Planos, Valores e Recursos')}</h4>
+    <p style={{margin:'4px 0 0',fontSize:'11px',color:'var(--muted)'}}>{t('Compare monthly subscription plans, free trial allowances and key 3D capabilities across major tools.','Compare planos de assinatura mensais, cotas gratuitas e recursos-chave de modelagem 3D.')}</p>
+   </div>
+   <span style={{fontSize:'10px',color:'var(--muted)',border:'1px solid var(--line)',borderRadius:'5px',padding:'4px 8px'}}>{t('Direct links to official pricing','Links diretos para preços oficiais')}</span>
+  </div>
+  <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(310px,1fr))',gap:'14px'}}>
+   {THREE_D_TOOLS.map(tool=><article key={tool.id} className="price-card" style={{padding:'16px',borderRadius:'10px',border:'1px solid var(--line)',background:'var(--paper)',display:'flex',flexDirection:'column',gap:'12px'}}>
+    <header style={{display:'flex',alignItems:'center',gap:'10px'}}>
+     <Brand name={tool.company}/>
+     <div style={{flex:1,minWidth:0}}>
+      <h2 style={{fontSize:'14px',margin:0,fontWeight:600}}>{tool.name}</h2>
+      <span style={{fontSize:'11px',color:'var(--muted)'}}>{tool.company} · {t('Score Elo: ','Nota Elo: ')}<strong style={{color:'var(--text)'}}>{tool.score}</strong></span>
+     </div>
+     <a href={tool.url} target="_blank" rel="noopener noreferrer" aria-label={tool.name} style={{color:'var(--muted)',display:'flex'}}><ArrowUpRight size={16}/></a>
+    </header>
+    <p style={{fontSize:'11px',lineHeight:1.6,color:'var(--muted)',margin:0}}>
+     {language==='en'?tool.highlight.en:tool.highlight.pt}
+    </p>
+    <div className="price-table" style={{fontSize:'11px',background:'var(--side)',borderRadius:'7px',padding:'8px 10px'}}>
+     <table style={{width:'100%',borderCollapse:'collapse'}}>
+      <thead>
+       <tr style={{borderBottom:'1px solid var(--line)'}}>
+        <th style={{textAlign:'left',padding:'4px 2px',fontSize:'10px',color:'var(--muted)'}}>{t('Plan','Plano')}</th>
+        <th style={{textAlign:'left',padding:'4px 2px',fontSize:'10px',color:'var(--muted)'}}>{t('Price','Valor')}</th>
+        <th style={{textAlign:'left',padding:'4px 2px',fontSize:'10px',color:'var(--muted)'}}>{t('Credits & Key Perks','Créditos e Vantagens')}</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr style={{borderBottom:'1px solid color-mix(in srgb,var(--line) 40%,transparent)'}}>
+        <td style={{padding:'6px 2px',fontWeight:600}}>{tool.plans.free.name}</td>
+        <td style={{padding:'6px 2px',color:'var(--green)'}}>{tool.plans.free.price}</td>
+        <td style={{padding:'6px 2px',fontSize:'10px'}}>
+         {language==='en'?tool.plans.free.credits.en:tool.plans.free.credits.pt} · <span style={{color:'var(--muted)'}}>{language==='en'?tool.plans.free.features.en:tool.plans.free.features.pt}</span>
+        </td>
+       </tr>
+       <tr style={{borderBottom:tool.plans.studio?'1px solid color-mix(in srgb,var(--line) 40%,transparent)':'none'}}>
+        <td style={{padding:'6px 2px',fontWeight:600}}>{tool.plans.pro.name}</td>
+        <td style={{padding:'6px 2px',fontWeight:600}}>{tool.plans.pro.price}</td>
+        <td style={{padding:'6px 2px',fontSize:'10px'}}>
+         {language==='en'?tool.plans.pro.credits.en:tool.plans.pro.credits.pt} · <span style={{color:'var(--muted)'}}>{language==='en'?tool.plans.pro.features.en:tool.plans.pro.features.pt}</span>
+        </td>
+       </tr>
+       {tool.plans.studio&&<tr>
+        <td style={{padding:'6px 2px',fontWeight:600}}>{tool.plans.studio.name}</td>
+        <td style={{padding:'6px 2px'}}>{tool.plans.studio.price}</td>
+        <td style={{padding:'6px 2px',fontSize:'10px'}}>
+         {language==='en'?tool.plans.studio.credits.en:tool.plans.studio.credits.pt} · <span style={{color:'var(--muted)'}}>{language==='en'?tool.plans.studio.features.en:tool.plans.studio.features.pt}</span>
+        </td>
+       </tr>}
+      </tbody>
+     </table>
+    </div>
+    <div style={{display:'flex',flexWrap:'wrap',gap:'6px',marginTop:'auto',paddingTop:'8px',borderTop:'1px solid var(--line)',fontSize:'10px',color:'var(--muted)',alignItems:'center'}}>
+     <span>{t('Formats: ','Formatos: ')}<strong style={{color:'var(--text)'}}>{tool.formats.join(', ')}</strong></span>
+     {tool.features.autoRigging&&<span style={{marginLeft:'auto',background:'var(--soft)',color:'var(--green)',padding:'2px 6px',borderRadius:'4px'}}>{t('Rigging','Rigging')}</span>}
+     {tool.features.retopology&&<span style={{background:'var(--soft)',color:'var(--green)',padding:'2px 6px',borderRadius:'4px'}}>{t('Retopology','Retopologia')}</span>}
+    </div>
+   </article>)}
+  </div>
+ </div>}
+
+ {freeMode&&!isWeb&&!is3D&&board.id==='text'&&<div className="unranked-chats"><span>{t('More chats · model to confirm','Mais chats · modelo a confirmar')}</span>{[{company:'xAI',name:'Grok',url:'https://grok.com/'},{company:'Kimi',name:'Kimi',url:'https://www.kimi.com/'}].map(chat=><a key={chat.name} href={chat.url} target="_blank" rel="noopener noreferrer" title={t('The free tier’s exact model was not matched to this benchmark. No score is assigned.','A versão exata do plano grátis não foi identificada nesta avaliação. Nenhuma nota foi atribuída.')}><Brand name={chat.company} small/>{chat.name}<ArrowUpRight size={12}/></a>)}</div>}
+ {is3D?<div className="comparison-bottom"><details className="quiet-details benchmark-details"><summary>{t('Details','Detalhes')}</summary><div className="details-body">
+  <p>{t('Comparison of generative AI tools and pipelines for 3D modeling, mesh generation, retopology and PBR texturing (such as Tripo3D, Rodin, Meshy, CSM, Trellis). Scores reflect 3D Elo preference in geometric fidelity, UV unwrapping and texture coherence.','Comparativo de ferramentas e pipelines de IA generativa para modelagem 3D, geração de malhas, retopologia e texturização PBR (como Tripo3D, Rodin, Meshy, CSM, Trellis). As notas refletem preferência humana e índices de fidelidade geométrica, UV unwrapping e coerência de texturas.')}</p>
+  <p>{t('Plan values and credit quotas are checked against official provider tables in USD. Free tiers provide testing quotas; paid tiers unlock quad retopology, auto-rigging and high-density export in industry standard formats (GLTF, FBX, OBJ, USDZ).','Valores de planos e cotas de créditos são consultados nas tabelas oficiais dos fornecedores em USD. Planos gratuitos oferecem cotas para testes; planos pagos liberam retopologia quad, auto-rigging e exportação em alta densidade nos formatos padrão da indústria (GLTF, FBX, OBJ, USDZ).')}</p>
+  <a href="https://www.tripo3d.ai/" target="_blank" rel="noopener noreferrer">{t('Official Tripo3D site','Site oficial Tripo3D')} <ArrowUpRight size={12}/></a>
+ </div></details></div>:isWeb?<div className="comparison-bottom"><details className="quiet-details benchmark-details"><summary>{t('Details','Detalhes')}</summary><div className="details-body">
   <p>{t('Top 20 by Elo in the DesignArena Website category, using each model’s best-ranked variant. People compare AI-generated sites without seeing which models made them. Battles are the number of comparisons for each model. The ranking measures voter preference for the generated sites.','Top 20 por Elo na categoria Website do DesignArena, com a variante mais bem colocada de cada modelo. Pessoas comparam sites gerados por IA sem saber quais modelos os criaram. O número de comparações aparece em cada linha. O ranking mede a preferência dos votantes pelos sites gerados.')}</p>
   {board.publishedAt&&<p>{t('Source edition','Edição da fonte')}: {new Intl.DateTimeFormat(locale,{dateStyle:'medium',timeStyle:'short',timeZone:'America/Sao_Paulo'}).format(new Date(board.publishedAt))} · Brasília</p>}
   <a href={board.methodology} target="_blank" rel="noopener noreferrer">{t('Methodology','Metodologia')} <ArrowUpRight size={12}/></a>

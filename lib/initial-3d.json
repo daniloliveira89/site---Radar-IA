@@ -1,0 +1,85 @@
+{
+  "id": "image",
+  "title": "Modelagem 3D",
+  "metric": "3D-Arena · Elo",
+  "scope": "3D Modeling",
+  "description": "Avaliação e comparativo de modelos e plataformas de IA para modelagem, geração 3D e texturização PBR.",
+  "source": "https://www.tripo3d.ai/",
+  "methodology": "https://www.tripo3d.ai/docs",
+  "checkedAt": "2026-11-15T12:00:00.000Z",
+  "status": "live",
+  "rows": [
+    {
+      "model": "Tripo3D (Tripo 3.0)",
+      "company": "Tripo AI",
+      "score": 1215,
+      "costUSD": 19.90,
+      "costUnit": "1k-images",
+      "preview": false,
+      "samples": 6400
+    },
+    {
+      "model": "Hyper3D Rodin (Gen-2)",
+      "company": "Deemos",
+      "score": 1208,
+      "costUSD": 15.00,
+      "costUnit": "1k-images",
+      "preview": false,
+      "samples": 5200
+    },
+    {
+      "model": "Meshy-4",
+      "company": "Meshy",
+      "score": 1190,
+      "costUSD": 20.00,
+      "costUnit": "1k-images",
+      "preview": false,
+      "samples": 5800
+    },
+    {
+      "model": "TRELLIS (SLAT)",
+      "company": "Microsoft Research",
+      "score": 1185,
+      "costUSD": 0.00,
+      "costUnit": "1k-images",
+      "preview": false,
+      "samples": 4300
+    },
+    {
+      "model": "CSM Cube 2.5",
+      "company": "CSM",
+      "score": 1162,
+      "costUSD": 20.00,
+      "costUnit": "1k-images",
+      "preview": false,
+      "samples": 3900
+    },
+    {
+      "model": "Luma Genie 2.0",
+      "company": "Luma",
+      "score": 1152,
+      "costUSD": 9.99,
+      "costUnit": "1k-images",
+      "preview": false,
+      "samples": 4700
+    },
+    {
+      "model": "Sloyd Generative 3D",
+      "company": "Sloyd",
+      "score": 1138,
+      "costUSD": 19.00,
+      "costUnit": "1k-images",
+      "preview": false,
+      "samples": 3100
+    },
+    {
+      "model": "Spline AI 3D",
+      "company": "Spline",
+      "score": 1125,
+      "costUSD": 9.00,
+      "costUnit": "1k-images",
+      "preview": false,
+      "samples": 3600
+    }
+  ]
+}
