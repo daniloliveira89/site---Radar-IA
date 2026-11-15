@@ -29,14 +29,16 @@ function Plot({board,rows,offers,valueMode=false}:{board:Board,rows:BenchmarkRow
   const name=board.evaluation==='eq-bench'?formatLongformModel(r.model):r.model;
   const accessTitle=(a as {limitsEn?:string;limitsPt?:string})[language==='en'?'limitsEn':'limitsPt']||(a.kind==='mixed'?t('Free access can have quotas, regional restrictions and different reasoning settings. Open the source for terms.','O acesso grátis pode ter cotas, restrições regionais e configurações de raciocínio diferentes. Abra a fonte para ver as condições.'):t('Open access terms for this model.','Abrir condições de acesso deste modelo.'));
   const maxScore=Math.max(...scores),minScore=Math.min(...scores),listRange=maxScore-minScore||1;
-  const norm=listRange>0?Math.max(0,Math.min(1,(r.score-minScore)/listRange)):1;
+  const isTop=r.score===maxScore;
+  const fade=listRange>0?Math.max(0,Math.min(1,(maxScore-r.score)/listRange)):0;
+  const barBackground=isTop?'#4f46e5':`linear-gradient(90deg, color-mix(in srgb, #4f46e5 ${Math.round(100-45*fade)}%, #a5b4fc), color-mix(in srgb, #4f46e5 ${Math.round(70-55*fade)}%, #e0e7ff))`;
   const below=value!==undefined&&isBelowAnyAbove(rows,i),tie=value!==undefined&&isTiedWithBestAbove(rows,i);
   const ratioTitle=below?t('Lower score than a model above: ','Nota menor que a de um modelo acima: ')+r.score+' < '+highestScoreAbove(rows,i):tie?t('Same score as a model above; none above has a higher score.','Mesma nota de um modelo acima; nenhum acima tem nota maior.'):undefined;
   const interval=r.low!==undefined&&r.high!==undefined?'95% CI: '+formatScore(r.low)+'–'+formatScore(r.high):undefined;
   return <tr key={r.model}>
    <th scope="row"><div className="score-model"><span className="score-rank" aria-hidden="true">{i+1}</span><Brand name={r.company} small/><strong title={r.model}>{name}</strong></div></th>
    <td><div className="score-meta"><span>{r.company}{r.preview?t(' · preview',' · prévia'):''}</span><a className={'access-badge '+a.kind} href={a.url} target="_blank" rel="noopener noreferrer" title={accessTitle}>{t(a.en,a.pt)}</a>{isWeb&&<><span>·</span><span>{r.samples?.toLocaleString(locale)||'—'}</span></>}{valueMode&&<span className="score-price">{value!==undefined?money(r.costUSD!,locale)+' / '+costUnit(board,language):'—'}</span>}</div></td>
-   <td><div className="score-meter" title={interval}><span className="score-track" aria-hidden="true"><span style={{width:Math.max(0,Math.min(100,(r.score-min)/(max-min)*100))+'%',background:`linear-gradient(90deg, color-mix(in srgb, #4f46e5 ${Math.round(35+65*norm)}%, #93c5fd), color-mix(in srgb, #06b6d4 ${Math.round(35+65*norm)}%, #cffafe))`,opacity:Math.max(0.4,Math.min(1,0.4+0.6*norm))}}/></span><strong>{formatScore(r.score)}</strong>{interval&&<span className="score-sr-only"> ({interval})</span>}</div></td>
+   <td><div className="score-meter" title={interval}><span className="score-track" aria-hidden="true"><span style={{width:Math.max(0,Math.min(100,(r.score-min)/(max-min)*100))+'%',background:barBackground}}/></span><strong>{formatScore(r.score)}</strong>{interval&&<span className="score-sr-only"> ({interval})</span>}</div></td>
    {valueMode&&<td className={'score-ratio '+(below?'score-regression':tie?'score-tie':'')} title={ratioTitle}>{value===undefined?'—':money(value,locale,true)}</td>}
   </tr>;
  })}</tbody></table></div>;
