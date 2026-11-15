@@ -53,8 +53,8 @@ test('category rank #1 models correspond to top benchmark winners', () => {
   assert.equal(topResearch.company, 'DeepSeek');
 
   const topImage = RANKED_AIS.find(i => i.category === 'image' && i.rank === 1);
-  assert(topImage.model.includes('Imagen 3') || topImage.model.includes('Flow'), 'Top Image should be Imagen 3 / Flow');
-  assert.equal(topImage.company, 'Google');
+  assert(topImage.model.includes('Sunburst'), 'Top Image should be GPT Image 2.6 Sunburst');
+  assert.equal(topImage.company, 'OpenAI');
 
   const topScience = RANKED_AIS.find(i => i.category === 'science' && i.rank === 1);
   assert(topScience.model.includes('Gemini 4 Argon'), 'Top Science should be Gemini 4 Argon');
@@ -108,4 +108,16 @@ test('all ChatGPT models are marked with Codex and not Antigravity', () => {
     assert.equal(item.codex, true, `${item.model} should be Codex ready`);
     assert.equal(item.antigravity, false, `${item.model} should NOT be Antigravity ready`);
   }
+});
+
+test('image category in my-ranking includes GPT Image 2.6 Sunburst and Flare with Codex support', () => {
+  const sunburst = RANKED_AIS.find(i => i.category === 'image' && i.model.includes('Sunburst'));
+  assert(sunburst, 'GPT Image 2.6 Sunburst must be in Image category');
+  assert.equal(sunburst.codex, true, 'Sunburst must be Codex enabled');
+  assert.equal(sunburst.company, 'OpenAI');
+
+  const flare = RANKED_AIS.find(i => i.category === 'image' && i.model.includes('Flare'));
+  assert(flare, 'GPT Image 2.6 Flare must be in Image category');
+  assert.equal(flare.codex, true, 'Flare must be Codex enabled');
+  assert.equal(flare.company, 'OpenAI');
 });

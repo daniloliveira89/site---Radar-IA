@@ -211,6 +211,20 @@ export const MY_ACCOUNTS: MyAccount[] = [
         descriptionEn: 'Specialized in STEM, code refactoring and algorithmic logic.'
       },
       {
+        name: 'GPT Image 2.6 Sunburst',
+        descriptionPt: 'Modelo #1 do mundo em geração de imagem (1261 Elo), fotorrealismo cinematográfico e renderização tipográfica precisa.',
+        descriptionEn: '#1 global image generation model (1261 Elo), cinematic photorealism, and precise typography rendering.',
+        isLatest: true,
+        badge: '#1 Global'
+      },
+      {
+        name: 'GPT Image 2.6 Flare',
+        descriptionPt: 'Geração ultrarrápida de imagens com alta resolução e ampla dinâmica de cores.',
+        descriptionEn: 'Ultra-fast image generation with high resolution and wide color dynamics.',
+        isLatest: true,
+        badge: 'Alta Velocidade'
+      },
+      {
         name: 'SearchGPT',
         descriptionPt: 'Busca na web em tempo real conectada ao índice com links verificados.',
         descriptionEn: 'Real-time web search connected to index with verified citations.'
@@ -224,7 +238,7 @@ export const MY_ACCOUNTS: MyAccount[] = [
     },
     codex: {
       supported: true,
-      models: ['OpenAI Codex', 'GPT-4o', 'o3-mini', 'GPT-5 Thinking Mini'],
+      models: ['OpenAI Codex', 'GPT-4o', 'o3-mini', 'GPT-5 Thinking Mini', 'GPT Image 2.6 Sunburst', 'GPT Image 2.6 Flare'],
       notesPt: 'Ambiente nativo para automação, CLI autônoma e geração de software no Codex.',
       notesEn: 'Native environment for automation, autonomous CLI and software gen in Codex.'
     }
@@ -267,10 +281,23 @@ export const MY_ACCOUNTS: MyAccount[] = [
       {
         name: 'GPT-6 Luna',
         descriptionPt: 'Nova geração ágil e de alta velocidade de resposta para autocompletar e edição interativa de arquivos.',
-        descriptionEn: 'New agile, highly responsive generation for code autocomplete and interactive file edits.'
-        ,
+        descriptionEn: 'New agile, highly responsive generation for code autocomplete and interactive file edits.',
         isLatest: true,
         badge: 'Mais Recente'
+      },
+      {
+        name: 'GPT Image 2.6 Sunburst',
+        descriptionPt: 'Geração e inspeção de imagens de ultra-alta fidelidade (#1 Global, 1261 Elo) integrada ao ecossistema Codex.',
+        descriptionEn: 'Ultra-high-fidelity image generation and inspection (#1 Global, 1261 Elo) integrated into the Codex ecosystem.',
+        isLatest: true,
+        badge: '#1 Global'
+      },
+      {
+        name: 'GPT Image 2.6 Flare',
+        descriptionPt: 'Geração rápida de assets visuais e prototipagem ágil integrada ao terminal Codex.',
+        descriptionEn: 'Fast visual asset generation and agile prototyping integrated into the Codex terminal.',
+        isLatest: true,
+        badge: 'Alta Velocidade'
       }
     ],
     antigravity: {
@@ -281,7 +308,7 @@ export const MY_ACCOUNTS: MyAccount[] = [
     },
     codex: {
       supported: true,
-      models: ['OpenAI Codex', 'GPT-5 Thinking Mini', 'GPT-4o', 'o3-mini'],
+      models: ['OpenAI Codex', 'GPT-5 Thinking Mini', 'GPT-4o', 'o3-mini', 'GPT Image 2.6 Sunburst', 'GPT Image 2.6 Flare'],
       notesPt: 'Ambiente nativo para automação, CLI autônoma e geração de software no Codex.',
       notesEn: 'Native environment for automation, autonomous CLI and software gen in Codex.'
     }
