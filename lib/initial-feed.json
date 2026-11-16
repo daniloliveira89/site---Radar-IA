@@ -1,6 +1,20 @@
 {
   "articles": [
     {
+      "id": "OpenAI:https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+      "company": "OpenAI",
+      "title": "Broadening access to AI for scientists",
+      "originalTitle": "Broadening access to AI for scientists",
+      "excerpt": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models.",
+      "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+      "date": "2026-11-16T17:00:00.000Z",
+      "category": "Aplicativos",
+      "important": true,
+      "topics": [],
+      "summary": "Publicação da OpenAI sobre aplicativos e ferramentas de IA. Abra o anúncio para conferir os recursos e as condições de acesso.",
+      "newsKind": "Teste grátis"
+    },
+    {
       "id": "OpenAI:https://openai.com/index/introducing-chatgpt-wallet",
       "company": "OpenAI",
       "title": "Conheça ChatGPT Wallet",
@@ -403,8 +417,8 @@
       "name": "OpenAI News",
       "url": "https://openai.com/news/rss.xml",
       "status": "ok",
-      "count": 5,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "count": 6,
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "deepmind",
@@ -413,7 +427,7 @@
       "url": "https://deepmind.google/blog/rss.xml",
       "status": "ok",
       "count": 4,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "google",
@@ -422,7 +436,7 @@
       "url": "https://blog.google/technology/ai/rss/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "google-dev",
@@ -431,7 +445,7 @@
       "url": "https://developers.googleblog.com/feeds/posts/default",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "google-aistudio",
@@ -440,7 +454,7 @@
       "url": "https://ai.google.dev/gemini-api/docs/changelog",
       "status": "ok",
       "count": 5,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "anthropic",
@@ -449,7 +463,7 @@
       "url": "https://www.anthropic.com/news",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "anthropic-models",
@@ -458,7 +472,7 @@
       "url": "https://www.anthropic.com/news/models",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "deepseek",
@@ -467,7 +481,7 @@
       "url": "https://www.deepseek.com/en/news/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "xai",
@@ -476,7 +490,7 @@
       "url": "https://x.ai/news",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-16T08:02:11.213Z",
+      "checkedAt": "2026-11-16T20:32:26.291Z",
       "error": "HTTP 403"
     },
     {
@@ -486,7 +500,7 @@
       "url": "https://www.kimi.com/en/blog/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "z-ai",
@@ -495,7 +509,7 @@
       "url": "https://www.zhipuai.cn/en/research",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "bfl",
@@ -504,7 +518,7 @@
       "url": "https://blackforestlabs.ai/blog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "runway",
@@ -513,7 +527,7 @@
       "url": "https://runwayml.com/changelog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "luma",
@@ -522,7 +536,7 @@
       "url": "https://lumalabs.ai/news",
       "status": "ok",
       "count": 6,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "midjourney",
@@ -531,7 +545,7 @@
       "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-16T08:02:11.213Z",
+      "checkedAt": "2026-11-16T20:32:26.291Z",
       "error": "HTTP 403"
     },
     {
@@ -541,7 +555,7 @@
       "url": "https://blogs.microsoft.com/feed/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "meta",
@@ -550,7 +564,7 @@
       "url": "https://about.fb.com/feed/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     },
     {
       "id": "mistral",
@@ -559,9 +573,9 @@
       "url": "https://mistral.ai/news/rss",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-16T08:02:11.213Z"
+      "checkedAt": "2026-11-16T20:32:26.291Z"
     }
   ],
-  "fetchedAt": "2026-11-16T08:02:11.213Z",
-  "nextCheckAt": "2026-11-16T14:02:11.213Z"
+  "fetchedAt": "2026-11-16T20:32:26.291Z",
+  "nextCheckAt": "2026-11-17T02:32:26.291Z"
 }
