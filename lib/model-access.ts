@@ -9,6 +9,7 @@ export function modelAccess(company:string,model:string,offers:FreeOffer[]=initi
  if(company==='Midjourney')return {kind:'paid',en:'Paid plan',pt:'Plano pago',url:'https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans'};
  if(company==='Runway')return {kind:'paid',en:'Paid · limited trial',pt:'Pago · teste limitado',url:'https://runway.com/pricing'};
  if(company==='Luma')return {kind:'paid',en:'Paid plan / API',pt:'Plano / API pagos',url:'https://lumalabs.ai/pricing'};
+ if(company==='Kling')return {kind:'mixed',en:'Free credits · plans',pt:'Créditos grátis · planos',url:'https://klingai.com/'};
  if(company==='Higgsfield')return {kind:'paid',en:'Paid plan / trial',pt:'Plano pago / teste',url:'https://higgsfield.ai/'};
  if(company==='Adobe')return {kind:'paid',en:'Paid plan / credits',pt:'Plano pago / créditos',url:'https://www.adobe.com/products/firefly.html'};
  if(company==='Stability AI')return {kind:'mixed',en:'API / Open weights',pt:'API / Pesos abertos',url:'https://stability.ai/pricing'};

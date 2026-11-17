@@ -30,3 +30,22 @@ test('Qwen4-Max appears in comparative tables and news feed with editorial brief
   assert(brief.evolution && brief.evolution.length > 0);
  }
 });
+
+test('Compare Video Generators top 8 order matches user rankings', () => {
+ const benchmarks = JSON.parse(fs.readFileSync(new URL('../lib/initial-benchmarks.json', import.meta.url)));
+ const videoBoard = benchmarks.boards.find(b => b.id === 'video');
+ const top8 = videoBoard.rows.slice(0, 8);
+
+ assert.match(top8[0].model, /Kling 4/i, 'Rank 1 must be Kling 4.0');
+ assert.match(top8[1].model, /Seedance 2\.5/i, 'Rank 2 must be Seedance 2.5');
+ assert.match(top8[2].model, /MiniMax H3/i, 'Rank 3 must be MiniMax H3');
+ assert.match(top8[3].model, /Seedance 2\.0/i, 'Rank 4 must be Seedance 2.0');
+ assert.match(top8[4].model, /Wan 3/i, 'Rank 5 must be Wan 3.0');
+ assert.match(top8[5].model, /FLUX/i, 'Rank 6 must be Flux');
+ assert.match(top8[6].model, /Omni/i, 'Rank 7 must be Gemini Omni');
+ assert.match(top8[7].model, /Grok/i, 'Rank 8 must be Grok 1.5');
+
+ for (let i = 1; i < top8.length; i++) {
+  assert(top8[i - 1].score > top8[i].score, 'Scores must be strictly descending');
+ }
+});

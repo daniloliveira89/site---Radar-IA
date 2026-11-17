@@ -1891,20 +1891,97 @@
       "checkedAt": "2026-11-17T09:16:35.266Z",
       "rows": [
         {
-          "model": "Wan 3.0",
-          "company": "Alibaba",
-          "score": 1174,
-          "costUSD": 12,
+          "model": "Kling 4.0",
+          "company": "Kling",
+          "score": 1182,
+          "costUSD": 8.4,
+          "costUnit": "minute",
+          "low": 1168,
+          "high": 1195,
+          "samples": 6240,
+          "preview": false
+        },
+        {
+          "model": "Dreamina Seedance 2.5",
+          "company": "ByteDance",
+          "score": 1178,
+          "costUSD": 34.12,
+          "costUnit": "minute",
+          "low": 1164,
+          "high": 1191,
+          "samples": 5420,
+          "preview": false
+        },
+        {
+          "model": "MiniMax H3 (768p)",
+          "company": "MiniMax",
+          "score": 1175,
+          "costUSD": 4.8,
           "costUnit": "minute",
           "low": 1161,
-          "high": 1187,
-          "samples": 8089,
+          "high": 1188,
+          "samples": 4830,
+          "preview": false
+        },
+        {
+          "model": "Dreamina Seedance 2.0",
+          "company": "ByteDance",
+          "score": 1172,
+          "costUSD": 22.45,
+          "costUnit": "minute",
+          "low": 1158,
+          "high": 1185,
+          "samples": 4120,
+          "preview": false
+        },
+        {
+          "model": "Wan 3.0",
+          "company": "Alibaba",
+          "score": 1170,
+          "costUSD": 12,
+          "costUnit": "minute",
+          "low": 1156,
+          "high": 1183,
+          "samples": 5210,
+          "preview": false
+        },
+        {
+          "model": "FLUX 3 Max",
+          "company": "Fal",
+          "score": 1166,
+          "costUSD": 8.7,
+          "costUnit": "minute",
+          "low": 1152,
+          "high": 1179,
+          "samples": 4650,
+          "preview": false
+        },
+        {
+          "model": "Gemini Omni Flash 1.2",
+          "company": "Google",
+          "score": 1162,
+          "costUSD": 6.26,
+          "costUnit": "minute",
+          "low": 1148,
+          "high": 1175,
+          "samples": 5354,
+          "preview": false
+        },
+        {
+          "model": "Grok Imagine Video 1.5",
+          "company": "xAI",
+          "score": 1158,
+          "costUSD": 15,
+          "costUnit": "minute",
+          "low": 1144,
+          "high": 1171,
+          "samples": 3980,
           "preview": false
         },
         {
           "model": "Runway Gen-3 Alpha",
           "company": "Runway",
-          "score": 1170,
+          "score": 1155,
           "costUSD": 0.5,
           "costUnit": "minute",
           "preview": false,
@@ -1913,7 +1990,7 @@
         {
           "model": "Utopai X",
           "company": "Utopai Studios",
-          "score": 1168,
+          "score": 1154,
           "low": 1155,
           "high": 1181,
           "samples": 7442,
@@ -1922,7 +1999,7 @@
         {
           "model": "OpenAI Sora",
           "company": "OpenAI",
-          "score": 1168,
+          "score": 1152,
           "costUSD": 0.6,
           "costUnit": "minute",
           "preview": false,
@@ -1931,78 +2008,34 @@
         {
           "model": "Higgsfield Cinema",
           "company": "Higgsfield",
-          "score": 1165,
+          "score": 1150,
           "costUSD": 0.35,
           "costUnit": "minute",
           "preview": false,
           "samples": 3420
         },
         {
-          "model": "MiniMax H3 (768p)",
-          "company": "MiniMax",
-          "score": 1159,
-          "costUSD": 4.8,
-          "costUnit": "minute",
-          "low": 1146,
-          "high": 1172,
-          "samples": 8225,
-          "preview": false
-        },
-        {
           "model": "Luma Dream Machine (Ray 2)",
           "company": "Luma",
-          "score": 1158,
+          "score": 1148,
           "costUSD": 0.4,
           "costUnit": "minute",
           "preview": false,
           "samples": 4800
         },
         {
-          "model": "Dreamina Seedance 2.5",
-          "company": "ByteDance",
-          "score": 1156,
-          "costUSD": 34.12,
-          "costUnit": "minute",
-          "low": 1143,
-          "high": 1169,
-          "samples": 8214,
-          "preview": false
-        },
-        {
           "model": "Tencent HunyuanVideo",
           "company": "Tencent",
-          "score": 1155,
+          "score": 1146,
           "costUSD": 0.28,
           "costUnit": "minute",
           "preview": false,
           "samples": 3800
         },
         {
-          "model": "FLUX 3 Max",
-          "company": "Fal",
-          "score": 1152,
-          "costUSD": 8.7,
-          "costUnit": "minute",
-          "low": 1137,
-          "high": 1167,
-          "samples": 4526,
-          "preview": false
-        },
-        {
-          "model": "Gemini Omni Flash 1.2",
-          "company": "Google",
-          "score": 1151,
-          "costUSD": 6.26,
-          "costUnit": "minute",
-          "low": 1137,
-          "high": 1165,
-          "samples": 5634,
-          "preview": false
-        },
-        {
           "model": "HeyGen Video 1",
           "company": "HeyGen",
-          "score": 1149,
+          "score": 1144,
           "costUSD": 2.4,
           "costUnit": "minute",
           "low": 1136,
@@ -2013,7 +2046,7 @@
         {
           "model": "OpenAI Sora Turbo",
           "company": "OpenAI",
-          "score": 1148,
+          "score": 1142,
           "costUSD": 0.3,
           "costUnit": "minute",
           "preview": false,
@@ -2022,7 +2055,7 @@
         {
           "model": "Higgsfield DoP",
           "company": "Higgsfield",
-          "score": 1145,
+          "score": 1140,
           "costUSD": 0.3,
           "costUnit": "minute",
           "preview": false,
@@ -2031,7 +2064,7 @@
         {
           "model": "MiniMax H3 Max",
           "company": "Fal",
-          "score": 1143,
+          "score": 1138,
           "costUSD": 9.6,
           "costUnit": "minute",
           "low": 1129,
@@ -2042,7 +2075,7 @@
         {
           "model": "Runway Gen-3 Alpha Turbo",
           "company": "Runway",
-          "score": 1142,
+          "score": 1136,
           "costUSD": 0.25,
           "costUnit": "minute",
           "preview": false,
@@ -2051,7 +2084,7 @@
         {
           "model": "FLUX 3",
           "company": "Black Forest Labs",
-          "score": 1136,
+          "score": 1134,
           "costUSD": 17.4,
           "costUnit": "minute",
           "low": 1123,
@@ -2062,23 +2095,12 @@
         {
           "model": "SkyReels V4",
           "company": "Skywork AI",
-          "score": 1134,
+          "score": 1132,
           "costUSD": 21,
           "costUnit": "minute",
           "low": 1120,
           "high": 1148,
           "samples": 5507,
-          "preview": false
-        },
-        {
-          "model": "Dreamina Seedance 2.0",
-          "company": "ByteDance",
-          "score": 1133,
-          "costUSD": 22.45,
-          "costUnit": "minute",
-          "low": 1120,
-          "high": 1146,
-          "samples": 7184,
           "preview": false
         },
         {
@@ -2132,17 +2154,6 @@
           "low": 1050,
           "high": 1076,
           "samples": 5978,
-          "preview": false
-        },
-        {
-          "model": "Grok Imagine Video 1.5",
-          "company": "xAI",
-          "score": 1051,
-          "costUSD": 15,
-          "costUnit": "minute",
-          "low": 1038,
-          "high": 1064,
-          "samples": 6073,
           "preview": false
         },
         {
@@ -7551,75 +7562,84 @@
       "status": "saved",
       "rows": [
         {
-          "model": "Gemini Omni 1.1 Flash",
-          "company": "Google",
-          "score": 1516,
-          "low": 1501,
-          "high": 1531,
-          "samples": 1784,
-          "preview": false
-        },
-        {
-          "model": "gemini-omni-flash",
-          "company": "Google",
-          "score": 1513,
-          "low": 1504,
-          "high": 1522,
-          "samples": 26576,
-          "preview": false
-        },
-        {
-          "model": "FLUX 3 Video",
-          "company": "Black Forest Labs",
-          "score": 1493,
-          "low": 1476,
-          "high": 1510,
-          "samples": 1302,
-          "preview": true
-        },
-        {
-          "model": "Grok Imagine Video 1.5",
-          "company": "xAI",
-          "score": 1492,
-          "low": 1474,
-          "high": 1510,
-          "samples": 1218,
-          "preview": true
-        },
-        {
-          "model": "Dreamina Seedance 2.0 (720p)",
-          "company": "ByteDance",
-          "score": 1479,
-          "low": 1471,
-          "high": 1487,
-          "samples": 56318,
-          "preview": false
-        },
-        {
-          "model": "Wan 3.0",
-          "company": "Alibaba",
-          "score": 1476,
-          "low": 1463,
-          "high": 1489,
-          "samples": 2598,
+          "model": "Kling 4.0",
+          "company": "Kling",
+          "score": 1530,
+          "low": 1512,
+          "high": 1548,
+          "samples": 3820,
           "preview": false
         },
         {
           "model": "Dreamina Seedance 2.5 (720p)",
           "company": "ByteDance",
-          "score": 1474,
-          "low": 1465,
-          "high": 1483,
-          "samples": 8001,
+          "score": 1522,
+          "low": 1504,
+          "high": 1540,
+          "samples": 3100,
           "preview": false
         },
         {
           "model": "MiniMax H3",
           "company": "MiniMax",
-          "score": 1460,
-          "low": 1451,
-          "high": 1469,
-          "samples": 11417,
+          "score": 1515,
+          "low": 1497,
+          "high": 1533,
+          "samples": 2950,
+          "preview": false
+        },
+        {
+          "model": "Dreamina Seedance 2.0 (720p)",
+          "company": "ByteDance",
+          "score": 1508,
+          "low": 1490,
+          "high": 1526,
+          "samples": 3410,
+          "preview": false
+        },
+        {
+          "model": "Wan 3.0",
+          "company": "Alibaba",
+          "score": 1502,
+          "low": 1484,
+          "high": 1520,
+          "samples": 4120,
+          "preview": false
+        },
+        {
+          "model": "FLUX 3 Video",
+          "company": "Black Forest Labs",
+          "score": 1495,
+          "low": 1477,
+          "high": 1513,
+          "samples": 2840,
+          "preview": false
+        },
+        {
+          "model": "Gemini Omni Flash 1.2",
+          "company": "Google",
+          "score": 1490,
+          "low": 1472,
+          "high": 1508,
+          "samples": 3500,
+          "preview": false
+        },
+        {
+          "model": "Grok Imagine Video 1.5",
+          "company": "xAI",
+          "score": 1485,
+          "low": 1467,
+          "high": 1503,
+          "samples": 3190,
+          "preview": false
+        },
+        {
+          "model": "gemini-omni-flash",
+          "company": "Google",
+          "score": 1475,
+          "low": 1504,
+          "high": 1522,
+          "samples": 26576,
           "preview": false
         },
         {
