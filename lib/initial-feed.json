@@ -53,6 +53,20 @@
       "newsKind": "Novo modelo"
     },
     {
+      "id": "OpenAI:https://openai.com/index/introducing-chatgpt-for-sales",
+      "company": "OpenAI",
+      "title": "Conheça ChatGPT for Sales",
+      "originalTitle": "Introducing ChatGPT for Sales",
+      "excerpt": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward.",
+      "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+      "date": "2026-11-17T08:00:00.000Z",
+      "category": "Aplicativos",
+      "important": true,
+      "topics": [],
+      "summary": "Publicação da OpenAI sobre aplicativos e ferramentas de IA. Abra o anúncio para conferir os recursos e as condições de acesso.",
+      "newsKind": "Ecossistema"
+    },
+    {
       "id": "Meta:https://about.fb.com/news/2026/11/introducing-direct-an-app-just-for-messaging",
       "company": "Meta",
       "title": "Conheça Direct: An App Just for Messaging",
@@ -64,20 +78,6 @@
       "important": true,
       "topics": [],
       "summary": "Publicação da Meta sobre aplicativos e ferramentas de IA. Abra o anúncio para conferir os recursos e as condições de acesso.",
-      "newsKind": "Ecossistema"
-    },
-    {
-      "id": "OpenAI:https://openai.com/index/introducing-openai-for-chile",
-      "company": "OpenAI",
-      "title": "Conheça OpenAI for Chile",
-      "originalTitle": "Introducing OpenAI for Chile",
-      "excerpt": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
-      "url": "https://openai.com/index/introducing-openai-for-chile",
-      "date": "2026-11-17T00:00:00.000Z",
-      "category": "Empresas",
-      "important": true,
-      "topics": [],
-      "summary": "Publicação da OpenAI sobre novidades da empresa. Abra o anúncio para conferir os recursos e as condições de acesso.",
       "newsKind": "Ecossistema"
     },
     {
@@ -93,6 +93,20 @@
       "topics": [],
       "summary": "Publicação da OpenAI sobre modelos de IA. Abra o anúncio para conferir os recursos e as condições de acesso.",
       "newsKind": "Novo modelo"
+    },
+    {
+      "id": "OpenAI:https://openai.com/index/introducing-openai-for-chile",
+      "company": "OpenAI",
+      "title": "Conheça OpenAI for Chile",
+      "originalTitle": "Introducing OpenAI for Chile",
+      "excerpt": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+      "url": "https://openai.com/index/introducing-openai-for-chile",
+      "date": "2026-11-17T00:00:00.000Z",
+      "category": "Empresas",
+      "important": true,
+      "topics": [],
+      "summary": "Publicação da OpenAI sobre novidades da empresa. Abra o anúncio para conferir os recursos e as condições de acesso.",
+      "newsKind": "Ecossistema"
     },
     {
       "id": "OpenAI:https://openai.com/index/expanding-chatgpt-for-academic-researchers",
@@ -495,8 +509,8 @@
       "name": "OpenAI News",
       "url": "https://openai.com/news/rss.xml",
       "status": "ok",
-      "count": 9,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "count": 10,
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     },
     {
       "id": "deepmind",
@@ -505,7 +519,7 @@
       "url": "https://deepmind.google/blog/rss.xml",
       "status": "ok",
       "count": 4,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     },
     {
       "id": "google",
@@ -514,7 +528,7 @@
       "url": "https://blog.google/technology/ai/rss/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     },
     {
       "id": "google-dev",
@@ -523,7 +537,7 @@
       "url": "https://developers.googleblog.com/feeds/posts/default",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     },
     {
       "id": "google-aistudio",
@@ -532,7 +546,7 @@
       "url": "https://ai.google.dev/gemini-api/docs/changelog",
       "status": "ok",
       "count": 5,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     },
     {
       "id": "anthropic",
@@ -541,7 +555,7 @@
       "url": "https://www.anthropic.com/news",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     },
     {
       "id": "anthropic-models",
@@ -550,7 +564,7 @@
       "url": "https://www.anthropic.com/news/models",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     },
     {
       "id": "deepseek",
@@ -559,7 +573,7 @@
       "url": "https://www.deepseek.com/en/news/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     },
     {
       "id": "xai",
@@ -568,7 +582,7 @@
       "url": "https://x.ai/news",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-17T22:33:04.492Z",
+      "checkedAt": "2026-11-18T02:28:03.655Z",
       "error": "HTTP 403"
     },
     {
@@ -578,7 +592,7 @@
       "url": "https://www.kimi.com/en/blog/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     },
     {
       "id": "z-ai",
@@ -587,7 +601,7 @@
       "url": "https://www.zhipuai.cn/en/research",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-17T22:33:04.492Z",
+      "checkedAt": "2026-11-18T02:28:03.655Z",
       "error": "fetch failed"
     },
     {
@@ -597,7 +611,7 @@
       "url": "https://blackforestlabs.ai/blog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     },
     {
       "id": "runway",
@@ -606,7 +620,7 @@
       "url": "https://runwayml.com/changelog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     },
     {
       "id": "luma",
@@ -615,7 +629,7 @@
       "url": "https://lumalabs.ai/news",
       "status": "ok",
       "count": 6,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     },
     {
       "id": "midjourney",
@@ -624,7 +638,7 @@
       "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-17T22:33:04.492Z",
+      "checkedAt": "2026-11-18T02:28:03.655Z",
       "error": "HTTP 403"
     },
     {
@@ -634,7 +648,7 @@
       "url": "https://blogs.microsoft.com/feed/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     },
     {
       "id": "meta",
@@ -643,7 +657,7 @@
       "url": "https://about.fb.com/feed/",
       "status": "ok",
       "count": 2,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     },
     {
       "id": "mistral",
@@ -652,9 +666,9 @@
       "url": "https://mistral.ai/news/rss",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-17T22:33:04.492Z"
+      "checkedAt": "2026-11-18T02:28:03.655Z"
     }
   ],
-  "fetchedAt": "2026-11-17T22:33:04.492Z",
-  "nextCheckAt": "2026-11-18T04:33:04.492Z"
+  "fetchedAt": "2026-11-18T02:28:03.655Z",
+  "nextCheckAt": "2026-11-18T08:28:03.655Z"
 }
