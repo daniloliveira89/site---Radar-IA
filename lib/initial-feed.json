@@ -1,6 +1,36 @@
 {
   "articles": [
     {
+      "id": "Google:https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval",
+      "company": "Google",
+      "title": "Conheça Tool Retrieval in the Gemini API",
+      "originalTitle": "Introducing Tool Retrieval in the Gemini API",
+      "excerpt": "Give your agents access to hundreds of tools while using fewer tokens with Tool Retrieval, now in preview in the Gemini API.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval",
+      "date": "2026-11-19T18:00:00.000Z",
+      "category": "Aplicativos",
+      "important": true,
+      "topics": [
+        "agentes e ferramentas"
+      ],
+      "summary": "Anúncio sobre aplicativos e ferramentas de IA. Entre os temas citados pela fonte: agentes e ferramentas.",
+      "newsKind": "Ecossistema"
+    },
+    {
+      "id": "Meta:https://about.fb.com/news/2026/11/forum-a-dedicated-app-for-facebook-groups-is-now-available-in-indonesia",
+      "company": "Meta",
+      "title": "Forum, a Dedicated App for Facebook Groups, Is já disponível in Indonesia",
+      "originalTitle": "Forum, a Dedicated App for Facebook Groups, Is Now Available in Indonesia",
+      "excerpt": "Forum is now available in Indonesia, bringing Facebook Groups into one dedicated app to make joining conversations, finding answers and exploring interests easier. The post Forum, a Dedicated App for Facebook Groups, Is Now Available in Indonesia appeared first on Meta Newsroom .",
+      "url": "https://about.fb.com/news/2026/11/forum-a-dedicated-app-for-facebook-groups-is-now-available-in-indonesia",
+      "date": "2026-11-19T06:05:13.000Z",
+      "category": "Aplicativos",
+      "important": true,
+      "topics": [],
+      "summary": "Publicação da Meta sobre aplicativos e ferramentas de IA. Abra o anúncio para conferir os recursos e as condições de acesso.",
+      "newsKind": "Ecossistema"
+    },
+    {
       "id": "Google:https://deepmind.google/blog/introducing-gemini-4-neon",
       "company": "Google",
       "title": "Conheça Gemini 4 Neon",
@@ -159,20 +189,6 @@
       "newsKind": "Ecossistema"
     },
     {
-      "id": "OpenAI:https://openai.com/index/astra-law-6-2",
-      "company": "OpenAI",
-      "title": "Astra for Law leads in legal intelligence",
-      "originalTitle": "Astra for Law leads in legal intelligence",
-      "excerpt": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
-      "url": "https://openai.com/index/astra-law-6-2",
-      "date": "2026-11-17T00:00:00.000Z",
-      "category": "Modelos",
-      "important": true,
-      "topics": [],
-      "summary": "Publicação da OpenAI sobre modelos de IA. Abra o anúncio para conferir os recursos e as condições de acesso.",
-      "newsKind": "Novo modelo"
-    },
-    {
       "id": "OpenAI:https://openai.com/index/introducing-openai-for-chile",
       "company": "OpenAI",
       "title": "Conheça OpenAI for Chile",
@@ -185,6 +201,20 @@
       "topics": [],
       "summary": "Publicação da OpenAI sobre novidades da empresa. Abra o anúncio para conferir os recursos e as condições de acesso.",
       "newsKind": "Ecossistema"
+    },
+    {
+      "id": "OpenAI:https://openai.com/index/astra-law-6-2",
+      "company": "OpenAI",
+      "title": "Astra for Law leads in legal intelligence",
+      "originalTitle": "Astra for Law leads in legal intelligence",
+      "excerpt": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
+      "url": "https://openai.com/index/astra-law-6-2",
+      "date": "2026-11-17T00:00:00.000Z",
+      "category": "Modelos",
+      "important": true,
+      "topics": [],
+      "summary": "Publicação da OpenAI sobre modelos de IA. Abra o anúncio para conferir os recursos e as condições de acesso.",
+      "newsKind": "Novo modelo"
     },
     {
       "id": "OpenAI:https://openai.com/index/expanding-chatgpt-for-academic-researchers",
@@ -588,7 +618,7 @@
       "url": "https://openai.com/news/rss.xml",
       "status": "ok",
       "count": 10,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "deepmind",
@@ -597,7 +627,7 @@
       "url": "https://deepmind.google/blog/rss.xml",
       "status": "ok",
       "count": 6,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "google",
@@ -605,8 +635,8 @@
       "name": "Google AI",
       "url": "https://blog.google/technology/ai/rss/",
       "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "count": 3,
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "google-dev",
@@ -615,7 +645,7 @@
       "url": "https://developers.googleblog.com/feeds/posts/default",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "google-aistudio",
@@ -624,7 +654,7 @@
       "url": "https://ai.google.dev/gemini-api/docs/changelog",
       "status": "ok",
       "count": 7,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "anthropic",
@@ -633,7 +663,7 @@
       "url": "https://www.anthropic.com/news",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "anthropic-models",
@@ -642,7 +672,7 @@
       "url": "https://www.anthropic.com/news/models",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "deepseek",
@@ -651,7 +681,7 @@
       "url": "https://www.deepseek.com/en/news/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "xai",
@@ -660,7 +690,7 @@
       "url": "https://x.ai/news",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-19T01:53:45.166Z",
+      "checkedAt": "2026-11-19T19:01:25.722Z",
       "error": "HTTP 403"
     },
     {
@@ -670,7 +700,7 @@
       "url": "https://www.kimi.com/en/blog/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "z-ai",
@@ -679,7 +709,7 @@
       "url": "https://www.zhipuai.cn/en/research",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "bfl",
@@ -688,7 +718,7 @@
       "url": "https://blackforestlabs.ai/blog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "runway",
@@ -697,7 +727,7 @@
       "url": "https://runwayml.com/changelog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "luma",
@@ -706,7 +736,7 @@
       "url": "https://lumalabs.ai/news",
       "status": "ok",
       "count": 6,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "midjourney",
@@ -715,7 +745,7 @@
       "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-19T01:53:45.166Z",
+      "checkedAt": "2026-11-19T19:01:25.722Z",
       "error": "HTTP 403"
     },
     {
@@ -725,7 +755,7 @@
       "url": "https://blogs.microsoft.com/feed/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "meta",
@@ -733,8 +763,8 @@
       "name": "Meta Newsroom",
       "url": "https://about.fb.com/feed/",
       "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "count": 3,
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     },
     {
       "id": "mistral",
@@ -743,9 +773,9 @@
       "url": "https://mistral.ai/news/rss",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-19T01:53:45.166Z"
+      "checkedAt": "2026-11-19T19:01:25.722Z"
     }
   ],
-  "fetchedAt": "2026-11-19T01:53:45.166Z",
-  "nextCheckAt": "2026-11-19T07:53:45.166Z"
+  "fetchedAt": "2026-11-19T19:01:25.722Z",
+  "nextCheckAt": "2026-11-20T01:01:25.722Z"
 }
