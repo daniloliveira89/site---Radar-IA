@@ -1,6 +1,22 @@
 {
   "articles": [
     {
+      "id": "Luma:https://lumalabs.ai/news/midjourney-pricing",
+      "company": "Luma",
+      "title": "Midjourney Pricing 2027: Plans, Costs, and Whether There Is a Free Trial",
+      "originalTitle": "Midjourney Pricing 2027: Plans, Costs, and Whether There Is a Free Trial",
+      "excerpt": "Compare Midjourney's 2027 pricing, plans, GPU hours, free trial limits, and commercial licensing rules to choose the right AI image tool for creative work fast.",
+      "url": "https://lumalabs.ai/news/midjourney-pricing",
+      "date": "2026-11-22T07:26:22.589Z",
+      "category": "Imagem",
+      "important": true,
+      "topics": [
+        "custos e preços"
+      ],
+      "summary": "Anúncio sobre criação e edição de imagens. Entre os temas citados pela fonte: custos e preços.",
+      "newsKind": "Teste grátis"
+    },
+    {
       "id": "Google:https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval",
       "company": "Google",
       "title": "Conheça Tool Retrieval in the Gemini API",
@@ -396,7 +412,7 @@
       "company": "Luma",
       "title": "Veo 3.1 Alternatives: 6 Models for Cinematic Work Outside Google Cloud",
       "originalTitle": "Veo 3.1 Alternatives: 6 Models for Cinematic Work Outside Google Cloud",
-      "excerpt": "Discover 6 Veo 3.1 alternatives for cinematic video production, comparing HDR export, keyframe control, 4K resolution, audio generation, and creative workflows.",
+      "excerpt": "",
       "url": "https://lumalabs.ai/news/veo-3.1-alternatives",
       "date": "2026-11-05T09:44:23.428Z",
       "category": "Vídeo",
@@ -599,7 +615,7 @@
       "url": "https://openai.com/news/rss.xml",
       "status": "ok",
       "count": 10,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     },
     {
       "id": "deepmind",
@@ -608,7 +624,7 @@
       "url": "https://deepmind.google/blog/rss.xml",
       "status": "ok",
       "count": 6,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     },
     {
       "id": "google",
@@ -617,7 +633,7 @@
       "url": "https://blog.google/technology/ai/rss/",
       "status": "ok",
       "count": 3,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     },
     {
       "id": "google-dev",
@@ -626,7 +642,7 @@
       "url": "https://developers.googleblog.com/feeds/posts/default",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     },
     {
       "id": "google-aistudio",
@@ -635,7 +651,7 @@
       "url": "https://ai.google.dev/gemini-api/docs/changelog",
       "status": "ok",
       "count": 7,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     },
     {
       "id": "anthropic",
@@ -644,7 +660,7 @@
       "url": "https://www.anthropic.com/news",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     },
     {
       "id": "anthropic-models",
@@ -653,7 +669,7 @@
       "url": "https://www.anthropic.com/news/models",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     },
     {
       "id": "deepseek",
@@ -662,7 +678,7 @@
       "url": "https://www.deepseek.com/en/news/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     },
     {
       "id": "xai",
@@ -671,7 +687,7 @@
       "url": "https://x.ai/news",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-22T00:22:53.377Z",
+      "checkedAt": "2026-11-22T08:03:52.064Z",
       "error": "HTTP 403"
     },
     {
@@ -681,16 +697,17 @@
       "url": "https://www.kimi.com/en/blog/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     },
     {
       "id": "z-ai",
       "company": "Z AI",
       "name": "Z.ai · GLM",
       "url": "https://www.zhipuai.cn/en/research",
-      "status": "ok",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z",
+      "error": "fetch failed"
     },
     {
       "id": "bfl",
@@ -699,7 +716,7 @@
       "url": "https://blackforestlabs.ai/blog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     },
     {
       "id": "runway",
@@ -708,7 +725,7 @@
       "url": "https://runwayml.com/changelog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     },
     {
       "id": "luma",
@@ -716,8 +733,8 @@
       "name": "Luma AI News",
       "url": "https://lumalabs.ai/news",
       "status": "ok",
-      "count": 6,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "count": 7,
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     },
     {
       "id": "midjourney",
@@ -726,7 +743,7 @@
       "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-22T00:22:53.377Z",
+      "checkedAt": "2026-11-22T08:03:52.064Z",
       "error": "HTTP 403"
     },
     {
@@ -736,7 +753,7 @@
       "url": "https://blogs.microsoft.com/feed/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     },
     {
       "id": "meta",
@@ -745,7 +762,7 @@
       "url": "https://about.fb.com/feed/",
       "status": "ok",
       "count": 3,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     },
     {
       "id": "mistral",
@@ -754,9 +771,9 @@
       "url": "https://mistral.ai/news/rss",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-22T00:22:53.377Z"
+      "checkedAt": "2026-11-22T08:03:52.064Z"
     }
   ],
-  "fetchedAt": "2026-11-22T00:22:53.377Z",
-  "nextCheckAt": "2026-11-22T06:22:53.377Z"
+  "fetchedAt": "2026-11-22T08:03:52.064Z",
+  "nextCheckAt": "2026-11-22T14:03:52.064Z"
 }
