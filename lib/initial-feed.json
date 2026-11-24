@@ -1,6 +1,40 @@
 {
   "articles": [
     {
+      "id": "Meta:https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control",
+      "company": "Meta",
+      "title": "Conheça Muse in the UK: A Personal AI Agent You Control",
+      "originalTitle": "Introducing Muse in the UK: A Personal AI Agent You Control",
+      "excerpt": "Muse is now in the UK: a personal AI agent that doesn't just answer questions, but one that you can task to get things done on your behalf The post Introducing Muse in the UK: A Personal AI Agent You Control appeared first on Meta Newsroom .",
+      "url": "https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control",
+      "date": "2026-11-24T06:00:40.000Z",
+      "category": "Aplicativos",
+      "important": true,
+      "topics": [
+        "agentes e ferramentas"
+      ],
+      "summary": "Anúncio sobre aplicativos e ferramentas de IA. Entre os temas citados pela fonte: agentes e ferramentas.",
+      "newsKind": "Ecossistema"
+    },
+    {
+      "id": "Meta:https://about.fb.com/news/2026/11/muse-now-available-in-the-uk-muse-does-the-work-you-stay-in-control",
+      "company": "Meta",
+      "title": "Muse já disponível in the UK: Muse Does the Work, You Stay in Control",
+      "originalTitle": "Muse Now Available in the UK: Muse Does the Work, You Stay in Control",
+      "excerpt": "Muse, Meta’s personal AI agent, is now available to adults in the UK. Think of it as a helping hand for the jobs that pile up, like chasing a refund, renewing car insurance or keeping on top of the school calendar. To get those jobs done you can connect Muse to the apps you already use, from your email and calendar to the retailer apps you shop on. Handing tasks to an AI agent is new for most of us, and we know it’s an act of trust. That’s why we’ve designed Muse so you stay in control at every step. Here’s how. Muse Asks You to Approve Anything Important Once you’ve decided what Muse is connected to and what you want it to do, with your oversight, it can handle tasks like searching, comparing and planning for you. But before it does anything like sending an email or buying something, it shows you exactly what it’s about to do and waits for your go-ahead. A separate security agent checks Muse’s actions and the information it sends out against the permissions you’ve granted. You can also choose how often it checks in with you in Settings. You Decide What It Can Access – and for How Long Muse only works with the apps and services you choose to connect it to, and you control the access it gets. For example, you can let it read your email without allowing it to send anything. When you connect an app, Muse uses information from it to help with the tasks you give it: connecting your email lets Muse proactively review your email to let you know of anything important, not download your whole inbox – unless that’s what you ask it to do. And if your Muse asks for extra permissions, o",
+      "url": "https://about.fb.com/news/2026/11/muse-now-available-in-the-uk-muse-does-the-work-you-stay-in-control",
+      "date": "2026-11-24T06:00:04.000Z",
+      "category": "Modelos",
+      "important": true,
+      "topics": [
+        "raciocínio",
+        "programação",
+        "agentes e ferramentas"
+      ],
+      "summary": "Anúncio sobre modelos de IA. Entre os temas citados pela fonte: raciocínio, programação, agentes e ferramentas.",
+      "newsKind": "Ecossistema"
+    },
+    {
       "id": "Z AI:https://z.ai/blog/glm-5.4",
       "company": "Z AI",
       "title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
@@ -202,18 +236,18 @@
       "newsKind": "Ecossistema"
     },
     {
-      "id": "Meta:https://about.fb.com/news/2026/11/introducing-direct-an-app-just-for-messaging",
-      "company": "Meta",
-      "title": "Conheça Direct: An App Just for Messaging",
-      "originalTitle": "Introducing Direct: An App Just for Messaging",
-      "excerpt": "Today, we're introducing Direct, a new messaging app brought to you by Instagram for chatting one-on-one or in groups with friends and family. The post Introducing Direct: An App Just for Messaging appeared first on Meta Newsroom .",
-      "url": "https://about.fb.com/news/2026/11/introducing-direct-an-app-just-for-messaging",
-      "date": "2026-11-17T01:00:48.000Z",
-      "category": "Aplicativos",
+      "id": "OpenAI:https://openai.com/index/astra-law-6-2",
+      "company": "OpenAI",
+      "title": "Astra for Law leads in legal intelligence",
+      "originalTitle": "Astra for Law leads in legal intelligence",
+      "excerpt": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
+      "url": "https://openai.com/index/astra-law-6-2",
+      "date": "2026-11-17T00:00:00.000Z",
+      "category": "Modelos",
       "important": true,
       "topics": [],
-      "summary": "Publicação da Meta sobre aplicativos e ferramentas de IA. Abra o anúncio para conferir os recursos e as condições de acesso.",
-      "newsKind": "Ecossistema"
+      "summary": "Publicação da OpenAI sobre modelos de IA. Abra o anúncio para conferir os recursos e as condições de acesso.",
+      "newsKind": "Novo modelo"
     },
     {
       "id": "OpenAI:https://openai.com/index/introducing-openai-for-chile",
@@ -228,20 +262,6 @@
       "topics": [],
       "summary": "Publicação da OpenAI sobre novidades da empresa. Abra o anúncio para conferir os recursos e as condições de acesso.",
       "newsKind": "Ecossistema"
-    },
-    {
-      "id": "OpenAI:https://openai.com/index/astra-law-6-2",
-      "company": "OpenAI",
-      "title": "Astra for Law leads in legal intelligence",
-      "originalTitle": "Astra for Law leads in legal intelligence",
-      "excerpt": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
-      "url": "https://openai.com/index/astra-law-6-2",
-      "date": "2026-11-17T00:00:00.000Z",
-      "category": "Modelos",
-      "important": true,
-      "topics": [],
-      "summary": "Publicação da OpenAI sobre modelos de IA. Abra o anúncio para conferir os recursos e as condições de acesso.",
-      "newsKind": "Novo modelo"
     },
     {
       "id": "OpenAI:https://openai.com/index/expanding-chatgpt-for-academic-researchers",
@@ -621,7 +641,7 @@
       "url": "https://openai.com/news/rss.xml",
       "status": "ok",
       "count": 10,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "deepmind",
@@ -630,7 +650,7 @@
       "url": "https://deepmind.google/blog/rss.xml",
       "status": "ok",
       "count": 6,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "google",
@@ -639,7 +659,7 @@
       "url": "https://blog.google/technology/ai/rss/",
       "status": "ok",
       "count": 3,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "google-dev",
@@ -648,7 +668,7 @@
       "url": "https://developers.googleblog.com/feeds/posts/default",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "google-aistudio",
@@ -657,7 +677,7 @@
       "url": "https://ai.google.dev/gemini-api/docs/changelog",
       "status": "ok",
       "count": 7,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "anthropic",
@@ -666,7 +686,7 @@
       "url": "https://www.anthropic.com/news",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "anthropic-models",
@@ -675,7 +695,7 @@
       "url": "https://www.anthropic.com/news/models",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "deepseek",
@@ -684,7 +704,7 @@
       "url": "https://www.deepseek.com/en/news/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "xai",
@@ -693,7 +713,7 @@
       "url": "https://x.ai/news",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-23T22:04:41.558Z",
+      "checkedAt": "2026-11-24T11:01:11.592Z",
       "error": "HTTP 403"
     },
     {
@@ -703,7 +723,7 @@
       "url": "https://www.kimi.com/en/blog/",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "z-ai",
@@ -712,7 +732,7 @@
       "url": "https://www.zhipuai.cn/en/research",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "bfl",
@@ -721,7 +741,7 @@
       "url": "https://blackforestlabs.ai/blog",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "runway",
@@ -730,7 +750,7 @@
       "url": "https://runwayml.com/changelog",
       "status": "ok",
       "count": 3,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "luma",
@@ -739,7 +759,7 @@
       "url": "https://lumalabs.ai/news",
       "status": "ok",
       "count": 3,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "midjourney",
@@ -748,7 +768,7 @@
       "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
       "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-23T22:04:41.558Z",
+      "checkedAt": "2026-11-24T11:01:11.592Z",
       "error": "HTTP 403"
     },
     {
@@ -758,7 +778,7 @@
       "url": "https://blogs.microsoft.com/feed/",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "meta",
@@ -766,8 +786,8 @@
       "name": "Meta Newsroom",
       "url": "https://about.fb.com/feed/",
       "status": "ok",
-      "count": 3,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "count": 4,
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     },
     {
       "id": "mistral",
@@ -776,9 +796,9 @@
       "url": "https://mistral.ai/news/rss",
       "status": "ok",
       "count": 0,
-      "checkedAt": "2026-11-23T22:04:41.558Z"
+      "checkedAt": "2026-11-24T11:01:11.592Z"
     }
   ],
-  "fetchedAt": "2026-11-23T22:04:41.558Z",
-  "nextCheckAt": "2026-11-24T04:04:41.558Z"
+  "fetchedAt": "2026-11-24T11:01:11.592Z",
+  "nextCheckAt": "2026-11-24T17:01:11.592Z"
 }
